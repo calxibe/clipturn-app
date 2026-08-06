@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClipTurn Changelog — What shipped in version 1.0.1</title>
+    <meta
+      name="description"
+      content="What ClipTurn 1.0.1 fixes and what 1.0.0 introduced: seven file types rotated from File Explorer, codec and soundtrack preserved, exact rotation for uncompressed AVI, and an independent check before any file is replaced."
+    />
+    <link rel="canonical" href="https://clipturn.app/changelog.html" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1022" media="(prefers-color-scheme: dark)" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ClipTurn" />
+    <meta property="og:title" content="ClipTurn 1.0.1 — release history" />
+    <meta
+      property="og:description"
+      content="What every ClipTurn release changed, from physical rotation in the source codec to an independent check before any file is replaced."
+    />
+    <meta property="og:url" content="https://clipturn.app/changelog.html" />
+    <meta property="og:image" content="https://clipturn.app/og.png" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ClipTurn 1.0.1 — release history" />
+    <meta
+      name="twitter:description"
+      content="What every ClipTurn release changed, from physical rotation in the source codec to an independent check before any file is replaced."
+    />
+    <meta name="twitter:image" content="https://clipturn.app/og.png" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="site.css?v=20260806-14" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell nav-shell">
+        <a class="brand-link" href="index.html" aria-label="ClipTurn home">
+          <img class="brand-mark" src="assets/brand/clipturn-mark.svg" width="40" height="40" alt="" />
+          <span class="brand-name">Clip<span>Turn</span></span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          aria-label="Open navigation"
+        >
+          <span class="menu-lines" aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+          <a href="index.html#how">How it works</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="manual.html">Manual</a>
+          <a href="changelog.html" aria-current="page">Changelog</a>
+          <a
+            class="nav-download"
+            href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            Microsoft Store
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="legal-hero" aria-labelledby="changelog-title">
+        <div class="shell">
+          <p class="eyebrow">Release history</p>
+          <h1 id="changelog-title">Changelog</h1>
+          <p>
+            Everything ClipTurn has shipped, newest first. Because ClipTurn is distributed through
+            Microsoft Store, updates arrive the same way every other Store app updates — you do not
+            download anything from this page.
+          </p>
+          <p class="updated">Current version 1.0.1</p>
+        </div>
+      </section>
+
+      <section class="changelog-main" aria-label="Releases">
+        <div class="shell">
+          <article class="version-card">
+            <div class="version-header">
+              <h2 class="version-number" id="v1-0-1">v1.0.1</h2>
+              <span class="version-badge">Latest</span>
+              <span class="version-date"><time datetime="2026-08">August 2026</time></span>
+            </div>
+
+            <div class="version-section">
+              <h3>Fixed</h3>
+              <ul class="feature-list">
+                <li>
+                  <strong>An interrupted rotation could keep reporting failure</strong> &mdash; If a
+                  rotation was cut short at the exact moment your file was replaced, ClipTurn could go on
+                  reporting it as failed every time it started, even though the video had been rotated
+                  correctly. It now recognises the finished turn and reports it once.
+                </li>
+                <li>
+                  <strong>Wrong colours in a few uncompressed AVI files</strong> &mdash; An AVI whose
+                  colour palette changes partway through could come back with the wrong colours from that
+                  point on. Those files are now refused by name, and the original is left untouched.
+                </li>
+                <li>
+                  <strong>Two unusual AVI files failed slowly instead of refusing quickly</strong> &mdash;
+                  An AVI declaring a soundtrack that holds no audio, or declaring fixed-size video frames,
+                  used to be rotated in full and only then reported as failed. Both are now recognised
+                  before any work starts and refused with the reason.
+                </li>
+                <li>
+                  <strong>A failed rotation could leave a spare copy of your video behind</strong> &mdash;
+                  A rotation that stopped partway could leave a <b>name.backup-…</b> file beside the
+                  original. Failed rotations now clean up after themselves.
+                </li>
+                <li>
+                  <strong>One problem no longer stops the rest of a batch</strong> &mdash; A momentary
+                  problem writing ClipTurn's own progress record could halt the videos still queued behind
+                  it. The batch now carries on, and each file still reports its own outcome.
+                </li>
+                <li>
+                  <strong>Dropping videos on Batch Rotate during a rotation</strong> &mdash; The list
+                  accepted the drop and then quietly ignored it. It now declines the drop visibly, the
+                  same way the <b>Add videos</b> button is unavailable while a rotation runs.
+                </li>
+                <li>
+                  <strong>A damaged MKV file gave an unexpected error</strong> &mdash; A Matroska file
+                  whose structure cannot be read now gets ClipTurn's ordinary refusal saying it could not
+                  be inspected safely, instead of an error. An MKV carrying two separate sets of metadata
+                  tags is refused too, rather than quietly losing one of them.
+                </li>
+                <li>
+                  <strong>Refusal messages name the right thing</strong> &mdash; An MKV could be refused
+                  with a message talking about a <b>.webm</b> file, and on a PC missing Windows' media
+                  support the refusal could name the wrong codec as the cause. A very long list of
+                  refusals is also no longer cut off in the result card.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="version-card">
+            <div class="version-header">
+              <h2 class="version-number" id="v1-0-0">v1.0.0</h2>
+              <span class="version-date"><time datetime="2026-08">August 2026</time></span>
+            </div>
+
+            <div class="version-section">
+              <h3>Added</h3>
+              <ul class="feature-list">
+                <li>
+                  <strong>Rotate from File Explorer</strong> &mdash; Right-click a video and pick
+                  <b>Rotate video left</b>, <b>Rotate video right</b> or <b>Open in ClipTurn</b>. No export
+                  dialog, no second filename. Works with MP4, M4V, MOV, MKV, WebM, WMV and uncompressed AVI.
+                </li>
+                <li>
+                  <strong>The video keeps its own codec</strong> &mdash; HEVC comes back as HEVC, VP9 as
+                  VP9, Windows Media Video in its own format. If your PC cannot write the original codec,
+                  the result says which one it used instead.
+                </li>
+                <li>
+                  <strong>Exact rotation for uncompressed AVI</strong> &mdash; The stored pixels are moved
+                  rather than re-encoded, and a separate check confirms every one of them landed where the
+                  turn requires. Nothing is lost.
+                </li>
+                <li>
+                  <strong>Your file is only replaced after an independent check</strong> &mdash; The rotated
+                  copy is decoded again and compared against the original: picture, sound, length,
+                  direction and colour. If anything fails, the copy is thrown away and your file is left
+                  untouched.
+                </li>
+                <li>
+                  <strong>Safe to interrupt</strong> &mdash; A crash or power cut during a rotation cannot
+                  leave a half-written video behind. ClipTurn works out what happened on the next start
+                  instead of rotating the file twice.
+                </li>
+                <li>
+                  <strong>The soundtrack is never re-encoded</strong> &mdash; In MKV, WebM and WMV files the
+                  audio is copied across untouched, so FLAC, ALAC, PCM, Dolby TrueHD, DTS-HD, Opus, Vorbis
+                  and MP3 all survive a rotation exactly as they were.
+                </li>
+                <li>
+                  <strong>Subtitles, extra soundtracks and attachments survive</strong> &mdash; Text
+                  subtitle tracks, additional audio tracks, cover art and fonts are all carried across.
+                  Picture-based and styled subtitles are refused by name, because a quarter turn would
+                  leave their captions sideways or off-screen.
+                </li>
+                <li>
+                  <strong>Capture date, location and HDR survive</strong> &mdash; The "Media created" date
+                  Explorer shows, GPS coordinates, camera make and model, track languages, colour
+                  information and 10-bit HDR all come through the rotation intact.
+                </li>
+                <li>
+                  <strong>A better WebM encoder, built in</strong> &mdash; ClipTurn ships its own copy of
+                  libvpx 1.16 rather than relying on the ageing encoder Windows provides, so a rotated WebM
+                  is both smaller and sharper, and still seeks the way the original did.
+                </li>
+                <li>
+                  <strong>System Capabilities</strong> &mdash; A plain report of what your particular PC can
+                  decode and encode. Where a missing piece has a free Microsoft download, it links there;
+                  where it does not, it says so instead of sending you somewhere that cannot help.
+                </li>
+                <li>
+                  <strong>A receipt for every rotation</strong> &mdash; Each rotated file records what was
+                  checked, and <b>Verify file again</b> re-reads the file on disk to confirm it is still
+                  the video ClipTurn verified.
+                </li>
+                <li>
+                  <strong>Uninstalling removes ClipTurn's data</strong> &mdash; Settings and job history go
+                  with the app; nothing is left behind in a folder you would have to find yourself.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <div class="changelog-note">
+            <strong>Worth knowing before you rotate</strong>
+            <p>
+              Compressed video is re-encoded, so rotating the same file over and over slowly costs quality;
+              only uncompressed AVI is exact. A rotation started from File Explorer replaces the file and
+              cannot be undone. Some formats need codecs Windows does not include, and MPEG-1 and MPEG-2
+              are refused permanently because Windows cannot write them at all. The
+              <a href="manual.html">user manual</a> explains each of these in full.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section" aria-labelledby="changelog-cta">
+        <div class="shell">
+          <div class="cta-card">
+            <div>
+              <h2 id="changelog-cta">Updates arrive through Microsoft Store.</h2>
+              <p>Install ClipTurn once and Windows keeps it current, the same as any other Store app.</p>
+            </div>
+            <a
+              class="button button-primary"
+              href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+              Get ClipTurn
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img
+              src="assets/brand/clipturn-lockup-on-dark.svg"
+              width="1600"
+              height="400"
+              alt="ClipTurn"
+              loading="lazy"
+            />
+            <p>A focused Windows 11 app for physical, verifiable video rotation. Published by FixQuotes.</p>
+          </div>
+          <div class="footer-column">
+            <h2>Product</h2>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#limits">Good to know</a></li>
+              <li><a href="manual.html">User manual</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="changelog.html" aria-current="page">Changelog</a></li>
+              <li><a href="https://apps.microsoft.com/detail/9PGB9JVBRGLB" target="_blank" rel="noopener">Microsoft Store</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h2>Legal &amp; support</h2>
+            <ul class="footer-links">
+              <li><a href="privacy.html">Privacy policy</a></li>
+              <li><a href="terms.html">Terms of use</a></li>
+              <li><a href="https://fixquotes.com/docs/contact/?category=clipturn" target="_blank" rel="noopener">Contact us</a></li>
+              <li><a href="https://fixquotes.com/docs/about/" target="_blank" rel="noopener">About the publisher</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 FixQuotes. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="site.js" defer></script>
+  </body>
+</html>

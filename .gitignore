@@ -1,0 +1,26 @@
+# Internal working notes — never publish. This repository is public.
+MAINTAINING.md
+
+# OS and editor cruft
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+*.swp
+*~
+.vscode/
+.idea/
+
+# OneDrive conflict copies (this folder syncs through OneDrive)
+* - Copy.*
+*conflicted copy*
+
+# Scratch and local previews
+/tmp/
+scratch/
+*.local.html
+*.bak
+*.orig
+*.rej
