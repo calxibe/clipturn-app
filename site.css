@@ -1301,6 +1301,12 @@ a:hover {
   font-size: 0.94rem;
 }
 
+.footer-brand .footer-copyright {
+  margin-top: 12px;
+  color: #8591aa;
+  font-size: 0.84rem;
+}
+
 .footer-column h2 {
   margin: 0 0 14px;
   color: #fff;
@@ -1354,12 +1360,6 @@ a:hover {
   height: 52px;
   max-width: 100%;
   object-fit: contain;
-}
-
-.footer-badges + .footer-bottom {
-  margin-top: 18px;
-  padding-top: 0;
-  border-top: 0;
 }
 
 .footer-bottom {
