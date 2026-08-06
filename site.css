@@ -23,9 +23,9 @@
 
   /* Vertical rhythm. Every page uses these three and nothing else, so the
      distance from the header to the first heading is identical site-wide. */
-  --page-h1: clamp(3.15rem, 6vw, 5.75rem);
-  --page-top: clamp(64px, 6.5vw, 92px);
-  --page-bottom: clamp(56px, 6vw, 76px);
+  --page-h1: clamp(2.45rem, 5vw, 4.25rem);
+  --page-top: clamp(56px, 5.5vw, 76px);
+  --page-bottom: clamp(48px, 5vw, 64px);
   --section-y: clamp(84px, 10vw, 132px);
 }
 
@@ -295,9 +295,9 @@ a:hover {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 0.87fr) minmax(460px, 1.13fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(430px, 0.85fr);
   align-items: center;
-  gap: clamp(44px, 6vw, 86px);
+  gap: clamp(40px, 4vw, 64px);
 }
 
 .eyebrow {
@@ -331,8 +331,9 @@ a:hover {
   text-wrap: balance;
 }
 
+/* No max-width: the hero copy column is already the constraint, and capping
+   here forced the headline onto five lines on a wide screen. */
 .hero h1 {
-  max-width: 720px;
   font-size: var(--page-h1);
 }
 
@@ -3792,7 +3793,7 @@ kbd {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  grid-template-columns: minmax(0, 1.28fr) minmax(320px, 0.72fr);
   align-items: center;
   gap: clamp(46px, 7vw, 86px);
 }
