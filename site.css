@@ -1327,6 +1327,41 @@ a:hover {
   color: var(--turn);
 }
 
+.footer-badges {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 36px;
+  padding-top: 18px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.16);
+}
+
+.footer-badge {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.footer-badge img {
+  display: block;
+  width: auto;
+  height: 52px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.footer-badges + .footer-bottom {
+  margin-top: 18px;
+  padding-top: 0;
+  border-top: 0;
+}
+
 .footer-bottom {
   display: flex;
   align-items: center;
