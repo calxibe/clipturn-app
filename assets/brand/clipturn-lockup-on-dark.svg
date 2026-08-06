@@ -1,0 +1,37 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" role="img" aria-labelledby="title desc">
+  <title id="title">ClipTurn</title>
+  <desc id="desc">The ClipTurn mark beside the ClipTurn wordmark</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18223f"/>
+      <stop offset="1" stop-color="#3553a4"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#70e1f5"/>
+      <stop offset="1" stop-color="#7b8cff"/>
+    </linearGradient>
+    <linearGradient id="wordmark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#70e1f5"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(40 40) scale(0.3125)">
+    <rect width="1024" height="1024" rx="224" fill="url(#background)"/>
+    <rect x="250" y="326" width="524" height="372" rx="58" fill="#101831" stroke="url(#frame)" stroke-width="28"/>
+    <path d="M470 424 L470 600 L626 512 Z" fill="#ffffff"/>
+    <path d="M260 308 C352 190 526 144 680 202 C731 221 776 250 812 287"
+          fill="none" stroke="#ffffff" stroke-width="58" stroke-linecap="round"/>
+    <path d="M790 208 L830 310 L722 326" fill="none" stroke="#ffffff" stroke-width="58"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M764 716 C672 834 498 880 344 822 C293 803 248 774 212 737"
+          fill="none" stroke="#70e1f5" stroke-width="58" stroke-linecap="round"/>
+    <path d="M234 816 L194 714 L302 698" fill="none" stroke="#70e1f5" stroke-width="58"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="420" y="212" font-family="Segoe UI Variable Display, Segoe UI, system-ui, sans-serif"
+        font-size="150" font-weight="600" fill="url(#wordmark)" letter-spacing="-2">ClipTurn</text>
+  <text x="424" y="286" font-family="Segoe UI Variable Text, Segoe UI, system-ui, sans-serif"
+        font-size="52" font-weight="400" fill="#8fa3c8" letter-spacing="6">VIDEO ROTATOR</text>
+</svg>

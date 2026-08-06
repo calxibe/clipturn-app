@@ -1,0 +1,21 @@
+{
+  "name": "ClipTurn",
+  "short_name": "ClipTurn",
+  "description": "Physical video rotation for Windows 11.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f7f9ff",
+  "theme_color": "#18223f",
+  "icons": [
+    {
+      "src": "/assets/brand/clipturn-mark-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/brand/clipturn-mark-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
