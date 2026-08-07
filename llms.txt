@@ -1,0 +1,30 @@
+# ClipTurn
+
+> ClipTurn is a Windows 11 desktop app for rotating videos from File Explorer or the app. It processes videos locally, verifies results before replacement, and offers reviewed fallback copies when exact preservation is not possible.
+
+ClipTurn is published by FixQuotes and distributed through Microsoft Store. It is currently free, requires no account, and does not upload selected videos. Use the Microsoft Store listing as the authoritative source for current availability and pricing.
+
+Use the user manual for detailed information about supported file types, codecs, physical rotation, lossless display rotation, verified H.264 copies, batch processing, backups, verification, and known limitations.
+
+## Product
+
+- [ClipTurn homepage](https://clipturn.app/): Product overview, screenshots, workflow, features, limitations, frequently asked questions, and tutorial video.
+- [Microsoft Store listing](https://apps.microsoft.com/detail/9PGB9JVBRGLB): Official installation source, current availability, and current price.
+- [Pricing](https://clipturn.app/pricing.html): Current pricing explanation and feature comparison.
+
+## Documentation
+
+- [User manual](https://clipturn.app/manual.html): Detailed installation, rotation workflows, supported formats, codec requirements, verification behavior, recovery guidance, and troubleshooting.
+- [Changelog](https://clipturn.app/changelog.html): Release history and changes by version.
+
+## Legal and support
+
+- [Privacy policy](https://clipturn.app/privacy.html): How the app, website, external badges, tutorial video, and support channels handle data.
+- [Terms of use](https://clipturn.app/terms.html): Website terms and product-specific notices.
+- [Contact ClipTurn support](https://fixquotes.com/docs/contact/?category=clipturn): Support, feedback, and questions.
+- [About FixQuotes](https://fixquotes.com/docs/about/): Information about the publisher.
+
+## Optional
+
+- [XML sitemap](https://clipturn.app/sitemap.xml): Complete list of indexable ClipTurn pages.
+- [Video tutorial](https://www.youtube.com/watch?v=Y6s_SqiK9uw): Walkthrough of File Explorer rotation, single-video preview, and batch processing.
