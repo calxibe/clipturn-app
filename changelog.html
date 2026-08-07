@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ClipTurn Changelog — What shipped in version 1.0.1</title>
+    <title>ClipTurn Changelog — What shipped in version 1.0.2</title>
     <meta
       name="description"
-      content="What ClipTurn 1.0.1 fixes and what 1.0.0 introduced: seven file types rotated from File Explorer, codec and soundtrack preserved, exact rotation for uncompressed AVI, and an independent check before any file is replaced."
+      content="What ClipTurn 1.0.2 adds: reviewed rotated copies when exact preservation is impossible, lossless display rotation for MP4-family video, and verified H.264 conversion without overwriting the original."
     />
     <link rel="canonical" href="https://clipturn.app/changelog.html" />
     <meta name="color-scheme" content="light dark" />
@@ -15,7 +15,7 @@
     <meta name="robots" content="index,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ClipTurn" />
-    <meta property="og:title" content="ClipTurn 1.0.1 — release history" />
+    <meta property="og:title" content="ClipTurn 1.0.2 — release history" />
     <meta
       property="og:description"
       content="What every ClipTurn release changed, from physical rotation in the source codec to an independent check before any file is replaced."
@@ -26,7 +26,7 @@
     <meta property="og:image:height" content="640" />
     <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ClipTurn 1.0.1 — release history" />
+    <meta name="twitter:title" content="ClipTurn 1.0.2 — release history" />
     <meta
       name="twitter:description"
       content="What every ClipTurn release changed, from physical rotation in the source codec to an independent check before any file is replaced."
@@ -84,7 +84,7 @@
             Microsoft Store, updates arrive the same way every other Store app updates — you do not
             download anything from this page.
           </p>
-          <p class="updated">Current version 1.0.1</p>
+          <p class="updated">Current version 1.0.2</p>
         </div>
       </section>
 
@@ -92,8 +92,55 @@
         <div class="shell">
           <article class="version-card">
             <div class="version-header">
-              <h2 class="version-number" id="v1-0-1">v1.0.1</h2>
+              <h2 class="version-number" id="v1-0-2">v1.0.2</h2>
               <span class="version-badge">Latest</span>
+              <span class="version-date"><time datetime="2026-08">August 2026</time></span>
+            </div>
+
+            <div class="version-section">
+              <h3>Added</h3>
+              <ul class="feature-list">
+                <li>
+                  <strong>A safe way forward when exact preservation is impossible</strong> &mdash;
+                  ClipTurn still tries its careful preserve-and-replace rotation first. If that cannot
+                  be done, it can now explain the available alternatives and ask before creating a
+                  separate verified copy; your original is never overwritten by a conversion. If the
+                  required decoder, deinterlacing, HDR conversion or multi-video handling cannot yet be
+                  verified, ClipTurn leaves the file unchanged instead of offering a conversion it cannot prove.
+                </li>
+                <li>
+                  <strong>Lossless display rotation for MP4, M4V and MOV</strong> &mdash; The recommended
+                  fallback changes only the instruction that tells a player how to display the picture.
+                  Video, sound, HDR, Dolby Vision and metadata stay byte-for-byte unchanged, with a clear
+                  warning that some older players and editors may ignore the instruction.
+                </li>
+                <li>
+                  <strong>A physically rotated H.264 option for SDR video</strong> &mdash; When Windows can
+                  decode the source, ClipTurn can make a high-quality H.264 MP4 that works without an
+                  orientation flag. It targets the source's quality, though encoder and container differences
+                  can make the copy larger. Before you approve it, the review lists soundtrack conversion or
+                  possible video-only output, omitted tracks, metadata or timing changes, and ClipTurn verifies the finished copy.
+                  HDR video is never silently sent through this SDR route.
+                </li>
+                <li>
+                  <strong>Review a whole batch once</strong> &mdash; Videos that need a conversion wait in
+                  a review state instead of repeatedly trying the same refused rotation. The new
+                  <b>Review conversions</b> action summarizes the recommended choices together before any
+                  separate copies are created.
+                </li>
+                <li>
+                  <strong>MPEG program streams can become a separate MP4</strong> &mdash; The app can now
+                  open common MPEG program-stream files and offer the reviewed H.264 copy when this PC can
+                  decode them and encode H.264. They remain outside File Explorer's in-place rotation menu,
+                  and the original MPEG file always stays untouched.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="version-card">
+            <div class="version-header">
+              <h2 class="version-number" id="v1-0-1">v1.0.1</h2>
               <span class="version-date"><time datetime="2026-08">August 2026</time></span>
             </div>
 
@@ -232,9 +279,11 @@
             <strong>Worth knowing before you rotate</strong>
             <p>
               Compressed video is re-encoded, so rotating the same file over and over slowly costs quality;
-              only uncompressed AVI is exact. A rotation started from File Explorer replaces the file and
-              cannot be undone. Some formats need codecs Windows does not include, and MPEG-1 and MPEG-2
-              are refused permanently because Windows cannot write them at all. The
+              only uncompressed AVI has an exact physical turn. The lossless display-copy option depends on
+              the player understanding orientation metadata. A rotation started from File Explorer replaces
+              the file and cannot be undone. Some formats need codecs Windows does not include, and MPEG-1
+              and MPEG-2 can only become a separately reviewed H.264 MP4 because Windows cannot write them
+              back in their original format. The
               <a href="manual.html">user manual</a> explains each of these in full.
             </p>
           </div>
