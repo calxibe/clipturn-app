@@ -31,7 +31,11 @@ source snapshot. Committing here does not touch the app, and building the app do
 
 ## Deploying
 
-Push to `main`. GitHub Pages builds and publishes automatically.
+> **Git push policy:** The site owner pushes changes manually. Do not run `git push` unless the
+> current request explicitly asks you to push. A push instruction from an earlier task does not
+> carry forward to later work.
+
+When changes are manually pushed to `main`, GitHub Pages builds and publishes automatically.
 
 **A clean `git status` does not mean the live site is current.** The Pages build takes a few minutes,
 and Fastly caches responses for ten minutes on top of that. To check what is actually live:
