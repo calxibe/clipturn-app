@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ClipTurn Changelog — What shipped in version 1.0.2</title>
+    <title>ClipTurn Changelog — What shipped in version 1.0.3</title>
     <meta
       name="description"
-      content="What ClipTurn 1.0.2 adds: reviewed rotated copies when exact preservation is impossible, lossless display rotation for MP4-family video, and verified H.264 conversion without overwriting the original."
+      content="What ClipTurn 1.0.3 adds: right-click rotations can open the same reviewed, verified separate-copy alternatives available inside the app."
     />
     <link rel="canonical" href="https://clipturn.app/changelog.html" />
     <meta name="color-scheme" content="light dark" />
@@ -15,7 +15,7 @@
     <meta name="robots" content="index,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ClipTurn" />
-    <meta property="og:title" content="ClipTurn 1.0.2 — release history" />
+    <meta property="og:title" content="ClipTurn 1.0.3 — release history" />
     <meta
       property="og:description"
       content="What every ClipTurn release changed, from physical rotation in the source codec to an independent check before any file is replaced."
@@ -26,7 +26,7 @@
     <meta property="og:image:height" content="640" />
     <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ClipTurn 1.0.2 — release history" />
+    <meta name="twitter:title" content="ClipTurn 1.0.3 — release history" />
     <meta
       name="twitter:description"
       content="What every ClipTurn release changed, from physical rotation in the source codec to an independent check before any file is replaced."
@@ -84,7 +84,7 @@
             Microsoft Store, updates arrive the same way every other Store app updates — you do not
             download anything from this page.
           </p>
-          <p class="updated">Current version 1.0.2</p>
+          <p class="updated">Current version 1.0.3</p>
         </div>
       </section>
 
@@ -92,8 +92,30 @@
         <div class="shell">
           <article class="version-card">
             <div class="version-header">
-              <h2 class="version-number" id="v1-0-2">v1.0.2</h2>
+              <h2 class="version-number" id="v1-0-3">v1.0.3</h2>
               <span class="version-badge">Latest</span>
+              <span class="version-date"><time datetime="2026-08">August 2026</time></span>
+            </div>
+
+            <div class="version-section">
+              <h3>Added</h3>
+              <ul class="feature-list">
+                <li>
+                  <strong>Right-click rotations now lead to the same safe alternatives</strong> &mdash;
+                  If a File Explorer rotation cannot faithfully replace a video but ClipTurn has proved
+                  a separate-copy option, the result card now offers <b>Review options</b> as the clear blue
+                  primary next step, while Copy details and Close remain neutral. One file opens
+                  the single-video review; a selection opens the batch review for only the eligible videos,
+                  and nothing is created until you approve the disclosed changes. The original stays unchanged,
+                  and the same action remains available in Recent Jobs if you close the result card.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="version-card">
+            <div class="version-header">
+              <h2 class="version-number" id="v1-0-2">v1.0.2</h2>
               <span class="version-date"><time datetime="2026-08">August 2026</time></span>
             </div>
 
@@ -120,6 +142,9 @@
                   orientation flag. It targets the source's quality, though encoder and container differences
                   can make the copy larger. Before you approve it, the review lists soundtrack conversion or
                   possible video-only output, omitted tracks, metadata or timing changes, and ClipTurn verifies the finished copy.
+                  For MP4, M4V and MOV sources, supported capture dates, GPS and camera details are preserved
+                  and checked exactly before publication; timed camera/sensor tracks and metadata from other
+                  container families are still omitted.
                   HDR video is never silently sent through this SDR route.
                 </li>
                 <li>
@@ -133,6 +158,42 @@
                   open common MPEG program-stream files and offer the reviewed H.264 copy when this PC can
                   decode them and encode H.264. They remain outside File Explorer's in-place rotation menu,
                   and the original MPEG file always stays untouched.
+                </li>
+              </ul>
+            </div>
+
+            <div class="version-section">
+              <h3>Fixed</h3>
+              <ul class="feature-list">
+                <li>
+                  <strong>Batch Rotate now lines up with every other tab</strong> &mdash; ClipTurn uses
+                  one shared, slightly wider workspace across every tab. Long filenames and folder paths
+                  shorten cleanly with an ellipsis, while their complete values remain available in a tooltip.
+                </li>
+                <li>
+                  <strong>The tabs now look and line up like Windows tabs</strong> &mdash; The five navigation
+                  tabs are centered together above ClipTurn's content instead of sitting at the far-left
+                  edge of a wide window. Larger, roomier labels, clearer separators, and a stronger outline
+                  now make the navigation read as tabs at a glance. Every selected tab has the same clean
+                  top and side outline, while one straight divider continues on both sides without gaps or
+                  darker overlaps. A neutral strip separates inactive tabs
+                  from the raised active tab, whose surface joins visually with the page below. The treatment follows light, dark,
+                  and high-contrast themes; positions stay still when you switch tabs, while narrow windows
+                  retain normal scrolling and keyboard navigation.
+                </li>
+                <li>
+                  <strong>Dragging videos works naturally from every tab</strong> &mdash; Drop one file
+                  to open it in Rotate Video, or append it to the list when Batch Rotate is already open.
+                  Drop several files from anywhere to switch to Batch Rotate and append only videos not
+                  already represented in the list. Dropping a folder also opens Batch Rotate and adds its
+                  directly contained videos.
+                </li>
+                <li>
+                  <strong>Separate copies keep the original file dates</strong> &mdash; A reviewed
+                  display or H.264 copy could appear in Explorer as newly created and newly modified.
+                  It now keeps the source's <b>Date created</b>, while <b>Date modified</b> follows
+                  the existing preservation setting. If Windows cannot apply a requested date,
+                  ClipTurn says so in the result instead of hiding it.
                 </li>
               </ul>
             </div>

@@ -37,8 +37,8 @@
         "@context": "https://schema.org",
         "@type": "TechArticle",
         "headline": "ClipTurn User Manual",
-        "description": "Complete instructions and reference information for ClipTurn version 1.0.0.",
-        "dateModified": "2026-08-06",
+        "description": "Complete instructions and reference information for ClipTurn version 1.0.3.",
+        "dateModified": "2026-08-08",
         "inLanguage": "en",
         "about": {
           "@type": "SoftwareApplication",
@@ -94,7 +94,7 @@
       <header class="manual-hero">
         <div class="shell manual-hero-grid">
           <div>
-            <p class="eyebrow">ClipTurn 1.0.0 · Windows 11</p>
+            <p class="eyebrow">ClipTurn 1.0.3 · Windows 11</p>
             <h1>The complete ClipTurn manual.</h1>
             <p class="manual-hero-lede">
               From a single right-click to a carefully controlled batch, this guide explains every
@@ -325,9 +325,10 @@
             </div>
             <h3>Drag-and-drop behavior</h3>
             <ul class="manual-check-list">
-              <li>When <strong>Batch Rotate</strong> is selected, dropped files and folders are added to the batch list.</li>
-              <li>On any other selected tab, drop exactly one supported video to open it on <strong>Rotate Video</strong>.</li>
-              <li>A folder dropped into Batch adds supported videos directly inside it; subfolders are not searched.</li>
+              <li>Drop exactly one file to switch to <strong>Rotate Video</strong> and open it, unless Batch Rotate is already selected.</li>
+              <li>While <strong>Batch Rotate</strong> is selected, dropping even one file appends it to the list.</li>
+              <li>Drop multiple files anywhere to switch to <strong>Batch Rotate</strong> and append files not already represented in the list.</li>
+              <li>A folder dropped anywhere switches to Batch Rotate and adds supported videos directly inside it; subfolders are not searched.</li>
               <li>You cannot change the selected source while a rotation may still own it.</li>
             </ul>
           </section>
@@ -382,12 +383,12 @@
               <button
                 class="screenshot-button"
                 type="button"
-                data-lightbox="assets/screenshots/store-05-explorer-flyout.png"
+                data-lightbox="assets/screenshots/store-01-explorer-flyout.png"
                 data-caption="ClipTurn adds rotate left, rotate right, and open commands to supported videos in File Explorer."
                 aria-label="Enlarge the File Explorer workflow screenshot"
               >
                 <img
-                  src="assets/screenshots/store-05-explorer-flyout.png"
+                  src="assets/screenshots/store-01-explorer-flyout.png"
                   width="1920"
                   height="1080"
                   alt="ClipTurn workflow in File Explorer, from right-click to verified result"
@@ -407,16 +408,20 @@
               <li>It appears without stealing keyboard focus and shows progress while the worker runs.</li>
               <li>A clean success closes automatically after a short countdown; interacting with the card keeps it open.</li>
               <li>Mixed results or failures remain open until you close them.</li>
+              <li>If ClipTurn proves a separate-copy alternative for an unchanged source, select the blue <strong>Review options</strong> button to open the same explicit review used inside the app. <strong>Copy details</strong> and <strong>Close</strong> remain neutral so the next step is unambiguous. A one-file Explorer request opens Rotate Video; every multi-file request opens Batch Rotate with only its reviewable files, even when just one is eligible.</li>
               <li>Select <strong>Copy details</strong>, or press <kbd>Ctrl</kbd>+<kbd>C</kbd>, to copy the complete report.</li>
-              <li>Use the mouse wheel or <kbd>Up</kbd>, <kbd>Down</kbd>, <kbd>Page Up</kbd>, <kbd>Page Down</kbd>, <kbd>Home</kbd>, and <kbd>End</kbd> to read a long report. <kbd>Esc</kbd> closes it.</li>
+              <li>Use <kbd>Tab</kbd> or <kbd>Shift</kbd>+<kbd>Tab</kbd> to reach a card button and <kbd>Enter</kbd> or <kbd>Space</kbd> to activate it. Use the mouse wheel or <kbd>Up</kbd>, <kbd>Down</kbd>, <kbd>Page Up</kbd>, <kbd>Page Down</kbd>, <kbd>Home</kbd>, and <kbd>End</kbd> to read a long report. <kbd>Esc</kbd> closes it.</li>
             </ul>
             <div class="manual-callout danger">
               <strong>Explorer rotations have no undo copy.</strong>
               <p>
-                The app’s backup setting does not apply here. A successful Explorer rotation replaces the source
-                after verification and removes its temporary rollback material. To preview or keep a backup, use
-                <strong>Open in ClipTurn</strong> instead. That command loads the selected file on Rotate Video;
-                open <strong>Details</strong> there when you want the full inspection window.
+                The app’s backup setting does not apply to the automatic preserve-and-replace request. A successful
+                Explorer rotation replaces the source after verification and removes its temporary rollback material.
+                If that safe replacement is impossible, <strong>Review options</strong> can open a separately named
+                copy choice in the app; the original remains unchanged and the copy does not start without approval.
+                To preview first or keep a replacement backup, use <strong>Open in ClipTurn</strong> instead. That
+                command loads the selected file on Rotate Video; open <strong>Details</strong> there when you want the
+                full inspection window.
               </p>
             </div>
             <div class="manual-callout warning">
@@ -435,12 +440,12 @@
               <button
                 class="screenshot-button"
                 type="button"
-                data-lightbox="assets/screenshots/store-01-rotate-video-dark.png"
+                data-lightbox="assets/screenshots/store-03-rotate-video-dark.png"
                 data-caption="Rotate Video lets you preview left, right, or 180-degree rotation before saving."
                 aria-label="Enlarge the Rotate Video screenshot"
               >
                 <img
-                  src="assets/screenshots/store-01-rotate-video-dark.png"
+                  src="assets/screenshots/store-03-rotate-video-dark.png"
                   width="1366"
                   height="854"
                   alt="ClipTurn Rotate Video tab with preview, direction controls, and Save rotation"
@@ -455,7 +460,7 @@
                   <h3>Open the source</h3>
                   <p>
                     Select <strong>Locate file</strong> or <strong>Locate a video</strong>, then choose one supported file.
-                    You can also drop one supported video anywhere in the window while Batch Rotate is not selected.
+                    You can also drop one supported video anywhere outside an already selected Batch Rotate tab; ClipTurn switches to Rotate Video automatically.
                   </p>
                 </div>
               </li>
@@ -562,21 +567,21 @@
             <p class="eyebrow">Workflow 3</p>
             <h2>Batch Rotate</h2>
             <p class="manual-lede">
-              Batch Rotate applies one selected direction to a list. Every row is still its own job, so one refusal does not hide or stop the others.
+              Batch Rotate applies one selected direction to a list. Every row is still its own job, so a refusal or a reviewed-copy choice does not hide or stop the others.
             </p>
             <div class="manual-screenshot">
               <button
                 class="screenshot-button"
                 type="button"
-                data-lightbox="assets/screenshots/store-02-batch-rotate.png"
-                data-caption="Batch Rotate shows file information, status, and a separate result for each video."
+                data-lightbox="assets/screenshots/store-04-batch-rotate.png"
+                data-caption="Batch Rotate shows four verified replacements and two videos waiting for explicit conversion review."
                 aria-label="Enlarge the Batch Rotate screenshot"
               >
                 <img
-                  src="assets/screenshots/store-02-batch-rotate.png"
+                  src="assets/screenshots/store-04-batch-rotate.png"
                   width="1366"
                   height="854"
-                  alt="ClipTurn Batch Rotate tab with multiple videos and per-file statuses"
+                  alt="ClipTurn Batch Rotate tab with verified rotations and two Review available rows"
                   loading="lazy"
                 />
                 <span class="zoom-label" aria-hidden="true">View larger</span>
@@ -584,12 +589,43 @@
             </div>
             <ol class="manual-steps">
               <li><div><h3>Choose one direction</h3><p>Select <strong>Rotate left 90°</strong>, <strong>Rotate right 90°</strong>, or <strong>Rotate 180°</strong>. The initial selection is right 90°. The selected direction applies to every eligible row started in that run.</p></div></li>
-              <li><div><h3>Add files</h3><p>Select <strong>Add videos</strong> for a multi-file picker, or drop files and folders while Batch Rotate is selected. You can stop a slow folder read with <strong>Stop adding</strong>; rows already read remain in the list.</p></div></li>
-              <li><div><h3>Review the list</h3><p>Each row shows the filename and folder, Length, displayed Resolution, Size, Status, and a selectable reason when relevant. A dash means metadata could not be read; it is not itself a rotation verdict.</p></div></li>
+              <li><div><h3>Add files</h3><p>Select <strong>Add videos</strong> for a multi-file picker, drop one or more files while Batch Rotate is selected, or drop multiple files or a folder anywhere in ClipTurn. The app switches to Batch Rotate when needed and skips files already represented in the list. You can stop a slow folder read with <strong>Stop adding</strong>; rows already read remain in the list.</p></div></li>
+              <li><div><h3>Review the list</h3><p>Each row shows the filename and folder, Length, displayed Resolution, Size, Status, and a selectable reason when relevant. Long filenames and folder paths end in an ellipsis; point to either line to see its complete value. A dash means metadata could not be read; it is not itself a rotation verdict.</p></div></li>
               <li><div><h3>Remove what you do not want</h3><p>Use <strong>Remove selected</strong> or <strong>Clear list</strong> before starting. Rows committed to an active run cannot be removed.</p></div></li>
               <li><div><h3>Start the work</h3><p>Select <strong>Rotate the list</strong>. ClipTurn snapshots the eligible rows, chosen direction, and current settings. Maximum concurrent jobs controls how many workers can run at once.</p></div></li>
-              <li><div><h3>Read every result</h3><p>One file may rotate while another safely refuses. The status and complete reason stay with each row, and the durable record is also written to Recent Jobs.</p></div></li>
+              <li><div><h3>Read every result</h3><p>One file may rotate while another safely refuses or stops at <strong>Review available</strong>. The status and complete reason stay with each row, and the durable record is also written to Recent Jobs.</p></div></li>
             </ol>
+            <h3>Review conversions before creating separate copies</h3>
+            <p>
+              Preserve-and-replace is always tried first. If the exact source cannot be replaced faithfully but
+              this PC proves it can start a separate-copy route, the row stops at <strong>Review available</strong>. Select
+              <strong>Review conversions</strong> to see the recommended strategy and every relevant change before
+              anything else starts.
+            </p>
+            <div class="manual-screenshot">
+              <button
+                class="screenshot-button"
+                type="button"
+                data-lightbox="assets/screenshots/store-09-reviewed-copies.png"
+                data-caption="The batch review discloses the lossless display route and the physical H.264 route before approval."
+                aria-label="Enlarge the reviewed rotated copies screenshot"
+              >
+                <img
+                  src="assets/screenshots/store-09-reviewed-copies.png"
+                  width="1366"
+                  height="854"
+                  alt="ClipTurn Review rotated copies dialog listing exact changes for a display-orientation copy and an H.264 copy"
+                  loading="lazy"
+                />
+                <span class="zoom-label" aria-hidden="true">View larger</span>
+              </button>
+            </div>
+            <ul class="manual-check-list">
+              <li>A lossless MP4, M4V, or MOV display copy changes only the orientation instruction; some older players and editors may ignore it.</li>
+              <li>An eligible SDR compatibility copy physically rotates the picture into H.264 MP4 and lists its wider codec, track, metadata, and timing boundary.</li>
+              <li>Approved outputs are verified, saved beside their sources under new names, and never replace the originals.</li>
+              <li>Changing the source after review invalidates the old approval; ClipTurn checks the exact reviewed fingerprint again before processing.</li>
+            </ul>
             <h3>What happens when you add a folder</h3>
             <ul class="manual-check-list">
               <li>Only supported files directly inside that folder are added.</li>
@@ -618,6 +654,8 @@
                   <tr><th scope="row">Waiting</th><td>The row belongs to the current run and is waiting for an available worker slot.</td><td>Not while the run is active; after a stop it returns to Not started if untouched</td></tr>
                   <tr><th scope="row">Rotating</th><td>A worker is processing or verifying the file.</td><td>No; wait for the terminal result</td></tr>
                   <tr><th scope="row">Rotated</th><td>The verified result replaced the source.</td><td>No; ClipTurn prevents an accidental second turn</td></tr>
+                  <tr><th scope="row">Review available</th><td>Exact replacement stopped safely, the source is unchanged, and ClipTurn has a proven separate-copy option for review.</td><td>No; use Review conversions and approve the disclosed choice explicitly</td></tr>
+                  <tr><th scope="row">Rotated copy created</th><td>A separately named output passed verification; the original was not replaced.</td><td>No; the reviewed request is complete</td></tr>
                   <tr><th scope="row">Refused safely</th><td>No faithful strategy was available and the source is proven unchanged.</td><td>Yes, if you first change the relevant setting or PC capability</td></tr>
                   <tr><th scope="row">Failed</th><td>The attempt failed before modifying the source, or the source could not be found.</td><td>Yes, after fixing the cause</td></tr>
                   <tr><th scope="row">Cannot rotate</th><td>The path or file type has a permanent refusal in this list.</td><td>No; remove it</td></tr>
@@ -654,13 +692,14 @@
               <li>The requested direction, overall status, local time, and job ID.</li>
               <li>Up to ten per-file outcomes for a completed request.</li>
               <li>The full path, whether the source was replaced, stayed unchanged, or may have changed, and the worker’s exact message.</li>
+              <li>A <strong>Review options</strong> action when the validated result still has one or more separate-copy choices, including results first shown by File Explorer.</li>
               <li>For a request still awaiting a result, up to five queued paths so you can identify the work.</li>
             </ul>
             <div class="manual-callout info">
               <strong>The page shows the ten newest jobs.</strong>
               <p>
                 Older job records can remain in ClipTurn’s local data folder even though the interface shows only ten.
-                There is no Clear history button in version 1.0.0. Uninstalling the app removes its packaged local data;
+                There is no Clear history button in version 1.0.3. Uninstalling the app removes its packaged local data;
                 rotated files and backups remain where you saved them.
               </p>
             </div>
@@ -677,12 +716,12 @@
               <button
                 class="screenshot-button"
                 type="button"
-                data-lightbox="assets/screenshots/store-06-file-details.png"
+                data-lightbox="assets/screenshots/store-08-file-details.png"
                 data-caption="Video Details shows the receipt state and only the verification facts ClipTurn actually recorded."
                 aria-label="Enlarge the ClipTurn Video Details screenshot"
               >
                 <img
-                  src="assets/screenshots/store-06-file-details.png"
+                  src="assets/screenshots/store-08-file-details.png"
                   width="1366"
                   height="854"
                   alt="ClipTurn Video Details with verification state and file information"
@@ -832,7 +871,7 @@
             <h2>Choose a processing policy</h2>
             <div class="manual-table-wrap">
               <table>
-                <thead><tr><th scope="col">Policy</th><th scope="col">Fidelity requirement</th><th scope="col">Size rule</th><th scope="col">Practical coverage in 1.0.0</th></tr></thead>
+                <thead><tr><th scope="col">Policy</th><th scope="col">Fidelity requirement</th><th scope="col">Size rule</th><th scope="col">Practical coverage in 1.0.3</th></tr></thead>
                 <tbody>
                   <tr>
                     <th scope="row">Keep codec and quality <span class="manual-badge">Recommended</span></th>
@@ -990,7 +1029,7 @@
             </p>
             <div class="manual-table-wrap manual-format-table">
               <table>
-                <thead><tr><th scope="col">Container</th><th scope="col">Extensions</th><th scope="col">Picture path in version 1.0.0</th><th scope="col">Main boundaries</th></tr></thead>
+                <thead><tr><th scope="col">Container</th><th scope="col">Extensions</th><th scope="col">Picture path in version 1.0.3</th><th scope="col">Main boundaries</th></tr></thead>
                 <tbody>
                   <tr>
                     <th scope="row">MP4 family</th>
@@ -1025,13 +1064,14 @@
                 </tbody>
               </table>
             </div>
-            <h3>Permanently unsupported MPEG-family paths</h3>
+            <h3>MPEG program streams use reviewed copies in the app</h3>
             <p>
-              <code>.mpg</code>, <code>.mpeg</code>, <code>.mod</code>, <code>.tod</code>, <code>.m2v</code>,
-              <code>.mpv</code>, and <code>.vob</code> are not registered in File Explorer and are refused if submitted
-              another way. Windows provides MPEG playback components but no matching MPEG-1/MPEG-2 encoder for a turned
-              replacement. The MPEG-2 Video Extension therefore does not add a safe output path. A VOB also belongs to
-              DVD-Video navigation structures that would be broken by replacing it alone.
+              <code>.mpg</code>, <code>.mpeg</code>, <code>.mod</code>, and <code>.tod</code> remain absent from File
+              Explorer's in-place commands because Windows has no matching MPEG-1/MPEG-2 encoder. The app picker,
+              drag-and-drop, and batch folder scan can accept them and offer a reviewed, physically rotated H.264 MP4
+              copy when this PC proves the required decode and encode paths. The MPEG source stays unchanged. Raw
+              elementary streams such as <code>.m2v</code>/<code>.mpv</code> and DVD objects such as <code>.vob</code>
+              retain their refusal boundaries.
             </p>
           </section>
 
@@ -1047,6 +1087,8 @@
                   <li>Eligible 8-bit HEVC stays HEVC when a usable encoder exists. If none does, a permitted H.264 fallback is named clearly in the result.</li>
                   <li>Eligible HEVC Main10 can stay 10-bit P010/Main10 with supported BT.2020/PQ and declared HDR10 static metadata only when a Main10 encoder accepts it. It never falls back to 8-bit.</li>
                   <li>The writer preserves supported capture/media-created time, camera/GPS/time-zone metadata, audio language, colour declarations, display geometry, and the compatible major container brand, then verifies the promised result.</li>
+                  <li>If faithful replacement is refused, a reviewed H.264 compatibility copy keeps MP4/M4V/MOV movie times, complete movie-level identity metadata—including GPS and camera details—and retained track languages. An independent reader compares the exact values and bytes before publication; failure leaves the source unchanged and publishes no copy.</li>
+                  <li>That compatibility copy deliberately remains a standard MP4 instead of inheriting a MOV/M4V brand. Extra soundtrack, subtitle, chapter, timecode, per-frame sensor and other auxiliary tracks can still be omitted as listed in the approval dialog; metadata from non-MP4 source containers is not yet mapped into the new MP4.</li>
                   <li>Ordinary iPhone timecode or sensor metadata tracks may be dropped with an explicit note. A Live Photo MOV is refused so the separately paired still image is not broken.</li>
                   <li>Fragmented files, a second video or audio track, subtitles, chapters, unknown tracks, non-square or fractional display geometry, field-coded/interlaced H.264, HLG transfer 18, sRGB transfer 13, and certain rewritten colour matrices refuse.</li>
                   <li>Dolby Vision enhancement metadata cannot survive this path. When an eligible base HDR layer can be preserved, the result names the dropped enhancement metadata.</li>
@@ -1062,7 +1104,7 @@
                   <li>Every admitted audio track is copied as compressed packets and verified by counts, bytes, and payload hashes. If exact copy cannot be proven, the file refuses.</li>
                   <li>Multiple audio tracks, SubRip/UTF-8 text, Matroska WebVTT text, track language/name/default/forced flags, attachments, tags, IDs, date, title, and supported display/colour data can be carried within verified limits.</li>
                   <li>Chapters, a second video track, PGS/VobSub/DVB/BMP bitmap subtitles, ASS/SSA and other styled scripts, unknown subtitle types, or content encodings ClipTurn cannot preserve are refused rather than stripped.</li>
-                  <li>10-bit HDR MKV is refused in version 1.0.0 because the output path cannot preserve the required declarations faithfully.</li>
+                  <li>10-bit HDR MKV is refused in version 1.0.3 because the output path cannot preserve the required declarations faithfully.</li>
                 </ul>
               </div>
             </details>
@@ -1160,7 +1202,7 @@
                   <tr><th scope="row">VP8 or VP9 / WebM</th><td>Install Microsoft’s free <strong>VP9 Video Extensions</strong>, restart affected apps if needed, then Analyze this PC again.</td><td>Required even when the source is VP8; ClipTurn’s bundled VP8 encoder does not supply the Windows decode path.</td></tr>
                   <tr><th scope="row">HEVC Main 8-bit</th><td>Install a compatible Microsoft/OEM <strong>HEVC Video Extensions</strong> package if the app provides that link.</td><td>The Microsoft package can be separately priced. An eligible 8-bit source may use a named H.264 fallback; not every HEVC layout is eligible.</td></tr>
                   <tr><th scope="row">HEVC Main10 encode</th><td>Install current graphics/chipset drivers from the exact PC or GPU manufacturer, restart, and analyze again; otherwise use another capable PC.</td><td>There is no generic Store package that guarantees a Main10 hardware encoder. ClipTurn never reduces 10-bit video to 8-bit silently.</td></tr>
-                  <tr><th scope="row">AV1 decode</th><td>Install Microsoft’s free <strong>AV1 Video Extension</strong> when the app offers it.</td><td>This can add decoding only; ClipTurn 1.0.0 has no AV1 output path, so an AV1 source may still refuse.</td></tr>
+                  <tr><th scope="row">AV1 decode</th><td>Install Microsoft’s free <strong>AV1 Video Extension</strong> when the app offers it.</td><td>This can add decoding only; ClipTurn 1.0.3 has no AV1 output path, so an AV1 source may still refuse.</td></tr>
                   <tr><th scope="row">Media Foundation unavailable on Windows N</th><td>Open Windows Settings → System → Optional features and install the free <strong>Media Feature Pack</strong>.</td><td>Restart Windows and analyze again after installation.</td></tr>
                   <tr><th scope="row">Vorbis playback component</th><td>Use the official <strong>Web Media Extensions</strong> action if ClipTurn names it.</td><td>WebM still has its own exact-audio and layout gates.</td></tr>
                   <tr><th scope="row">AC-3/E-AC-3 decode on newer Windows 11</th><td>Some systems rely on a device manufacturer’s codec; there may be no Microsoft Store restoration.</td><td>MKV exact packet passthrough can sometimes avoid audio decode, but other paths can refuse.</td></tr>
@@ -1188,7 +1230,7 @@
               <table>
                 <thead><tr><th scope="col">Message theme</th><th scope="col">What usually caused it</th><th scope="col">Useful response</th></tr></thead>
                 <tbody>
-                  <tr><th scope="row">Unsupported extension</th><td>The suffix is outside MP4, M4V, MOV, MKV, AVI, WMV, and WebM, or is a permanently unsupported MPEG family.</td><td>Use a supported source container. Renaming the extension does not convert a file.</td></tr>
+                  <tr><th scope="row">Unsupported extension</th><td>The suffix is outside MP4, M4V, MOV, MKV, AVI, WMV, WebM, MPG, MPEG, MOD, and TOD, or is a raw MPEG stream/DVD object the app cannot treat as one safe video.</td><td>Use a supported source container. Renaming the extension does not convert a file.</td></tr>
                   <tr><th scope="row">Cannot be rotated sample-exactly</th><td>Strict or Exact was selected for compressed video.</td><td>Choose Keep codec and quality only if one quality-preserving picture re-encode is acceptable.</td></tr>
                   <tr><th scope="row">Decoder or encoder missing</th><td>Windows has no exact media component required by this route.</td><td>Use System Capabilities and the precise official action shown; analyze again afterward.</td></tr>
                   <tr><th scope="row">Unsupported picture layout</th><td>Examples include interlaced H.264, 10-bit MKV, WebM alpha/wider chroma, AVI chroma subsampling, non-square MP4 geometry, HLG, or a professional/lossless codec.</td><td>Changing policy usually does not help. Preserve the source or use a controlled conversion tool first.</td></tr>
@@ -1277,7 +1319,7 @@
             <div class="manual-callout info">
               <strong>No hidden app-specific shortcut set.</strong>
               <p>
-                Version 1.0.0 relies on standard WinUI keyboard behavior rather than undocumented custom shortcuts.
+                Version 1.0.3 relies on standard WinUI keyboard behavior rather than undocumented custom shortcuts.
                 Visible buttons remain the authoritative commands.
               </p>
             </div>
@@ -1475,7 +1517,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <span>Manual for ClipTurn 1.0.0</span>
+          <span>Manual for ClipTurn 1.0.3</span>
         </div>
       </div>
     </footer>
@@ -1483,7 +1525,7 @@
     <dialog class="lightbox" id="image-lightbox" aria-label="Screenshot preview">
       <button class="lightbox-close" type="button" aria-label="Close screenshot">✕</button>
       <figure class="lightbox-figure">
-        <img src="assets/screenshots/store-01-rotate-video-dark.png" alt="" />
+        <img src="assets/screenshots/store-03-rotate-video-dark.png" alt="" />
         <figcaption class="lightbox-caption"></figcaption>
       </figure>
     </dialog>

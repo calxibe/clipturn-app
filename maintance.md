@@ -137,7 +137,7 @@ Before pushing, sanity-check links and structured data:
 ```bash
 grep -n 'site\.css?v=' *.html                  # must return no matches
 grep -n 'rel="stylesheet"' *.html             # every page must use the expected plain CSS URL
-grep -c '9PGB9JVBRGLB' *.html                  # Store id, 18 occurrences across 6 files
+grep -c '9PGB9JVBRGLB' *.html                  # Store id, 20 occurrences across 6 files
 ```
 
 ---
@@ -441,7 +441,7 @@ A full audit is on file separately. The ones most worth fixing:
 - 180° rotation ships in the app but is not mentioned on any marketing page.
 - Printing `index.html` loses the workflow steps and the whole limits section to white-on-white text.
 - 14 scrollable tables in `manual.html` are not keyboard-reachable.
-- `assets/screenshots/store-05-explorer-flyout.png` is 349 KB, roughly 4.4× larger than needed.
+- `assets/screenshots/store-01-explorer-flyout.png` is 350 KB, roughly 4.4× larger than needed.
   `og.png` is 282 KB and `favicon.ico` is 79 KB, both far heavier than they need to be.
 - The home page `<title>` does not contain "Windows 11", which is in almost every real search query
   for this product.
