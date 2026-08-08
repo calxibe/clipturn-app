@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">ClipTurn</title>
+  <desc id="desc">A video frame surrounded by two rotation arrows, in one colour</desc>
+  <g fill="none" stroke="currentColor" stroke-width="58" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="250" y="326" width="524" height="372" rx="58" stroke-width="46"/>
+    <path d="M260 308 C352 190 526 144 680 202 C731 221 776 250 812 287"/>
+    <path d="M790 208 L830 310 L722 326"/>
+    <path d="M764 716 C672 834 498 880 344 822 C293 803 248 774 212 737"/>
+    <path d="M234 816 L194 714 L302 698"/>
+  </g>
+  <path d="M470 424 L470 600 L626 512 Z" fill="currentColor"/>
+</svg>

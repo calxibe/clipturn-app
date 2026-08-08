@@ -37,7 +37,7 @@
         "@context": "https://schema.org",
         "@type": "TechArticle",
         "headline": "ClipTurn User Manual",
-        "description": "Complete instructions and reference information for ClipTurn version 1.0.3.",
+        "description": "Complete instructions and reference information for ClipTurn version 1.0.4.",
         "dateModified": "2026-08-08",
         "inLanguage": "en",
         "about": {
@@ -53,6 +53,7 @@
         }
       }
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-26WWFWZZMP"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-26WWFWZZMP");</script>
   </head>
   <body class="manual-page">
     <a class="skip-link" href="#manual-content">Skip to manual</a>
@@ -94,7 +95,7 @@
       <header class="manual-hero">
         <div class="shell manual-hero-grid">
           <div>
-            <p class="eyebrow">ClipTurn 1.0.3 · Windows 11</p>
+            <p class="eyebrow">ClipTurn 1.0.4 · Windows 11</p>
             <h1>The complete ClipTurn manual.</h1>
             <p class="manual-hero-lede">
               From a single right-click to a carefully controlled batch, this guide explains every
@@ -699,7 +700,7 @@
               <strong>The page shows the ten newest jobs.</strong>
               <p>
                 Older job records can remain in ClipTurn’s local data folder even though the interface shows only ten.
-                There is no Clear history button in version 1.0.3. Uninstalling the app removes its packaged local data;
+                There is no Clear history button in version 1.0.4. Uninstalling the app removes its packaged local data;
                 rotated files and backups remain where you saved them.
               </p>
             </div>
@@ -871,7 +872,7 @@
             <h2>Choose a processing policy</h2>
             <div class="manual-table-wrap">
               <table>
-                <thead><tr><th scope="col">Policy</th><th scope="col">Fidelity requirement</th><th scope="col">Size rule</th><th scope="col">Practical coverage in 1.0.3</th></tr></thead>
+                <thead><tr><th scope="col">Policy</th><th scope="col">Fidelity requirement</th><th scope="col">Size rule</th><th scope="col">Practical coverage in 1.0.4</th></tr></thead>
                 <tbody>
                   <tr>
                     <th scope="row">Keep codec and quality <span class="manual-badge">Recommended</span></th>
@@ -1027,9 +1028,13 @@
               The extension gets a file into ClipTurn; it does not guarantee that the codec, bit depth, track layout,
               geometry, metadata, and installed Windows components inside that file can all be preserved.
             </p>
+            <p>
+              For measured evidence rather than a container-level overview, see the
+              <a href="tested-formats.html">99 real files, codecs, profiles, and outcomes in the tested-formats matrix</a>.
+            </p>
             <div class="manual-table-wrap manual-format-table">
               <table>
-                <thead><tr><th scope="col">Container</th><th scope="col">Extensions</th><th scope="col">Picture path in version 1.0.3</th><th scope="col">Main boundaries</th></tr></thead>
+                <thead><tr><th scope="col">Container</th><th scope="col">Extensions</th><th scope="col">Picture path in version 1.0.4</th><th scope="col">Main boundaries</th></tr></thead>
                 <tbody>
                   <tr>
                     <th scope="row">MP4 family</th>
@@ -1104,7 +1109,7 @@
                   <li>Every admitted audio track is copied as compressed packets and verified by counts, bytes, and payload hashes. If exact copy cannot be proven, the file refuses.</li>
                   <li>Multiple audio tracks, SubRip/UTF-8 text, Matroska WebVTT text, track language/name/default/forced flags, attachments, tags, IDs, date, title, and supported display/colour data can be carried within verified limits.</li>
                   <li>Chapters, a second video track, PGS/VobSub/DVB/BMP bitmap subtitles, ASS/SSA and other styled scripts, unknown subtitle types, or content encodings ClipTurn cannot preserve are refused rather than stripped.</li>
-                  <li>10-bit HDR MKV is refused in version 1.0.3 because the output path cannot preserve the required declarations faithfully.</li>
+                  <li>10-bit HDR MKV is refused in version 1.0.4 because the output path cannot preserve the required declarations faithfully.</li>
                 </ul>
               </div>
             </details>
@@ -1202,7 +1207,7 @@
                   <tr><th scope="row">VP8 or VP9 / WebM</th><td>Install Microsoft’s free <strong>VP9 Video Extensions</strong>, restart affected apps if needed, then Analyze this PC again.</td><td>Required even when the source is VP8; ClipTurn’s bundled VP8 encoder does not supply the Windows decode path.</td></tr>
                   <tr><th scope="row">HEVC Main 8-bit</th><td>Install a compatible Microsoft/OEM <strong>HEVC Video Extensions</strong> package if the app provides that link.</td><td>The Microsoft package can be separately priced. An eligible 8-bit source may use a named H.264 fallback; not every HEVC layout is eligible.</td></tr>
                   <tr><th scope="row">HEVC Main10 encode</th><td>Install current graphics/chipset drivers from the exact PC or GPU manufacturer, restart, and analyze again; otherwise use another capable PC.</td><td>There is no generic Store package that guarantees a Main10 hardware encoder. ClipTurn never reduces 10-bit video to 8-bit silently.</td></tr>
-                  <tr><th scope="row">AV1 decode</th><td>Install Microsoft’s free <strong>AV1 Video Extension</strong> when the app offers it.</td><td>This can add decoding only; ClipTurn 1.0.3 has no AV1 output path, so an AV1 source may still refuse.</td></tr>
+                  <tr><th scope="row">AV1 decode</th><td>Install Microsoft’s free <strong>AV1 Video Extension</strong> when the app offers it.</td><td>This can add decoding only; ClipTurn 1.0.4 has no AV1 output path, so an AV1 source may still refuse.</td></tr>
                   <tr><th scope="row">Media Foundation unavailable on Windows N</th><td>Open Windows Settings → System → Optional features and install the free <strong>Media Feature Pack</strong>.</td><td>Restart Windows and analyze again after installation.</td></tr>
                   <tr><th scope="row">Vorbis playback component</th><td>Use the official <strong>Web Media Extensions</strong> action if ClipTurn names it.</td><td>WebM still has its own exact-audio and layout gates.</td></tr>
                   <tr><th scope="row">AC-3/E-AC-3 decode on newer Windows 11</th><td>Some systems rely on a device manufacturer’s codec; there may be no Microsoft Store restoration.</td><td>MKV exact packet passthrough can sometimes avoid audio decode, but other paths can refuse.</td></tr>
@@ -1319,7 +1324,7 @@
             <div class="manual-callout info">
               <strong>No hidden app-specific shortcut set.</strong>
               <p>
-                Version 1.0.3 relies on standard WinUI keyboard behavior rather than undocumented custom shortcuts.
+                Version 1.0.4 relies on standard WinUI keyboard behavior rather than undocumented custom shortcuts.
                 Visible buttons remain the authoritative commands.
               </p>
             </div>
@@ -1501,6 +1506,7 @@
             <ul class="footer-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="manual.html" aria-current="page">User manual</a></li>
+              <li><a href="tested-formats.html">Tested formats</a></li>
               <li><a href="pricing.html">Pricing</a></li>
               <li><a href="changelog.html">Changelog</a></li>
               <li><a href="https://apps.microsoft.com/detail/9PGB9JVBRGLB" target="_blank" rel="noopener">Microsoft Store</a></li>
@@ -1512,12 +1518,13 @@
               <li><a href="privacy.html">Privacy policy</a></li>
               <li><a href="terms.html">Terms of use</a></li>
               <li><a href="https://fixquotes.com/docs/contact/?category=clipturn" target="_blank" rel="noopener">Contact us</a></li>
+              <li><a href="media.html">Media</a></li>
               <li><a href="https://fixquotes.com/docs/about/" target="_blank" rel="noopener">About the publisher</a></li>
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
-          <span>Manual for ClipTurn 1.0.3</span>
+          <span>Manual for ClipTurn 1.0.4</span>
         </div>
       </div>
     </footer>

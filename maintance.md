@@ -18,13 +18,15 @@ source snapshot. Committing here does not touch the app, and building the app do
 | `index.html` | Home page — the only page most visitors see |
 | `pricing.html` | Price, what is included, workflow comparison table |
 | `manual.html` | The full user manual, ~6,800 words on one page |
+| `tested-formats.html` | Public real-file evidence matrix for tested containers, codecs, profiles and outcomes |
 | `changelog.html` | Release history — see the rules below |
+| `media.html` | Downloadable brand assets, product screenshots and video links |
 | `privacy.html`, `terms.html` | Legal pages |
 | `404.html` | Served by GitHub Pages for any unknown URL |
 | `site.css` | Every style for every page, one file |
 | `site.js` | Mobile menu, screenshot lightbox, video facade |
 | `manual.js` | Manual search and table of contents only |
-| `sitemap.xml`, `robots.txt`, `llms.txt`, `manifest.webmanifest` | Crawler, LLM and PWA metadata |
+| `sitemap.xml`, `robots.txt`, `llms.txt`, `pad.xml`, `manifest.webmanifest` | Crawler, LLM, software-directory and PWA metadata |
 | `CNAME`, `.nojekyll` | GitHub Pages custom domain, and "do not run Jekyll" |
 
 ---
@@ -255,6 +257,58 @@ skip and breaks screen-reader navigation.
 
 ---
 
+## The tested-formats evidence page
+
+`tested-formats.html` is a first-party test record, not a blanket supported-codecs claim. Its facts
+come from three places: `../latest/version.json` for the product version, the final zero-failure
+media-corpus `results.csv` and reviewed-copy summary for observed outcomes, and
+`../latest/docs/test-corpus.md` for the technical identity and provenance of each fixture. Never
+infer a successful route from an extension, a codec name, or an earlier run.
+
+Update the page whenever the committed corpus, processing routes, expected outcomes, or final audit
+changes materially. A changelog-only edit does not require changing the matrix. Before publishing:
+
+1. Run the complete corpus from `../test/Orginal` with the Release NativeAOT worker for the stated
+   architecture. Complete every preferred reviewed-copy route, not just the preservation-first pass.
+2. Make the visible version, audit date, Windows platform, architecture, direction, totals, table
+   caption, metadata, and JSON-LD agree. The version always comes from `version.json`.
+3. Account for every fixture exactly once. Aggregate only files whose extension, container, picture
+   codec/profile/bit-depth/chroma, materially relevant track structure, and observed route agree.
+   The `data-samples` values must add up to the visible source count.
+4. Reconcile the four route totals from `data-route`: `replacement`, `display`, `h264`, and
+   `refusal`. A safe refusal is a passing guardrail only when the expected reason was returned and
+   the source stayed unchanged; it must never be described as support for rotating that format.
+5. Keep known gaps visible. Do not silently turn an absent profile, architecture, professional
+   editor, or playback environment into an implied success.
+6. Keep the matrix in static semantic HTML. Its scrollable wrapper must remain keyboard-focusable,
+   the table needs a visible caption and scoped headers, and every JSON-LD statement must also be
+   visible on the page. Do not replace rows with client-rendered data.
+7. Update the primary navigation and Product footer in all seven navigation-bearing pages, the
+   contextual links on the home page and manual, `sitemap.xml`, and `llms.txt` together.
+
+The result taxonomy is deliberately precise:
+
+- **Verified replacement** means a physically turned result replaced only the isolated test source
+  after the complete candidate passed verification.
+- **Lossless display copy** means a separate MP4-family file retained its encoded media and changed
+  only the verified display-orientation matrix. It can still appear unrotated in software that
+  ignores orientation metadata.
+- **Physical H.264 copy** means a separate physically turned SDR MP4 was created only after its
+  disclosed conversion and track contract was approved and verified.
+- **Expected safe refusal** means ClipTurn created no contract-safe output and left the source
+  unchanged. It is evidence of safe behavior, not a compatibility claim.
+
+Some external fixtures have public download URLs but no clear redistribution grant. Their measured
+technical results may be described without linking or serving the media. Do not add a download,
+mirror, or redistribution claim unless the right to do so has been confirmed separately.
+
+After editing, validate JSON-LD and JSON syntax, parse the XML sitemap, check every local link, verify
+one canonical and one `h1` per indexable page, sum the matrix sample/route counts, and inspect the new
+page in light and dark mode at desktop and 375px. Also inspect the header just above its 1080px mobile
+breakpoint; the extra navigation label must not wrap or collide.
+
+---
+
 ## The competitor comparison on `pricing.html`
 
 The table names four real Microsoft Store apps: Clipchamp, Lossless-Video-Rotate-Cut, Video Rotate
@@ -317,6 +371,26 @@ Check the real duration rather than guessing — `"lengthSeconds"` in the watch 
 
 ---
 
+## The PAD file
+
+`pad.xml` is the Portable Application Description metadata used by software directories. Keep its
+canonical URL stable at `https://clipturn.app/pad.xml`.
+
+Update the PAD only from the version that Microsoft Store is actually serving. `latest/version.json`
+can be ahead of the public release, so verify the Store package version and update date before changing
+`Program_Version` or the three `Program_Release_*` fields. Re-check the Store download size, price,
+architectures, change summary and descriptions at the same time.
+
+PAD 4.0 predates Microsoft Store and its old validator requires a direct `.exe`, `.msi` or archive URL,
+plus publisher and application IDs assigned by the now-defunct AppVisor service. ClipTurn has no direct
+binary download and must not invent one. Keep the real Microsoft Store listing in both
+`Application_Order_URL` and `Primary_Download_URL`, leave the unavailable AppVisor/contact values empty,
+and retain the explanatory XML comments. The file is deliberately truthful and useful to modern
+catalog importers, even though those obsolete mandatory rules make strict PAD 4.0 validation impossible
+for a Store-only app.
+
+---
+
 ## Things that are easy to get wrong
 
 **The site has no theme toggle.** It follows `prefers-color-scheme`. Every new component needs
@@ -326,8 +400,11 @@ overrides in the dark block or it will render light-on-light.
 screenshots are light. That is a known inconsistency worth fixing when the screenshots are next
 retaken.
 
-**The primary nav differs slightly per page**, because each legal page injects a self-link. When you
-change the nav, change it in all seven files and check for drift.
+**The primary nav differs slightly per page**, because the current page carries its own
+`aria-current="page"` marker. When you change it, update and check all eight navigation-bearing files:
+`index.html`, `pricing.html`, `manual.html`, `tested-formats.html`, `changelog.html`, `media.html`,
+`privacy.html`, and `terms.html`. `404.html` has no primary navigation. Media itself is intentionally
+linked only from the footer, directly below Contact us; do not add it to the primary nav.
 
 **Footer column headings are `<h2>`.** That adds two content-free top-level headings to the outline of
 every page. Known issue, worth changing to `<p>` with styling.
