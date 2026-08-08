@@ -1,0 +1,55 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1080" role="img" aria-labelledby="title desc">
+  <title id="title">ClipTurn - Video Rotator</title>
+  <desc id="desc">ClipTurn poster artwork with the app mark and wordmark</desc>
+  <defs>
+    <linearGradient id="posterBackground" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18223f"/>
+      <stop offset="1" stop-color="#3553a4"/>
+    </linearGradient>
+    <linearGradient id="markBackground" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18223f"/>
+      <stop offset="1" stop-color="#3553a4"/>
+    </linearGradient>
+    <linearGradient id="markFrame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#70e1f5"/>
+      <stop offset="1" stop-color="#7b8cff"/>
+    </linearGradient>
+    <linearGradient id="posterWordmark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#70e1f5"/>
+    </linearGradient>
+    <filter id="markShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#080d1f" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+
+  <rect width="720" height="1080" fill="url(#posterBackground)"/>
+  <circle cx="620" cy="80" r="300" fill="#ffffff" fill-opacity="0.035"/>
+  <circle cx="70" cy="1010" r="240" fill="#70e1f5" fill-opacity="0.055"/>
+
+  <g transform="translate(110 118) scale(0.48828125)" filter="url(#markShadow)">
+    <rect width="1024" height="1024" rx="224" fill="url(#markBackground)"/>
+    <circle cx="512" cy="512" r="390" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2"/>
+    <rect x="250" y="326" width="524" height="372" rx="58" fill="#101831" stroke="url(#markFrame)" stroke-width="28"/>
+    <path d="M470 424 L470 600 L626 512 Z" fill="#ffffff"/>
+    <path d="M260 308 C352 190 526 144 680 202 C731 221 776 250 812 287"
+          fill="none" stroke="#ffffff" stroke-width="58" stroke-linecap="round"/>
+    <path d="M790 208 L830 310 L722 326" fill="none" stroke="#ffffff" stroke-width="58"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M764 716 C672 834 498 880 344 822 C293 803 248 774 212 737"
+          fill="none" stroke="#70e1f5" stroke-width="58" stroke-linecap="round"/>
+    <path d="M234 816 L194 714 L302 698" fill="none" stroke="#70e1f5" stroke-width="58"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="360" y="764" text-anchor="middle"
+        font-family="Segoe UI Variable Display, Segoe UI, system-ui, sans-serif"
+        font-size="88" font-weight="600" fill="url(#posterWordmark)" letter-spacing="-2">ClipTurn</text>
+  <text x="360" y="826" text-anchor="middle"
+        font-family="Segoe UI Variable Text, Segoe UI, system-ui, sans-serif"
+        font-size="23" font-weight="500" fill="#9fb5da" letter-spacing="6">VIDEO ROTATOR</text>
+  <line x1="210" y1="872" x2="510" y2="872" stroke="#70e1f5" stroke-opacity="0.6" stroke-width="2"/>
+  <text x="360" y="934" text-anchor="middle"
+        font-family="Segoe UI Variable Text, Segoe UI, system-ui, sans-serif"
+        font-size="28" font-weight="400" fill="#dbe6ff">Rotate video. Keep what matters.</text>
+</svg>

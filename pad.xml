@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XML_DIZ_INFO>
+  <MASTER_PAD_VERSION_INFO>
+    <MASTER_PAD_VERSION>4.0</MASTER_PAD_VERSION>
+    <MASTER_PAD_EDITOR>Hand-authored</MASTER_PAD_EDITOR>
+    <MASTER_PAD_INFO>Portable Application Description metadata for ClipTurn. Microsoft Store is the only authorized acquisition source.</MASTER_PAD_INFO>
+    <CERTIFIED>N</CERTIFIED>
+    <CERTIFICATE_ID />
+    <CERTIFICATE_LICENSE />
+  </MASTER_PAD_VERSION_INFO>
+
+  <Company_Info>
+    <!-- AppVisor, which assigned PAD 4 PublisherID values, is no longer available. -->
+    <PublisherID />
+    <Company_Name>FixQuotes</Company_Name>
+    <Address_1 />
+    <Address_2 />
+    <City_Town />
+    <State_Province />
+    <Zip_Postal_Code />
+    <Country>Norway</Country>
+    <Company_WebSite_URL>https://fixquotes.com/</Company_WebSite_URL>
+    <Contact_Info>
+      <Author_First_Name />
+      <Author_Last_Name />
+      <Author_Email />
+      <Contact_First_Name />
+      <Contact_Last_Name />
+      <Contact_Email />
+    </Contact_Info>
+    <Support_Info>
+      <Sales_Email />
+      <Support_Email />
+      <General_Email />
+      <Sales_Phone />
+      <Support_Phone />
+      <General_Phone />
+      <Fax_Phone />
+    </Support_Info>
+  </Company_Info>
+
+  <Program_Info>
+    <!-- AppVisor, which assigned PAD 4 AppID values, is no longer available. -->
+    <AppID />
+    <Program_Name>ClipTurn</Program_Name>
+    <Program_Version>1.0.3</Program_Version>
+    <Program_Release_Month>08</Program_Release_Month>
+    <Program_Release_Day>08</Program_Release_Day>
+    <Program_Release_Year>2026</Program_Release_Year>
+    <Program_Cost_Dollars>0.00</Program_Cost_Dollars>
+    <Program_Cost_Other_Code />
+    <Program_Cost_Other />
+    <Program_Type>Freeware</Program_Type>
+    <Program_Release_Status>Minor Update</Program_Release_Status>
+    <Program_Install_Support>Install and Uninstall</Program_Install_Support>
+    <Program_OS_Support>Other</Program_OS_Support>
+    <Program_Target_Platform>Windows</Program_Target_Platform>
+    <Program_Language>English</Program_Language>
+    <!-- Approximate maximum Store download size for the x64 and ARM64 bundle. -->
+    <File_Info>
+      <File_Size_Bytes>194080693</File_Size_Bytes>
+      <File_Size_K>189531.93</File_Size_K>
+      <File_Size_MB>185.09</File_Size_MB>
+    </File_Info>
+    <Expire_Info>
+      <Has_Expire_Info>N</Has_Expire_Info>
+      <Expire_Count />
+      <Expire_Based_On />
+      <Expire_Other_Info />
+      <Expire_Month />
+      <Expire_Day />
+      <Expire_Year />
+    </Expire_Info>
+    <Program_Change_Info>Adds Review options to File Explorer and Recent Jobs so verified separate-copy alternatives can be inspected and approved after preservation-first rotation leaves the source unchanged.</Program_Change_Info>
+    <Program_Category_Class>Audio &amp; Multimedia::Video Tools</Program_Category_Class>
+    <Program_System_Requirements>Windows 10 version 2004 (build 19041) or later; designed for Windows 11; x64 or ARM64</Program_System_Requirements>
+  </Program_Info>
+
+  <Program_Descriptions>
+    <English>
+      <Keywords>video rotator,rotate video,batch video rotation,physical video rotation,video orientation fixer,preserve video quality,MP4 MOV MKV rotator,Windows 11,File Explorer,verified rotation</Keywords>
+      <Char_Desc_45>Safe, verified video rotation for Windows 11.</Char_Desc_45>
+      <Char_Desc_80>Rotate videos in Explorer or ClipTurn; verify each result before replacement.</Char_Desc_80>
+      <Char_Desc_250>ClipTurn rotates videos from Windows 11 File Explorer or its app. It physically turns the picture on supported paths, verifies the result before replacement, and offers reviewed separate copies when faithful replacement is not possible.</Char_Desc_250>
+      <Char_Desc_450>ClipTurn makes video rotation native to Windows 11. Right-click a supported video in File Explorer, preview one file in the app, or process a batch. The preservation path physically turns the picture while retaining supported codec, audio, metadata, subtitles and other content, then independently verifies it before replacement. If faithful replacement is impossible, ClipTurn can offer a reviewed, verified copy and leave the original unchanged.</Char_Desc_450>
+      <Char_Desc_2000>Rotate a video like a photo in Windows 11. ClipTurn adds Rotate video left, Rotate video right and Open in ClipTurn commands to File Explorer, plus single-video preview, Batch Rotate, Recent Jobs, file details, settings and system-capability checks in the desktop app.
+
+Automatic work is preservation-first: ClipTurn physically turns the stored picture while keeping the source codec and supported audio, metadata, subtitles, extra tracks, colour, HDR and geometry whenever the active Windows media path can reproduce and verify them. A candidate is checked independently across the complete result before it can replace the source. If the contract cannot be proved, the source stays unchanged and ClipTurn explains why.
+
+Some refusals can be handled as an explicit second decision. ClipTurn may offer a verified, separately named lossless display-orientation copy for MP4, M4V or MOV, or a physically rotated high-quality H.264 MP4 for an eligible SDR source. The review lists every expected change before anything is created, and the original is never overwritten by that reviewed copy.
+
+File Explorer commands cover MP4, M4V, MOV, MKV, WebM, WMV and supported uncompressed AVI. The app can also open MPG, MPEG, MOD and TOD program streams for a reviewed H.264 copy when the required Windows decoder and encoder are available. Exact support depends on the container, codec, track layout, metadata, installed Windows codecs, hardware and drivers.
+
+ClipTurn processes selected videos locally. It has no ClipTurn account, advertising or cloud video-processing service, and it does not upload selected videos to FixQuotes. The complete current app is free from Microsoft Store, with no ClipTurn trial timer, subscription or paid feature gate. Microsoft Store remains the source of truth for availability and pricing.</Char_Desc_2000>
+    </English>
+  </Program_Descriptions>
+
+  <Web_Info>
+    <Application_URLs>
+      <Application_Info_URL>https://clipturn.app/</Application_Info_URL>
+      <Application_Order_URL>https://apps.microsoft.com/detail/9PGB9JVBRGLB</Application_Order_URL>
+      <Application_Screenshot_URL>https://clipturn.app/assets/screenshots/store-01-explorer-flyout.png</Application_Screenshot_URL>
+      <Application_Icon_URL>https://clipturn.app/assets/brand/clipturn-mark-256.png</Application_Icon_URL>
+      <Application_XML_File_URL>https://clipturn.app/pad.xml</Application_XML_File_URL>
+      <Video_Link_1_URL>https://youtu.be/-_kdhLjnPy0</Video_Link_1_URL>
+      <Video_Link_2_URL />
+    </Application_URLs>
+    <Download_URLs>
+      <!-- PAD 4 predates app stores and requires a direct binary URL. ClipTurn has none. -->
+      <Primary_Download_URL>https://apps.microsoft.com/detail/9PGB9JVBRGLB</Primary_Download_URL>
+      <Secondary_Download_URL />
+      <Additional_Download_URL_1 />
+      <Additional_Download_URL_2 />
+    </Download_URLs>
+  </Web_Info>
+
+  <Permissions>
+    <Distribution_Permissions>Software directories may reproduce this PAD metadata and link to ClipTurn's official product page and Microsoft Store listing. Do not mirror, repackage, modify or redistribute ClipTurn binaries. Microsoft Store is the only authorized installation source.</Distribution_Permissions>
+    <EULA>ClipTurn is licensed under the Microsoft Standard Application License Terms available at https://go.microsoft.com/fwlink/?linkid=528905, together with the product-specific notices at https://clipturn.app/terms.html.</EULA>
+  </Permissions>
+
+  <ASP>
+    <ASP_Member>N</ASP_Member>
+    <ASP_Member_Number />
+  </ASP>
+</XML_DIZ_INFO>

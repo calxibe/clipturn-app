@@ -15,6 +15,7 @@ Use the user manual for detailed information about supported file types, codecs,
 ## Documentation
 
 - [User manual](https://clipturn.app/manual.html): Detailed installation, rotation workflows, supported formats, codec requirements, verification behavior, recovery guidance, and troubleshooting.
+- [Tested formats and codecs](https://clipturn.app/tested-formats.html): Real-file, end-to-end results by container, extension, picture codec and profile, notable streams, processing route, and verified outcome, including expected safe refusals.
 - [Changelog](https://clipturn.app/changelog.html): Release history and changes by version.
 
 ## Legal and support
