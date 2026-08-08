@@ -27,4 +27,4 @@ Use the user manual for detailed information about supported file types, codecs,
 ## Optional
 
 - [XML sitemap](https://clipturn.app/sitemap.xml): Complete list of indexable ClipTurn pages.
-- [Video tutorial](https://www.youtube.com/watch?v=Y6s_SqiK9uw): Walkthrough of File Explorer rotation, single-video preview, and batch processing.
+- [Video tutorial](https://www.youtube.com/watch?v=-_kdhLjnPy0): Walkthrough of File Explorer rotation, single-video preview, batch processing, and reviewed separate-copy options.
