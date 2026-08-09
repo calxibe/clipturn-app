@@ -58,7 +58,6 @@
   const dialog = document.querySelector("#image-lightbox");
   const dialogImage = dialog?.querySelector("img");
   const dialogCaption = dialog?.querySelector("figcaption");
-  const dialogClose = dialog?.querySelector(".lightbox-close");
   let lightboxOpener = null;
 
   const closeLightbox = () => {
@@ -76,21 +75,11 @@
         dialogImage.alt = preview?.alt || "ClipTurn screenshot";
         dialogCaption.textContent = trigger.dataset.caption || dialogImage.alt;
         dialog.showModal();
-        dialogClose?.focus();
+        dialog.focus({ preventScroll: true });
       });
     });
 
-    dialogClose?.addEventListener("click", closeLightbox);
-
-    dialog.addEventListener("click", (event) => {
-      const bounds = dialog.getBoundingClientRect();
-      const outside =
-        event.clientX < bounds.left ||
-        event.clientX > bounds.right ||
-        event.clientY < bounds.top ||
-        event.clientY > bounds.bottom;
-      if (outside) closeLightbox();
-    });
+    dialog.addEventListener("click", closeLightbox);
 
     dialog.addEventListener("close", () => {
       dialogImage.removeAttribute("src");
