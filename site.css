@@ -1395,13 +1395,19 @@ a:hover {
 }
 
 .lightbox {
-  width: min(94vw, 1420px);
-  max-width: none;
+  width: fit-content;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
   padding: 0;
+  overflow: visible;
   border: 0;
-  border-radius: 22px;
-  background: #fff;
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.34);
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  box-shadow: none;
+  outline: 0;
+  cursor: zoom-out;
 }
 
 .lightbox::backdrop {
@@ -1411,37 +1417,31 @@ a:hover {
 }
 
 .lightbox-figure {
+  width: fit-content;
+  max-width: 100%;
   margin: 0;
-  padding: 10px;
 }
 
 .lightbox-figure img {
-  width: 100%;
-  max-height: 82vh;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(100vh - 7rem);
+  max-height: calc(100dvh - 7rem);
   object-fit: contain;
-  border-radius: 14px;
 }
 
 .lightbox-caption {
-  padding: 12px 56px 10px 10px;
-  color: var(--muted);
+  box-sizing: border-box;
+  width: 0;
+  min-width: 100%;
+  padding: 12px 0 0;
+  overflow-wrap: anywhere;
+  color: rgba(255, 255, 255, 0.92);
   font-size: 0.9rem;
-}
-
-.lightbox-close {
-  position: absolute;
-  z-index: 2;
-  top: 18px;
-  right: 18px;
-  display: grid;
-  width: 42px;
-  height: 42px;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-  background: rgba(16, 24, 49, 0.88);
-  color: #fff;
-  cursor: pointer;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .legal-hero {
@@ -2429,10 +2429,6 @@ a:hover {
     padding: 22px;
   }
 
-  .lightbox {
-    width: 96vw;
-    border-radius: 16px;
-  }
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -2733,15 +2729,6 @@ a:hover {
 
   .site-footer {
     border-top: 1px solid #1d2840;
-  }
-
-  .lightbox {
-    background: #101831;
-    color: var(--ink);
-  }
-
-  .lightbox-caption {
-    color: var(--muted);
   }
 
   .legal-hero {
@@ -4961,6 +4948,15 @@ kbd {
 /* Media kit */
 .media-page .media-hero p:not(.eyebrow) {
   max-width: 760px;
+}
+
+.media-page .media-hero .media-pad-link {
+  margin-top: 14px;
+  font-size: 0.92rem;
+}
+
+.media-pad-link a {
+  font-weight: 750;
 }
 
 .asset-grid {
