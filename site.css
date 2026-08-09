@@ -1370,6 +1370,10 @@ a:hover {
   background: #fff;
 }
 
+.footer-badge--dark {
+  background: #1a1a1a;
+}
+
 .footer-badge img {
   display: block;
   width: auto;
