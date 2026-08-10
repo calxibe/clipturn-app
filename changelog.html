@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ClipTurn Changelog — What shipped in version 1.0.4</title>
+    <title>ClipTurn Changelog — What changed in version 1.0.5</title>
     <meta
       name="description"
-      content="What ClipTurn 1.0.4 adds: an instant twelve-language selector and a public real-file evidence matrix covering 99 videos and their verified outcomes."
+      content="See what is new in ClipTurn 1.0.5 and browse the changes from earlier versions."
     />
     <link rel="canonical" href="https://clipturn.app/changelog.html" />
     <meta name="color-scheme" content="light dark" />
@@ -15,7 +15,7 @@
     <meta name="robots" content="index,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ClipTurn" />
-    <meta property="og:title" content="ClipTurn 1.0.4 — release history" />
+    <meta property="og:title" content="ClipTurn 1.0.5 — release history" />
     <meta
       property="og:description"
       content="What every ClipTurn release changed, from physical rotation in the source codec to an independent check before any file is replaced."
@@ -24,9 +24,9 @@
     <meta property="og:image" content="https://clipturn.app/og.png" />
     <meta property="og:image:width" content="1280" />
     <meta property="og:image:height" content="640" />
-    <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11" />
+    <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11 and Windows 10" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ClipTurn 1.0.4 — release history" />
+    <meta name="twitter:title" content="ClipTurn 1.0.5 — release history" />
     <meta
       name="twitter:description"
       content="What every ClipTurn release changed, from physical rotation in the source codec to an independent check before any file is replaced."
@@ -85,7 +85,7 @@
             Microsoft Store, updates arrive the same way every other Store app updates — you do not
             download anything from this page.
           </p>
-          <p class="updated">Current version 1.0.4</p>
+          <p class="updated">Current version 1.0.5</p>
         </div>
       </section>
 
@@ -93,8 +93,25 @@
         <div class="shell">
           <article class="version-card">
             <div class="version-header">
-              <h2 class="version-number" id="v1-0-4">v1.0.4</h2>
+              <h2 class="version-number" id="v1-0-5">v1.0.5</h2>
               <span class="version-badge">Latest</span>
+              <span class="version-date"><time datetime="2026-08">August 2026</time></span>
+            </div>
+
+            <div class="version-section">
+              <h3>Fixed</h3>
+              <ul class="feature-list">
+                <li>
+                  <strong>Microsoft Store installation on Windows 10</strong> &mdash;
+                  Fixes a problem that could prevent ClipTurn from installing on Windows 10.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="version-card">
+            <div class="version-header">
+              <h2 class="version-number" id="v1-0-4">v1.0.4</h2>
               <span class="version-date"><time datetime="2026-08">August 2026</time></span>
             </div>
 
@@ -137,12 +154,9 @@
               <ul class="feature-list">
                 <li>
                   <strong>Right-click rotations now lead to the same safe alternatives</strong> &mdash;
-                  If a File Explorer rotation cannot faithfully replace a video but ClipTurn has proved
-                  a separate-copy option, the result card now offers <b>Review options</b> as the clear blue
-                  primary next step, while Copy details and Close remain neutral. One file opens
-                  the single-video review; a selection opens the batch review for only the eligible videos,
-                  and nothing is created until you approve the disclosed changes. The original stays unchanged,
-                  and the same action remains available in Recent Jobs if you close the result card.
+                  If a File Explorer rotation cannot safely replace a video, <b>Review options</b> opens
+                  the same single-file or batch alternatives as the app. Nothing is created until you
+                  approve it, and the original stays unchanged.
                 </li>
               </ul>
             </div>
@@ -159,11 +173,9 @@
               <ul class="feature-list">
                 <li>
                   <strong>A safe way forward when exact preservation is impossible</strong> &mdash;
-                  ClipTurn still tries its careful preserve-and-replace rotation first. If that cannot
-                  be done, it can now explain the available alternatives and ask before creating a
-                  separate verified copy; your original is never overwritten by a conversion. If the
-                  required decoder, deinterlacing, HDR conversion or multi-video handling cannot yet be
-                  verified, ClipTurn leaves the file unchanged instead of offering a conversion it cannot prove.
+                  ClipTurn still tries the safest rotation first. When that is not possible, it explains
+                  the verified separate-copy choices and asks before continuing. If no safe choice can be
+                  verified, the original is left unchanged.
                 </li>
                 <li>
                   <strong>Lossless display rotation for MP4, M4V and MOV</strong> &mdash; The recommended
@@ -172,15 +184,10 @@
                   warning that some older players and editors may ignore the instruction.
                 </li>
                 <li>
-                  <strong>A physically rotated H.264 option for SDR video</strong> &mdash; When Windows can
-                  decode the source, ClipTurn can make a high-quality H.264 MP4 that works without an
-                  orientation flag. It targets the source's quality, though encoder and container differences
-                  can make the copy larger. Before you approve it, the review lists soundtrack conversion or
-                  possible video-only output, omitted tracks, metadata or timing changes, and ClipTurn verifies the finished copy.
-                  For MP4, M4V and MOV sources, supported capture dates, GPS and camera details are preserved
-                  and checked exactly before publication; timed camera/sensor tracks and metadata from other
-                  container families are still omitted.
-                  HDR video is never silently sent through this SDR route.
+                  <strong>A physically rotated H.264 option for SDR video</strong> &mdash; For videos Windows
+                  can decode, ClipTurn can offer a high-quality rotated H.264 MP4. The review shows any changes
+                  before approval, and ClipTurn verifies the finished copy. HDR video is never silently converted
+                  through this SDR option.
                 </li>
                 <li>
                   <strong>Review a whole batch once</strong> &mdash; Videos that need a conversion wait in
@@ -207,14 +214,8 @@
                 </li>
                 <li>
                   <strong>The tabs now look and line up like Windows tabs</strong> &mdash; The five navigation
-                  tabs are centered together above ClipTurn's content instead of sitting at the far-left
-                  edge of a wide window. Larger, roomier labels, clearer separators, and a stronger outline
-                  now make the navigation read as tabs at a glance. Every selected tab has the same clean
-                  top and side outline, while one straight divider continues on both sides without gaps or
-                  darker overlaps. A neutral strip separates inactive tabs
-                  from the raised active tab, whose surface joins visually with the page below. The treatment follows light, dark,
-                  and high-contrast themes; positions stay still when you switch tabs, while narrow windows
-                  retain normal scrolling and keyboard navigation.
+                  tabs are centered, larger, and easier to recognise at a glance. The selected tab connects
+                  visually to its page, and the layout stays stable across themes and window sizes.
                 </li>
                 <li>
                   <strong>Dragging videos works naturally from every tab</strong> &mdash; Drop one file
@@ -418,7 +419,7 @@
               alt="ClipTurn"
               loading="lazy"
             />
-            <p>A focused Windows 11 app for physical, verifiable video rotation. Published by FixQuotes.</p>
+            <p>A focused app for physical, verifiable video rotation on Windows 11 and Windows 10. Published by FixQuotes.</p>
             <p class="footer-copyright">© 2026 FixQuotes. All rights reserved.</p>
           </div>
           <div class="footer-column">

@@ -198,6 +198,10 @@ Rules of thumb:
 - Lead with a short bold label, then an em dash, then the explanation.
 - No class names, file names, API names, or HRESULTs. No benchmark numbers unless the number is the
   point a user would care about.
+- The public changelog is not a diagnostic or build log. Never include error codes, manifest or
+  capability names, certificate instructions, command-line steps, internal verification details,
+  or the technical cause of a bug. Keep those details in the engineering changelog or technical
+  documentation and summarize only the outcome a user will notice here.
 - Say what the user gets, not what the code does.
 - Keep the site's habit of naming limits honestly. The `.changelog-note` box at the bottom of the
   page exists for that and should stay.
@@ -250,6 +254,10 @@ release to improve on or fix.
 5. Update the version in the `<title>` and `<meta name="description">`, and the
    `<p class="updated">Current version …</p>` line in the hero.
 6. `privacy.html` and `terms.html` both name the version in their opening paragraph. Update those too.
+
+Use the version from `version.json` as the single **Latest** changelog entry. Do not add public
+status labels such as **Unreleased**, **In development**, **Upcoming**, or **Not yet published**.
+The changelog should focus on what changed in each numbered version.
 
 The `h2` must stay the version number — that keeps the heading outline `h1 Changelog → h2 v1.0.0 →
 h3 Added`. Do not demote it to a `<span>` and promote the section headings; that produces a heading
@@ -520,7 +528,7 @@ A full audit is on file separately. The ones most worth fixing:
 - 14 scrollable tables in `manual.html` are not keyboard-reachable.
 - `assets/screenshots/store-01-explorer-flyout.png` is 350 KB, roughly 4.4× larger than needed.
   `og.png` is 282 KB and `favicon.ico` is 79 KB, both far heavier than they need to be.
-- The home page `<title>` does not contain "Windows 11", which is in almost every real search query
-  for this product.
+- The home page `<title>` does not mention Windows 10 or Windows 11, even though platform terms
+  appear in most real search queries for this product.
 - Three unlinked `SoftwareApplication` JSON-LD nodes with no shared `@id`.
 - Eleven visible question-and-answer pairs carry no `FAQPage` markup.

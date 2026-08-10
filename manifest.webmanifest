@@ -1,7 +1,7 @@
 {
   "name": "ClipTurn",
   "short_name": "ClipTurn",
-  "description": "Physical video rotation for Windows 11.",
+  "description": "Physical video rotation for Windows 11 and Windows 10.",
   "start_url": "/",
   "display": "browser",
   "background_color": "#f7f9ff",
