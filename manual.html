@@ -22,7 +22,7 @@
     />
     <meta property="og:url" content="https://clipturn.app/manual.html" />
     <meta property="og:image" content="https://clipturn.app/og.png" />
-    <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11" />
+    <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11 and Windows 10" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ClipTurn User Manual" />
     <meta name="twitter:description" content="The complete guide to rotating videos safely with ClipTurn." />
@@ -37,14 +37,14 @@
         "@context": "https://schema.org",
         "@type": "TechArticle",
         "headline": "ClipTurn User Manual",
-        "description": "Complete instructions and reference information for ClipTurn version 1.0.4.",
-        "dateModified": "2026-08-09",
+        "description": "Complete instructions and reference information for ClipTurn version 1.0.5.",
+        "dateModified": "2026-08-10",
         "inLanguage": "en",
         "about": {
           "@type": "SoftwareApplication",
           "name": "ClipTurn",
           "applicationCategory": "MultimediaApplication",
-          "operatingSystem": "Windows 11"
+          "operatingSystem": "Windows 11, Windows 10"
         },
         "publisher": {
           "@type": "Organization",
@@ -95,7 +95,7 @@
       <header class="manual-hero">
         <div class="shell manual-hero-grid">
           <div>
-            <p class="eyebrow">ClipTurn 1.0.4 · Windows 11</p>
+            <p class="eyebrow">ClipTurn 1.0.5 · Windows 11 and Windows 10</p>
             <h1>The complete ClipTurn manual.</h1>
             <p class="manual-hero-lede">
               From a single right-click to a carefully controlled batch, this guide explains every
@@ -279,7 +279,7 @@
               </li>
             </ol>
             <div class="manual-spec-row">
-              <div><span>Designed for</span><strong>Windows 11</strong></div>
+              <div><span>Runs on</span><strong>Windows 11 and Windows 10</strong></div>
               <div><span>Delivery</span><strong>Microsoft Store</strong></div>
               <div><span>Processing</span><strong>On your PC</strong></div>
               <div><span>Account</span><strong>Not required</strong></div>
@@ -709,7 +709,7 @@
               <strong>The page shows the ten newest jobs.</strong>
               <p>
                 Older job records can remain in ClipTurn’s local data folder even though the interface shows only ten.
-                There is no Clear history button in version 1.0.4. Uninstalling the app removes its packaged local data;
+                There is no Clear history button in version 1.0.5. Uninstalling the app removes its packaged local data;
                 rotated files and backups remain where you saved them.
               </p>
             </div>
@@ -886,7 +886,7 @@
             <h2>Choose a processing policy</h2>
             <div class="manual-table-wrap">
               <table>
-                <thead><tr><th scope="col">Policy</th><th scope="col">Fidelity requirement</th><th scope="col">Size rule</th><th scope="col">Practical coverage in 1.0.4</th></tr></thead>
+                <thead><tr><th scope="col">Policy</th><th scope="col">Fidelity requirement</th><th scope="col">Size rule</th><th scope="col">Practical coverage in 1.0.5</th></tr></thead>
                 <tbody>
                   <tr>
                     <th scope="row">Keep codec and quality <span class="manual-badge">Recommended</span></th>
@@ -1048,7 +1048,7 @@
             </p>
             <div class="manual-table-wrap manual-format-table">
               <table>
-                <thead><tr><th scope="col">Container</th><th scope="col">Extensions</th><th scope="col">Picture path in version 1.0.4</th><th scope="col">Main boundaries</th></tr></thead>
+                <thead><tr><th scope="col">Container</th><th scope="col">Extensions</th><th scope="col">Picture path in version 1.0.5</th><th scope="col">Main boundaries</th></tr></thead>
                 <tbody>
                   <tr>
                     <th scope="row">MP4 family</th>
@@ -1123,7 +1123,7 @@
                   <li>Every admitted audio track is copied as compressed packets and verified by counts, bytes, and payload hashes. If exact copy cannot be proven, the file refuses.</li>
                   <li>Multiple audio tracks, SubRip/UTF-8 text, Matroska WebVTT text, track language/name/default/forced flags, attachments, tags, IDs, date, title, and supported display/colour data can be carried within verified limits.</li>
                   <li>Chapters, a second video track, PGS/VobSub/DVB/BMP bitmap subtitles, ASS/SSA and other styled scripts, unknown subtitle types, or content encodings ClipTurn cannot preserve are refused rather than stripped.</li>
-                  <li>10-bit HDR MKV is refused in version 1.0.4 because the output path cannot preserve the required declarations faithfully.</li>
+                  <li>10-bit HDR MKV is refused in version 1.0.5 because the output path cannot preserve the required declarations faithfully.</li>
                 </ul>
               </div>
             </details>
@@ -1221,7 +1221,7 @@
                   <tr><th scope="row">VP8 or VP9 / WebM</th><td>Install Microsoft’s free <strong>VP9 Video Extensions</strong>, restart affected apps if needed, then Analyze this PC again.</td><td>Required even when the source is VP8; ClipTurn’s bundled VP8 encoder does not supply the Windows decode path.</td></tr>
                   <tr><th scope="row">HEVC Main 8-bit</th><td>Install a compatible Microsoft/OEM <strong>HEVC Video Extensions</strong> package if the app provides that link.</td><td>The Microsoft package can be separately priced. An eligible 8-bit source may use a named H.264 fallback; not every HEVC layout is eligible.</td></tr>
                   <tr><th scope="row">HEVC Main10 encode</th><td>Install current graphics/chipset drivers from the exact PC or GPU manufacturer, restart, and analyze again; otherwise use another capable PC.</td><td>There is no generic Store package that guarantees a Main10 hardware encoder. ClipTurn never reduces 10-bit video to 8-bit silently.</td></tr>
-                  <tr><th scope="row">AV1 decode</th><td>Install Microsoft’s free <strong>AV1 Video Extension</strong> when the app offers it.</td><td>This can add decoding only; ClipTurn 1.0.4 has no AV1 output path, so an AV1 source may still refuse.</td></tr>
+                  <tr><th scope="row">AV1 decode</th><td>Install Microsoft’s free <strong>AV1 Video Extension</strong> when the app offers it.</td><td>This can add decoding only; ClipTurn 1.0.5 has no AV1 output path, so an AV1 source may still refuse.</td></tr>
                   <tr><th scope="row">Media Foundation unavailable on Windows N</th><td>Open Windows Settings → System → Optional features and install the free <strong>Media Feature Pack</strong>.</td><td>Restart Windows and analyze again after installation.</td></tr>
                   <tr><th scope="row">Vorbis playback component</th><td>Use the official <strong>Web Media Extensions</strong> action if ClipTurn names it.</td><td>WebM still has its own exact-audio and layout gates.</td></tr>
                   <tr><th scope="row">AC-3/E-AC-3 decode on newer Windows 11</th><td>Some systems rely on a device manufacturer’s codec; there may be no Microsoft Store restoration.</td><td>MKV exact packet passthrough can sometimes avoid audio decode, but other paths can refuse.</td></tr>
@@ -1338,7 +1338,7 @@
             <div class="manual-callout info">
               <strong>No hidden app-specific shortcut set.</strong>
               <p>
-                Version 1.0.4 relies on standard WinUI keyboard behavior rather than undocumented custom shortcuts.
+                Version 1.0.5 relies on standard WinUI keyboard behavior rather than undocumented custom shortcuts.
                 Visible buttons remain the authoritative commands.
               </p>
             </div>
@@ -1348,6 +1348,13 @@
             <p class="eyebrow">Find the symptom</p>
             <h2>Troubleshooting</h2>
             <div class="manual-definition-list">
+              <details id="windows-support">
+                <summary>Which versions of Windows does ClipTurn support?</summary>
+                <div>
+                  <p>ClipTurn supports Windows 11 and Windows 10 version 2004 (build 19041) or later. On Windows 10, the PC must use the 64-bit (x64) version of Windows; 32-bit Windows is not supported.</p>
+                  <p>On Windows 11, ClipTurn supports both standard x64 PCs and ARM64 PCs. Microsoft Store selects the compatible package automatically.</p>
+                </div>
+              </details>
               <details open>
                 <summary>The ClipTurn menu is missing in File Explorer</summary>
                 <div>
@@ -1512,7 +1519,7 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <img src="assets/brand/clipturn-lockup-on-dark.svg" width="1600" height="400" alt="ClipTurn" />
-            <p>A focused Windows 11 app for physical, verifiable video rotation. Published by FixQuotes.</p>
+            <p>A focused app for physical, verifiable video rotation on Windows 11 and Windows 10. Published by FixQuotes.</p>
             <p class="footer-copyright">© 2026 FixQuotes. All rights reserved.</p>
           </div>
           <div class="footer-column">
@@ -1538,7 +1545,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <span>Manual for ClipTurn 1.0.4</span>
+          <span>Manual for ClipTurn 1.0.5</span>
         </div>
       </div>
     </footer>

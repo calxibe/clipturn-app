@@ -13,7 +13,12 @@
     <Country>Norway</Country>
     <Company_WebSite_URL>https://fixquotes.com/</Company_WebSite_URL>
     <Contact_Info>
+      <Author_First_Name>FixQuotes</Author_First_Name>
+      <Author_Last_Name>Team</Author_Last_Name>
       <Author_Email>fixquotescom@gmail.com</Author_Email>
+      <Contact_First_Name>FixQuotes</Contact_First_Name>
+      <Contact_Last_Name>Support</Contact_Last_Name>
+      <Contact_Email>fixquotescom@gmail.com</Contact_Email>
     </Contact_Info>
     <Support_Info>
       <Support_Email>support@fixquotes.com</Support_Email>
@@ -45,17 +50,17 @@
     </Expire_Info>
     <Program_Change_Info>Adds Review options to File Explorer and Recent Jobs so verified separate-copy alternatives can be inspected and approved after preservation-first rotation leaves the source unchanged.</Program_Change_Info>
     <Program_Category_Class>Audio &amp; Multimedia::Video Tools</Program_Category_Class>
-    <Program_System_Requirements>Windows 10 version 2004 (build 19041) or later; designed for Windows 11; x64 or ARM64</Program_System_Requirements>
+    <Program_System_Requirements>Windows 11, x64 or ARM64; Windows 10 version 2004 (build 19041) or later, x64</Program_System_Requirements>
   </Program_Info>
 
   <Program_Descriptions>
     <English>
-      <Keywords>video rotator,rotate video,batch video rotation,physical video rotation,video orientation fixer,preserve video quality,MP4 MOV MKV rotator,Windows 11,File Explorer,verified rotation</Keywords>
-      <Char_Desc_45>Safe, verified video rotation for Windows 11.</Char_Desc_45>
+      <Keywords>video rotator,rotate video,batch video rotation,physical video rotation,video orientation fixer,preserve video quality,MP4 MOV MKV rotator,Windows 11,Windows 10,File Explorer,verified rotation</Keywords>
+      <Char_Desc_45>Video rotation for Windows 11 and Windows 10.</Char_Desc_45>
       <Char_Desc_80>Rotate videos in Explorer or ClipTurn; verify each result before replacement.</Char_Desc_80>
-      <Char_Desc_250>ClipTurn rotates videos from Windows 11 File Explorer or its app. It physically turns the picture on supported paths, verifies the result before replacement, and offers reviewed separate copies when faithful replacement is not possible.</Char_Desc_250>
-      <Char_Desc_450>ClipTurn makes video rotation native to Windows 11. Right-click a supported video in File Explorer, preview one file in the app, or process a batch. The preservation path physically turns the picture while retaining supported codec, audio, metadata, subtitles and other content, then independently verifies it before replacement. If faithful replacement is impossible, ClipTurn can offer a reviewed, verified copy and leave the original unchanged.</Char_Desc_450>
-      <Char_Desc_2000>Rotate a video like a photo in Windows 11. ClipTurn adds Rotate video left, Rotate video right and Open in ClipTurn commands to File Explorer, plus single-video preview, Batch Rotate, Recent Jobs, file details, settings and system-capability checks in the desktop app.
+      <Char_Desc_250>ClipTurn rotates videos from File Explorer or its app on Windows 11 and Windows 10. It physically turns the picture, verifies the result before replacement, and offers reviewed separate copies when faithful replacement is not possible.</Char_Desc_250>
+      <Char_Desc_450>ClipTurn brings native video rotation to Windows 11 and Windows 10. Right-click a supported video in File Explorer, preview one file, or process a batch. ClipTurn preserves supported content and independently verifies each result before replacement. If faithful replacement is impossible, it can offer a reviewed, verified copy and leave the original unchanged.</Char_Desc_450>
+      <Char_Desc_2000>Rotate a video like a photo on Windows 11 and Windows 10. ClipTurn adds Rotate video left, Rotate video right and Open in ClipTurn commands to File Explorer, plus single-video preview, Batch Rotate, Recent Jobs, file details, settings and system-capability checks in the desktop app.
 
 Automatic work is preservation-first: ClipTurn physically turns the stored picture while keeping the source codec and supported audio, metadata, subtitles, extra tracks, colour, HDR and geometry whenever the active Windows media path can reproduce and verify them. A candidate is checked independently across the complete result before it can replace the source. If the contract cannot be proved, the source stays unchanged and ClipTurn explains why.
 

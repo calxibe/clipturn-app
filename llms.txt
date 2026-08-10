@@ -1,6 +1,6 @@
 # ClipTurn
 
-> ClipTurn is a Windows 11 desktop app for rotating videos from File Explorer or the app. It processes videos locally, verifies results before replacement, and offers reviewed fallback copies when exact preservation is not possible.
+> ClipTurn is a desktop app for rotating videos from File Explorer or the app on Windows 11 and Windows 10. It processes videos locally, verifies results before replacement, and offers reviewed fallback copies when exact preservation is not possible.
 
 ClipTurn is published by FixQuotes and distributed through Microsoft Store. It is currently free, requires no account, and does not upload selected videos. Use the Microsoft Store listing as the authoritative source for current availability and pricing.
 
