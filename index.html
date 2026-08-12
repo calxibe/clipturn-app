@@ -76,7 +76,7 @@
         }
       }
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-26WWFWZZMP"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-26WWFWZZMP");</script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-26WWFWZZMP");(function(){var sent=false;var evts=["pointerdown","keydown","scroll","touchstart"];function load(){if(sent)return;sent=true;evts.forEach(function(e){removeEventListener(e,load,{passive:true})});removeEventListener("load",load);clearTimeout(timer);var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-26WWFWZZMP";document.head.appendChild(s)}var timer=setTimeout(load,1800);evts.forEach(function(e){addEventListener(e,load,{passive:true})});addEventListener("load",load)})();</script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -147,13 +147,32 @@
 
           <div class="hero-visual" aria-label="ClipTurn application preview">
             <div class="app-frame">
-              <img
-                src="assets/screenshots/store-03-rotate-video-dark.png"
-                width="1452"
-                height="1401"
-                alt="ClipTurn showing a video preview with rotate left, reset, and rotate right controls"
-                fetchpriority="high"
-              />
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="
+                    assets/screenshots/store-03-rotate-video-dark-768.avif   768w,
+                    assets/screenshots/store-03-rotate-video-dark-1452.avif 1452w
+                  "
+                  sizes="(max-width: 1020px) calc(100vw - 50px), 457px"
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    assets/screenshots/store-03-rotate-video-dark-768.webp   768w,
+                    assets/screenshots/store-03-rotate-video-dark-1452.webp 1452w
+                  "
+                  sizes="(max-width: 1020px) calc(100vw - 50px), 457px"
+                />
+                <!-- fetchpriority is not valid on <source>; it must stay here. -->
+                <img
+                  src="assets/screenshots/store-03-rotate-video-dark.png"
+                  width="1452"
+                  height="1401"
+                  alt="ClipTurn showing a video preview with rotate left, reset, and rotate right controls"
+                  fetchpriority="high"
+                />
+              </picture>
             </div>
             <div class="floating-chip">
               <span class="check" aria-hidden="true">✓</span>
@@ -196,13 +215,35 @@
           </div>
 
           <div class="workflow-card">
-            <img
-              src="assets/screenshots/store-01-explorer-flyout.png"
-              width="1920"
-              height="1080"
-              alt="Three steps in File Explorer: right-click a video, ClipTurn rotates it, and the verified result appears"
-              loading="lazy"
-            />
+            <!-- Despite loading="lazy" this sits inside Chrome's ~1250px prefetch
+                 threshold on a phone, so it really is fetched during first paint. -->
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  assets/screenshots/store-01-explorer-flyout-768.avif   768w,
+                  assets/screenshots/store-01-explorer-flyout-1152.avif 1152w,
+                  assets/screenshots/store-01-explorer-flyout-1920.avif 1920w
+                "
+                sizes="(min-width: 1220px) 1178px, (min-width: 621px) calc(100vw - 42px), calc(100vw - 30px)"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  assets/screenshots/store-01-explorer-flyout-768.webp   768w,
+                  assets/screenshots/store-01-explorer-flyout-1152.webp 1152w,
+                  assets/screenshots/store-01-explorer-flyout-1920.webp 1920w
+                "
+                sizes="(min-width: 1220px) 1178px, (min-width: 621px) calc(100vw - 42px), calc(100vw - 30px)"
+              />
+              <img
+                src="assets/screenshots/store-01-explorer-flyout.png"
+                width="1920"
+                height="1080"
+                alt="Three steps in File Explorer: right-click a video, ClipTurn rotates it, and the verified result appears"
+                loading="lazy"
+              />
+            </picture>
             <div class="workflow-steps">
               <article class="workflow-step">
                 <span class="step-number">1</span>
@@ -286,13 +327,31 @@
               data-video-title="ClipTurn Tutorial | Rotate Videos from File Explorer &amp; Batch Rotate v1.0.2"
             >
               <span class="video-facade-frame">
-                <img
-                  src="assets/video/tutorial-poster.jpg"
-                  width="1280"
-                  height="720"
-                  alt="ClipTurn Batch Rotate handling five mixed videos, with three verified rotations and two verified separate copies"
-                  loading="lazy"
-                />
+                <picture>
+                  <source
+                    type="image/avif"
+                    srcset="
+                      assets/video/tutorial-poster-768.avif   768w,
+                      assets/video/tutorial-poster-1280.avif 1280w
+                    "
+                    sizes="(min-width: 1220px) 1158px, calc(100vw - 62px)"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      assets/video/tutorial-poster-768.webp   768w,
+                      assets/video/tutorial-poster-1280.webp 1280w
+                    "
+                    sizes="(min-width: 1220px) 1158px, calc(100vw - 62px)"
+                  />
+                  <img
+                    src="assets/video/tutorial-poster.jpg"
+                    width="1280"
+                    height="720"
+                    alt="ClipTurn Batch Rotate handling five mixed videos, with three verified rotations and two verified separate copies"
+                    loading="lazy"
+                  />
+                </picture>
                 <span class="video-play" aria-hidden="true">
                   <svg viewBox="0 0 24 24" width="34" height="34" focusable="false"><path d="M8 5.4v13.2L19 12z" fill="currentColor" /></svg>
                 </span>
@@ -329,13 +388,23 @@
               data-caption="Batch Rotate gives every video an independent result and holds conversion choices for review."
               aria-label="Enlarge the ClipTurn Batch Rotate screenshot"
             >
-              <img
-                src="assets/screenshots/store-04-batch-rotate.png"
-                width="1452"
-                height="1401"
-                alt="ClipTurn Batch Rotate showing four verified rotations and two videos waiting for conversion review"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    assets/screenshots/store-04-batch-rotate-768.webp   768w,
+                    assets/screenshots/store-04-batch-rotate-full.webp 1452w
+                  "
+                  sizes="(min-width: 1021px) 600px, (min-width: 901px) 860px, calc(100vw - 40px)"
+                />
+                <img
+                  src="assets/screenshots/store-04-batch-rotate.png"
+                  width="1452"
+                  height="1401"
+                  alt="ClipTurn Batch Rotate showing four verified rotations and two videos waiting for conversion review"
+                  loading="lazy"
+                />
+              </picture>
               <span class="zoom-label" aria-hidden="true">View larger</span>
             </button>
           </div>
@@ -365,13 +434,23 @@
               data-caption="ClipTurn names both recommended strategies and every relevant change before creating separate verified copies."
               aria-label="Enlarge the ClipTurn reviewed copies screenshot"
             >
-              <img
-                src="assets/screenshots/store-09-reviewed-copies.png"
-                width="1452"
-                height="1401"
-                alt="ClipTurn Review rotated copies dialog showing a lossless display option and a high-quality H.264 copy option"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    assets/screenshots/store-09-reviewed-copies-768.webp   768w,
+                    assets/screenshots/store-09-reviewed-copies-full.webp 1452w
+                  "
+                  sizes="(min-width: 1021px) 600px, (min-width: 901px) 860px, calc(100vw - 40px)"
+                />
+                <img
+                  src="assets/screenshots/store-09-reviewed-copies.png"
+                  width="1452"
+                  height="1401"
+                  alt="ClipTurn Review rotated copies dialog showing a lossless display option and a high-quality H.264 copy option"
+                  loading="lazy"
+                />
+              </picture>
               <span class="zoom-label" aria-hidden="true">View larger</span>
             </button>
           </div>
@@ -401,13 +480,23 @@
               data-caption="File details show the checks recorded for the exact video."
               aria-label="Enlarge the ClipTurn verification details screenshot"
             >
-              <img
-                src="assets/screenshots/store-08-file-details.png"
-                width="1452"
-                height="1401"
-                alt="ClipTurn file details showing verified rotation, metadata, and audio checks"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    assets/screenshots/store-08-file-details-768.webp   768w,
+                    assets/screenshots/store-08-file-details-full.webp 1452w
+                  "
+                  sizes="(min-width: 1021px) 600px, (min-width: 901px) 860px, calc(100vw - 40px)"
+                />
+                <img
+                  src="assets/screenshots/store-08-file-details.png"
+                  width="1452"
+                  height="1401"
+                  alt="ClipTurn file details showing verified rotation, metadata, and audio checks"
+                  loading="lazy"
+                />
+              </picture>
               <span class="zoom-label" aria-hidden="true">View larger</span>
             </button>
           </div>
@@ -672,7 +761,7 @@
 
     <dialog class="lightbox" id="image-lightbox" aria-label="Screenshot preview" aria-describedby="lightbox-caption" tabindex="-1">
       <figure class="lightbox-figure">
-        <img src="assets/screenshots/store-03-rotate-video-dark.png" alt="" />
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" />
         <figcaption class="lightbox-caption" id="lightbox-caption"></figcaption>
       </figure>
     </dialog>
