@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Video Won't Rotate on Windows? Causes and Fixes | ClipTurn</title>
+    <meta
+      name="description"
+      content="A video that plays but will not rotate, or a rotation that will not save. The real causes on Windows — codecs, storage, tracks — and what fixes each."
+    />
+    <link rel="canonical" href="https://clipturn.app/video-wont-rotate.html" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1022" media="(prefers-color-scheme: dark)" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="FixQuotes" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ClipTurn" />
+    <meta property="og:title" content="Video Won't Rotate on Windows? Causes and Fixes" />
+    <meta
+      property="og:description"
+      content="Why a video that plays perfectly can still refuse to rotate, and how to fix each cause on Windows."
+    />
+    <meta property="og:url" content="https://clipturn.app/video-wont-rotate.html" />
+    <meta property="og:image" content="https://clipturn.app/og.png" />
+    <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11 and Windows 10" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Video Won't Rotate on Windows? Causes and Fixes" />
+    <meta name="twitter:description" content="Why a video that plays perfectly can still refuse to rotate, and how to fix it." />
+    <meta name="twitter:image" content="https://clipturn.app/og.png" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Video won't rotate on Windows? Causes and fixes",
+        "description": "Diagnosing a video that will not rotate or will not save its rotation on Windows 11 and Windows 10.",
+        "inLanguage": "en",
+        "url": "https://clipturn.app/video-wont-rotate.html",
+        "dateModified": "2026-08-13",
+        "publisher": {
+          "@type": "Organization",
+          "name": "FixQuotes",
+          "url": "https://fixquotes.com/docs/about/"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why does my video play fine but refuse to rotate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Playing a video only proves your PC can decode it. Rotating one also needs an encoder for the same codec, a container writer, a route that preserves the soundtrack exactly, a supported picture layout, and somewhere safe to write the result. Any one of those being unavailable stops a rotation while playback carries on working perfectly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does my video rotation keep not saving?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nearly always because the tool rotated playback rather than the file. VLC's Geometry transform, and the view controls in many players, apply a filter on the way to the screen and never write anything back. Check by opening the file in a different program: if it is sideways there, nothing was saved. Rotating the file itself requires a tool that writes a new video."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why can I not rotate a video stored on a network drive or USB stick?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Safely replacing a file requires guarantees about file identity, same-volume staging and recovery that network shares, removable drives and non-NTFS storage cannot provide. If a rotation were interrupted there, the original might not be recoverable. Copy the video to a local drive, rotate it there, and copy it back."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does my video refuse with a missing codec message?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Windows is missing the specific encoder that route needs. WebM and VP8 or VP9 files need Microsoft's free VP9 Video Extensions. HEVC needs an HEVC Video Extensions package, and 10-bit HEVC output usually needs current graphics drivers from your PC or GPU manufacturer. Install only the exact component named in the message, then run the capability analysis again. Generic codec packs are not a reliable fix and often make diagnosis harder."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "My video will not rotate at all. What should I do?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Read the exact reason given rather than retrying. If a rotation was refused, the source was left unchanged, so nothing is lost. Fix the specific cause named — install the exact codec, move the file to a local drive, change the processing policy, or accept a reviewed rotated copy. If the outcome is reported as uncertain, inspect the file before trying again, because rotating an already-rotated clip leaves it 180 degrees out."
+            }
+          }
+        ]
+      }
+    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-26WWFWZZMP");(function(){var sent=false;var evts=["pointerdown","keydown","scroll","touchstart"];function load(){if(sent)return;sent=true;evts.forEach(function(e){removeEventListener(e,load,{passive:true})});removeEventListener("load",load);clearTimeout(timer);var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-26WWFWZZMP";document.head.appendChild(s)}var timer=setTimeout(load,1800);evts.forEach(function(e){addEventListener(e,load,{passive:true})});addEventListener("load",load)})();</script>
+  </head>
+  <body class="manual-page">
+    <a class="skip-link" href="#guide-content">Skip to the guide</a>
+
+    <header class="site-header">
+      <div class="shell nav-shell">
+        <a class="brand-link" href="/" aria-label="ClipTurn home">
+          <img class="brand-mark" src="assets/brand/clipturn-mark.svg" width="40" height="40" alt="" />
+          <span class="brand-name">Clip<span>Turn</span></span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          aria-label="Open navigation"
+        >
+          <span class="menu-lines" aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+          <a href="/#how">How it works</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="guides.html" aria-current="page">Guides</a>
+          <a href="manual.html">Manual</a>
+          <a href="changelog.html">Changelog</a>
+          <a
+            class="nav-download"
+            href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            Microsoft Store
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="guide-content">
+      <section class="legal-hero" aria-labelledby="guide-title">
+        <div class="shell">
+          <p class="eyebrow"><a href="guides.html">Guides</a></p>
+          <h1 id="guide-title">Video won't rotate? Causes and fixes on Windows</h1>
+          <p>
+            Three completely different problems get described with the same sentence: the rotation never saved,
+            the file was refused, or nothing happened at all. Each has its own causes and its own fix. Start with
+            the symptom, and remember that a refusal is a result &mdash; your original was left exactly as it was.
+          </p>
+          <div class="manual-hero-actions">
+            <a class="button button-primary" href="#symptom">Find your symptom</a>
+            <a class="button button-secondary" href="#refusals">Why files get refused</a>
+          </div>
+          <p class="updated">Windows 11 and Windows 10 &middot; updated August 2026</p>
+        </div>
+      </section>
+
+      <div class="shell manual-layout">
+        <aside class="manual-sidebar" aria-label="Guide navigation">
+          <button
+            class="manual-toc-toggle"
+            id="manual-toc-toggle"
+            type="button"
+            aria-controls="manual-toc"
+            aria-expanded="true"
+          >
+            <span>On this page</span>
+            <span class="manual-toc-toggle-state">Hide sections</span>
+          </button>
+          <nav class="manual-toc" id="manual-toc" aria-label="Guide sections">
+            <p>On this page</p>
+            <ol>
+              <li><a href="#symptom">Start with the symptom</a></li>
+              <li><a href="#not-saving">The rotation will not save</a></li>
+              <li><a href="#plays-not-rotates">It plays but will not rotate</a></li>
+              <li><a href="#refusals">Why files get refused</a></li>
+              <li><a href="#codecs">Missing codecs on Windows</a></li>
+              <li><a href="#storage">Storage and permission problems</a></li>
+              <li><a href="#uncertain">When the outcome is uncertain</a></li>
+              <li><a href="#faq">Common questions</a></li>
+            </ol>
+          </nav>
+        </aside>
+
+        <article class="manual-article">
+          <section class="manual-topic" id="symptom">
+            <p class="eyebrow">Triage</p>
+            <h2>Start with the symptom</h2>
+            <div class="manual-table-wrap" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">What you are seeing</th>
+                    <th scope="col">What it usually means</th>
+                    <th scope="col">Go to</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Looks right in one program, sideways in others</th>
+                    <td>Only playback was rotated. The file never changed.</td>
+                    <td><a href="#not-saving">The rotation will not save</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Plays perfectly, but rotation is refused</th>
+                    <td>Decoding works; something later in the chain does not.</td>
+                    <td><a href="#plays-not-rotates">It plays but will not rotate</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">A specific reason is shown</th>
+                    <td>A deliberate refusal with the source left unchanged.</td>
+                    <td><a href="#refusals">Why files get refused</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">A codec or component is named</th>
+                    <td>Windows is missing an exact encoder or decoder.</td>
+                    <td><a href="#codecs">Missing codecs</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">The file is on a NAS, USB stick or cloud folder</th>
+                    <td>Safe replacement cannot be guaranteed there.</td>
+                    <td><a href="#storage">Storage problems</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">The result says it could not be confirmed</th>
+                    <td>Stop. Do not retry until you have looked at the file.</td>
+                    <td><a href="#uncertain">Uncertain outcomes</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="not-saving">
+            <p class="eyebrow">Cause 1</p>
+            <h2>The rotation will not save</h2>
+            <p class="manual-lede">
+              By far the most common version of this problem, and it is not a failure &mdash; it is a
+              misunderstanding about what the tool did.
+            </p>
+            <p>
+              Players rotate the picture on its way to the screen. That is a display filter, applied fresh every
+              time, and nothing is written back to disk. VLC's <strong>Geometry &rarr; Transform</strong> is the
+              usual culprit, partly because VLC remembers the setting and keeps showing the clip correctly, which
+              looks exactly like success.
+            </p>
+            <div class="manual-callout info">
+              <strong>The one-second test.</strong>
+              <p>
+                Drag the video file into a browser window. A browser knows nothing about any player's settings,
+                so what it shows is the true state of the file.
+              </p>
+            </div>
+            <p>
+              To change the file you need a tool that writes video. Either export properly &mdash;
+              <a href="rotate-video-vlc.html">the VLC guide covers the exact sequence, including the step most
+              people miss</a> &mdash; or use a tool that rotates the file directly.
+            </p>
+            <p>
+              The other version of this: a rotation that <em>did</em> save, into a new file you have not noticed.
+              Editors export rather than overwrite, so check the folder for a second copy before concluding
+              nothing happened.
+            </p>
+          </section>
+
+          <section class="manual-topic" id="plays-not-rotates">
+            <p class="eyebrow">Cause 2</p>
+            <h2>It plays but will not rotate</h2>
+            <p>
+              This looks like a contradiction and is not. Playing a video and rotating one need different things
+              from your PC.
+            </p>
+            <div class="manual-table-wrap" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Needed to play it</th>
+                    <th scope="col">Also needed to rotate it</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>A decoder for the picture</td>
+                    <td>An <strong>encoder</strong> for the picture, which is a separate component</td>
+                  </tr>
+                  <tr>
+                    <td>Enough performance to draw frames</td>
+                    <td>A container writer that can rebuild the file structure</td>
+                  </tr>
+                  <tr>
+                    <td>Nothing in particular from the soundtrack</td>
+                    <td>A route that carries the soundtrack across exactly</td>
+                  </tr>
+                  <tr>
+                    <td>Nothing in particular from extra tracks</td>
+                    <td>A way to preserve subtitles, chapters and attachments, or a refusal</td>
+                  </tr>
+                  <tr>
+                    <td>Read access</td>
+                    <td>Write access, free space, and safe storage for the replacement</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              Windows commonly ships a decoder without the matching encoder &mdash; HEVC is the usual example.
+              That combination plays your holiday footage perfectly and cannot write it back out.
+            </p>
+          </section>
+
+          <section class="manual-topic" id="refusals">
+            <p class="eyebrow">Cause 3</p>
+            <h2>Why files get refused</h2>
+            <p class="manual-lede">
+              A refusal means no route was found that could produce a faithful result. The source is proven
+              unchanged, so nothing has been lost &mdash; you have simply been told before the damage rather than
+              after.
+            </p>
+            <div class="manual-table-wrap" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Reason</th>
+                    <th scope="col">What causes it</th>
+                    <th scope="col">What actually helps</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Unsupported picture layout</th>
+                    <td>
+                      Interlaced H.264, 10-bit HDR in MKV, WebM alpha or wider chroma, non-square geometry, or a
+                      professional codec.
+                    </td>
+                    <td>
+                      Changing settings will not help. Keep the source, or convert deliberately in a tool built
+                      for that first.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Audio could not be preserved</th>
+                    <td>
+                      The soundtrack cannot be copied across and proven intact by the destination writer.
+                    </td>
+                    <td>
+                      An MKV source supports more exact-copy audio arrangements. A lossy audio fallback is
+                      deliberately never offered.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Unsupported track or structure</th>
+                    <td>
+                      Extra video or audio tracks, chapters, subtitles, Live Photo pairing, fragmentation or
+                      DRM.
+                    </td>
+                    <td>
+                      Nothing is silently discarded. Remux a copy elsewhere if you are willing to lose that
+                      structure.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cannot be rotated sample-exactly</th>
+                    <td>
+                      The Strict or Exact policy was selected for compressed video, which cannot meet it.
+                    </td>
+                    <td>
+                      Switch to <strong>Keep codec and quality</strong> if one quality-preserving re-encode is
+                      acceptable.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">AVI would reach 2 GiB</th>
+                    <td>
+                      A quarter turn changes row padding, and the projected AVI 1.0 output hits the format's
+                      limit.
+                    </td>
+                    <td>
+                      An invalid oversized AVI is never written. Use a different container for that footage.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Not enough space</th>
+                    <td>
+                      No room for the candidate file, same-volume staging, rollback material or an optional
+                      backup.
+                    </td>
+                    <td>Free space on the drive holding the video, then try again.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="manual-callout info">
+              <strong>A refusal often comes with an offer.</strong>
+              <p>
+                When an exact replacement is impossible but a separate copy can be produced safely, the row stops
+                at <strong>Review available</strong> instead. Choosing <strong>Review conversions</strong> lists
+                every change before anything starts, and the copy is saved under a new name with your original
+                untouched.
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="codecs">
+            <p class="eyebrow">Cause 4</p>
+            <h2>Missing codecs on Windows</h2>
+            <p>
+              If the reason names a decoder or encoder, install only the exact component it names. ClipTurn's
+              <strong>System Capabilities</strong> tab analyses what is registered on your PC and links to the
+              official page for whatever is missing.
+            </p>
+            <div class="manual-table-wrap" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Missing</th>
+                    <th scope="col">The fix</th>
+                    <th scope="col">Limit worth knowing</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">VP8 or VP9 / WebM</th>
+                    <td>Install Microsoft's free <strong>VP9 Video Extensions</strong>.</td>
+                    <td>Required even for VP8 sources, because the Windows decode path depends on it.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">HEVC 8-bit</th>
+                    <td>Install a compatible <strong>HEVC Video Extensions</strong> package.</td>
+                    <td>The Microsoft package can be separately priced. An eligible source may use a named H.264 fallback.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">HEVC Main10 encoding</th>
+                    <td>Install current graphics drivers from your PC or GPU manufacturer, then restart.</td>
+                    <td>No Store package guarantees this. 10-bit is never silently reduced to 8-bit.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Media Foundation on Windows N</th>
+                    <td>Settings &rarr; System &rarr; Optional features &rarr; <strong>Media Feature Pack</strong>.</td>
+                    <td>Restart Windows afterwards and analyse again.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">AV1</th>
+                    <td>Microsoft's free <strong>AV1 Video Extension</strong> when offered.</td>
+                    <td>Adds decoding only. There is no AV1 output path in version 1.0.5, so the file may still refuse.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="manual-callout danger">
+              <strong>Do not install a generic codec pack.</strong>
+              <p>
+                Rotation needs exact Media Foundation component pairs that can be verified. Third-party filter
+                packs frequently leave the required encoder still missing, break playback in other applications,
+                and make the real problem much harder to identify. Install the named component, restart if asked,
+                and re-run the capability analysis.
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="storage">
+            <p class="eyebrow">Cause 5</p>
+            <h2>Storage and permission problems</h2>
+            <p>
+              Replacing a file safely requires guarantees that some storage simply cannot provide. Rather than
+              risk an unrecoverable original, these locations are refused outright.
+            </p>
+            <ul class="manual-check-list">
+              <li>
+                <strong>Network shares and NAS drives.</strong> Copy the video to a local drive, rotate it, copy
+                it back.
+              </li>
+              <li>
+                <strong>USB sticks, SD cards and other removable media.</strong> Same fix &mdash; and it is
+                faster anyway.
+              </li>
+              <li>
+                <strong>Non-NTFS volumes</strong>, including drives formatted exFAT or FAT32 for camera use.
+              </li>
+              <li>
+                <strong>Cloud placeholders that are not downloaded.</strong> Make the file
+                <em>Always keep on this device</em> in OneDrive first. A fully downloaded file on a local NTFS
+                drive is eligible.
+              </li>
+              <li>
+                <strong>Read-only files.</strong> Clear the read-only attribute in Properties, or copy the file
+                somewhere you own.
+              </li>
+              <li>
+                <strong>Files another program has open.</strong> Close the player or editor holding it and try
+                again.
+              </li>
+            </ul>
+          </section>
+
+          <section class="manual-topic" id="uncertain">
+            <p class="eyebrow">Stop and read this one</p>
+            <h2>When the outcome is uncertain</h2>
+            <p class="manual-lede">
+              Occasionally a result cannot be confirmed either way &mdash; usually after a crash, a forced
+              shutdown or another program changing the file mid-operation.
+            </p>
+            <div class="manual-callout danger">
+              <strong>Do not send the same rotation again.</strong>
+              <p>
+                If the turn already applied, repeating it leaves the video 180&deg; from where it started, and now
+                you have two problems. Open <strong>Recent Jobs</strong> to read the durable record, then look at
+                the video itself and establish which way up it currently is before doing anything else.
+              </p>
+            </div>
+            <ol class="manual-steps compact">
+              <li>
+                <div>
+                  <h3>Check Recent Jobs</h3>
+                  <p>
+                    It reads the records the worker saved to disk, not a message from a window you may have
+                    closed.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Open the video and look</h3>
+                  <p>In a program with no rotation filter applied. Its current orientation is the fact you need.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Leave recovery files alone</h3>
+                  <p>
+                    A hidden name containing <code>.cliptc.rollback</code> or <code>.cliptc.tmp</code> beside the
+                    source is recovery material. Deleting it can remove exactly what is needed to put things
+                    right. Copy the result message and
+                    <a href="https://fixquotes.com/docs/contact/?category=clipturn" target="_blank" rel="noopener">contact support</a>
+                    if the state is still unclear.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <section class="manual-topic" id="faq">
+            <p class="eyebrow">Answers</p>
+            <h2>Common questions</h2>
+
+            <h3>Why does my video play fine but refuse to rotate?</h3>
+            <p>
+              Playing a video only proves your PC can decode it. Rotating one also needs an encoder for the same
+              codec, a container writer, a route that preserves the soundtrack exactly, a supported picture
+              layout, and somewhere safe to write the result. Any one of those being unavailable stops a rotation
+              while playback carries on working perfectly.
+            </p>
+
+            <h3>Why does my video rotation keep not saving?</h3>
+            <p>
+              Nearly always because the tool rotated playback rather than the file. VLC's Geometry transform, and
+              the view controls in many players, apply a filter on the way to the screen and never write anything
+              back. Check by opening the file in a different program: if it is sideways there, nothing was saved.
+              Rotating the file itself requires a tool that writes a new video.
+            </p>
+
+            <h3>Why can I not rotate a video stored on a network drive or USB stick?</h3>
+            <p>
+              Safely replacing a file requires guarantees about file identity, same-volume staging and recovery
+              that network shares, removable drives and non-NTFS storage cannot provide. If a rotation were
+              interrupted there, the original might not be recoverable. Copy the video to a local drive, rotate it
+              there, and copy it back.
+            </p>
+
+            <h3>Why does my video refuse with a missing codec message?</h3>
+            <p>
+              Windows is missing the specific encoder that route needs. WebM and VP8 or VP9 files need Microsoft's
+              free VP9 Video Extensions. HEVC needs an HEVC Video Extensions package, and 10-bit HEVC output
+              usually needs current graphics drivers from your PC or GPU manufacturer. Install only the exact
+              component named in the message, then run the capability analysis again. Generic codec packs are not
+              a reliable fix and often make diagnosis harder.
+            </p>
+
+            <h3>My video will not rotate at all. What should I do?</h3>
+            <p>
+              Read the exact reason given rather than retrying. If a rotation was refused, the source was left
+              unchanged, so nothing is lost. Fix the specific cause named &mdash; install the exact codec, move
+              the file to a local drive, change the processing policy, or accept a reviewed rotated copy. If the
+              outcome is reported as uncertain, inspect the file before trying again, because rotating an
+              already-rotated clip leaves it 180&deg; out.
+            </p>
+
+            <div class="manual-callout info">
+              <strong>Where to go next</strong>
+              <p>
+                The manual's <a href="manual.html#refusals">refusal reference</a> and
+                <a href="manual.html#troubleshooting">troubleshooting section</a> go deeper on every message, and
+                <a href="tested-formats.html">the tested-formats matrix</a> shows the real outcome for 99 actual
+                files. For the methods themselves, see
+                <a href="rotate-video-windows.html">how to rotate a video on Windows</a>. If several rows in a batch
+                are being refused, <a href="batch-rotate-videos.html">the batch guide</a> explains why that does not
+                affect the rest.
+              </p>
+            </div>
+
+            <div class="manual-hero-actions">
+              <a
+                class="button button-primary"
+                href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                Get ClipTurn free
+              </a>
+              <a class="button button-secondary" href="guides.html">All guides</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/brand/clipturn-lockup-on-dark.svg" width="1600" height="400" alt="ClipTurn" />
+            <p>A focused app for physical, verifiable video rotation on Windows 11 and Windows 10. Published by FixQuotes.</p>
+            <p class="footer-copyright">
+              &copy; 2026 FixQuotes, Norway. All rights reserved.<br />
+              <a href="mailto:support@fixquotes.com">support@fixquotes.com</a>
+            </p>
+          </div>
+          <div class="footer-column">
+            <h2>Product</h2>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="manual.html">User manual</a></li>
+              <li><a href="guides.html">Guides</a></li>
+              <li><a href="tested-formats.html">Tested formats</a></li>
+              <li><a href="changelog.html">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h2>Legal &amp; support</h2>
+            <ul class="footer-links">
+              <li><a href="privacy.html">Privacy policy</a></li>
+              <li><a href="terms.html">Terms of use</a></li>
+              <li><a href="https://fixquotes.com/docs/contact/?category=clipturn" target="_blank" rel="noopener">Contact us</a></li>
+              <li><a href="media.html">Media</a></li>
+              <li><a href="https://fixquotes.com/docs/about/" target="_blank" rel="noopener">About the publisher</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="site.js" defer></script>
+    <script src="manual.js" defer></script>
+  </body>
+</html>

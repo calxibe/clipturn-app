@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How to Rotate a MOV File on Windows (iPhone Video)</title>
+    <meta
+      name="description"
+      content="Rotate a MOV on Windows without QuickTime, keep the capture date and GPS data, and understand why some iPhone clips are refused rather than broken."
+    />
+    <link rel="canonical" href="https://clipturn.app/rotate-mov-file.html" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1022" media="(prefers-color-scheme: dark)" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="FixQuotes" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ClipTurn" />
+    <meta property="og:title" content="How to Rotate a MOV File on Windows (iPhone Video)" />
+    <meta
+      property="og:description"
+      content="Rotate a MOV on Windows without QuickTime, keep the capture date and GPS data, and know which iPhone clips are refused."
+    />
+    <meta property="og:url" content="https://clipturn.app/rotate-mov-file.html" />
+    <meta property="og:image" content="https://clipturn.app/og.png" />
+    <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11 and Windows 10" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How to Rotate a MOV File on Windows (iPhone Video)" />
+    <meta name="twitter:description" content="Rotate a MOV on Windows without QuickTime, and keep the capture date and GPS data." />
+    <meta name="twitter:image" content="https://clipturn.app/og.png" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "How to rotate a MOV file on Windows",
+        "description": "Rotating MOV and iPhone video on Windows without QuickTime, and what survives the rotation.",
+        "inLanguage": "en",
+        "url": "https://clipturn.app/rotate-mov-file.html",
+        "dateModified": "2026-08-14",
+        "publisher": {
+          "@type": "Organization",
+          "name": "FixQuotes",
+          "url": "https://fixquotes.com/docs/about/"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Rotate a MOV file on Windows",
+        "description": "Turn a MOV or iPhone video the right way up on Windows 11 or Windows 10 without installing QuickTime.",
+        "totalTime": "PT2M",
+        "tool": [{ "@type": "HowToTool", "name": "ClipTurn for Windows" }],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Copy the file to a local drive",
+            "text": "Move the MOV off the phone, a memory card or a network share onto a local NTFS drive. Rotation is refused on removable, network and non-NTFS storage because safe replacement cannot be guaranteed there."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Install ClipTurn and open it once",
+            "text": "Install ClipTurn free from Microsoft Store and launch it once so Windows registers its File Explorer commands."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Right-click the MOV",
+            "text": "Open the ClipTurn submenu and choose Rotate video left or Rotate video right. The stored picture is turned, so the result is correct in every player."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Check the result",
+            "text": "Open the file in a different program, or check Properties then Details, where the frame width and height should have swapped after a quarter turn."
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I rotate a MOV file on Windows?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Install ClipTurn from Microsoft Store, right-click the MOV in File Explorer, open the ClipTurn submenu and choose Rotate video left or Rotate video right. The stored picture is turned and saved into the same file, so it plays the right way up everywhere. Windows has no built-in rotate command for video files, and QuickTime for Windows has been unsupported since 2016."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need QuickTime to rotate a MOV on Windows?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, and you should not install it. Apple discontinued QuickTime for Windows in 2016 and stopped issuing security updates for it. Modern Windows plays MOV files without it, and a current rotation tool reads and writes the container directly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will rotating a MOV lose the date it was filmed or its GPS location?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It should not. The MP4 family route preserves the capture and media-created time, camera and GPS metadata, audio track language, colour declarations and display geometry, and verifies them against the source before the result is published. Many general-purpose converters do drop these and stamp the new file with today's date, which quietly ruins a library sorted by date taken."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is my iPhone Live Photo MOV refused?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Live Photo MOV is paired with a separate still image, and rotating the video alone would break that pairing. It is refused deliberately and the source is left unchanged, rather than producing a video that no longer matches its photo. Rotating the pair properly has to happen on the device or in software that understands the pairing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a MOV be rotated without losing any quality?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, by rewriting the orientation instruction in the container rather than the picture. That is instant and completely lossless, but any player, editor or upload pipeline that ignores that instruction still shows the clip the old way. Physically turning the picture costs one encode generation and works everywhere."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does my iPhone MOV refuse with a missing HEVC codec message?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Recent iPhones record in HEVC, and Windows does not always include an HEVC encoder. Install a compatible HEVC Video Extensions package from Microsoft Store, which may be separately priced, then run the capability analysis again. An eligible 8-bit HEVC clip can instead fall back to H.264, and the result names that fallback rather than applying it silently. A 10-bit HEVC source is never quietly reduced to 8-bit."
+            }
+          }
+        ]
+      }
+    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-26WWFWZZMP");(function(){var sent=false;var evts=["pointerdown","keydown","scroll","touchstart"];function load(){if(sent)return;sent=true;evts.forEach(function(e){removeEventListener(e,load,{passive:true})});removeEventListener("load",load);clearTimeout(timer);var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-26WWFWZZMP";document.head.appendChild(s)}var timer=setTimeout(load,1800);evts.forEach(function(e){addEventListener(e,load,{passive:true})});addEventListener("load",load)})();</script>
+  </head>
+  <body class="manual-page">
+    <a class="skip-link" href="#guide-content">Skip to the guide</a>
+
+    <header class="site-header">
+      <div class="shell nav-shell">
+        <a class="brand-link" href="/" aria-label="ClipTurn home">
+          <img class="brand-mark" src="assets/brand/clipturn-mark.svg" width="40" height="40" alt="" />
+          <span class="brand-name">Clip<span>Turn</span></span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          aria-label="Open navigation"
+        >
+          <span class="menu-lines" aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+          <a href="/#how">How it works</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="guides.html" aria-current="page">Guides</a>
+          <a href="manual.html">Manual</a>
+          <a href="changelog.html">Changelog</a>
+          <a
+            class="nav-download"
+            href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            Microsoft Store
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="guide-content">
+      <section class="legal-hero" aria-labelledby="guide-title">
+        <div class="shell">
+          <p class="eyebrow"><a href="guides.html">Guides</a></p>
+          <h1 id="guide-title">How to rotate a MOV file on Windows</h1>
+          <p>
+            MOV is what an iPhone hands you, and it lands on a Windows PC carrying more than just a picture: a
+            capture date, GPS coordinates, camera details, and sometimes a rotation flag that Windows and the phone
+            disagree about. This covers turning the clip the right way up without QuickTime, keeping everything else
+            intact, and the two cases where a MOV is deliberately refused rather than quietly broken.
+          </p>
+          <div class="manual-hero-actions">
+            <a class="button button-primary" href="#rotate">Rotate a MOV</a>
+            <a class="button button-secondary" href="#survives">What survives</a>
+          </div>
+          <p class="updated">Windows 11 and Windows 10 &middot; updated August 2026</p>
+        </div>
+      </section>
+
+      <div class="shell manual-layout">
+        <aside class="manual-sidebar" aria-label="Guide navigation">
+          <button
+            class="manual-toc-toggle"
+            id="manual-toc-toggle"
+            type="button"
+            aria-controls="manual-toc"
+            aria-expanded="true"
+          >
+            <span>On this page</span>
+            <span class="manual-toc-toggle-state">Hide sections</span>
+          </button>
+          <nav class="manual-toc" id="manual-toc" aria-label="Guide sections">
+            <p>On this page</p>
+            <ol>
+              <li><a href="#quicktime">You do not need QuickTime</a></li>
+              <li><a href="#rotate">Rotate a MOV on Windows</a></li>
+              <li><a href="#lossless">The lossless option for MOV</a></li>
+              <li><a href="#survives">What survives the rotation</a></li>
+              <li><a href="#hevc">iPhone clips and HEVC</a></li>
+              <li><a href="#refused">Two MOV files that are refused</a></li>
+              <li><a href="#many">A camera roll's worth</a></li>
+              <li><a href="#faq">Common questions</a></li>
+            </ol>
+          </nav>
+        </aside>
+
+        <article class="manual-article">
+          <section class="manual-topic" id="quicktime">
+            <p class="eyebrow">First, the myth</p>
+            <h2>You do not need QuickTime</h2>
+            <p class="manual-lede">
+              Advice to install QuickTime for Windows is still everywhere, and it is out of date by about a decade.
+            </p>
+            <p>
+              Apple discontinued QuickTime for Windows in 2016 and stopped shipping security updates for it. Modern
+              Windows plays MOV files perfectly well without it, and any current rotation tool reads and writes the
+              container directly. Installing it today adds unpatched software to your PC and buys nothing.
+            </p>
+            <div class="manual-callout info">
+              <strong>MOV and MP4 are closer than they look.</strong>
+              <p>
+                Both descend from the same container design, which is why a tool that handles MP4 usually handles
+                MOV and M4V through the same route. ClipTurn treats <code>.mp4</code>, <code>.m4v</code> and
+                <code>.mov</code> as one family with the same rules and the same limits.
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="rotate">
+            <p class="eyebrow">The method</p>
+            <h2>Rotate a MOV on Windows</h2>
+
+            <div class="manual-screenshot">
+              <img
+                src="assets/screenshots/store-01-explorer-flyout.png"
+                width="1920"
+                height="1080"
+                alt="The Windows File Explorer right-click menu showing rotate video left and rotate video right on a selected clip"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <ol class="manual-steps">
+              <li>
+                <div>
+                  <h3>Get the file onto a local drive</h3>
+                  <p>
+                    Copy it off the phone, the memory card or the network share first. Removable, network and
+                    non-NTFS storage is refused, because the guarantees needed to replace a file safely and recover
+                    from an interruption are not available there. A OneDrive file works if it is fully downloaded
+                    rather than a placeholder.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Install ClipTurn and open it once</h3>
+                  <p>
+                    Free from
+                    <a href="https://apps.microsoft.com/detail/9PGB9JVBRGLB" target="_blank" rel="noopener">Microsoft Store</a>,
+                    no account needed. Opening it once registers its File Explorer commands.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Right-click and choose a direction</h3>
+                  <p>
+                    Open <strong>ClipTurn &ndash; Video Rotator</strong> and pick
+                    <strong>Rotate video left</strong> or <strong>Rotate video right</strong>. This turns the stored
+                    picture, so the result is correct in every player rather than only the ones that read a flag.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Confirm it held</h3>
+                  <p>
+                    Open the file somewhere other than the app you fixed it in, and check
+                    <strong>Properties &rarr; Details</strong>: after a genuine quarter turn a 1920&times;1080 clip
+                    reads 1080&times;1920.
+                  </p>
+                </div>
+              </li>
+            </ol>
+
+            <div class="manual-callout warning">
+              <strong>The rotation replaces the original.</strong>
+              <p>
+                It is verified before anything is overwritten, but there is no undo. For footage you cannot film
+                again, copy it first &mdash; or use <strong>Open in ClipTurn</strong> from the same menu and switch on
+                <strong>Create a backup before replacement</strong> in Settings.
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="lossless">
+            <p class="eyebrow">The other route</p>
+            <h2>The lossless option for MOV</h2>
+            <p>
+              MOV is one of the three containers &mdash; with MP4 and M4V &mdash; that carries an orientation
+              instruction in its header. Rewriting that instead of the picture costs nothing at all: no decoding, no
+              encoding, not a single pixel touched.
+            </p>
+            <ul class="manual-check-list">
+              <li>Instant, and completely lossless.</li>
+              <li>
+                Ignored by anything that ignored the original flag &mdash; older editors, some projectors and
+                televisions, and conversion pipelines that re-encode on upload.
+              </li>
+              <li>
+                Offered as a reviewed <em>rotated copy</em> when exact replacement is not possible: the changes are
+                listed before anything starts, the copy is saved under a new name, and the original is never
+                replaced without approval.
+              </li>
+            </ul>
+            <p>
+              Use it when the clip stays on modern software you control. Use physical rotation when it is going
+              somewhere you do not. <a href="rotate-mp4.html">The MP4 guide compares the two properly.</a>
+            </p>
+          </section>
+
+          <section class="manual-topic" id="survives">
+            <p class="eyebrow">The part that matters later</p>
+            <h2>What survives the rotation</h2>
+            <p class="manual-lede">
+              A MOV off a phone is half metadata. Losing it is the difference between a photo library that still
+              sorts correctly in five years and one that does not.
+            </p>
+            <div class="manual-table-wrap" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Carried through</th>
+                    <th scope="col">Why it matters</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Capture and media-created time</th>
+                    <td>The date Explorer and photo apps sort by. Converters that stamp today's date scramble a whole library.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">GPS coordinates</th>
+                    <td>Where the clip was filmed, used by map views in photo software.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Camera make and model</th>
+                    <td>Movie-level identity metadata, kept with the rest.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Audio, exactly</th>
+                    <td>The soundtrack is copied as original packets and verified, never re-encoded to hide a problem.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Colour and HDR declarations</th>
+                    <td>An HDR clip that loses these comes back looking washed out.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Track language and display geometry</th>
+                    <td>Checked against the source before the result is allowed to replace anything.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="manual-callout info">
+              <strong>One documented exception.</strong>
+              <p>
+                Ordinary iPhone timecode and sensor metadata tracks can be dropped, and when that happens it is
+                stated explicitly in the result rather than passing unmentioned. Everything ClipTurn cannot carry is
+                either disclosed or refused.
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="hevc">
+            <p class="eyebrow">The usual iPhone snag</p>
+            <h2>iPhone clips and HEVC</h2>
+            <p>
+              Recent iPhones record HEVC by default, and Windows does not always include an HEVC encoder even when it
+              can happily play the file. That combination plays your holiday footage perfectly and cannot write it
+              back out.
+            </p>
+            <ul class="manual-check-list">
+              <li>
+                Install a compatible <strong>HEVC Video Extensions</strong> package from Microsoft Store when the app
+                offers the link. The Microsoft package can be separately priced.
+              </li>
+              <li>
+                An eligible 8-bit HEVC clip can instead fall back to H.264, and the result <em>names</em> that
+                fallback rather than applying it silently.
+              </li>
+              <li>
+                A 10-bit HEVC source never falls back to 8-bit. If no Main10 encoder is available it refuses instead,
+                because quietly halving the bit depth of HDR footage is not a fix.
+              </li>
+              <li>
+                Main10 encoding usually depends on your graphics driver. Installing the current driver from your PC
+                or GPU manufacturer and re-running the capability analysis is the fix that actually works.
+              </li>
+            </ul>
+            <p>
+              Setting the phone to record in <em>Most Compatible</em> rather than <em>High Efficiency</em> avoids the
+              whole issue for future clips, at the cost of larger files.
+            </p>
+          </section>
+
+          <section class="manual-topic" id="refused">
+            <p class="eyebrow">Deliberate limits</p>
+            <h2>Two MOV files that are refused</h2>
+
+            <h3>A Live Photo MOV</h3>
+            <p>
+              A Live Photo is a still image paired with a short MOV. Rotating the video on its own would leave the
+              pair mismatched, so it is refused and the source is left untouched. That is a deliberate choice, not a
+              gap: producing a video that no longer matches its photo would be worse than doing nothing.
+            </p>
+
+            <h3>A MOV with extra tracks or unusual geometry</h3>
+            <p>
+              The MP4-family route carries one video track and at most one audio track. These refuse rather than
+              being silently stripped:
+            </p>
+            <ul class="manual-check-list">
+              <li>A second video or audio track, subtitles, or chapters.</li>
+              <li>Fragmented files, and non-square or fractional display geometry.</li>
+              <li>Field-coded or interlaced H.264.</li>
+              <li>
+                Dolby Vision enhancement metadata, which cannot survive this path. Where an eligible base HDR layer
+                can be kept, the result names what was dropped.
+              </li>
+            </ul>
+            <p>
+              In most of those cases a reviewed rotated copy is still offered, so you get an explicit choice rather
+              than a dead end. <a href="video-wont-rotate.html">The troubleshooting guide covers every cause</a>, and
+              <a href="tested-formats.html">the tested-formats matrix</a> shows the real outcome for 99 actual files.
+            </p>
+          </section>
+
+          <section class="manual-topic" id="many">
+            <p class="eyebrow">More than one</p>
+            <h2>A camera roll's worth</h2>
+            <p>
+              Sideways MOV files rarely arrive alone. Select them all in File Explorer and rotate once &mdash; the
+              direction applies to each file independently &mdash; or drop the folder onto ClipTurn's Batch Rotate
+              tab, where every clip keeps its own status and reason.
+              <a href="batch-rotate-videos.html">The batch guide covers a whole folder.</a>
+            </p>
+          </section>
+
+          <section class="manual-topic" id="faq">
+            <p class="eyebrow">Answers</p>
+            <h2>Common questions</h2>
+
+            <h3>How do I rotate a MOV file on Windows?</h3>
+            <p>
+              Install ClipTurn from Microsoft Store, right-click the MOV in File Explorer, open the ClipTurn submenu
+              and choose <strong>Rotate video left</strong> or <strong>Rotate video right</strong>. The stored picture
+              is turned and saved into the same file, so it plays the right way up everywhere. Windows has no
+              built-in rotate command for video files, and QuickTime for Windows has been unsupported since 2016.
+            </p>
+
+            <h3>Do I need QuickTime to rotate a MOV on Windows?</h3>
+            <p>
+              No, and you should not install it. Apple discontinued QuickTime for Windows in 2016 and stopped issuing
+              security updates for it. Modern Windows plays MOV files without it, and a current rotation tool reads
+              and writes the container directly.
+            </p>
+
+            <h3>Will rotating a MOV lose the date it was filmed or its GPS location?</h3>
+            <p>
+              It should not. The MP4 family route preserves the capture and media-created time, camera and GPS
+              metadata, audio track language, colour declarations and display geometry, and verifies them against the
+              source before the result is published. Many general-purpose converters do drop these and stamp the new
+              file with today's date, which quietly ruins a library sorted by date taken.
+            </p>
+
+            <h3>Why is my iPhone Live Photo MOV refused?</h3>
+            <p>
+              A Live Photo MOV is paired with a separate still image, and rotating the video alone would break that
+              pairing. It is refused deliberately and the source is left unchanged, rather than producing a video that
+              no longer matches its photo. Rotating the pair properly has to happen on the device or in software that
+              understands the pairing.
+            </p>
+
+            <h3>Can a MOV be rotated without losing any quality?</h3>
+            <p>
+              Yes, by rewriting the orientation instruction in the container rather than the picture. That is instant
+              and completely lossless, but any player, editor or upload pipeline that ignores that instruction still
+              shows the clip the old way. Physically turning the picture costs one encode generation and works
+              everywhere.
+            </p>
+
+            <h3>Why does my iPhone MOV refuse with a missing HEVC codec message?</h3>
+            <p>
+              Recent iPhones record in HEVC, and Windows does not always include an HEVC encoder. Install a compatible
+              HEVC Video Extensions package from Microsoft Store, which may be separately priced, then run the
+              capability analysis again. An eligible 8-bit HEVC clip can instead fall back to H.264, and the result
+              names that fallback rather than applying it silently. A 10-bit HEVC source is never quietly reduced to
+              8-bit.
+            </p>
+
+            <div class="manual-callout info">
+              <strong>Where to go next</strong>
+              <p>
+                If the clip looks fine on the phone and wrong on the PC,
+                <a href="rotate-video-taken-sideways.html">the sideways-video guide</a> explains why. For the
+                lossless-versus-physical choice in detail, see <a href="rotate-mp4.html">the MP4 guide</a>. For every
+                Windows method compared, <a href="rotate-video-windows.html">start here</a>.
+              </p>
+            </div>
+
+            <div class="manual-hero-actions">
+              <a
+                class="button button-primary"
+                href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                Get ClipTurn free
+              </a>
+              <a class="button button-secondary" href="guides.html">All guides</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/brand/clipturn-lockup-on-dark.svg" width="1600" height="400" alt="ClipTurn" />
+            <p>A focused app for physical, verifiable video rotation on Windows 11 and Windows 10. Published by FixQuotes.</p>
+            <p class="footer-copyright">
+              &copy; 2026 FixQuotes, Norway. All rights reserved.<br />
+              <a href="mailto:support@fixquotes.com">support@fixquotes.com</a>
+            </p>
+          </div>
+          <div class="footer-column">
+            <h2>Product</h2>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="manual.html">User manual</a></li>
+              <li><a href="guides.html">Guides</a></li>
+              <li><a href="tested-formats.html">Tested formats</a></li>
+              <li><a href="changelog.html">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h2>Legal &amp; support</h2>
+            <ul class="footer-links">
+              <li><a href="privacy.html">Privacy policy</a></li>
+              <li><a href="terms.html">Terms of use</a></li>
+              <li><a href="https://fixquotes.com/docs/contact/?category=clipturn" target="_blank" rel="noopener">Contact us</a></li>
+              <li><a href="media.html">Media</a></li>
+              <li><a href="https://fixquotes.com/docs/about/" target="_blank" rel="noopener">About the publisher</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="site.js" defer></script>
+    <script src="manual.js" defer></script>
+  </body>
+</html>

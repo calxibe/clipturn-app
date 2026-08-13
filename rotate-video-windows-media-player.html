@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How to Rotate a Video in Windows Media Player | ClipTurn</title>
+    <meta
+      name="description"
+      content="Windows Media Player has no rotate feature and never has. What to use instead on Windows 11 and 10 — to watch a clip now, or fix the file for good."
+    />
+    <link rel="canonical" href="https://clipturn.app/rotate-video-windows-media-player.html" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1022" media="(prefers-color-scheme: dark)" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="FixQuotes" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ClipTurn" />
+    <meta property="og:title" content="How to Rotate a Video in Windows Media Player" />
+    <meta
+      property="og:description"
+      content="Windows Media Player cannot rotate video. Here is what to use instead on Windows 11 and Windows 10."
+    />
+    <meta property="og:url" content="https://clipturn.app/rotate-video-windows-media-player.html" />
+    <meta property="og:image" content="https://clipturn.app/og.png" />
+    <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11 and Windows 10" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How to Rotate a Video in Windows Media Player" />
+    <meta name="twitter:description" content="Windows Media Player cannot rotate video. Here is what to use instead." />
+    <meta name="twitter:image" content="https://clipturn.app/og.png" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "How to rotate a video in Windows Media Player",
+        "description": "Windows Media Player has no rotation feature. This explains the alternatives on Windows 11 and Windows 10.",
+        "inLanguage": "en",
+        "url": "https://clipturn.app/rotate-video-windows-media-player.html",
+        "dateModified": "2026-08-13",
+        "publisher": {
+          "@type": "Organization",
+          "name": "FixQuotes",
+          "url": "https://fixquotes.com/docs/about/"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can Windows Media Player rotate a video?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Neither Windows Media Player Legacy nor the newer Media Player app included with Windows 11 has a rotation control, and no setting, shortcut or right-click option adds one. It is a playback application, not an editor. Rotating the video has to happen in a different program, after which Windows Media Player will play the corrected file normally."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a keyboard shortcut to rotate a video in Windows Media Player?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There is not. Ctrl+Alt with an arrow key rotates your whole screen on some graphics drivers, which is occasionally suggested as a workaround, but it turns the entire desktop rather than the video and changes nothing about the file."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I watch a sideways video the right way up right now?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Open it in VLC, press Ctrl+E, go to Video Effects then Geometry, tick Transform and choose a rotation. Playback turns immediately. This changes only how VLC displays the clip, so the file stays sideways in every other program, including Windows Media Player."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I rotate the video file itself on Windows?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Install ClipTurn from Microsoft Store, right-click the video in File Explorer, open the ClipTurn submenu and choose Rotate video left or Rotate video right. The stored picture is turned and saved into the same file, so it plays correctly afterwards in Windows Media Player and everywhere else."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does Windows Media Player show my phone video sideways when my phone does not?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The phone stored the picture one way round and added a rotation flag describing how it was held. Software that reads the flag turns the picture for you; software that ignores it shows the stored picture, which looks sideways. Physically rotating the stored picture settles the disagreement for every player at once."
+            }
+          }
+        ]
+      }
+    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-26WWFWZZMP");(function(){var sent=false;var evts=["pointerdown","keydown","scroll","touchstart"];function load(){if(sent)return;sent=true;evts.forEach(function(e){removeEventListener(e,load,{passive:true})});removeEventListener("load",load);clearTimeout(timer);var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-26WWFWZZMP";document.head.appendChild(s)}var timer=setTimeout(load,1800);evts.forEach(function(e){addEventListener(e,load,{passive:true})});addEventListener("load",load)})();</script>
+  </head>
+  <body class="manual-page">
+    <a class="skip-link" href="#guide-content">Skip to the guide</a>
+
+    <header class="site-header">
+      <div class="shell nav-shell">
+        <a class="brand-link" href="/" aria-label="ClipTurn home">
+          <img class="brand-mark" src="assets/brand/clipturn-mark.svg" width="40" height="40" alt="" />
+          <span class="brand-name">Clip<span>Turn</span></span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          aria-label="Open navigation"
+        >
+          <span class="menu-lines" aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+          <a href="/#how">How it works</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="guides.html" aria-current="page">Guides</a>
+          <a href="manual.html">Manual</a>
+          <a href="changelog.html">Changelog</a>
+          <a
+            class="nav-download"
+            href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            Microsoft Store
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="guide-content">
+      <section class="legal-hero" aria-labelledby="guide-title">
+        <div class="shell">
+          <p class="eyebrow"><a href="guides.html">Guides</a></p>
+          <h1 id="guide-title">How to rotate a video in Windows Media Player</h1>
+          <p>
+            The honest answer first: you cannot. Windows Media Player has never had a rotation feature, and
+            neither does the newer Media Player app in Windows 11. There is no hidden setting and no keyboard
+            shortcut. What you can do is rotate the video somewhere else and then play it normally &mdash; this
+            page covers both the two-minute fix and the watch-it-now workaround.
+          </p>
+          <div class="manual-hero-actions">
+            <a class="button button-primary" href="#fix-file">Fix the file</a>
+            <a class="button button-secondary" href="#watch-now">Just watch it now</a>
+          </div>
+          <p class="updated">Windows 11 and Windows 10 &middot; updated August 2026</p>
+        </div>
+      </section>
+
+      <div class="shell manual-layout">
+        <aside class="manual-sidebar" aria-label="Guide navigation">
+          <button
+            class="manual-toc-toggle"
+            id="manual-toc-toggle"
+            type="button"
+            aria-controls="manual-toc"
+            aria-expanded="true"
+          >
+            <span>On this page</span>
+            <span class="manual-toc-toggle-state">Hide sections</span>
+          </button>
+          <nav class="manual-toc" id="manual-toc" aria-label="Guide sections">
+            <p>On this page</p>
+            <ol>
+              <li><a href="#no-feature">Why there is no rotate button</a></li>
+              <li><a href="#which-player">Which player do you actually have?</a></li>
+              <li><a href="#fix-file">Fix the file in two minutes</a></li>
+              <li><a href="#watch-now">Just watch it the right way up now</a></li>
+              <li><a href="#not-workarounds">Workarounds that do not work</a></li>
+              <li><a href="#faq">Common questions</a></li>
+            </ol>
+          </nav>
+        </aside>
+
+        <article class="manual-article">
+          <section class="manual-topic" id="no-feature">
+            <p class="eyebrow">The short answer</p>
+            <h2>Why there is no rotate button</h2>
+            <p class="manual-lede">
+              Windows Media Player is a player. Rotating a video means writing a new video, and writing video was
+              never part of its job.
+            </p>
+            <p>
+              Rotating a compressed clip means decoding every frame, turning it, and encoding it again into a new
+              file. That is editing work. Windows Media Player reads files and draws them on screen; it has no
+              encoder, no export and no save-as for video. The same is true of the Media Player app that replaced
+              it in Windows 11, and of Films &amp; TV.
+            </p>
+            <div class="manual-callout info">
+              <strong>Good news, such as it is.</strong>
+              <p>
+                Once the file itself is rotated, Windows Media Player plays it correctly with no configuration at
+                all. It reads whatever orientation the file has. The fix just has to happen somewhere else first.
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="which-player">
+            <p class="eyebrow">Worth knowing</p>
+            <h2>Which player do you actually have?</h2>
+            <p>
+              Windows currently ships more than one thing called a media player, which is part of why this
+              question gets confusing answers.
+            </p>
+            <div class="manual-table-wrap" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Application</th>
+                    <th scope="col">Where it comes from</th>
+                    <th scope="col">Can it rotate video?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Windows Media Player Legacy</th>
+                    <td>The classic player, still present on Windows 11 as an optional feature</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Media Player</th>
+                    <td>The newer Windows 11 app that replaced Groove Music</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Films &amp; TV</th>
+                    <td>Bundled with Windows 10 and 11</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Photos</th>
+                    <td>Bundled with Windows 10 and 11</td>
+                    <td>Rotates images only, not video</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              So the answer is the same whichever one you are looking at. Nothing bundled with Windows rotates a
+              video from a playback window.
+            </p>
+          </section>
+
+          <section class="manual-topic" id="fix-file">
+            <p class="eyebrow">The real fix</p>
+            <h2>Fix the file in two minutes</h2>
+            <p class="manual-lede">
+              Rotate the video itself, once, and every player &mdash; including Windows Media Player &mdash; shows
+              it correctly from then on.
+            </p>
+
+            <div class="manual-screenshot">
+              <img
+                src="assets/screenshots/store-01-explorer-flyout.png"
+                width="1920"
+                height="1080"
+                alt="The Windows File Explorer right-click menu with rotate video left and rotate video right commands added"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <ol class="manual-steps">
+              <li>
+                <div>
+                  <h3>Install ClipTurn from Microsoft Store</h3>
+                  <p>
+                    It is
+                    <a href="https://apps.microsoft.com/detail/9PGB9JVBRGLB" target="_blank" rel="noopener">free</a>,
+                    needs no account, and runs entirely on your PC. Open it once after installing so Windows picks
+                    up its File Explorer commands.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Right-click the video</h3>
+                  <p>
+                    Open <strong>ClipTurn &ndash; Video Rotator</strong> and choose
+                    <strong>Rotate video left</strong> or <strong>Rotate video right</strong>. Works on
+                    <code>.mp4</code>, <code>.m4v</code>, <code>.mov</code>, <code>.mkv</code>, <code>.avi</code>,
+                    <code>.wmv</code> and <code>.webm</code>, and on several files at once.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Play it in Windows Media Player as usual</h3>
+                  <p>
+                    The rotation is now stored in the file, so nothing needs configuring in the player. The same
+                    file is also correct in browsers, editors, on a TV and on your phone.
+                  </p>
+                </div>
+              </li>
+            </ol>
+
+            <div class="manual-callout warning">
+              <strong>A rotation replaces the original file.</strong>
+              <p>
+                The result is verified before anything is overwritten, but there is no undo. Keep a copy of
+                footage you cannot replace, or use <strong>Open in ClipTurn</strong> from the same menu and turn
+                on the backup setting so the original is kept alongside the result.
+              </p>
+            </div>
+
+            <p>
+              If you would rather not install anything, Windows 11 includes Clipchamp, which can rotate a clip on
+              a timeline and export a new file. It is slower and re-encodes everything, but it is already there.
+              <a href="rotate-video-windows.html">Every method is compared here.</a>
+            </p>
+          </section>
+
+          <section class="manual-topic" id="watch-now">
+            <p class="eyebrow">The workaround</p>
+            <h2>Just watch it the right way up now</h2>
+            <p>
+              If you only need to get through this one clip and do not care about the file, use VLC as a viewer:
+            </p>
+            <ol class="manual-steps compact">
+              <li>
+                <div>
+                  <h3>Open the clip in VLC</h3>
+                  <p>Then press <kbd>Ctrl</kbd>+<kbd>E</kbd> for Effects and Filters.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Video Effects &rarr; Geometry</h3>
+                  <p>
+                    Tick <strong>Transform</strong> and choose a rotation. Playback turns immediately.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Remember to turn it off afterwards</h3>
+                  <p>
+                    If you pressed Save, every video you open in VLC from now on is rotated too. Untick Transform
+                    when you are done.
+                  </p>
+                </div>
+              </li>
+            </ol>
+            <div class="manual-callout warning">
+              <strong>This changes nothing about the file.</strong>
+              <p>
+                Windows Media Player will still show the clip sideways, because only VLC's display was rotated.
+                <a href="rotate-video-vlc.html">The VLC guide explains the difference and how to export properly.</a>
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="not-workarounds">
+            <p class="eyebrow">Save yourself the time</p>
+            <h2>Workarounds that do not work</h2>
+            <ul class="manual-check-list">
+              <li>
+                <strong>Rotating the screen with Ctrl+Alt+arrow.</strong> On graphics drivers that support it,
+                this turns your entire desktop. It is occasionally suggested for this problem and it is a bad
+                idea: everything else becomes unusable and the file is untouched.
+              </li>
+              <li>
+                <strong>Looking for a plugin or skin.</strong> Windows Media Player skins change the interface,
+                not the video pipeline. No skin adds rotation.
+              </li>
+              <li>
+                <strong>Installing a codec pack.</strong> Codecs decide what can be decoded. Rotation is not a
+                decoding problem, and codec packs commonly cause more playback trouble than they solve.
+              </li>
+              <li>
+                <strong>Renaming the file extension.</strong> This changes nothing inside the file and can stop
+                it opening at all.
+              </li>
+            </ul>
+          </section>
+
+          <section class="manual-topic" id="faq">
+            <p class="eyebrow">Answers</p>
+            <h2>Common questions</h2>
+
+            <h3>Can Windows Media Player rotate a video?</h3>
+            <p>
+              No. Neither Windows Media Player Legacy nor the newer Media Player app included with Windows 11 has
+              a rotation control, and no setting, shortcut or right-click option adds one. It is a playback
+              application, not an editor. Rotating the video has to happen in a different program, after which
+              Windows Media Player will play the corrected file normally.
+            </p>
+
+            <h3>Is there a keyboard shortcut to rotate a video in Windows Media Player?</h3>
+            <p>
+              There is not. <kbd>Ctrl</kbd>+<kbd>Alt</kbd> with an arrow key rotates your whole screen on some
+              graphics drivers, which is occasionally suggested as a workaround, but it turns the entire desktop
+              rather than the video and changes nothing about the file.
+            </p>
+
+            <h3>How do I watch a sideways video the right way up right now?</h3>
+            <p>
+              Open it in VLC, press <kbd>Ctrl</kbd>+<kbd>E</kbd>, go to <strong>Video Effects</strong> then
+              <strong>Geometry</strong>, tick <strong>Transform</strong> and choose a rotation. Playback turns
+              immediately. This changes only how VLC displays the clip, so the file stays sideways in every other
+              program, including Windows Media Player.
+            </p>
+
+            <h3>How do I rotate the video file itself on Windows?</h3>
+            <p>
+              Install ClipTurn from Microsoft Store, right-click the video in File Explorer, open the ClipTurn
+              submenu and choose <strong>Rotate video left</strong> or <strong>Rotate video right</strong>. The
+              stored picture is turned and saved into the same file, so it plays correctly afterwards in Windows
+              Media Player and everywhere else.
+            </p>
+
+            <h3>Why does Windows Media Player show my phone video sideways when my phone does not?</h3>
+            <p>
+              The phone stored the picture one way round and added a rotation flag describing how it was held.
+              Software that reads the flag turns the picture for you; software that ignores it shows the stored
+              picture, which looks sideways. Physically rotating the stored picture settles the disagreement for
+              every player at once.
+              <a href="rotate-video-taken-sideways.html">More on sideways phone footage.</a>
+            </p>
+
+            <div class="manual-hero-actions">
+              <a
+                class="button button-primary"
+                href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                Get ClipTurn free
+              </a>
+              <a class="button button-secondary" href="guides.html">All guides</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/brand/clipturn-lockup-on-dark.svg" width="1600" height="400" alt="ClipTurn" />
+            <p>A focused app for physical, verifiable video rotation on Windows 11 and Windows 10. Published by FixQuotes.</p>
+            <p class="footer-copyright">
+              &copy; 2026 FixQuotes, Norway. All rights reserved.<br />
+              <a href="mailto:support@fixquotes.com">support@fixquotes.com</a>
+            </p>
+          </div>
+          <div class="footer-column">
+            <h2>Product</h2>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="manual.html">User manual</a></li>
+              <li><a href="guides.html">Guides</a></li>
+              <li><a href="tested-formats.html">Tested formats</a></li>
+              <li><a href="changelog.html">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h2>Legal &amp; support</h2>
+            <ul class="footer-links">
+              <li><a href="privacy.html">Privacy policy</a></li>
+              <li><a href="terms.html">Terms of use</a></li>
+              <li><a href="https://fixquotes.com/docs/contact/?category=clipturn" target="_blank" rel="noopener">Contact us</a></li>
+              <li><a href="media.html">Media</a></li>
+              <li><a href="https://fixquotes.com/docs/about/" target="_blank" rel="noopener">About the publisher</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="site.js" defer></script>
+    <script src="manual.js" defer></script>
+  </body>
+</html>

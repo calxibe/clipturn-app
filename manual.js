@@ -81,4 +81,51 @@
     compactLayout.addEventListener("change", () => setContentsOpen(!compactLayout.matches));
     setContentsOpen(!compactLayout.matches);
   }
+
+  // On desktop the sidebar is the scroll box, not the <nav> inside it. On narrow
+  // screens the sidebar goes static and overflow:visible, so scrollHeight matches
+  // clientHeight and the guard below turns this into a no-op.
+  const scrollBox = contents?.closest(".manual-sidebar") ?? contents;
+
+  // The contents list is taller than its scroll box on a long page. Keep the
+  // current entry inside that box by scrolling the list itself — never the page,
+  // which is why this sets scrollTop directly instead of using scrollIntoView.
+  const keepCurrentInView = () => {
+    if (!scrollBox || !contents || contents.hidden) return;
+    if (scrollBox.scrollHeight <= scrollBox.clientHeight) return;
+
+    const current = contents.querySelector("a.is-current");
+    if (!current) return;
+
+    const box = scrollBox.getBoundingClientRect();
+    const item = current.getBoundingClientRect();
+    const margin = 16;
+
+    if (item.top < box.top + margin) {
+      scrollBox.scrollTop -= box.top + margin - item.top;
+    } else if (item.bottom > box.bottom - margin) {
+      scrollBox.scrollTop += item.bottom - (box.bottom - margin);
+    }
+  };
+
+  // Highlight the section currently in view in the contents list.
+  const observedTopics = topics.filter((topic) => topic.id);
+  if (contents && observedTopics.length && "IntersectionObserver" in window) {
+    const linkById = new Map(
+      contentsLinks.map((link) => [link.getAttribute("href").slice(1), link]),
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const link = linkById.get(entry.target.id);
+          if (link) link.classList.toggle("is-current", entry.isIntersecting);
+        });
+        keepCurrentInView();
+      },
+      { rootMargin: "-20% 0px -70% 0px" },
+    );
+
+    observedTopics.forEach((topic) => observer.observe(topic));
+  }
 })();

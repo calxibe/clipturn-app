@@ -1323,6 +1323,13 @@ a:hover {
   font-size: 0.84rem;
 }
 
+/* The publisher email lives here so a contact address is reachable from every
+   page, which the privacy policy's controller section depends on. Matches
+   .footer-bottom a rather than the global link colour. */
+.footer-brand .footer-copyright a {
+  color: #aeb8ce;
+}
+
 .footer-column h2 {
   margin: 0 0 14px;
   color: #fff;
@@ -1903,6 +1910,14 @@ a:hover {
 }
 
 .evidence-table-wrap:focus-visible {
+  outline-offset: 5px;
+}
+
+/* Manual and guide tables scroll sideways on a narrow screen, so they carry
+   tabindex="0" to be reachable without a mouse (WCAG 2.1.1). Deliberately no
+   role="region": there are ~30 of them and that many landmarks would bury the
+   real ones. Offset matches .evidence-table-wrap. */
+.manual-table-wrap:focus-visible {
   outline-offset: 5px;
 }
 
@@ -2905,6 +2920,39 @@ a:hover {
     display: none;
   }
 
+  /* Browsers drop backgrounds when printing, so every component that relies on a
+     dark ground for its light text printed white-on-white and vanished — the
+     whole workflow strip and the limits section on index.html. Force these back
+     to black on white rather than trusting a background nobody prints. */
+  .truth-band,
+  .truth-band *,
+  .workflow-card,
+  .workflow-card *,
+  .workflow-step,
+  .workflow-steps *,
+  .limits-grid,
+  .limit-card,
+  .limit-card *,
+  .step-number,
+  .cta-card,
+  .cta-card * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .workflow-card,
+  .limit-card,
+  .step-number {
+    border: 1px solid #999 !important;
+  }
+
+  .workflow-card,
+  .limit-card {
+    break-inside: avoid;
+  }
+
   a {
     color: #000;
   }
@@ -3122,6 +3170,13 @@ a:hover {
   padding-bottom: 96px;
 }
 
+/* Guides index carries no sidebar. One column, same vertical rhythm as every
+   other manual page — do not swap this for a bare .shell, which drops the
+   56px/96px padding and butts the first card into the hero border. */
+.manual-layout-full {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .manual-sidebar {
   position: sticky;
   top: 104px;
@@ -3168,6 +3223,15 @@ a:hover {
   border-left-color: var(--turn);
   background: #e9effc;
   color: var(--signal-dark);
+}
+
+/* Marks the section currently under the reader. Weight plus the filled accent
+   rail keeps it readable against a hovered neighbour. */
+.manual-toc a.is-current {
+  border-left-color: var(--signal);
+  background: #dfe8fb;
+  color: var(--signal-dark);
+  font-weight: 700;
 }
 
 .manual-article {
@@ -3485,6 +3549,28 @@ a:hover {
 .manual-route-grid a {
   font-size: 0.87rem;
   font-weight: 700;
+}
+
+/* Guides index only. The whole card is one click target: ::after stretches the
+   card's own link over it, so the visible link text stays the accessible name
+   and no nested-anchor markup is needed. Scoped with -cards so the quick-start
+   cards in manual.html keep their current behaviour. */
+.manual-route-grid-cards article {
+  position: relative;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.manual-route-grid-cards article:hover {
+  border-color: #a8b8de;
+  box-shadow: 0 18px 40px rgba(24, 34, 63, 0.13);
+  transform: translateY(-4px);
+}
+
+.manual-route-grid-cards article > a::after {
+  position: absolute;
+  border-radius: 18px;
+  content: "";
+  inset: 0;
 }
 
 .manual-screenshot {
@@ -4104,6 +4190,12 @@ kbd {
     color: #c5d0ff;
   }
 
+  .manual-toc a.is-current {
+    border-left-color: #7f97ff;
+    background: #24345a;
+    color: #dbe3ff;
+  }
+
   .manual-mini-card,
   .manual-glossary > div {
     background: #172139;
@@ -4126,6 +4218,11 @@ kbd {
 
   .manual-route-grid article {
     background: linear-gradient(145deg, #172139, #11192c);
+  }
+
+  .manual-route-grid-cards article:hover {
+    border-color: #5f739f;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.3);
   }
 
   .manual-route-grid article > span,
@@ -4221,6 +4318,12 @@ kbd {
   .manual-check-list li::before,
   .manual-facts li::before {
     display: none;
+  }
+
+  /* Forced colours drop the tinted background, so the current entry needs a
+     non-colour cue of its own. */
+  .manual-toc a.is-current {
+    text-decoration: underline;
   }
 }
 

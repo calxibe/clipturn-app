@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ClipTurn User Manual — Complete guide</title>
+    <title>ClipTurn Manual — Batch Rotate, Settings, Formats, Fixes</title>
     <meta
       name="description"
-      content="The complete ClipTurn user manual: rotate one video or a batch, understand verification, settings, supported formats, backups, recovery, and troubleshooting."
+      content="The complete ClipTurn reference: rotate one video or a whole batch, supported formats and codecs, every setting, backups, and what each refusal means."
     />
     <link rel="canonical" href="https://clipturn.app/manual.html" />
     <meta name="color-scheme" content="light dark" />
@@ -15,17 +15,17 @@
     <meta name="robots" content="index,follow" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="ClipTurn" />
-    <meta property="og:title" content="ClipTurn User Manual" />
+    <meta property="og:title" content="ClipTurn Manual — Batch Rotate, Settings, Formats, Fixes" />
     <meta
       property="og:description"
-      content="Step-by-step instructions and a detailed technical reference for ClipTurn."
+      content="Step-by-step instructions and a detailed technical reference for rotating video with ClipTurn on Windows."
     />
     <meta property="og:url" content="https://clipturn.app/manual.html" />
     <meta property="og:image" content="https://clipturn.app/og.png" />
     <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11 and Windows 10" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ClipTurn User Manual" />
-    <meta name="twitter:description" content="The complete guide to rotating videos safely with ClipTurn." />
+    <meta name="twitter:title" content="ClipTurn Manual — Batch Rotate, Settings, Formats, Fixes" />
+    <meta name="twitter:description" content="The complete reference for rotating videos safely with ClipTurn on Windows." />
     <meta name="twitter:image" content="https://clipturn.app/og.png" />
     <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -36,12 +36,13 @@
       {
         "@context": "https://schema.org",
         "@type": "TechArticle",
-        "headline": "ClipTurn User Manual",
+        "headline": "The complete ClipTurn video rotation manual",
         "description": "Complete instructions and reference information for ClipTurn version 1.0.5.",
-        "dateModified": "2026-08-10",
+        "dateModified": "2026-08-13",
         "inLanguage": "en",
         "about": {
           "@type": "SoftwareApplication",
+          "@id": "https://clipturn.app/#software",
           "name": "ClipTurn",
           "applicationCategory": "MultimediaApplication",
           "operatingSystem": "Windows 11, Windows 10"
@@ -53,6 +54,170 @@
         }
       }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Rotate a video from File Explorer",
+        "description": "The fastest of ClipTurn's three routes: rotate a supported video directly from the Windows right-click menu.",
+        "totalTime": "PT1M",
+        "tool": [{ "@type": "HowToTool", "name": "ClipTurn for Windows" }],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Right-click a supported video",
+            "text": "Right-click a supported video.",
+            "url": "https://clipturn.app/manual.html#quick-start"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Open the ClipTurn submenu",
+            "text": "Open ClipTurn – Video Rotator.",
+            "url": "https://clipturn.app/manual.html#quick-start"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Choose the direction",
+            "text": "Select Rotate video left or Rotate video right.",
+            "url": "https://clipturn.app/manual.html#quick-start"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Read the result",
+            "text": "Wait for the result card.",
+            "url": "https://clipturn.app/manual.html#quick-start"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Which versions of Windows does ClipTurn support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ClipTurn supports Windows 11 and Windows 10 version 2004 (build 19041) or later. On Windows 10, the PC must use the 64-bit (x64) version of Windows; 32-bit Windows is not supported. On Windows 11, ClipTurn supports both standard x64 PCs and ARM64 PCs. Microsoft Store selects the compatible package automatically."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is the ClipTurn menu missing in File Explorer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Confirm that the selection contains only files ending in .mp4, .m4v, .mov, .mkv, .avi, .wmv, or .webm. The menu stays hidden when any selected item is unsupported. MPEG/VOB extensions are intentionally not registered. If supported files never show the menu, confirm the Store installation completed and restart File Explorer or sign out and in before contacting support."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is rotation refused when the video plays fine?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Playback proves only that a decoder can display the source. ClipTurn also needs an eligible encoder, container writer, exact audio route, supported track/geometry/colour layout, safe file location, and a candidate that passes complete verification. Read the per-file result, then open System Capabilities only when the message names a missing codec path."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why do Strict and Exact refuse an ordinary phone video?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "This is expected. Compressed video cannot be rotated sample-exactly through decode and encode. Strict and Exact currently cover eligible uncompressed AVI only. Select Keep codec and quality if you accept a quality-preserving re-encode, then save the setting and try once more."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does a WebM or VP8/VP9 file refuse on a normal Windows installation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Install Microsoft’s free VP9 Video Extensions using the exact action ClipTurn provides, then restart affected apps and select Analyze this PC again. VP8 planning also depends on this Windows package. The file can still refuse for 10-bit/profile, alpha, audio, subtitle, chapter, attachment, or multi-video limits."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What do I do when HEVC or Main10 is unavailable?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For 8-bit HEVC, use the official HEVC extension link offered by ClipTurn when present. It may be a separately priced Microsoft Store product. Eligible 8-bit input can use a clearly named H.264 fallback when no HEVC encoder is usable. Main10 encoding normally depends on hardware and a matching driver. Install the exact manufacturer driver for the PC/GPU, restart, and analyze again, or use another capable PC. ClipTurn does not silently convert 10-bit to 8-bit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I fix Media Foundation being unavailable on Windows N?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Open Windows Settings → System → Optional features, add Microsoft’s free Media Feature Pack, restart Windows, and run System Capabilities again."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is a cloud, network, removable, or read-only file refused?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Make a cloud file fully available on this device, ensure it is writable, and place it on a local fixed NTFS volume. A hydrated OneDrive file on local NTFS can be eligible, but the sync client may upload the changed result afterward. ClipTurn intentionally refuses storage where its same-volume replacement, identity, and recovery guarantees cannot be proved."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is the rotated file larger than the original?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "This can be normal under Keep codec and quality. ClipTurn targets the source quality/bitrate and has no compressed-output size ceiling; it does not spend picture quality simply to hit the old byte count. Strict has a small container-overhead tolerance, but applies only to exact AVI. Exact allows exact AVI to grow without that ceiling."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does the app look stuck on Preparing or processing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Large files, full-stream verification, slow storage, codec startup, or recovery can take time. Select Stop waiting when offered to release the foreground wait; the rotation continues safely. Check Recent Jobs later. Do not kill and resubmit the same file while the outcome is uncertain."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why are some videos still running after I stopped a batch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Stop after the current videos is working as designed. It stops dispatching new rows but does not terminate workers that already own files. Those rows finish; untouched rows return to Not started. Select Rotate the list later to process the remainder."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does a verification receipt say the file changed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The current identity, length, modified time, or full SHA-256 no longer matches the recorded version. Rename/move behavior depends on available file identity, but any content edit or replacement makes the old proof stale. Verify file again hashes the current bytes; it does not restore an older receipt or undo an edit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does an AVI refuse because it would reach 2 GiB?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ClipTurn writes the supported AVI 1.0 layout and refuses a projected output at or above 2 GiB. A 90° turn can change row padding and therefore size even when every stored pixel is exact."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does the result mention a subtitle, chapter, attachment, or extra track?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ClipTurn will not silently delete or reposition a structure it cannot preserve and verify. Changing processing policy does not make that layout safe. Keep the source unchanged or deliberately remux/convert a copy in a tool suited to that task."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What should I do when a row says Outcome unknown or Source changed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Do not retry. Open Recent Jobs, inspect the physical video, and determine its current orientation first. A second turn could produce an unintended 180° result. If you still cannot establish the state, copy the result and contact support before deleting any recovery material."
+            }
+          }
+        ]
+      }
+    </script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-26WWFWZZMP");(function(){var sent=false;var evts=["pointerdown","keydown","scroll","touchstart"];function load(){if(sent)return;sent=true;evts.forEach(function(e){removeEventListener(e,load,{passive:true})});removeEventListener("load",load);clearTimeout(timer);var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-26WWFWZZMP";document.head.appendChild(s)}var timer=setTimeout(load,1800);evts.forEach(function(e){addEventListener(e,load,{passive:true})});addEventListener("load",load)})();</script>
   </head>
   <body class="manual-page">
@@ -60,7 +225,7 @@
 
     <header class="site-header">
       <div class="shell nav-shell">
-        <a class="brand-link" href="index.html" aria-label="ClipTurn home">
+        <a class="brand-link" href="/" aria-label="ClipTurn home">
           <img class="brand-mark" src="assets/brand/clipturn-mark.svg" width="40" height="40" alt="" />
           <span class="brand-name">Clip<span>Turn</span></span>
         </a>
@@ -74,8 +239,9 @@
           <span class="menu-lines" aria-hidden="true"></span>
         </button>
         <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
-          <a href="index.html#how">How it works</a>
+          <a href="/#how">How it works</a>
           <a href="pricing.html">Pricing</a>
+          <a href="guides.html">Guides</a>
           <a href="manual.html" aria-current="page">Manual</a>
           <a href="changelog.html">Changelog</a>
           <a
@@ -96,7 +262,7 @@
         <div class="shell manual-hero-grid">
           <div>
             <p class="eyebrow">ClipTurn 1.0.5 · Windows 11 and Windows 10</p>
-            <h1>The complete ClipTurn manual.</h1>
+            <h1>The complete ClipTurn video rotation manual.</h1>
             <p class="manual-hero-lede">
               From a single right-click to a carefully controlled batch, this guide explains every
               workflow, setting, safeguard, supported format, and useful recovery step.
@@ -195,7 +361,7 @@
 
           <section class="manual-topic" id="start">
             <p class="eyebrow">Start here</p>
-            <h2>What ClipTurn does</h2>
+            <h2>How ClipTurn rotates a video on Windows</h2>
             <p class="manual-lede">
               ClipTurn physically turns the picture stored in a video by 90° left, 90° right, or 180°.
               It does not merely add an orientation hint that another player may ignore.
@@ -238,11 +404,22 @@
                 accumulate quality loss. Supported uncompressed AVI is the only sample-exact path.
               </p>
             </div>
+            <div class="manual-callout info">
+              <strong>Coming from another tool?</strong>
+              <p>
+                Rotating inside a player is a different operation. VLC's transform changes playback only and leaves
+                the file untouched, and Windows Media Player has no rotation at all. The
+                <a href="guides.html">guides</a> cover
+                <a href="rotate-video-vlc.html">rotating and saving in VLC</a>,
+                <a href="rotate-video-windows-media-player.html">what to use instead of Windows Media Player</a>, and
+                <a href="rotate-video-taken-sideways.html">why phone footage looks right on the phone and sideways on a PC</a>.
+              </p>
+            </div>
           </section>
 
           <section class="manual-topic" id="install">
             <p class="eyebrow">Setup</p>
-            <h2>Install and first launch</h2>
+            <h2>Install ClipTurn on Windows 11 or Windows 10</h2>
             <ol class="manual-steps">
               <li>
                 <div>
@@ -288,9 +465,9 @@
 
           <section class="manual-topic" id="tour">
             <p class="eyebrow">Orientation</p>
-            <h2>A tour of the app</h2>
+            <h2>A tour of the ClipTurn video rotator</h2>
             <p>ClipTurn has five tabs. The <strong>Locate file</strong> button in the title area is always available when no rotation owns a source.</p>
-            <div class="manual-table-wrap">
+            <div class="manual-table-wrap" tabindex="0">
               <table>
                 <thead>
                   <tr><th scope="col">Tab</th><th scope="col">What it is for</th><th scope="col">Key controls</th></tr>
@@ -345,7 +522,7 @@
 
           <section class="manual-topic" id="quick-start">
             <p class="eyebrow">Choose a route</p>
-            <h2>Three quick starts</h2>
+            <h2>How to rotate a video: three quick ways</h2>
             <div class="manual-route-grid">
               <article>
                 <span>Fastest</span>
@@ -381,11 +558,15 @@
                 <a href="#batch">Read the batch guide</a>
               </article>
             </div>
+            <p>
+              For these three routes compared against Clipchamp, VLC and the options built into Windows, see
+              <a href="rotate-video-windows.html">how to rotate a video on Windows 11 and Windows 10</a>.
+            </p>
           </section>
 
           <section class="manual-topic" id="file-explorer">
             <p class="eyebrow">Workflow 1</p>
-            <h2>Rotate from File Explorer</h2>
+            <h2>Rotate a video by right-clicking it in File Explorer</h2>
             <p class="manual-lede">
               Use this route when the direction is already obvious and you do not need a preview or persistent backup.
             </p>
@@ -445,7 +626,7 @@
 
           <section class="manual-topic" id="rotate-video">
             <p class="eyebrow">Workflow 2</p>
-            <h2>Rotate one video in the app</h2>
+            <h2>Rotate one video and save it permanently</h2>
             <div class="manual-screenshot">
               <button
                 class="screenshot-button"
@@ -531,7 +712,7 @@
 
           <section class="manual-topic" id="preview-details">
             <p class="eyebrow">Inspect before and after</p>
-            <h2>Preview, playback, and Video Details</h2>
+            <h2>Preview the rotation and check video details</h2>
             <p>
               Preview answers “is this the direction I want?” Details answers “what is in this file?” Neither is a promise that
               the complete rotation path will succeed; the real save performs deeper codec, stream, replacement, and verification checks.
@@ -549,7 +730,7 @@
               </div>
             </div>
             <h3>What the Details window shows</h3>
-            <div class="manual-table-wrap">
+            <div class="manual-table-wrap" tabindex="0">
               <table>
                 <thead><tr><th scope="col">Section</th><th scope="col">Examples of information</th></tr></thead>
                 <tbody>
@@ -575,7 +756,7 @@
 
           <section class="manual-topic" id="batch">
             <p class="eyebrow">Workflow 3</p>
-            <h2>Batch Rotate</h2>
+            <h2>Batch rotate multiple videos at once</h2>
             <p class="manual-lede">
               Batch Rotate applies one selected direction to a list. Every row is still its own job, so a refusal or a reviewed-copy choice does not hide or stop the others.
             </p>
@@ -651,12 +832,17 @@
                 files finish. Untouched waiting rows return to Not started; select Rotate the list later to run exactly the remainder.
               </p>
             </div>
+            <p>
+              For this workflow written as a task &mdash; multi-select against the list, adding folders, concurrency,
+              and splitting clips that need different directions &mdash; see
+              <a href="batch-rotate-videos.html">how to batch rotate multiple videos at once</a>.
+            </p>
           </section>
 
           <section class="manual-topic" id="batch-statuses">
             <p class="eyebrow">Read before retrying</p>
-            <h2>Batch statuses and retry rules</h2>
-            <div class="manual-table-wrap">
+            <h2>Batch statuses and when it is safe to retry</h2>
+            <div class="manual-table-wrap" tabindex="0">
               <table>
                 <thead><tr><th scope="col">Status</th><th scope="col">Meaning</th><th scope="col">Can Rotate the list try it again?</th></tr></thead>
                 <tbody>
@@ -684,7 +870,7 @@
 
           <section class="manual-topic" id="recent-jobs">
             <p class="eyebrow">Durable history</p>
-            <h2>Recent Jobs</h2>
+            <h2>Recent Jobs: find the result of a rotation</h2>
             <p>
               Recent Jobs is the first place to look after closing a progress window, selecting Stop waiting,
               recovering from an interruption, or seeing an uncertain batch status. It reads the request and result
@@ -717,7 +903,7 @@
 
           <section class="manual-topic" id="verification">
             <p class="eyebrow">Exact-file evidence</p>
-            <h2>Verification receipts</h2>
+            <h2>Verification receipts: proof a video was rotated</h2>
             <p class="manual-lede">
               A receipt records what ClipTurn proved about one exact on-disk version of a video. It is local evidence,
               not a permanent badge embedded in the media.
@@ -757,7 +943,7 @@
                 </p>
               </div>
             </div>
-            <div class="manual-table-wrap">
+            <div class="manual-table-wrap" tabindex="0">
               <table>
                 <thead><tr><th scope="col">State</th><th scope="col">What it means</th><th scope="col">What to do</th></tr></thead>
                 <tbody>
@@ -781,7 +967,7 @@
 
           <section class="manual-topic" id="capabilities">
             <p class="eyebrow">This PC</p>
-            <h2>System Capabilities</h2>
+            <h2>System Capabilities: check your Windows video codecs</h2>
             <p>
               The first time you select this tab, ClipTurn analyzes registered media components in a separate worker.
               Select <strong>Analyze this PC</strong> to run it again after a codec, Windows, driver, or hardware change.
@@ -792,13 +978,13 @@
               <span role="listitem">VP8</span><span role="listitem">VP9</span><span role="listitem">AV1</span><span role="listitem">WMV7</span><span role="listitem">WMV8</span>
               <span role="listitem">WMV9</span><span role="listitem">VC-1</span>
             </div>
-            <div class="manual-table-wrap">
+            <div class="manual-table-wrap" tabindex="0">
               <table>
                 <thead><tr><th scope="col">Label</th><th scope="col">What it proves</th><th scope="col">What it does not prove</th></tr></thead>
                 <tbody>
                   <tr><th scope="row">Detected</th><td>Windows registered a matching Media Foundation decoder or encoder for the exact subtype pair.</td><td>That it can negotiate this file, sustain the work, preserve everything, or pass ClipTurn’s verification.</td></tr>
                   <tr><th scope="row">Not detected</th><td>No matching registered component was found within the analysis.</td><td>That a generic codec pack is a safe fix. Use only the exact remediation shown.</td></tr>
-                  <tr><th scope="row">Included</th><td>The running worker contains the named bundled codec library, such as ClipTurn’s preferred VP8 encoder.</td><td>That the required Windows decoder or container path is also available.</td></tr>
+                  <tr><th scope="row">Included</th><td>The running worker contains the named bundled codec library, such as the libvpx 1.16 build ClipTurn prefers for VP8 encoding.</td><td>That the required Windows decoder or container path is also available.</td></tr>
                 </tbody>
               </table>
             </div>
@@ -818,13 +1004,13 @@
 
           <section class="manual-topic" id="settings">
             <p class="eyebrow">Reference</p>
-            <h2>Settings</h2>
+            <h2>ClipTurn settings reference</h2>
             <p>
               Rotation settings apply to jobs started in the app and File Explorer, except for the backup switch.
               Explorer always requests no persistent backup. Every setting saves as soon as you change it, and an
               in-app rotation captures the values currently shown. There is no separate Save settings step.
             </p>
-            <div class="manual-table-wrap">
+            <div class="manual-table-wrap" tabindex="0">
               <table>
                 <thead><tr><th scope="col">Setting</th><th scope="col">Default</th><th scope="col">Effect</th></tr></thead>
                 <tbody>
@@ -883,8 +1069,8 @@
 
           <section class="manual-topic" id="policies">
             <p class="eyebrow">Quality and exactness</p>
-            <h2>Choose a processing policy</h2>
-            <div class="manual-table-wrap">
+            <h2>Rotate without losing quality: choose a processing policy</h2>
+            <div class="manual-table-wrap" tabindex="0">
               <table>
                 <thead><tr><th scope="col">Policy</th><th scope="col">Fidelity requirement</th><th scope="col">Size rule</th><th scope="col">Practical coverage in 1.0.5</th></tr></thead>
                 <tbody>
@@ -931,11 +1117,17 @@
                 files, unsafe storage, and other fidelity gates still refuse. Exact policies never silently fall back.
               </p>
             </div>
+            <p>
+              MP4, M4V, and MOV also have a route that costs no quality at all, because it rewrites the orientation
+              instruction instead of the picture.
+              <a href="rotate-mp4.html">Rotating an MP4 without losing quality</a> compares that choice against
+              physical rotation and explains when each one is the right answer.
+            </p>
           </section>
 
           <section class="manual-topic" id="safety">
             <p class="eyebrow">Behind every save</p>
-            <h2>How replacement stays safe</h2>
+            <h2>How ClipTurn rotates a video without corrupting it</h2>
             <p class="manual-lede">
               ClipTurn treats rotation as a verified file-replacement transaction. It does not overwrite the source
               incrementally while frames are still being produced.
@@ -950,7 +1142,7 @@
               <li><strong>Record the outcome.</strong><span>The durable result, journal state, and exact-file receipt are saved after the installed result is known.</span></li>
             </ol>
             <h3>Storage and file gates</h3>
-            <div class="manual-table-wrap">
+            <div class="manual-table-wrap" tabindex="0">
               <table>
                 <thead><tr><th scope="col">Source state</th><th scope="col">ClipTurn behavior</th><th scope="col">Reason</th></tr></thead>
                 <tbody>
@@ -981,7 +1173,7 @@
 
           <section class="manual-topic" id="backups-recovery">
             <p class="eyebrow">When something interrupts the work</p>
-            <h2>Backups, interruption, and recovery</h2>
+            <h2>Backups, interrupted rotations, and recovery</h2>
             <h3>Persistent backups</h3>
             <div class="manual-card-grid">
               <div class="manual-mini-card">
@@ -1006,7 +1198,7 @@
               These exist so recovery can determine which bytes belong at the source path after an interruption. They
               are normally removed after a durable success and are not a persistent copy you can restore through the UI.
             </p>
-            <div class="manual-table-wrap">
+            <div class="manual-table-wrap" tabindex="0">
               <table>
                 <thead><tr><th scope="col">Interruption point</th><th scope="col">Recovery behavior</th></tr></thead>
                 <tbody>
@@ -1037,7 +1229,7 @@
 
           <section class="manual-topic" id="formats">
             <p class="eyebrow">At a glance</p>
-            <h2>Supported file types</h2>
+            <h2>Supported video formats: MP4, MOV, MKV, AVI, WMV, WebM</h2>
             <p class="manual-lede">
               The extension gets a file into ClipTurn; it does not guarantee that the codec, bit depth, track layout,
               geometry, metadata, and installed Windows components inside that file can all be preserved.
@@ -1045,8 +1237,10 @@
             <p>
               For measured evidence rather than a container-level overview, see the
               <a href="tested-formats.html">99 real files, codecs, profiles, and outcomes in the tested-formats matrix</a>.
+              For the MP4 family specifically, including the lossless orientation route,
+              <a href="rotate-mp4.html">read the MP4 guide</a>.
             </p>
-            <div class="manual-table-wrap manual-format-table">
+            <div class="manual-table-wrap manual-format-table" tabindex="0">
               <table>
                 <thead><tr><th scope="col">Container</th><th scope="col">Extensions</th><th scope="col">Picture path in version 1.0.5</th><th scope="col">Main boundaries</th></tr></thead>
                 <tbody>
@@ -1096,7 +1290,7 @@
 
           <section class="manual-topic" id="container-details">
             <p class="eyebrow">Deep format reference</p>
-            <h2>Container-specific behavior</h2>
+            <h2>Rotating MP4, MOV, MKV, WebM, WMV, and AVI files</h2>
 
             <details class="manual-disclosure" open>
               <summary>MP4, M4V, and MOV</summary>
@@ -1108,7 +1302,7 @@
                   <li>The writer preserves supported capture/media-created time, camera/GPS/time-zone metadata, audio language, colour declarations, display geometry, and the compatible major container brand, then verifies the promised result.</li>
                   <li>If faithful replacement is refused, a reviewed H.264 compatibility copy keeps MP4/M4V/MOV movie times, complete movie-level identity metadata—including GPS and camera details—and retained track languages. An independent reader compares the exact values and bytes before publication; failure leaves the source unchanged and publishes no copy.</li>
                   <li>That compatibility copy deliberately remains a standard MP4 instead of inheriting a MOV/M4V brand. Extra soundtrack, subtitle, chapter, timecode, per-frame sensor and other auxiliary tracks can still be omitted as listed in the approval dialog; metadata from non-MP4 source containers is not yet mapped into the new MP4.</li>
-                  <li>Ordinary iPhone timecode or sensor metadata tracks may be dropped with an explicit note. A Live Photo MOV is refused so the separately paired still image is not broken.</li>
+                  <li>Ordinary iPhone timecode or sensor metadata tracks may be dropped with an explicit note. A Live Photo MOV is refused so the separately paired still image is not broken. <a href="rotate-mov-file.html">More on MOV and iPhone video.</a></li>
                   <li>Fragmented files, a second video or audio track, subtitles, chapters, unknown tracks, non-square or fractional display geometry, field-coded/interlaced H.264, HLG transfer 18, sRGB transfer 13, and certain rewritten colour matrices refuse.</li>
                   <li>Dolby Vision enhancement metadata cannot survive this path. When an eligible base HDR layer can be preserved, the result names the dropped enhancement metadata.</li>
                 </ul>
@@ -1135,6 +1329,7 @@
                   <li>VP8 remains VP8 and VP9 remains VP9, for supported 8-bit 4:2:0 sources. Every saved turn creates a new compressed picture generation.</li>
                   <li>Audio must be Opus or Vorbis and is copied packet-exactly. Supported WebVTT subtitle variants can be carried.</li>
                   <li>The free Microsoft VP9 Video Extensions package is required for planning both VP9 and VP8/WebM paths. ClipTurn’s bundled VP8 encoder does not replace the Windows decoder requirement.</li>
+                  <li>VP8 is encoded by ClipTurn’s own bundled libvpx 1.16 rather than the 2015 encoder Windows carries, which makes the result smaller and sharper and keeps the source’s keyframe positions. The registered Windows encoder remains the required fallback. VP9 uses the Windows encoder.</li>
                   <li>AV1, VP9 Profile 2 10/12-bit, Profile 1/wider chroma, alpha/block additions, other audio, chapters, attachments, non-WebVTT subtitles, and a second video refuse.</li>
                   <li>If every track starts before zero, ClipTurn can shift the shared timeline to zero without changing synchronization. Missing default frame duration can be derived from individual frame timing.</li>
                 </ul>
@@ -1170,7 +1365,7 @@
 
           <section class="manual-topic" id="streams">
             <p class="eyebrow">Beyond the picture</p>
-            <h2>Audio, subtitles, tracks, and metadata</h2>
+            <h2>What happens to audio, subtitles, and metadata</h2>
             <h3>Audio is exact copy or refusal</h3>
             <p>
               ClipTurn does not hide an incompatible soundtrack behind a lossy AAC conversion. For an admitted path,
@@ -1185,7 +1380,7 @@
               <li><strong>Uncompressed AVI:</strong> an admitted audio stream is copied byte-for-byte.</li>
             </ul>
             <h3>Subtitles and other tracks</h3>
-            <div class="manual-table-wrap">
+            <div class="manual-table-wrap" tabindex="0">
               <table>
                 <thead><tr><th scope="col">Container</th><th scope="col">Can be carried</th><th scope="col">Causes a refusal</th></tr></thead>
                 <tbody>
@@ -1208,13 +1403,13 @@
 
           <section class="manual-topic" id="windows-codecs">
             <p class="eyebrow">Windows dependencies</p>
-            <h2>Codecs and optional Windows components</h2>
+            <h2>Windows codecs you may need (HEVC, VP9, AV1)</h2>
             <p>
               ClipTurn includes its own application runtime, but some media paths rely on codecs registered with
               Windows. Use <strong>System Capabilities</strong> and only the exact Microsoft or manufacturer action the
               app names. ClipTurn opens an official page; it never purchases or installs a codec for you.
             </p>
-            <div class="manual-table-wrap">
+            <div class="manual-table-wrap" tabindex="0">
               <table>
                 <thead><tr><th scope="col">Missing path</th><th scope="col">Relevant action</th><th scope="col">Important limit</th></tr></thead>
                 <tbody>
@@ -1236,16 +1431,38 @@
                 capability analysis after each deliberate change.
               </p>
             </div>
+            <h3>One encoder ClipTurn brings itself</h3>
+            <p>
+              The Store build carries its own copy of <strong>libvpx 1.16</strong> and prefers it when it encodes VP8.
+              The VP8 encoder Windows provides is libvpx 1.4.0 from 2015 behind a Media Foundation wrapper, and it
+              needs 24&ndash;101% more data to hold the same picture quality. Measured across ClipTurn's VP8 test
+              files, the bundled encoder produced results that were both smaller and sharper on every file, and it
+              reproduces the source's own keyframe positions, so a rotated WebM still seeks the way the original did.
+            </p>
+            <div class="manual-callout info">
+              <strong>A newer encoder is not wider format support.</strong>
+              <p>
+                This changes the quality of what ClipTurn writes, not what it can open. The registered Windows
+                encoder stays the required fallback, and the Windows decode path is still mandatory, so a VP8 or
+                WebM source continues to need the free VP9 Video Extensions package listed above. VP9 is
+                deliberately left on the Windows encoder, which already performs well for that codec. System
+                Capabilities reports the bundled library separately as <strong>Included</strong>.
+              </p>
+            </div>
           </section>
 
           <section class="manual-topic" id="refusals">
             <p class="eyebrow">Source unchanged</p>
-            <h2>Why ClipTurn refuses a file</h2>
+            <h2>What each refusal reason means</h2>
             <p class="manual-lede">
               A refusal means ClipTurn found no route that satisfies the selected policy and its preservation checks.
               It is an intentional, non-modifying outcome—not a hidden partial export.
             </p>
-            <div class="manual-table-wrap">
+            <p>
+              For these causes arranged by symptom rather than by message, with the fix for each, see
+              <a href="video-wont-rotate.html">why a video will not rotate on Windows</a>.
+            </p>
+            <div class="manual-table-wrap" tabindex="0">
               <table>
                 <thead><tr><th scope="col">Message theme</th><th scope="col">What usually caused it</th><th scope="col">Useful response</th></tr></thead>
                 <tbody>
@@ -1276,7 +1493,7 @@
 
           <section class="manual-topic" id="local-data">
             <p class="eyebrow">Your device</p>
-            <h2>Local data and privacy</h2>
+            <h2>Your videos never leave your PC</h2>
             <p>
               ClipTurn processes selected videos on your PC. It does not require an account, upload your videos to
               FixQuotes, or include app analytics, telemetry, advertising, or automatic crash reporting. The operating
@@ -1284,7 +1501,7 @@
             </p>
             <h3>Packaged data location</h3>
             <p class="manual-path"><code>%LOCALAPPDATA%\Packages\FixQuotes.ClipTurn_vwr2r8hw3e3ww\LocalState</code></p>
-            <div class="manual-table-wrap">
+            <div class="manual-table-wrap" tabindex="0">
               <table>
                 <thead><tr><th scope="col">Local item</th><th scope="col">Purpose</th><th scope="col">Can include</th></tr></thead>
                 <tbody>
@@ -1346,7 +1563,12 @@
 
           <section class="manual-topic" id="troubleshooting">
             <p class="eyebrow">Find the symptom</p>
-            <h2>Troubleshooting</h2>
+            <h2>Troubleshooting rotation problems</h2>
+            <p>
+              These answers cover ClipTurn itself. If the rotation was made in another program and did not stick, or
+              you are not sure which of several problems you have,
+              <a href="video-wont-rotate.html">the troubleshooting guide starts from the symptom</a> instead.
+            </p>
             <div class="manual-definition-list">
               <details id="windows-support">
                 <summary>Which versions of Windows does ClipTurn support?</summary>
@@ -1356,95 +1578,95 @@
                 </div>
               </details>
               <details open>
-                <summary>The ClipTurn menu is missing in File Explorer</summary>
+                <summary>Why is the ClipTurn menu missing in File Explorer?</summary>
                 <div>
                   <p>Confirm that the selection contains only files ending in <code>.mp4</code>, <code>.m4v</code>, <code>.mov</code>, <code>.mkv</code>, <code>.avi</code>, <code>.wmv</code>, or <code>.webm</code>. The menu stays hidden when any selected item is unsupported.</p>
                   <p>MPEG/VOB extensions are intentionally not registered. If supported files never show the menu, confirm the Store installation completed and restart File Explorer or sign out and in before contacting support.</p>
                 </div>
               </details>
               <details>
-                <summary>The video plays or previews, but rotation is refused</summary>
+                <summary>Why is rotation refused when the video plays fine?</summary>
                 <div>
                   <p>Playback proves only that a decoder can display the source. ClipTurn also needs an eligible encoder, container writer, exact audio route, supported track/geometry/colour layout, safe file location, and a candidate that passes complete verification.</p>
                   <p>Read the per-file result, then open System Capabilities only when the message names a missing codec path.</p>
                 </div>
               </details>
               <details>
-                <summary>Strict or Exact refuses an ordinary phone video</summary>
+                <summary>Why do Strict and Exact refuse an ordinary phone video?</summary>
                 <div>
                   <p>This is expected. Compressed video cannot be rotated sample-exactly through decode and encode. Strict and Exact currently cover eligible uncompressed AVI only.</p>
                   <p>Select Keep codec and quality if you accept a quality-preserving re-encode, then save the setting and try once more.</p>
                 </div>
               </details>
               <details>
-                <summary>A WebM or VP8/VP9 file refuses on a normal Windows installation</summary>
+                <summary>Why does a WebM or VP8/VP9 file refuse on a normal Windows installation?</summary>
                 <div>
                   <p>Install Microsoft’s free VP9 Video Extensions using the exact action ClipTurn provides, then restart affected apps and select Analyze this PC again. VP8 planning also depends on this Windows package.</p>
                   <p>The file can still refuse for 10-bit/profile, alpha, audio, subtitle, chapter, attachment, or multi-video limits.</p>
                 </div>
               </details>
               <details>
-                <summary>HEVC or Main10 is unavailable</summary>
+                <summary>What do I do when HEVC or Main10 is unavailable?</summary>
                 <div>
                   <p>For 8-bit HEVC, use the official HEVC extension link offered by ClipTurn when present. It may be a separately priced Microsoft Store product. Eligible 8-bit input can use a clearly named H.264 fallback when no HEVC encoder is usable.</p>
                   <p>Main10 encoding normally depends on hardware and a matching driver. Install the exact manufacturer driver for the PC/GPU, restart, and analyze again, or use another capable PC. ClipTurn does not silently convert 10-bit to 8-bit.</p>
                 </div>
               </details>
               <details>
-                <summary>Media Foundation is unavailable on Windows N</summary>
+                <summary>How do I fix Media Foundation being unavailable on Windows N?</summary>
                 <div>
                   <p>Open Windows Settings → System → Optional features, add Microsoft’s free Media Feature Pack, restart Windows, and run System Capabilities again.</p>
                 </div>
               </details>
               <details>
-                <summary>A cloud, network, removable, or read-only file is refused</summary>
+                <summary>Why is a cloud, network, removable, or read-only file refused?</summary>
                 <div>
                   <p>Make a cloud file fully available on this device, ensure it is writable, and place it on a local fixed NTFS volume. A hydrated OneDrive file on local NTFS can be eligible, but the sync client may upload the changed result afterward.</p>
                   <p>ClipTurn intentionally refuses storage where its same-volume replacement, identity, and recovery guarantees cannot be proved.</p>
                 </div>
               </details>
               <details>
-                <summary>The rotated file is larger than the original</summary>
+                <summary>Why is the rotated file larger than the original?</summary>
                 <div>
                   <p>This can be normal under Keep codec and quality. ClipTurn targets the source quality/bitrate and has no compressed-output size ceiling; it does not spend picture quality simply to hit the old byte count.</p>
                   <p>Strict has a small container-overhead tolerance, but applies only to exact AVI. Exact allows exact AVI to grow without that ceiling.</p>
                 </div>
               </details>
               <details>
-                <summary>The app looks stuck on Preparing or processing</summary>
+                <summary>Why does the app look stuck on Preparing or processing?</summary>
                 <div>
                   <p>Large files, full-stream verification, slow storage, codec startup, or recovery can take time. Select Stop waiting when offered to release the foreground wait; the rotation continues safely.</p>
                   <p>Check Recent Jobs later. Do not kill and resubmit the same file while the outcome is uncertain.</p>
                 </div>
               </details>
               <details>
-                <summary>I stopped a batch, but some videos are still running</summary>
+                <summary>Why are some videos still running after I stopped a batch?</summary>
                 <div>
                   <p>Stop after the current videos is working as designed. It stops dispatching new rows but does not terminate workers that already own files. Those rows finish; untouched rows return to Not started.</p>
                   <p>Select Rotate the list later to process the remainder.</p>
                 </div>
               </details>
               <details>
-                <summary>A verification receipt says the file changed</summary>
+                <summary>Why does a verification receipt say the file changed?</summary>
                 <div>
                   <p>The current identity, length, modified time, or full SHA-256 no longer matches the recorded version. Rename/move behavior depends on available file identity, but any content edit or replacement makes the old proof stale.</p>
                   <p>Verify file again hashes the current bytes; it does not restore an older receipt or undo an edit.</p>
                 </div>
               </details>
               <details>
-                <summary>An AVI refuses because it would reach 2 GiB</summary>
+                <summary>Why does an AVI refuse because it would reach 2 GiB?</summary>
                 <div>
                   <p>ClipTurn writes the supported AVI 1.0 layout and refuses a projected output at or above 2 GiB. A 90° turn can change row padding and therefore size even when every stored pixel is exact.</p>
                 </div>
               </details>
               <details>
-                <summary>The result mentions a subtitle, chapter, attachment, or extra track</summary>
+                <summary>Why does the result mention a subtitle, chapter, attachment, or extra track?</summary>
                 <div>
                   <p>ClipTurn will not silently delete or reposition a structure it cannot preserve and verify. Changing processing policy does not make that layout safe. Keep the source unchanged or deliberately remux/convert a copy in a tool suited to that task.</p>
                 </div>
               </details>
               <details>
-                <summary>A row says Outcome unknown or Source changed</summary>
+                <summary>What should I do when a row says Outcome unknown or Source changed?</summary>
                 <div>
                   <p>Do not retry. Open Recent Jobs, inspect the physical video, and determine its current orientation first. A second turn could produce an unintended 180° result.</p>
                   <p>If you still cannot establish the state, copy the result and contact support before deleting any recovery material.</p>
@@ -1455,11 +1677,11 @@
 
           <section class="manual-topic" id="glossary">
             <p class="eyebrow">Plain language</p>
-            <h2>Glossary and quick reference</h2>
+            <h2>Video rotation glossary and quick reference</h2>
             <dl class="manual-glossary">
               <div><dt>Source</dt><dd>The selected video at its original path—the file ClipTurn intends to replace only after verification.</dd></div>
               <div><dt>Candidate</dt><dd>The separate turned file ClipTurn builds and verifies before replacement.</dd></div>
-              <div><dt>Physical rotation</dt><dd>Turning stored picture samples so orientation does not depend on a display flag.</dd></div>
+              <div><dt>Physical rotation</dt><dd>Turning stored picture samples so orientation does not depend on a display flag. <a href="rotate-video-taken-sideways.html">Why that distinction matters for phone footage.</a></dd></div>
               <div><dt>Container</dt><dd>The file structure identified by extensions such as MP4, MKV, WebM, WMV, or AVI; it holds video, audio, timing, and metadata.</dd></div>
               <div><dt>Codec</dt><dd>The method used to encode picture or sound inside the container, such as H.264, HEVC, VP9, or WMA.</dd></div>
               <div><dt>Re-encode</dt><dd>Decode compressed picture, turn it, and encode it again. The recommended policy aims to preserve perceived quality but cannot be sample-exact.</dd></div>
@@ -1485,7 +1707,8 @@
             <h2>Contact support</h2>
             <p>
               If the exact result message and this guide do not resolve the problem, send FixQuotes enough context to
-              reproduce or identify the path—without sending the video unless you deliberately choose to.
+              reproduce or identify the path—without sending the video unless you deliberately choose to. The
+              <a href="guides.html">task guides</a> may also cover it from a different angle.
             </p>
             <h3>Include these details</h3>
             <ul class="manual-check-list">
@@ -1520,17 +1743,19 @@
           <div class="footer-brand">
             <img src="assets/brand/clipturn-lockup-on-dark.svg" width="1600" height="400" alt="ClipTurn" />
             <p>A focused app for physical, verifiable video rotation on Windows 11 and Windows 10. Published by FixQuotes.</p>
-            <p class="footer-copyright">© 2026 FixQuotes. All rights reserved.</p>
+            <p class="footer-copyright">
+              © 2026 FixQuotes, Norway. All rights reserved.<br />
+              <a href="mailto:support@fixquotes.com">support@fixquotes.com</a>
+            </p>
           </div>
           <div class="footer-column">
             <h2>Product</h2>
             <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li><a href="manual.html" aria-current="page">User manual</a></li>
+              <li><a href="guides.html">Guides</a></li>
               <li><a href="tested-formats.html">Tested formats</a></li>
-              <li><a href="pricing.html">Pricing</a></li>
               <li><a href="changelog.html">Changelog</a></li>
-              <li><a href="https://apps.microsoft.com/detail/9PGB9JVBRGLB" target="_blank" rel="noopener">Microsoft Store</a></li>
             </ul>
           </div>
           <div class="footer-column">

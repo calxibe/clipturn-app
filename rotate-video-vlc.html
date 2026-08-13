@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How to Rotate a Video in VLC and Actually Save It</title>
+    <meta
+      name="description"
+      content="VLC rotates playback, not the file. The Geometry transform, the Convert/Save sequence that does write a rotated copy, and why it so often fails."
+    />
+    <link rel="canonical" href="https://clipturn.app/rotate-video-vlc.html" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1022" media="(prefers-color-scheme: dark)" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="FixQuotes" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ClipTurn" />
+    <meta property="og:title" content="How to Rotate a Video in VLC — and Actually Save It" />
+    <meta
+      property="og:description"
+      content="VLC's rotation is a playback filter. Here is how to make it write a rotated file, and why most people never manage it."
+    />
+    <meta property="og:url" content="https://clipturn.app/rotate-video-vlc.html" />
+    <meta property="og:image" content="https://clipturn.app/og.png" />
+    <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11 and Windows 10" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How to Rotate a Video in VLC — and Actually Save It" />
+    <meta name="twitter:description" content="VLC's rotation is a playback filter. Here is how to make it write a rotated file." />
+    <meta name="twitter:image" content="https://clipturn.app/og.png" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "How to rotate a video in VLC — and actually save it",
+        "description": "VLC's Geometry transform rotates playback only. This explains the difference and gives the sequence that writes a rotated file.",
+        "inLanguage": "en",
+        "url": "https://clipturn.app/rotate-video-vlc.html",
+        "dateModified": "2026-08-13",
+        "publisher": {
+          "@type": "Organization",
+          "name": "FixQuotes",
+          "url": "https://fixquotes.com/docs/about/"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Rotate a video in VLC",
+        "description": "Rotate playback in VLC using the Geometry video effect, then export a rotated copy with Convert/Save.",
+        "totalTime": "PT5M",
+        "tool": [{ "@type": "HowToTool", "name": "VLC media player" }],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Open the video effects",
+            "text": "Play the video, then open Tools followed by Effects and Filters, or press Ctrl+E."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Apply the transform",
+            "text": "Go to the Video Effects tab, then Geometry. Tick Transform and choose a rotation such as Rotate by 90 degrees. Playback turns immediately."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Understand what changed",
+            "text": "Only playback has been rotated. The file on disk is unchanged, and VLC remembers the filter, so other programs still show the original orientation."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Enable the filter for output",
+            "text": "Open Tools, Preferences, set Show settings to All, then under Video and Filters tick Video transformation filter so the transform is applied when writing a file."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Convert to a new file",
+            "text": "Open Media, Convert/Save, add the video, choose Convert, pick a profile, and in the profile's video codec settings enable the transformation filter. Choose a destination filename and start."
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why does VLC forget my rotation, or keep it when I do not want it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Geometry transform is a playback setting belonging to VLC, not to the video. Depending on whether you pressed Save or Close in the effects window, VLC either applies it to everything you play afterwards or drops it at the next restart. Either way the file itself never changed, which is why the same clip is still sideways in every other program."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I rotate a video in VLC and save it permanently?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Apply the Geometry transform, then turn on the video transformation filter in Preferences with Show settings set to All, under Video and Filters. Then use Media, Convert/Save, choose a profile, enable the transformation filter inside that profile's video codec settings, and write the result to a new filename. Missing either the preferences step or the profile step produces an unrotated copy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is my converted VLC file still sideways?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Almost always because the transformation filter was enabled for playback but not for output. VLC treats the effects window and the conversion profile as separate settings, so a rotation you can see on screen is not automatically applied to what is written. The other common cause is choosing a profile that copies the video stream instead of re-encoding it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does rotating and converting in VLC reduce quality?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Convert/Save re-encodes the video using the bitrate in the chosen profile, not the bitrate of your source, and VLC's default profiles are conservative. A high-bitrate 4K clip converted with a default profile can come back noticeably softer and much smaller, which is a quality loss beyond the single unavoidable generation that any physical rotation costs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is VLC the best way to rotate a video on Windows?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It is excellent for checking which way a clip needs to turn, because toggling the transform during playback is instant and changes nothing. For actually saving the rotation it is a poor fit: the sequence is long, easy to get wrong, offers no per-file result when you convert several, and gives you no control over preserving the original bitrate, timestamps or metadata."
+            }
+          }
+        ]
+      }
+    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-26WWFWZZMP");(function(){var sent=false;var evts=["pointerdown","keydown","scroll","touchstart"];function load(){if(sent)return;sent=true;evts.forEach(function(e){removeEventListener(e,load,{passive:true})});removeEventListener("load",load);clearTimeout(timer);var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-26WWFWZZMP";document.head.appendChild(s)}var timer=setTimeout(load,1800);evts.forEach(function(e){addEventListener(e,load,{passive:true})});addEventListener("load",load)})();</script>
+  </head>
+  <body class="manual-page">
+    <a class="skip-link" href="#guide-content">Skip to the guide</a>
+
+    <header class="site-header">
+      <div class="shell nav-shell">
+        <a class="brand-link" href="/" aria-label="ClipTurn home">
+          <img class="brand-mark" src="assets/brand/clipturn-mark.svg" width="40" height="40" alt="" />
+          <span class="brand-name">Clip<span>Turn</span></span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          aria-label="Open navigation"
+        >
+          <span class="menu-lines" aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+          <a href="/#how">How it works</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="guides.html" aria-current="page">Guides</a>
+          <a href="manual.html">Manual</a>
+          <a href="changelog.html">Changelog</a>
+          <a
+            class="nav-download"
+            href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            Microsoft Store
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="guide-content">
+      <section class="legal-hero" aria-labelledby="guide-title">
+        <div class="shell">
+          <p class="eyebrow"><a href="guides.html">Guides</a></p>
+          <h1 id="guide-title">How to rotate a video in VLC &mdash; and actually save it</h1>
+          <p>
+            VLC can rotate a video in about four seconds. What it does not tell you is that it rotated the
+            <em>playback</em> and not the file, which is why the clip is still sideways everywhere else. This guide
+            covers the quick playback rotation, then the specific and easily-missed sequence that writes a
+            genuinely rotated file &mdash; and where that route falls short.
+          </p>
+          <div class="manual-hero-actions">
+            <a class="button button-primary" href="#playback">Rotate playback</a>
+            <a class="button button-secondary" href="#save">Save it to a file</a>
+          </div>
+          <p class="updated">VLC on Windows &middot; updated August 2026</p>
+        </div>
+      </section>
+
+      <div class="shell manual-layout">
+        <aside class="manual-sidebar" aria-label="Guide navigation">
+          <button
+            class="manual-toc-toggle"
+            id="manual-toc-toggle"
+            type="button"
+            aria-controls="manual-toc"
+            aria-expanded="true"
+          >
+            <span>On this page</span>
+            <span class="manual-toc-toggle-state">Hide sections</span>
+          </button>
+          <nav class="manual-toc" id="manual-toc" aria-label="Guide sections">
+            <p>On this page</p>
+            <ol>
+              <li><a href="#playback">Rotate playback in VLC</a></li>
+              <li><a href="#not-saved">Why the file did not change</a></li>
+              <li><a href="#save">Saving a rotated copy properly</a></li>
+              <li><a href="#wrong">Why the converted file is still sideways</a></li>
+              <li><a href="#quality">What conversion costs you</a></li>
+              <li><a href="#instead">A shorter route on Windows</a></li>
+              <li><a href="#keep-vlc">What VLC is still the best tool for</a></li>
+              <li><a href="#faq">Common questions</a></li>
+            </ol>
+          </nav>
+        </aside>
+
+        <article class="manual-article">
+          <section class="manual-topic" id="playback">
+            <p class="eyebrow">The quick part</p>
+            <h2>Rotate playback in VLC</h2>
+            <p class="manual-lede">
+              This takes seconds and is genuinely useful &mdash; as long as you know what it does and does not do.
+            </p>
+            <ol class="manual-steps">
+              <li>
+                <div>
+                  <h3>Open the effects window</h3>
+                  <p>
+                    Start the video playing, then choose <strong>Tools &rarr; Effects and Filters</strong>, or
+                    press <kbd>Ctrl</kbd>+<kbd>E</kbd>.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Go to Video Effects, then Geometry</h3>
+                  <p>The rotation controls live on that tab, alongside zoom and cropping.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Tick Transform and choose a rotation</h3>
+                  <p>
+                    Pick <strong>Rotate by 90 degrees</strong>, <strong>180 degrees</strong> or
+                    <strong>270 degrees</strong>. Playback turns immediately. The <strong>Rotate</strong> dial
+                    just below allows any angle, which is almost never what you want for fixing a sideways clip.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Close the window</h3>
+                  <p>
+                    <strong>Save</strong> keeps the transform applied to everything you play from now on;
+                    <strong>Close</strong> applies it for this session. Neither writes anything to your video.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <section class="manual-topic" id="not-saved">
+            <p class="eyebrow">The catch</p>
+            <h2>Why the file did not change</h2>
+            <p class="manual-lede">
+              The Geometry transform is a setting that belongs to VLC, not to your video. It is applied to the
+              picture on its way to the screen, every time, and nothing is written back.
+            </p>
+            <p>Two things make this unusually confusing:</p>
+            <ul class="manual-check-list">
+              <li>
+                <strong>VLC remembers it.</strong> If you pressed Save, every video you open afterwards is
+                rotated too &mdash; including ones that were the right way up. People often conclude the original
+                fix worked and something else broke.
+              </li>
+              <li>
+                <strong>The evidence looks good.</strong> Reopen the clip in VLC and it is still correct, because
+                the filter is still on. Open it anywhere else and it is sideways again.
+              </li>
+            </ul>
+            <div class="manual-callout warning">
+              <strong>The quick check.</strong>
+              <p>
+                Drag the video file into a browser window. The browser knows nothing about VLC's settings, so
+                whatever it shows you is the real state of the file.
+              </p>
+            </div>
+            <p>
+              If you only need the clip to look right while you watch it in VLC, you are finished and this is a
+              perfectly good outcome. If it has to go anywhere else &mdash; an editor, a phone, a TV, an upload
+              &mdash; carry on.
+            </p>
+          </section>
+
+          <section class="manual-topic" id="save">
+            <p class="eyebrow">The long part</p>
+            <h2>Saving a rotated copy properly</h2>
+            <p>
+              VLC can write a rotated file, but the setting that rotates playback and the setting that rotates
+              output are two different things, and both have to be on. This is the step that trips almost
+              everybody.
+            </p>
+            <ol class="manual-steps">
+              <li>
+                <div>
+                  <h3>Apply the transform first</h3>
+                  <p>
+                    Follow the playback steps above so the Geometry transform is active with the rotation you
+                    want.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Turn the filter on in Preferences</h3>
+                  <p>
+                    Open <strong>Tools &rarr; Preferences</strong>. At the bottom left, switch
+                    <strong>Show settings</strong> from Simple to <strong>All</strong>. Navigate to
+                    <strong>Video &rarr; Filters</strong> and tick <strong>Video transformation filter</strong>.
+                    Save, and restart VLC.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Start a conversion</h3>
+                  <p>
+                    Choose <strong>Media &rarr; Convert/Save</strong>, add your video on the File tab, then click
+                    <strong>Convert&nbsp;/&nbsp;Save</strong>.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Enable the filter inside the profile</h3>
+                  <p>
+                    Pick a profile that re-encodes the video, then open its settings with the spanner icon. On the
+                    <strong>Video codec</strong> tab there is a <strong>Filters</strong> list &mdash; tick the
+                    video transformation filter there as well. Skipping this produces an unrotated copy.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Choose a destination and start</h3>
+                  <p>
+                    Give the output a new filename, including its extension, and click <strong>Start</strong>. The
+                    progress bar is the playback slider; the conversion is finished when it reaches the end.
+                  </p>
+                </div>
+              </li>
+            </ol>
+            <div class="manual-callout danger">
+              <strong>Never point the output at the source file.</strong>
+              <p>
+                VLC will happily write over the file it is reading from, and the result is a truncated or
+                unusable video with no original left to go back to. Always convert to a new name.
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="wrong">
+            <p class="eyebrow">Troubleshooting</p>
+            <h2>Why the converted file is still sideways</h2>
+            <div class="manual-table-wrap" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Symptom</th>
+                    <th scope="col">Usual cause</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Output is the original orientation</th>
+                    <td>
+                      The transformation filter was on for playback but not ticked inside the conversion
+                      profile, or VLC was not restarted after enabling it in Preferences.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Output plays but is tiny or corrupt</th>
+                    <td>
+                      A profile whose container cannot hold the chosen codecs, or a destination filename with
+                      the wrong extension.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Output has no sound</th>
+                    <td>
+                      The profile's audio codec is disabled or incompatible with the source track. VLC does not
+                      warn before writing.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Nothing happens at all</th>
+                    <td>
+                      A profile that copies rather than re-encodes the video stream. A stream copy cannot apply
+                      a filter, so the picture passes through untouched.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Everything you open is now rotated</th>
+                    <td>
+                      The transform is still on globally. Return to Effects and Filters, untick Transform, and
+                      press Save.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="quality">
+            <p class="eyebrow">The hidden cost</p>
+            <h2>What conversion costs you</h2>
+            <p>
+              Any physical rotation of compressed video costs one encode. VLC's Convert/Save can cost more than
+              that, because it re-encodes to the settings in the profile rather than to the properties of your
+              source.
+            </p>
+            <ul class="manual-check-list">
+              <li>
+                <strong>Bitrate comes from the profile.</strong> A high-bitrate 4K clip pushed through a default
+                profile can come back dramatically smaller and visibly softer.
+              </li>
+              <li>
+                <strong>Audio is usually re-encoded too</strong>, so a lossless or high-bitrate soundtrack takes
+                a second hit it did not need.
+              </li>
+              <li>
+                <strong>Metadata is largely not carried over.</strong> Capture dates, camera and GPS fields,
+                track languages and subtitle tracks commonly do not survive.
+              </li>
+              <li>
+                <strong>Timestamps change.</strong> The new file gets today's date, so a folder sorted by date
+                taken loses its order.
+              </li>
+            </ul>
+            <p>
+              None of that matters for a clip you are about to post. It matters a great deal for family footage
+              you intend to keep.
+            </p>
+          </section>
+
+          <section class="manual-topic" id="instead">
+            <p class="eyebrow">The alternative</p>
+            <h2>A shorter route on Windows</h2>
+            <p>
+              If the goal is simply &ldquo;this file should be the right way up&rdquo;, a purpose-built rotator
+              removes the whole sequence above.
+            </p>
+            <ul class="manual-check-list">
+              <li>Right-click the video in File Explorer, choose a direction, done.</li>
+              <li>
+                The output targets the source bitrate rather than a fixed profile, so quality is preserved rather
+                than dictated.
+              </li>
+              <li>
+                Audio is copied across as original packets rather than re-encoded, and capture dates, camera and
+                GPS fields and track languages are preserved where the format allows.
+              </li>
+              <li>
+                The result is verified before it replaces anything, and if a faithful result cannot be produced
+                the file is refused and left untouched rather than silently degraded.
+              </li>
+              <li>Several files at once each get their own outcome instead of one shared progress bar.</li>
+            </ul>
+            <div class="manual-hero-actions">
+              <a
+                class="button button-primary"
+                href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                Get ClipTurn free
+              </a>
+              <a class="button button-secondary" href="rotate-video-windows.html">Compare every method</a>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="keep-vlc">
+            <p class="eyebrow">Credit where it is due</p>
+            <h2>What VLC is still the best tool for</h2>
+            <p>
+              None of this is a criticism of VLC. It is a player with a filter chain attached, and used that way
+              it is unbeatable here:
+            </p>
+            <ul class="manual-check-list">
+              <li>
+                <strong>Deciding the direction.</strong> Toggling the transform during playback is the fastest way
+                to see which quarter turn a clip needs, and it changes nothing on disk.
+              </li>
+              <li>
+                <strong>Checking a rotated result.</strong> Make sure the Geometry transform is off first, then
+                open the finished file &mdash; if it looks right with no filter applied, the rotation is genuinely
+                in the file.
+              </li>
+              <li>
+                <strong>Playing anything at all.</strong> VLC opens files that refuse to play elsewhere, which
+                makes it a useful second opinion when a video is misbehaving.
+              </li>
+            </ul>
+          </section>
+
+          <section class="manual-topic" id="faq">
+            <p class="eyebrow">Answers</p>
+            <h2>Common questions</h2>
+
+            <h3>Why does VLC forget my rotation, or keep it when I do not want it?</h3>
+            <p>
+              The Geometry transform is a playback setting belonging to VLC, not to the video. Depending on
+              whether you pressed Save or Close in the effects window, VLC either applies it to everything you
+              play afterwards or drops it at the next restart. Either way the file itself never changed, which is
+              why the same clip is still sideways in every other program.
+            </p>
+
+            <h3>How do I rotate a video in VLC and save it permanently?</h3>
+            <p>
+              Apply the Geometry transform, then turn on the video transformation filter in
+              <strong>Preferences</strong> with <strong>Show settings</strong> set to <strong>All</strong>, under
+              <strong>Video &rarr; Filters</strong>. Then use <strong>Media &rarr; Convert/Save</strong>, choose a
+              profile, enable the transformation filter inside that profile's video codec settings, and write the
+              result to a new filename. Missing either the preferences step or the profile step produces an
+              unrotated copy.
+            </p>
+
+            <h3>Why is my converted VLC file still sideways?</h3>
+            <p>
+              Almost always because the transformation filter was enabled for playback but not for output. VLC
+              treats the effects window and the conversion profile as separate settings, so a rotation you can see
+              on screen is not automatically applied to what is written. The other common cause is choosing a
+              profile that copies the video stream instead of re-encoding it.
+            </p>
+
+            <h3>Does rotating and converting in VLC reduce quality?</h3>
+            <p>
+              Yes. Convert/Save re-encodes the video using the bitrate in the chosen profile, not the bitrate of
+              your source, and VLC's default profiles are conservative. A high-bitrate 4K clip converted with a
+              default profile can come back noticeably softer and much smaller, which is a quality loss beyond the
+              single unavoidable generation that any physical rotation costs.
+            </p>
+
+            <h3>Is VLC the best way to rotate a video on Windows?</h3>
+            <p>
+              It is excellent for checking which way a clip needs to turn, because toggling the transform during
+              playback is instant and changes nothing. For actually saving the rotation it is a poor fit: the
+              sequence is long, easy to get wrong, offers no per-file result when you convert several, and gives
+              you no control over preserving the original bitrate, timestamps or metadata.
+            </p>
+
+            <div class="manual-callout info">
+              <strong>Where to go next</strong>
+              <p>
+                For every Windows method side by side, read
+                <a href="rotate-video-windows.html">how to rotate a video on Windows</a>. If the clip came off a
+                phone, <a href="rotate-video-taken-sideways.html">the sideways-video guide</a> explains why. For
+                MP4 specifically, including the lossless option,
+                <a href="rotate-mp4.html">see the MP4 guide</a>.
+              </p>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/brand/clipturn-lockup-on-dark.svg" width="1600" height="400" alt="ClipTurn" />
+            <p>A focused app for physical, verifiable video rotation on Windows 11 and Windows 10. Published by FixQuotes.</p>
+            <p class="footer-copyright">
+              &copy; 2026 FixQuotes, Norway. All rights reserved.<br />
+              <a href="mailto:support@fixquotes.com">support@fixquotes.com</a>
+            </p>
+          </div>
+          <div class="footer-column">
+            <h2>Product</h2>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="manual.html">User manual</a></li>
+              <li><a href="guides.html">Guides</a></li>
+              <li><a href="tested-formats.html">Tested formats</a></li>
+              <li><a href="changelog.html">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h2>Legal &amp; support</h2>
+            <ul class="footer-links">
+              <li><a href="privacy.html">Privacy policy</a></li>
+              <li><a href="terms.html">Terms of use</a></li>
+              <li><a href="https://fixquotes.com/docs/contact/?category=clipturn" target="_blank" rel="noopener">Contact us</a></li>
+              <li><a href="media.html">Media</a></li>
+              <li><a href="https://fixquotes.com/docs/about/" target="_blank" rel="noopener">About the publisher</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="site.js" defer></script>
+    <script src="manual.js" defer></script>
+  </body>
+</html>

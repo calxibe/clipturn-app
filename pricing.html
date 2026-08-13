@@ -41,6 +41,7 @@
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
+        "@id": "https://clipturn.app/#software",
         "name": "ClipTurn",
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Windows 11, Windows 10",
@@ -60,6 +61,62 @@
         }
       }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is ClipTurn really free today?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The complete current ClipTurn app is offered for $0. There is no ClipTurn trial timer, subscription, or paid-feature gate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this a reduced free edition?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. File Explorer integration, single-video preview, Batch Rotate, supported formats, processing policies, Recent Jobs, and verification are included in the current app."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will ClipTurn always be free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We are not making a lifetime-pricing promise. ClipTurn is free at the time this page was published. If that changes, Microsoft Store will show the applicable price and terms."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are paid ClipTurn plans being announced?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. This page describes one complete current app. It does not announce a Pro, Business, or subscription tier."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need an account or payment details?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ClipTurn itself does not require an app account, request payment details, or provide an in-app checkout. Microsoft controls Store acquisition and any Store account requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a required codec cost extra?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Some videos can depend on a separately offered Microsoft or device-manufacturer codec. ClipTurn does not sell, buy, or silently install those components; they are separate from ClipTurn’s current price."
+            }
+          }
+        ]
+      }
+    </script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-26WWFWZZMP");(function(){var sent=false;var evts=["pointerdown","keydown","scroll","touchstart"];function load(){if(sent)return;sent=true;evts.forEach(function(e){removeEventListener(e,load,{passive:true})});removeEventListener("load",load);clearTimeout(timer);var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-26WWFWZZMP";document.head.appendChild(s)}var timer=setTimeout(load,1800);evts.forEach(function(e){addEventListener(e,load,{passive:true})});addEventListener("load",load)})();</script>
   </head>
   <body class="pricing-page">
@@ -67,7 +124,7 @@
 
     <header class="site-header">
       <div class="shell nav-shell">
-        <a class="brand-link" href="index.html" aria-label="ClipTurn home">
+        <a class="brand-link" href="/" aria-label="ClipTurn home">
           <img class="brand-mark" src="assets/brand/clipturn-mark.svg" width="40" height="40" alt="" />
           <span class="brand-name">Clip<span>Turn</span></span>
         </a>
@@ -81,8 +138,9 @@
           <span class="menu-lines" aria-hidden="true"></span>
         </button>
         <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
-          <a href="index.html#how">How it works</a>
+          <a href="/#how">How it works</a>
           <a href="pricing.html" aria-current="page">Pricing</a>
+          <a href="guides.html">Guides</a>
           <a href="manual.html">Manual</a>
           <a href="changelog.html">Changelog</a>
           <a
@@ -158,7 +216,7 @@
             <article class="pricing-benefit">
               <span aria-hidden="true">01</span>
               <h3>Three complete workflows</h3>
-              <p>Rotate from File Explorer, preview one video in the app, or process a batch with an independent result for every file.</p>
+              <p>Rotate from File Explorer, preview one video in the app, or process a batch with an independent result for every file. Left 90&deg;, right 90&deg; and 180&deg; are all included.</p>
             </article>
             <article class="pricing-benefit">
               <span aria-hidden="true">02</span>
@@ -365,17 +423,19 @@
           <div class="footer-brand">
             <img src="assets/brand/clipturn-lockup-on-dark.svg" width="1600" height="400" alt="ClipTurn" />
             <p>A focused app for physical, verifiable video rotation on Windows 11 and Windows 10. Published by FixQuotes.</p>
-            <p class="footer-copyright">© 2026 FixQuotes. All rights reserved.</p>
+            <p class="footer-copyright">
+              © 2026 FixQuotes, Norway. All rights reserved.<br />
+              <a href="mailto:support@fixquotes.com">support@fixquotes.com</a>
+            </p>
           </div>
           <div class="footer-column">
             <h2>Product</h2>
             <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li><a href="manual.html">User manual</a></li>
+              <li><a href="guides.html">Guides</a></li>
               <li><a href="tested-formats.html">Tested formats</a></li>
-              <li><a href="pricing.html" aria-current="page">Pricing</a></li>
               <li><a href="changelog.html">Changelog</a></li>
-              <li><a href="https://apps.microsoft.com/detail/9PGB9JVBRGLB" target="_blank" rel="noopener">Microsoft Store</a></li>
             </ul>
           </div>
           <div class="footer-column">

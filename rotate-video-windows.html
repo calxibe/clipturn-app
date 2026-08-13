@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How to Rotate a Video on Windows 11 and Windows 10</title>
+    <meta
+      name="description"
+      content="Every way to rotate a video on Windows 11 and 10, compared — Clipchamp, VLC, and a right-click rotation that saves the turn into the file itself."
+    />
+    <link rel="canonical" href="https://clipturn.app/rotate-video-windows.html" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1022" media="(prefers-color-scheme: dark)" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="FixQuotes" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ClipTurn" />
+    <meta property="og:title" content="How to Rotate a Video on Windows 11 and Windows 10" />
+    <meta
+      property="og:description"
+      content="Every way to rotate a video on Windows, compared — and how to make the rotation stick to the file instead of just the player."
+    />
+    <meta property="og:url" content="https://clipturn.app/rotate-video-windows.html" />
+    <meta property="og:image" content="https://clipturn.app/og.png" />
+    <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11 and Windows 10" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How to Rotate a Video on Windows 11 and Windows 10" />
+    <meta name="twitter:description" content="Every way to rotate a video on Windows, compared — and how to make the rotation stick." />
+    <meta name="twitter:image" content="https://clipturn.app/og.png" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "How to rotate a video on Windows 11 and Windows 10",
+        "description": "Every method for rotating video on Windows, compared, including how to make the rotation persist in the file.",
+        "inLanguage": "en",
+        "url": "https://clipturn.app/rotate-video-windows.html",
+        "dateModified": "2026-08-13",
+        "about": {
+          "@type": "SoftwareApplication",
+          "@id": "https://clipturn.app/#software",
+          "name": "ClipTurn",
+          "applicationCategory": "MultimediaApplication",
+          "operatingSystem": "Windows 11, Windows 10"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "FixQuotes",
+          "url": "https://fixquotes.com/docs/about/"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Rotate a video on Windows from File Explorer",
+        "description": "Rotate a video file on Windows 11 or Windows 10 so the new orientation is stored in the file itself.",
+        "totalTime": "PT2M",
+        "tool": [{ "@type": "HowToTool", "name": "ClipTurn for Windows" }],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Install a rotation app",
+            "text": "Install ClipTurn from Microsoft Store and open it once so Windows registers its File Explorer commands."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Select the video",
+            "text": "In File Explorer, select one or more videos ending in .mp4, .m4v, .mov, .mkv, .avi, .wmv or .webm."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Open the rotate menu",
+            "text": "Right-click the selection and choose ClipTurn – Video Rotator from the context menu."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Choose the direction",
+            "text": "Select Rotate video left or Rotate video right. The direction is applied to every selected video independently."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Read the result",
+            "text": "A result card reports whether each file was rotated, refused, or needs inspection. A rotated file keeps its original name and location."
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can Windows rotate a video without extra software?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not from File Explorer. Windows can rotate a photo from the right-click menu, but there is no equivalent command for video. Windows 11 includes Clipchamp, which can rotate a clip and export a new file, and both versions of Windows can install a dedicated rotation app from Microsoft Store. Windows Media Player has no rotation feature at all."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I rotate a video 90 degrees on Windows?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Install ClipTurn from Microsoft Store, right-click the video in File Explorer, open the ClipTurn submenu and choose Rotate video left or Rotate video right. Each command turns the picture a quarter turn and saves the result into the same file. In the app itself, each click of Rotate left or Rotate right adds another 90 degrees, so two clicks and one save produce a 180 degree turn."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does rotating a video reduce its quality?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Rotating compressed video physically requires decoding and encoding it again, which costs one generation of quality. A good tool targets the source bitrate so the difference is not visible, but repeated saved rotations do accumulate. Rotating an MP4, M4V or MOV by changing its display flag instead is instant and lossless, but some older players and editors ignore that flag."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does my video look right on my phone but sideways on my PC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The phone recorded the picture in one orientation and added a rotation flag telling players to turn it. Software that reads the flag shows the clip correctly; software that ignores it shows the raw stored picture, which is sideways. Physically rotating the stored picture removes the disagreement, because there is no longer a flag for anything to ignore."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I rotate several videos at once on Windows?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Select all of them in File Explorer and use the rotate command once — the direction is applied to each file independently. For a whole folder, or for a mix of files that need reviewing first, use ClipTurn's Batch Rotate tab, which lists every file with its own status and reason so one refusal does not stop the rest."
+            }
+          }
+        ]
+      }
+    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-26WWFWZZMP");(function(){var sent=false;var evts=["pointerdown","keydown","scroll","touchstart"];function load(){if(sent)return;sent=true;evts.forEach(function(e){removeEventListener(e,load,{passive:true})});removeEventListener("load",load);clearTimeout(timer);var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-26WWFWZZMP";document.head.appendChild(s)}var timer=setTimeout(load,1800);evts.forEach(function(e){addEventListener(e,load,{passive:true})});addEventListener("load",load)})();</script>
+  </head>
+  <body class="manual-page">
+    <a class="skip-link" href="#guide-content">Skip to the guide</a>
+
+    <header class="site-header">
+      <div class="shell nav-shell">
+        <a class="brand-link" href="/" aria-label="ClipTurn home">
+          <img class="brand-mark" src="assets/brand/clipturn-mark.svg" width="40" height="40" alt="" />
+          <span class="brand-name">Clip<span>Turn</span></span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          aria-label="Open navigation"
+        >
+          <span class="menu-lines" aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+          <a href="/#how">How it works</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="guides.html" aria-current="page">Guides</a>
+          <a href="manual.html">Manual</a>
+          <a href="changelog.html">Changelog</a>
+          <a
+            class="nav-download"
+            href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            Microsoft Store
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="guide-content">
+      <section class="legal-hero" aria-labelledby="guide-title">
+        <div class="shell">
+          <p class="eyebrow"><a href="guides.html">Guides</a></p>
+          <h1 id="guide-title">How to rotate a video on Windows 11 and Windows 10</h1>
+          <p>
+            The short answer: Windows cannot rotate a video from File Explorer on its own, but three routes get
+            it done &mdash; Clipchamp, VLC, or a dedicated rotate command added to the right-click menu. Below is
+            each one, what it costs you in quality, and how to make sure the turn is actually saved into the file
+            rather than applied by the player.
+          </p>
+          <div class="manual-hero-actions">
+            <a class="button button-primary" href="#fastest">Jump to the fastest method</a>
+            <a class="button button-secondary" href="#compare">Compare every method</a>
+          </div>
+          <p class="updated">Windows 11 and Windows 10 &middot; updated August 2026</p>
+        </div>
+      </section>
+
+      <div class="shell manual-layout">
+        <aside class="manual-sidebar" aria-label="Guide navigation">
+          <button
+            class="manual-toc-toggle"
+            id="manual-toc-toggle"
+            type="button"
+            aria-controls="manual-toc"
+            aria-expanded="true"
+          >
+            <span>On this page</span>
+            <span class="manual-toc-toggle-state">Hide sections</span>
+          </button>
+          <nav class="manual-toc" id="manual-toc" aria-label="Guide sections">
+            <p>On this page</p>
+            <ol>
+              <li><a href="#built-in">What Windows can do on its own</a></li>
+              <li><a href="#compare">Every method compared</a></li>
+              <li><a href="#fastest">The fastest method: right-click</a></li>
+              <li><a href="#clipchamp">Rotating in Clipchamp</a></li>
+              <li><a href="#vlc-short">Rotating in VLC</a></li>
+              <li><a href="#direction">Which way does it need to turn?</a></li>
+              <li><a href="#many">Rotating a whole folder</a></li>
+              <li><a href="#quality">What rotation costs in quality</a></li>
+              <li><a href="#check">Checking the rotation saved</a></li>
+              <li><a href="#faq">Common questions</a></li>
+            </ol>
+          </nav>
+        </aside>
+
+        <article class="manual-article">
+          <section class="manual-topic" id="built-in">
+            <p class="eyebrow">The starting point</p>
+            <h2>What Windows can do on its own</h2>
+            <p class="manual-lede">
+              Less than most people expect, and the gap is the reason this question is asked so often.
+            </p>
+
+            <div class="manual-table-wrap" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Built into Windows</th>
+                    <th scope="col">Can it rotate video?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">File Explorer right-click</th>
+                    <td>
+                      Photos yes, video no. <strong>Rotate left</strong> and <strong>Rotate right</strong> appear
+                      for JPEG and PNG images and never for video files.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Windows Media Player</th>
+                    <td>
+                      No. Neither the legacy player nor the newer Media Player app offers a rotation control.
+                      <a href="rotate-video-windows-media-player.html">The full explanation is here.</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Photos</th>
+                    <td>Rotates still images only. Video opens for playback and trimming, not rotation.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Clipchamp</th>
+                    <td>
+                      Yes. Included with Windows 11 and installable free on Windows 10. It rotates in a timeline
+                      and exports a new file. <a href="#clipchamp">Covered below.</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>
+              So the honest position is that Windows can rotate a video, but only by opening a video editor,
+              placing the clip on a timeline and exporting a second file. For one clip that is a minor
+              inconvenience. For twelve clips off a phone it is an afternoon.
+            </p>
+          </section>
+
+          <section class="manual-topic" id="compare">
+            <p class="eyebrow">Choose a route</p>
+            <h2>Every method compared</h2>
+
+            <div class="manual-table-wrap" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Method</th>
+                    <th scope="col">Result</th>
+                    <th scope="col">Best for</th>
+                    <th scope="col">Watch out for</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Right-click rotate <span class="manual-badge">Fastest</span></th>
+                    <td>The same file, turned and saved in place.</td>
+                    <td>Phone footage, several files at once, anything you want fixed and forgotten.</td>
+                    <td>Replaces the original, so keep a copy of irreplaceable footage.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Clipchamp</th>
+                    <td>A new exported file beside the original.</td>
+                    <td>One clip you were going to edit anyway.</td>
+                    <td>Re-encodes everything, and export settings decide the final quality.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">VLC</th>
+                    <td>Playback looks correct; the file is unchanged until you also convert it.</td>
+                    <td>Checking which way a clip should turn before committing.</td>
+                    <td>
+                      The rotation is a playback filter. Most people stop here and think the job is done.
+                      <a href="rotate-video-vlc.html">Details.</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Online rotators</th>
+                    <td>A downloaded copy, rotated.</td>
+                    <td>A single small clip on a machine where you cannot install anything.</td>
+                    <td>
+                      The video is uploaded to somebody else's server, and file-size limits and watermarks are
+                      common.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="manual-callout info">
+              <strong>Two clips are not the same job as two hundred.</strong>
+              <p>
+                Every method above works for one file. The differences only start to matter at volume, when
+                re-exporting each clip by hand stops being realistic and you need each file to succeed or fail on
+                its own.
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="fastest">
+            <p class="eyebrow">Method 1</p>
+            <h2>The fastest method: rotate from the right-click menu</h2>
+            <p class="manual-lede">
+              This adds the command Windows is missing &mdash; a rotate option on video files, in the same menu
+              where you already rotate photos.
+            </p>
+
+            <div class="manual-screenshot">
+              <img
+                src="assets/screenshots/store-01-explorer-flyout.png"
+                width="1920"
+                height="1080"
+                alt="The Windows File Explorer right-click menu showing ClipTurn's rotate video left and rotate video right commands"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <ol class="manual-steps">
+              <li>
+                <div>
+                  <h3>Install ClipTurn and open it once</h3>
+                  <p>
+                    Get it free from
+                    <a href="https://apps.microsoft.com/detail/9PGB9JVBRGLB" target="_blank" rel="noopener">Microsoft Store</a>,
+                    then launch it a single time so Windows registers its File Explorer commands.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Select one or more videos</h3>
+                  <p>
+                    The menu appears for <code>.mp4</code>, <code>.m4v</code>, <code>.mov</code>,
+                    <code>.mkv</code>, <code>.avi</code>, <code>.wmv</code> and <code>.webm</code>. If any file in
+                    the selection is a different type, the menu stays hidden.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Choose the direction</h3>
+                  <p>
+                    Right-click, open <strong>ClipTurn &ndash; Video Rotator</strong>, then pick
+                    <strong>Rotate video left</strong> or <strong>Rotate video right</strong>. With several files
+                    selected, the same direction is applied to each one independently.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Read the result card</h3>
+                  <p>
+                    A card reports each file as rotated, refused, failed or uncertain. A rotated file keeps its
+                    original name and location &mdash; the turn is now stored inside it, so every player agrees.
+                  </p>
+                </div>
+              </li>
+            </ol>
+
+            <div class="manual-callout danger">
+              <strong>A right-click rotation replaces the original.</strong>
+              <p>
+                It is verified before anything is overwritten, but it does not leave a persistent backup and it
+                cannot be undone from the app. To preview the turn first or keep a copy of the original, use
+                <strong>Open in ClipTurn</strong> from the same menu and rotate inside the app with the backup
+                setting turned on. The
+                <a href="manual.html#backups-recovery">manual explains backups and recovery in full</a>.
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="clipchamp">
+            <p class="eyebrow">Method 2</p>
+            <h2>Rotating in Clipchamp</h2>
+            <p>
+              Clipchamp ships with Windows 11 and installs free from Microsoft Store on Windows 10. It is a real
+              video editor, so rotation is one operation among many: import the clip, drop it on the timeline,
+              rotate it, then export.
+            </p>
+            <ul class="manual-check-list">
+              <li>The output is always a new file. Your original stays where it is, untouched.</li>
+              <li>
+                Everything is re-encoded on export, including the audio, and the export settings you choose
+                decide the final quality rather than the source file.
+              </li>
+              <li>
+                At the time of writing the free tier exports at up to 1080p, so a 4K clip comes back smaller than
+                it went in.
+              </li>
+              <li>
+                It is a timeline editor, which makes it excellent for one clip you were going to trim anyway and
+                slow for a folder of twenty.
+              </li>
+            </ul>
+            <p>
+              If the clip needs trimming, captions or music as well as a turn, this is the right tool and the
+              rotation is free along the way. If all it needs is a quarter turn, it is a lot of ceremony.
+            </p>
+          </section>
+
+          <section class="manual-topic" id="vlc-short">
+            <p class="eyebrow">Method 3</p>
+            <h2>Rotating in VLC</h2>
+            <p>
+              VLC's rotation lives under <strong>Tools &rarr; Effects and Filters &rarr; Video Effects &rarr;
+              Geometry</strong>. Tick <strong>Transform</strong>, pick a rotation, and playback turns
+              immediately.
+            </p>
+            <div class="manual-callout warning">
+              <strong>That setting does not change the file.</strong>
+              <p>
+                It is a playback filter. Close VLC, open the video anywhere else, and it is sideways again
+                &mdash; and because the filter is remembered, VLC keeps showing it correctly, which is why people
+                are convinced it worked. Saving a rotated copy from VLC is possible but takes a specific and
+                easily-missed sequence.
+                <a href="rotate-video-vlc.html">The VLC guide walks through it.</a>
+              </p>
+            </div>
+            <p>
+              Where VLC genuinely helps is deciding <em>which way</em> a clip needs to go. Toggling the transform
+              during playback is the quickest way to see the answer before you commit to anything.
+            </p>
+          </section>
+
+          <section class="manual-topic" id="direction">
+            <p class="eyebrow">Get it right first time</p>
+            <h2>Which way does it need to turn?</h2>
+            <p>
+              Rotating the wrong way and then rotating back costs you two generations of quality instead of one,
+              so it is worth thirty seconds of checking.
+            </p>
+
+            <div class="manual-table-wrap" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">What you see</th>
+                    <th scope="col">What it needs</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">The top of the scene is on the left</th>
+                    <td>Rotate right (clockwise) 90&deg;</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">The top of the scene is on the right</th>
+                    <td>Rotate left (anticlockwise) 90&deg;</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Everything is upside down</th>
+                    <td>Rotate 180&deg; &mdash; two quarter turns, saved once</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>
+              For a 180&deg; turn, do not save two separate 90&deg; rotations. Each save is a fresh encode, so
+              two saves cost twice the quality. In ClipTurn, click the direction button twice so the preview
+              reads 180&deg;, then save once. Batch Rotate offers <strong>Rotate 180&deg;</strong> directly.
+            </p>
+          </section>
+
+          <section class="manual-topic" id="many">
+            <p class="eyebrow">At volume</p>
+            <h2>Rotating a whole folder</h2>
+            <p>
+              Selecting every file in File Explorer and using the rotate command once is enough for a handful of
+              clips filmed the same way. Beyond that, or when the clips are mixed, the app's Batch Rotate tab is
+              the better route.
+            </p>
+
+            <div class="manual-screenshot">
+              <img
+                src="assets/screenshots/store-04-batch-rotate.png"
+                width="1452"
+                height="1401"
+                alt="ClipTurn's Batch Rotate list showing several videos with individual status and reason columns"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <ul class="manual-check-list">
+              <li>Drop a folder onto the window to add every supported video directly inside it.</li>
+              <li>
+                Each row keeps its own status and reason, so one file being refused never silently stops the
+                others.
+              </li>
+              <li>
+                One direction applies to the whole run, which is exactly what you want for a batch of clips
+                filmed the same way and wrong for a mixed bag.
+              </li>
+              <li>
+                <strong>Stop after the current videos</strong> ends the run gracefully; files already being
+                processed finish rather than being killed mid-write.
+              </li>
+            </ul>
+            <p>
+              The <a href="manual.html#batch">Batch Rotate section of the manual</a> documents every status and
+              the rules about when a row can safely be retried.
+            </p>
+          </section>
+
+          <section class="manual-topic" id="quality">
+            <p class="eyebrow">The honest trade-off</p>
+            <h2>What rotation costs in quality</h2>
+            <p class="manual-lede">
+              Any tool that physically turns compressed video has to decode it and encode it again. There is no
+              way around that, and anyone claiming otherwise is either changing a display flag or not telling
+              you.
+            </p>
+            <ul class="manual-check-list">
+              <li>
+                <strong>One rotation is not a problem.</strong> A tool that targets the source bitrate produces a
+                result you will not be able to tell apart from the original by eye.
+              </li>
+              <li>
+                <strong>Repeated rotations are.</strong> Each saved turn is another encode. Rotate, check,
+                rotate back, rotate again and the losses stack up.
+              </li>
+              <li>
+                <strong>The rotated file may be larger.</strong> Preserving quality means not spending picture
+                detail to hit the old file size. A bigger output is normal, not a bug.
+              </li>
+              <li>
+                <strong>MP4, M4V and MOV have a lossless option.</strong> Changing the display flag rather than
+                the picture costs nothing at all &mdash; but some older players and editors ignore it.
+                <a href="rotate-mp4.html">The MP4 guide covers the choice.</a>
+              </li>
+            </ul>
+            <p>
+              Uncompressed AVI is the one format where a quarter turn can be done with no loss whatsoever,
+              because the stored pixels can simply be rearranged. Everything else involves a trade.
+            </p>
+          </section>
+
+          <section class="manual-topic" id="check">
+            <p class="eyebrow">Before you delete the original</p>
+            <h2>Checking the rotation actually saved</h2>
+            <p>
+              The most common bad outcome is not a corrupted file &mdash; it is believing a video was fixed when
+              only the player was. Two quick checks settle it:
+            </p>
+            <ol class="manual-steps compact">
+              <li>
+                <div>
+                  <h3>Open it in a different program</h3>
+                  <p>
+                    Not the one you rotated in. If you used VLC, check in Films &amp; TV or a browser. A file
+                    that is genuinely rotated looks right everywhere.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Check the dimensions swapped</h3>
+                  <p>
+                    Right-click the file, open <strong>Properties &rarr; Details</strong> and read the frame
+                    width and height. After a genuine quarter turn a 1920&times;1080 clip reads 1080&times;1920.
+                    If the numbers are unchanged, the picture was not turned.
+                  </p>
+                </div>
+              </li>
+            </ol>
+            <div class="manual-callout info">
+              <strong>The dimension check has one exception.</strong>
+              <p>
+                A display-flag rotation deliberately leaves the stored dimensions alone and only changes how
+                players are told to present them. That is the intended behaviour of that method, not a failure
+                &mdash; but it is also why the flag is worth nothing to software that ignores it.
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="faq">
+            <p class="eyebrow">Answers</p>
+            <h2>Common questions</h2>
+
+            <h3>Can Windows rotate a video without extra software?</h3>
+            <p>
+              Not from File Explorer. Windows can rotate a photo from the right-click menu, but there is no
+              equivalent command for video. Windows 11 includes Clipchamp, which can rotate a clip and export a
+              new file, and both versions of Windows can install a dedicated rotation app from Microsoft Store.
+              Windows Media Player has no rotation feature at all.
+            </p>
+
+            <h3>How do I rotate a video 90 degrees on Windows?</h3>
+            <p>
+              Install ClipTurn from Microsoft Store, right-click the video in File Explorer, open the ClipTurn
+              submenu and choose <strong>Rotate video left</strong> or <strong>Rotate video right</strong>. Each
+              command turns the picture a quarter turn and saves the result into the same file. In the app
+              itself, each click of Rotate left or Rotate right adds another 90&deg;, so two clicks and one save
+              produce a 180&deg; turn.
+            </p>
+
+            <h3>Does rotating a video reduce its quality?</h3>
+            <p>
+              Rotating compressed video physically requires decoding and encoding it again, which costs one
+              generation of quality. A good tool targets the source bitrate so the difference is not visible, but
+              repeated saved rotations do accumulate. Rotating an MP4, M4V or MOV by changing its display flag
+              instead is instant and lossless, but some older players and editors ignore that flag.
+            </p>
+
+            <h3>Why does my video look right on my phone but sideways on my PC?</h3>
+            <p>
+              The phone recorded the picture in one orientation and added a rotation flag telling players to turn
+              it. Software that reads the flag shows the clip correctly; software that ignores it shows the raw
+              stored picture, which is sideways. Physically rotating the stored picture removes the disagreement,
+              because there is no longer a flag for anything to ignore.
+              <a href="rotate-video-taken-sideways.html">The sideways-video guide goes further into this.</a>
+            </p>
+
+            <h3>How do I rotate several videos at once on Windows?</h3>
+            <p>
+              Select all of them in File Explorer and use the rotate command once &mdash; the direction is applied
+              to each file independently. For a whole folder, or for a mix of files that need reviewing first,
+              use ClipTurn's <a href="batch-rotate-videos.html">Batch Rotate</a> tab, which lists every file with its own
+              status and reason so one refusal does not stop the rest.
+            </p>
+
+            <div class="manual-callout info">
+              <strong>Where to go next</strong>
+              <p>
+                If the clip came off a phone, read
+                <a href="rotate-video-taken-sideways.html">how to fix a video that was taken sideways</a>. If a
+                file is being refused, work through
+                <a href="video-wont-rotate.html">why a video will not rotate</a>. For the complete reference,
+                see the <a href="manual.html">ClipTurn manual</a>.
+              </p>
+            </div>
+
+            <div class="manual-hero-actions">
+              <a
+                class="button button-primary"
+                href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                Get ClipTurn free
+              </a>
+              <a class="button button-secondary" href="guides.html">All guides</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/brand/clipturn-lockup-on-dark.svg" width="1600" height="400" alt="ClipTurn" />
+            <p>A focused app for physical, verifiable video rotation on Windows 11 and Windows 10. Published by FixQuotes.</p>
+            <p class="footer-copyright">
+              &copy; 2026 FixQuotes, Norway. All rights reserved.<br />
+              <a href="mailto:support@fixquotes.com">support@fixquotes.com</a>
+            </p>
+          </div>
+          <div class="footer-column">
+            <h2>Product</h2>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="manual.html">User manual</a></li>
+              <li><a href="guides.html">Guides</a></li>
+              <li><a href="tested-formats.html">Tested formats</a></li>
+              <li><a href="changelog.html">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h2>Legal &amp; support</h2>
+            <ul class="footer-links">
+              <li><a href="privacy.html">Privacy policy</a></li>
+              <li><a href="terms.html">Terms of use</a></li>
+              <li><a href="https://fixquotes.com/docs/contact/?category=clipturn" target="_blank" rel="noopener">Contact us</a></li>
+              <li><a href="media.html">Media</a></li>
+              <li><a href="https://fixquotes.com/docs/about/" target="_blank" rel="noopener">About the publisher</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="site.js" defer></script>
+    <script src="manual.js" defer></script>
+  </body>
+</html>

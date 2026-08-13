@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How to Rotate an MP4 on Windows Without Losing Quality</title>
+    <meta
+      name="description"
+      content="Rotate an MP4 losslessly by rewriting its display flag, or physically turn the picture so every player agrees. When to use each, and what survives."
+    />
+    <link rel="canonical" href="https://clipturn.app/rotate-mp4.html" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1022" media="(prefers-color-scheme: dark)" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="FixQuotes" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ClipTurn" />
+    <meta property="og:title" content="How to Rotate an MP4 File on Windows" />
+    <meta
+      property="og:description"
+      content="The lossless display-flag route and the physical rotation route, compared — and what each one does to your audio, dates and GPS data."
+    />
+    <meta property="og:url" content="https://clipturn.app/rotate-mp4.html" />
+    <meta property="og:image" content="https://clipturn.app/og.png" />
+    <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11 and Windows 10" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How to Rotate an MP4 File on Windows" />
+    <meta name="twitter:description" content="Lossless display flag or physical rotation — which one your MP4 actually needs." />
+    <meta name="twitter:image" content="https://clipturn.app/og.png" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "How to rotate an MP4 file on Windows",
+        "description": "The difference between rewriting an MP4's display flag and physically rotating its picture, and how to do each on Windows.",
+        "inLanguage": "en",
+        "url": "https://clipturn.app/rotate-mp4.html",
+        "dateModified": "2026-08-13",
+        "publisher": {
+          "@type": "Organization",
+          "name": "FixQuotes",
+          "url": "https://fixquotes.com/docs/about/"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can you rotate an MP4 without losing quality?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, if you rewrite the display flag instead of the picture. An MP4 stores an orientation value that tells players how to present the video, and changing it is instant and completely lossless because no pixels are touched. The catch is that any player, editor or upload pipeline that ignores that value will still show the clip the old way. Physically turning the picture is the option that works everywhere, and it costs one encode."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I rotate an MP4 on Windows?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Install ClipTurn from Microsoft Store, right-click the MP4 in File Explorer, open the ClipTurn submenu and choose Rotate video left or Rotate video right. The picture is physically turned, the result is verified, and the file keeps its original name and location. Windows itself has no rotate command for video files; Clipchamp can do it but exports a separate file."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does rotating an MP4 lose the audio quality?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It should not. There is no reason to touch the soundtrack when rotating the picture, and a well-behaved tool copies the original audio packets across unchanged rather than re-encoding them. Some general-purpose converters do re-encode audio by default, which costs quality for no benefit, so it is worth checking what your tool does."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will rotating an MP4 remove the date it was filmed or its GPS location?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends entirely on the tool. Many converters write a new file with today's date and drop the camera and GPS fields, which quietly ruins a library sorted by date taken. A tool built for rotation preserves the capture time, camera and GPS metadata, track language and colour information, and refuses rather than silently discarding something it cannot carry."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is my rotated MP4 bigger than the original?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Because quality was preserved instead of file size. Re-encoding at a bitrate that matches the source can produce a slightly larger file, particularly when the original was encoded with a more efficient or slower setting. A tool that guaranteed the same size would have to spend picture detail to get there. A larger output is normal, not a fault."
+            }
+          }
+        ]
+      }
+    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-26WWFWZZMP");(function(){var sent=false;var evts=["pointerdown","keydown","scroll","touchstart"];function load(){if(sent)return;sent=true;evts.forEach(function(e){removeEventListener(e,load,{passive:true})});removeEventListener("load",load);clearTimeout(timer);var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-26WWFWZZMP";document.head.appendChild(s)}var timer=setTimeout(load,1800);evts.forEach(function(e){addEventListener(e,load,{passive:true})});addEventListener("load",load)})();</script>
+  </head>
+  <body class="manual-page">
+    <a class="skip-link" href="#guide-content">Skip to the guide</a>
+
+    <header class="site-header">
+      <div class="shell nav-shell">
+        <a class="brand-link" href="/" aria-label="ClipTurn home">
+          <img class="brand-mark" src="assets/brand/clipturn-mark.svg" width="40" height="40" alt="" />
+          <span class="brand-name">Clip<span>Turn</span></span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          aria-label="Open navigation"
+        >
+          <span class="menu-lines" aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+          <a href="/#how">How it works</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="guides.html" aria-current="page">Guides</a>
+          <a href="manual.html">Manual</a>
+          <a href="changelog.html">Changelog</a>
+          <a
+            class="nav-download"
+            href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            Microsoft Store
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="guide-content">
+      <section class="legal-hero" aria-labelledby="guide-title">
+        <div class="shell">
+          <p class="eyebrow"><a href="guides.html">Guides</a></p>
+          <h1 id="guide-title">How to rotate an MP4 file on Windows</h1>
+          <p>
+            MP4 is the one format where you get a real choice: rewrite a single orientation value and lose
+            nothing at all, or turn the stored picture so the result works everywhere. Most tools pick one
+            silently and never mention the other. This guide explains which one your file actually needs, and
+            what each does to your audio, capture dates and GPS data along the way.
+          </p>
+          <div class="manual-hero-actions">
+            <a class="button button-primary" href="#choose">Which one do I need?</a>
+            <a class="button button-secondary" href="#how">Rotate it on Windows</a>
+          </div>
+          <p class="updated">MP4, M4V and MOV &middot; updated August 2026</p>
+        </div>
+      </section>
+
+      <div class="shell manual-layout">
+        <aside class="manual-sidebar" aria-label="Guide navigation">
+          <button
+            class="manual-toc-toggle"
+            id="manual-toc-toggle"
+            type="button"
+            aria-controls="manual-toc"
+            aria-expanded="true"
+          >
+            <span>On this page</span>
+            <span class="manual-toc-toggle-state">Hide sections</span>
+          </button>
+          <nav class="manual-toc" id="manual-toc" aria-label="Guide sections">
+            <p>On this page</p>
+            <ol>
+              <li><a href="#two-ways">The two ways to rotate an MP4</a></li>
+              <li><a href="#choose">Which one your file needs</a></li>
+              <li><a href="#how">Rotating an MP4 on Windows</a></li>
+              <li><a href="#keeps">What survives the rotation</a></li>
+              <li><a href="#size">Why the result can be larger</a></li>
+              <li><a href="#limits">MP4 files that get refused</a></li>
+              <li><a href="#faq">Common questions</a></li>
+            </ol>
+          </nav>
+        </aside>
+
+        <article class="manual-article">
+          <section class="manual-topic" id="two-ways">
+            <p class="eyebrow">The fork in the road</p>
+            <h2>The two ways to rotate an MP4</h2>
+            <p class="manual-lede">
+              An MP4 carries a small piece of information describing how the picture should be presented. You can
+              change that description, or you can change the picture. They are not the same operation and they do
+              not have the same result.
+            </p>
+
+            <div class="manual-table-wrap" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">&nbsp;</th>
+                    <th scope="col">Rewrite the display flag</th>
+                    <th scope="col">Physically rotate the picture</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Quality cost</th>
+                    <td>None whatsoever</td>
+                    <td>One encode generation</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Speed</th>
+                    <td>Effectively instant</td>
+                    <td>Seconds to minutes, depending on length</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Stored dimensions</th>
+                    <td>Unchanged</td>
+                    <td>Width and height swap on a quarter turn</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Works in modern players</th>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Works in older editors, TVs, upload pipelines</th>
+                    <td>Not reliably</td>
+                    <td>Yes</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Available for</th>
+                    <td>MP4, M4V and MOV only</td>
+                    <td>Any supported format</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>
+              This is also the source of most of the confusion online. Somebody rotates a clip losslessly in
+              seconds and reports that it was easy; somebody else does the same thing, uploads the result, and
+              finds it sideways again. Both are describing the display flag &mdash; one of them just happened to
+              send it somewhere that ignores it.
+            </p>
+          </section>
+
+          <section class="manual-topic" id="choose">
+            <p class="eyebrow">Decide once</p>
+            <h2>Which one your file needs</h2>
+
+            <div class="manual-card-grid">
+              <div class="manual-mini-card">
+                <h3>Rewrite the flag when&hellip;</h3>
+                <p>
+                  The clip stays on modern software you control, quality matters more than anything, the file is
+                  large and you would rather not spend an encode, or you are fixing a whole archive and want zero
+                  risk of degradation.
+                </p>
+              </div>
+              <div class="manual-mini-card">
+                <h3>Rotate the picture when&hellip;</h3>
+                <p>
+                  The video is going somewhere you do not control &mdash; a submission portal, a client, an older
+                  editing suite, a projector, a television, a conversion pipeline &mdash; or it has already turned
+                  up sideways once and you want the question closed.
+                </p>
+              </div>
+            </div>
+
+            <div class="manual-callout info">
+              <strong>When in doubt, rotate the picture.</strong>
+              <p>
+                A single encode at a matched bitrate is not something you will see. A clip that turns up sideways
+                on somebody else's screen is. The lossless route is the specialist choice, not the safe default.
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="how">
+            <p class="eyebrow">Doing it</p>
+            <h2>Rotating an MP4 on Windows</h2>
+            <p>
+              Windows has no rotate command for video files &mdash; the right-click <strong>Rotate left</strong>
+              and <strong>Rotate right</strong> entries appear only on images. Adding one is the shortest route.
+            </p>
+
+            <ol class="manual-steps">
+              <li>
+                <div>
+                  <h3>Install ClipTurn and open it once</h3>
+                  <p>
+                    Free from
+                    <a href="https://apps.microsoft.com/detail/9PGB9JVBRGLB" target="_blank" rel="noopener">Microsoft Store</a>,
+                    no account required. Opening it once registers its File Explorer commands.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Right-click the MP4 and pick a direction</h3>
+                  <p>
+                    Open <strong>ClipTurn &ndash; Video Rotator</strong> and choose
+                    <strong>Rotate video left</strong> or <strong>Rotate video right</strong>. This takes the
+                    physical route: the picture is turned, so the result is correct everywhere.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Or open it in the app to preview first</h3>
+                  <p>
+                    <strong>Open in ClipTurn</strong> loads the file on the Rotate Video tab, where each click of
+                    Rotate left or Rotate right adds another 90&deg; to the preview without touching the file. For
+                    a 180&deg; turn, click twice and save once &mdash; two separate saves would cost two encodes.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Take the lossless route when it is offered</h3>
+                  <p>
+                    If an exact replacement is not possible, ClipTurn can offer a reviewed
+                    <strong>rotated copy</strong> instead &mdash; including the lossless display-flag version for
+                    MP4, M4V and MOV. The exact changes are listed before anything starts, the copy is saved
+                    under a new name, and your original is never replaced without approval.
+                  </p>
+                </div>
+              </li>
+            </ol>
+
+            <div class="manual-screenshot">
+              <img
+                src="assets/screenshots/store-09-reviewed-copies.png"
+                width="1452"
+                height="1401"
+                alt="A review dialog listing the exact changes for a lossless display-orientation copy and a physically rotated H.264 copy"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </section>
+
+          <section class="manual-topic" id="keeps">
+            <p class="eyebrow">The part nobody checks</p>
+            <h2>What survives the rotation</h2>
+            <p class="manual-lede">
+              Rotating an MP4 in a general-purpose converter often quietly costs you more than one encode
+              generation. It is worth knowing what should survive.
+            </p>
+
+            <ul class="manual-check-list">
+              <li>
+                <strong>Audio should not be re-encoded at all.</strong> There is no reason to touch the
+                soundtrack when turning the picture. The original compressed packets can be copied across and
+                verified byte for byte.
+              </li>
+              <li>
+                <strong>Capture date should stay the capture date.</strong> Converters that stamp today's date
+                onto the result will scramble any library sorted by date taken.
+              </li>
+              <li>
+                <strong>Camera and GPS fields should be preserved</strong>, along with the movie-level identity
+                metadata and track languages.
+              </li>
+              <li>
+                <strong>Colour information should carry over.</strong> An HDR clip that quietly loses its colour
+                declarations comes back looking washed out.
+              </li>
+              <li>
+                <strong>The codec should normally stay the same.</strong> H.264 in, H.264 out. Eligible 8-bit
+                HEVC stays HEVC where a usable encoder exists, and if a fallback is genuinely required it should
+                be named in the result rather than applied silently.
+              </li>
+            </ul>
+
+            <p>
+              ClipTurn compares the finished candidate against the source for every property its route promised
+              to carry, and refuses rather than publishing a result that would drop something undisclosed. The
+              <a href="manual.html#streams">audio, subtitles and metadata section of the manual</a> sets out
+              exactly what that covers per container.
+            </p>
+          </section>
+
+          <section class="manual-topic" id="size">
+            <p class="eyebrow">Expected behaviour</p>
+            <h2>Why the result can be larger</h2>
+            <p>
+              A rotated MP4 is sometimes bigger than the one that went in, and this surprises people who assume
+              something has gone wrong.
+            </p>
+            <p>
+              It has not. Preserving quality and preserving file size are competing goals, and only one of them
+              can win. A tool that guaranteed the same byte count would have to lower the bitrate to get there,
+              which means spending picture detail to hit an arbitrary number. Targeting the source bitrate
+              instead can produce a slightly larger file, particularly when the original was encoded slowly or
+              with a more efficient encoder than the one available on your PC.
+            </p>
+            <div class="manual-callout info">
+              <strong>If size matters more than quality</strong>
+              <p>
+                Rotate first, then compress deliberately in a tool built for that. Combining the two operations
+                blindly is how footage quietly gets worse over a few years of well-meant edits.
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="limits">
+            <p class="eyebrow">Honest limits</p>
+            <h2>MP4 files that get refused</h2>
+            <p>
+              Not every MP4 can be rotated faithfully, and a tool that tries anyway is a tool that will
+              eventually damage something. These are the common cases where ClipTurn stops and leaves the source
+              untouched:
+            </p>
+            <ul class="manual-check-list">
+              <li>More than one video track, or more than one audio track.</li>
+              <li>Subtitles or chapters, which the MP4 route cannot carry through.</li>
+              <li>A Live Photo MOV, where rotating would break its pairing with the still image.</li>
+              <li>Fragmented MP4, interlaced H.264, or non-square display geometry.</li>
+              <li>
+                Dolby Vision enhancement metadata, which cannot survive. Where an eligible base HDR layer can be
+                kept, the result says explicitly what was dropped.
+              </li>
+              <li>
+                Missing codec support on your PC &mdash; for example no usable HEVC encoder for an HEVC source.
+              </li>
+            </ul>
+            <p>
+              In most of those cases a reviewed rotated copy is still offered, so you get an explicit choice
+              rather than a refusal and nothing else. The
+              <a href="tested-formats.html">tested-formats matrix</a> lists 99 real files and the exact outcome
+              for each, and <a href="video-wont-rotate.html">the troubleshooting guide</a> works through the
+              causes.
+            </p>
+          </section>
+
+          <section class="manual-topic" id="faq">
+            <p class="eyebrow">Answers</p>
+            <h2>Common questions</h2>
+
+            <h3>Can you rotate an MP4 without losing quality?</h3>
+            <p>
+              Yes, if you rewrite the display flag instead of the picture. An MP4 stores an orientation value that
+              tells players how to present the video, and changing it is instant and completely lossless because
+              no pixels are touched. The catch is that any player, editor or upload pipeline that ignores that
+              value will still show the clip the old way. Physically turning the picture is the option that works
+              everywhere, and it costs one encode.
+            </p>
+
+            <h3>How do I rotate an MP4 on Windows?</h3>
+            <p>
+              Install ClipTurn from Microsoft Store, right-click the MP4 in File Explorer, open the ClipTurn
+              submenu and choose <strong>Rotate video left</strong> or <strong>Rotate video right</strong>. The
+              picture is physically turned, the result is verified, and the file keeps its original name and
+              location. Windows itself has no rotate command for video files; Clipchamp can do it but exports a
+              separate file.
+            </p>
+
+            <h3>Does rotating an MP4 lose the audio quality?</h3>
+            <p>
+              It should not. There is no reason to touch the soundtrack when rotating the picture, and a
+              well-behaved tool copies the original audio packets across unchanged rather than re-encoding them.
+              Some general-purpose converters do re-encode audio by default, which costs quality for no benefit,
+              so it is worth checking what your tool does.
+            </p>
+
+            <h3>Will rotating an MP4 remove the date it was filmed or its GPS location?</h3>
+            <p>
+              It depends entirely on the tool. Many converters write a new file with today's date and drop the
+              camera and GPS fields, which quietly ruins a library sorted by date taken. A tool built for rotation
+              preserves the capture time, camera and GPS metadata, track language and colour information, and
+              refuses rather than silently discarding something it cannot carry.
+            </p>
+
+            <h3>Why is my rotated MP4 bigger than the original?</h3>
+            <p>
+              Because quality was preserved instead of file size. Re-encoding at a bitrate that matches the source
+              can produce a slightly larger file, particularly when the original was encoded with a more efficient
+              or slower setting. A tool that guaranteed the same size would have to spend picture detail to get
+              there. A larger output is normal, not a fault.
+            </p>
+
+            <div class="manual-callout info">
+              <strong>Where to go next</strong>
+              <p>
+                For every Windows method compared, read
+                <a href="rotate-video-windows.html">how to rotate a video on Windows</a>. If the clip came off a
+                phone, see <a href="rotate-video-taken-sideways.html">the sideways-video guide</a> or
+                <a href="rotate-mov-file.html">the MOV and iPhone guide</a>. For a whole folder, see
+                <a href="batch-rotate-videos.html">batch rotating multiple videos</a>. For the full
+                container-by-container reference, the manual covers
+                <a href="manual.html#container-details">MP4, MOV, MKV, WebM, WMV and AVI behaviour</a> in detail.
+              </p>
+            </div>
+
+            <div class="manual-hero-actions">
+              <a
+                class="button button-primary"
+                href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                Get ClipTurn free
+              </a>
+              <a class="button button-secondary" href="guides.html">All guides</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/brand/clipturn-lockup-on-dark.svg" width="1600" height="400" alt="ClipTurn" />
+            <p>A focused app for physical, verifiable video rotation on Windows 11 and Windows 10. Published by FixQuotes.</p>
+            <p class="footer-copyright">
+              &copy; 2026 FixQuotes, Norway. All rights reserved.<br />
+              <a href="mailto:support@fixquotes.com">support@fixquotes.com</a>
+            </p>
+          </div>
+          <div class="footer-column">
+            <h2>Product</h2>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="manual.html">User manual</a></li>
+              <li><a href="guides.html">Guides</a></li>
+              <li><a href="tested-formats.html">Tested formats</a></li>
+              <li><a href="changelog.html">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h2>Legal &amp; support</h2>
+            <ul class="footer-links">
+              <li><a href="privacy.html">Privacy policy</a></li>
+              <li><a href="terms.html">Terms of use</a></li>
+              <li><a href="https://fixquotes.com/docs/contact/?category=clipturn" target="_blank" rel="noopener">Contact us</a></li>
+              <li><a href="media.html">Media</a></li>
+              <li><a href="https://fixquotes.com/docs/about/" target="_blank" rel="noopener">About the publisher</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="site.js" defer></script>
+    <script src="manual.js" defer></script>
+  </body>
+</html>
