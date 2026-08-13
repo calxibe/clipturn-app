@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ClipTurn — Rotate videos from File Explorer</title>
+    <title>Video Rotator for Windows 11 and Windows 10 — Free</title>
     <meta
       name="description"
-      content="Rotate videos like photos on Windows 11 and Windows 10. ClipTurn physically turns the picture, preserves what it can, and verifies the result before replacement."
+      content="Rotate a video on Windows 11 or 10 straight from the right-click menu. ClipTurn turns the picture itself and verifies the result before replacing it."
     />
     <link rel="canonical" href="https://clipturn.app/" />
     <meta name="color-scheme" content="light dark" />
@@ -40,6 +40,7 @@
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
+        "@id": "https://clipturn.app/#software",
         "name": "ClipTurn",
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Windows 11, Windows 10",
@@ -76,6 +77,54 @@
         }
       }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is ClipTurn free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ClipTurn is currently free through Microsoft Store. See pricing and everything included."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does ClipTurn rotate every video losslessly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Supported uncompressed AVI can be rotated sample-exactly. Compressed video is physically rotated through a visually lossless re-encode under the default policy, so repeated turns can accumulate loss."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it keep my original file?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A successful rotation replaces the selected file in place. File Explorer rotations keep no persistent backup and cannot be undone. When rotating inside the app, an optional backup setting is available and is off by default. If ClipTurn refuses or fails before a safe commit, the source remains unchanged."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will the rotated file be the same size?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not necessarily. ClipTurn does not lower quality merely to force the output back to the source byte size, so a faithful result can be somewhat larger."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why can a supported format still be refused?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The container name is only one part of the file. Codec, bit depth, track layout, metadata, installed Windows codecs, and hardware can all affect whether ClipTurn can produce and prove a faithful result. When it cannot, it gives a specific reason instead of taking a risky guess."
+            }
+          }
+        ]
+      }
+    </script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-26WWFWZZMP");(function(){var sent=false;var evts=["pointerdown","keydown","scroll","touchstart"];function load(){if(sent)return;sent=true;evts.forEach(function(e){removeEventListener(e,load,{passive:true})});removeEventListener("load",load);clearTimeout(timer);var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-26WWFWZZMP";document.head.appendChild(s)}var timer=setTimeout(load,1800);evts.forEach(function(e){addEventListener(e,load,{passive:true})});addEventListener("load",load)})();</script>
   </head>
   <body>
@@ -83,7 +132,7 @@
 
     <header class="site-header">
       <div class="shell nav-shell">
-        <a class="brand-link" href="index.html" aria-label="ClipTurn home">
+        <a class="brand-link" href="/" aria-label="ClipTurn home">
           <img class="brand-mark" src="assets/brand/clipturn-mark.svg" width="40" height="40" alt="" />
           <span class="brand-name">Clip<span>Turn</span></span>
         </a>
@@ -101,6 +150,7 @@
         <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
           <a href="#how">How it works</a>
           <a href="pricing.html">Pricing</a>
+          <a href="guides.html">Guides</a>
           <a href="manual.html">Manual</a>
           <a href="changelog.html">Changelog</a>
           <a
@@ -247,7 +297,7 @@
             <div class="workflow-steps">
               <article class="workflow-step">
                 <span class="step-number">1</span>
-                <div><h3>Choose a direction</h3><p>Right-click a supported video and select rotate left or right.</p></div>
+                <div><h3>Choose a direction</h3><p>Right-click a supported video and select rotate left or right. In the app you can also turn it 180&deg;, in one save.</p></div>
               </article>
               <article class="workflow-step">
                 <span class="step-number">2</span>
@@ -670,18 +720,19 @@
               loading="lazy"
             />
             <p>A focused app for physical, verifiable video rotation on Windows 11 and Windows 10. Published by FixQuotes.</p>
-            <p class="footer-copyright">© 2026 FixQuotes. All rights reserved.</p>
+            <p class="footer-copyright">
+              © 2026 FixQuotes, Norway. All rights reserved.<br />
+              <a href="mailto:support@fixquotes.com">support@fixquotes.com</a>
+            </p>
           </div>
           <div class="footer-column">
             <h2>Product</h2>
             <ul class="footer-links">
-              <li><a href="#how">How it works</a></li>
-              <li><a href="#limits">Good to know</a></li>
+              <li><a href="/" aria-current="page">Home</a></li>
               <li><a href="manual.html">User manual</a></li>
+              <li><a href="guides.html">Guides</a></li>
               <li><a href="tested-formats.html">Tested formats</a></li>
-              <li><a href="pricing.html">Pricing</a></li>
               <li><a href="changelog.html">Changelog</a></li>
-              <li><a href="https://apps.microsoft.com/detail/9PGB9JVBRGLB" target="_blank" rel="noopener">Microsoft Store</a></li>
             </ul>
           </div>
           <div class="footer-column">

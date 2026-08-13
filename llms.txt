@@ -18,6 +18,20 @@ Use the user manual for detailed information about supported file types, codecs,
 - [Tested formats and codecs](https://clipturn.app/tested-formats.html): Real-file, end-to-end results by container, extension, picture codec and profile, notable streams, processing route, and verified outcome, including expected safe refusals.
 - [Changelog](https://clipturn.app/changelog.html): Release history and changes by version.
 
+## Guides
+
+Task-focused guides written for people solving a rotation problem, rather than reference documentation. Each one covers the built-in Windows options and free tools honestly before describing ClipTurn.
+
+- [Guides index](https://clipturn.app/guides.html): All guides, plus the difference between rewriting an orientation flag and physically rotating stored picture.
+- [How to rotate a video on Windows 11 and Windows 10](https://clipturn.app/rotate-video-windows.html): Every method compared, including what Windows can and cannot do without extra software, choosing a direction, whole folders, quality cost, and how to confirm a rotation was saved.
+- [How to rotate a video that was taken sideways](https://clipturn.app/rotate-video-taken-sideways.html): Why phone footage looks correct on the phone and sideways elsewhere, how rotation flags cause it, permanent fixes, and how to avoid it when recording.
+- [How to rotate a video in VLC and actually save it](https://clipturn.app/rotate-video-vlc.html): The Geometry transform is playback-only; includes the Convert/Save sequence that writes a rotated file, why converted output is often still sideways, and what conversion costs in quality and metadata.
+- [How to rotate a video in Windows Media Player](https://clipturn.app/rotate-video-windows-media-player.html): Windows Media Player, the Windows 11 Media Player app, and Films & TV have no rotation feature; covers alternatives and workarounds that do not work.
+- [How to rotate an MP4 file on Windows](https://clipturn.app/rotate-mp4.html): Lossless display-flag rotation versus physical rotation, what survives each route, why output can be larger, and which MP4 files are refused.
+- [How to rotate a MOV file on Windows](https://clipturn.app/rotate-mov-file.html): Rotating MOV and iPhone video without QuickTime, preserved capture date and GPS metadata, HEVC encoder requirements, and the deliberate Live Photo refusal.
+- [How to batch rotate multiple videos at once](https://clipturn.app/batch-rotate-videos.html): Multi-select in File Explorer versus the Batch Rotate list, adding folders, per-file statuses, safe stopping, concurrency, and handling clips that need different directions.
+- [Video will not rotate: causes and fixes](https://clipturn.app/video-wont-rotate.html): Diagnosing rotations that will not save, files that play but refuse to rotate, missing codecs, unsafe storage locations, and uncertain outcomes.
+
 ## Legal and support
 
 - [Privacy policy](https://clipturn.app/privacy.html): How the app, website, external badges, tutorial video, and support channels handle data.

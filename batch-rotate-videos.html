@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How to Batch Rotate Multiple Videos at Once on Windows</title>
+    <meta
+      name="description"
+      content="Rotate a whole folder of videos in one run on Windows 11 or 10, with a separate result for every file so one refusal never stops the rest."
+    />
+    <link rel="canonical" href="https://clipturn.app/batch-rotate-videos.html" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1022" media="(prefers-color-scheme: dark)" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="FixQuotes" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ClipTurn" />
+    <meta property="og:title" content="How to Batch Rotate Multiple Videos at Once on Windows" />
+    <meta
+      property="og:description"
+      content="Rotate a whole folder in one run, with a separate result for every file so one refusal never stops the rest."
+    />
+    <meta property="og:url" content="https://clipturn.app/batch-rotate-videos.html" />
+    <meta property="og:image" content="https://clipturn.app/og.png" />
+    <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11 and Windows 10" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How to Batch Rotate Multiple Videos at Once on Windows" />
+    <meta name="twitter:description" content="Rotate a whole folder in one run, with a separate result for every file." />
+    <meta name="twitter:image" content="https://clipturn.app/og.png" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "How to batch rotate multiple videos at once on Windows",
+        "description": "Rotating a folder of videos in one run on Windows, with an independent result for every file.",
+        "inLanguage": "en",
+        "url": "https://clipturn.app/batch-rotate-videos.html",
+        "dateModified": "2026-08-14",
+        "publisher": {
+          "@type": "Organization",
+          "name": "FixQuotes",
+          "url": "https://fixquotes.com/docs/about/"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Batch rotate videos on Windows",
+        "description": "Rotate many videos in one run on Windows 11 or Windows 10, keeping a separate outcome for each file.",
+        "totalTime": "PT5M",
+        "tool": [{ "@type": "HowToTool", "name": "ClipTurn for Windows" }],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Open Batch Rotate",
+            "text": "Open ClipTurn and select the Batch Rotate tab."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Choose one direction",
+            "text": "Select Rotate left 90 degrees, Rotate right 90 degrees, or Rotate 180 degrees. That direction applies to every eligible file in the run."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Add the videos",
+            "text": "Select Add videos for a multi-file picker, or drop files or a whole folder onto the window. Only supported videos directly inside a dropped folder are added; subfolders are not searched."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Review the list",
+            "text": "Check the filename, length, resolution and size of each row, and remove anything you do not want with Remove selected or Clear list."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Start the run",
+            "text": "Select Rotate the list. Each row is processed as its own job and keeps its own status and reason."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Read every result",
+            "text": "One file may rotate while another safely refuses or stops at Review available. The durable record for each is also written to Recent Jobs."
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I rotate multiple videos at once on Windows?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For a handful of clips filmed the same way, select them all in File Explorer, right-click, and use the rotate command once — the direction is applied to each file independently. For a folder, or for a list you want to check before starting, use ClipTurn's Batch Rotate tab, which shows every file as its own row with its own status and reason."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I rotate a whole folder of videos in one go?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Drop the folder anywhere on the ClipTurn window and every supported video directly inside it is added to the list. Subfolders are deliberately never searched, so a folder of folders adds nothing unexpected. Unsupported files inside the folder are counted and skipped rather than filling the list with rows you cannot use."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can different videos be rotated in different directions in one run?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. One direction applies to the whole run, which is what you want for a batch of clips filmed the same way and wrong for a mixed set. Rotate the clips that need one direction, then add the rest and run again with the other direction."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if one video in the batch fails?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nothing happens to the others. Every row is its own job, so a refusal, a failure or a row waiting for review does not stop or hide the rest. The status and the complete reason stay attached to that row, and a refused file is left exactly as it was."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many videos can be rotated at the same time?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Maximum concurrent jobs in Settings allows 1 to 32 workers at once, and the default is 1. Raising it uses more CPU, hardware codec sessions, storage bandwidth, memory and temporary space. Concurrency never weakens per-file verification; it only changes how many files are active at a time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I stop a batch part-way through?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Stop after the current videos prevents new rows from starting while letting files already being processed finish rather than being killed mid-write. Untouched waiting rows return to Not started, so selecting Rotate the list later runs exactly the remainder."
+            }
+          }
+        ]
+      }
+    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-26WWFWZZMP");(function(){var sent=false;var evts=["pointerdown","keydown","scroll","touchstart"];function load(){if(sent)return;sent=true;evts.forEach(function(e){removeEventListener(e,load,{passive:true})});removeEventListener("load",load);clearTimeout(timer);var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-26WWFWZZMP";document.head.appendChild(s)}var timer=setTimeout(load,1800);evts.forEach(function(e){addEventListener(e,load,{passive:true})});addEventListener("load",load)})();</script>
+  </head>
+  <body class="manual-page">
+    <a class="skip-link" href="#guide-content">Skip to the guide</a>
+
+    <header class="site-header">
+      <div class="shell nav-shell">
+        <a class="brand-link" href="/" aria-label="ClipTurn home">
+          <img class="brand-mark" src="assets/brand/clipturn-mark.svg" width="40" height="40" alt="" />
+          <span class="brand-name">Clip<span>Turn</span></span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          aria-label="Open navigation"
+        >
+          <span class="menu-lines" aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+          <a href="/#how">How it works</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="guides.html" aria-current="page">Guides</a>
+          <a href="manual.html">Manual</a>
+          <a href="changelog.html">Changelog</a>
+          <a
+            class="nav-download"
+            href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            Microsoft Store
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="guide-content">
+      <section class="legal-hero" aria-labelledby="guide-title">
+        <div class="shell">
+          <p class="eyebrow"><a href="guides.html">Guides</a></p>
+          <h1 id="guide-title">How to batch rotate multiple videos at once</h1>
+          <p>
+            A phone held the same way all afternoon produces a folder of clips that all need the same quarter turn.
+            Doing that one file at a time in a video editor is an evening's work. This is how to do the whole folder
+            in one run on Windows &mdash; and, more importantly, how to keep a separate answer for every file so one
+            awkward clip does not take the rest down with it.
+          </p>
+          <div class="manual-hero-actions">
+            <a class="button button-primary" href="#batch-tab">Rotate a folder</a>
+            <a class="button button-secondary" href="#statuses">Read the results</a>
+          </div>
+          <p class="updated">Windows 11 and Windows 10 &middot; updated August 2026</p>
+        </div>
+      </section>
+
+      <div class="shell manual-layout">
+        <aside class="manual-sidebar" aria-label="Guide navigation">
+          <button
+            class="manual-toc-toggle"
+            id="manual-toc-toggle"
+            type="button"
+            aria-controls="manual-toc"
+            aria-expanded="true"
+          >
+            <span>On this page</span>
+            <span class="manual-toc-toggle-state">Hide sections</span>
+          </button>
+          <nav class="manual-toc" id="manual-toc" aria-label="Guide sections">
+            <p>On this page</p>
+            <ol>
+              <li><a href="#two-routes">Two routes, and when each wins</a></li>
+              <li><a href="#explorer">A handful of clips, from File Explorer</a></li>
+              <li><a href="#batch-tab">A folder, in Batch Rotate</a></li>
+              <li><a href="#statuses">Reading the per-file results</a></li>
+              <li><a href="#stopping">Stopping a run safely</a></li>
+              <li><a href="#concurrency">How many at once</a></li>
+              <li><a href="#mixed">Clips that need different directions</a></li>
+              <li><a href="#before">Before you start a large batch</a></li>
+              <li><a href="#faq">Common questions</a></li>
+            </ol>
+          </nav>
+        </aside>
+
+        <article class="manual-article">
+          <section class="manual-topic" id="two-routes">
+            <p class="eyebrow">Pick a route</p>
+            <h2>Two routes, and when each wins</h2>
+            <p class="manual-lede">
+              Windows has no built-in way to rotate even one video, let alone forty. Both routes below come from
+              installing a rotation app; the difference is how much control you want before anything starts.
+            </p>
+
+            <div class="manual-table-wrap" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Route</th>
+                    <th scope="col">Best for</th>
+                    <th scope="col">What you give up</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Multi-select in File Explorer</th>
+                    <td>
+                      A handful of clips you already know need the same turn. Select, right-click, choose a
+                      direction, done.
+                    </td>
+                    <td>
+                      No list to review first, and no persistent backup &mdash; Explorer rotations never keep one.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Batch Rotate <span class="manual-badge">More control</span></th>
+                    <td>
+                      A whole folder, a mixed set, or anything you want to inspect before committing. Every file
+                      appears as a row with its own length, resolution, size and status.
+                    </td>
+                    <td>A few more clicks, and the app has to be open.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="manual-callout danger">
+              <strong>Batch work is where an irreversible mistake gets multiplied.</strong>
+              <p>
+                A successful rotation replaces the original file. One wrong direction on one clip is an annoyance;
+                the same mistake across ninety clips is an afternoon of re-rotating and two encode generations on
+                every one of them. Copy anything irreplaceable first, and try the direction on a single file before
+                you commit the folder.
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="explorer">
+            <p class="eyebrow">Route 1</p>
+            <h2>A handful of clips, from File Explorer</h2>
+            <ol class="manual-steps compact">
+              <li>
+                <div>
+                  <h3>Select the videos</h3>
+                  <p>
+                    Click the first, then <kbd>Ctrl</kbd>-click the others, or <kbd>Ctrl</kbd>+<kbd>A</kbd> for
+                    everything in the folder. Every item in the selection must be a supported type &mdash;
+                    <code>.mp4</code>, <code>.m4v</code>, <code>.mov</code>, <code>.mkv</code>, <code>.avi</code>,
+                    <code>.wmv</code> or <code>.webm</code>. If any file is something else, the menu stays hidden
+                    entirely.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Right-click and choose a direction</h3>
+                  <p>
+                    Open <strong>ClipTurn &ndash; Video Rotator</strong> and select
+                    <strong>Rotate video left</strong> or <strong>Rotate video right</strong>. The direction is
+                    applied to each selected video independently.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Read the result card</h3>
+                  <p>
+                    One card reports the outcome for every file in the selection: rotated, refused, failed or
+                    uncertain. Mixed results keep the card open until you close it, so a single refusal in a batch
+                    of twenty is not something you can miss.
+                  </p>
+                </div>
+              </li>
+            </ol>
+            <div class="manual-callout warning">
+              <strong>Explorer rotations keep no backup.</strong>
+              <p>
+                The app's backup setting does not apply to them, whatever it is set to. To keep the originals, use
+                <strong>Open in ClipTurn</strong> instead and turn on
+                <strong>Create a backup before replacement</strong> in Settings before you start.
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="batch-tab">
+            <p class="eyebrow">Route 2</p>
+            <h2>A folder, in Batch Rotate</h2>
+
+            <div class="manual-screenshot">
+              <img
+                src="assets/screenshots/store-04-batch-rotate.png"
+                width="1452"
+                height="1401"
+                alt="ClipTurn's Batch Rotate tab listing several videos, each with its own length, resolution, size, status and reason"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <ol class="manual-steps">
+              <li>
+                <div>
+                  <h3>Choose one direction first</h3>
+                  <p>
+                    <strong>Rotate left 90&deg;</strong>, <strong>Rotate right 90&deg;</strong> or
+                    <strong>Rotate 180&deg;</strong>. The initial selection is right 90&deg;. Whatever you pick
+                    applies to every eligible row started in that run, so it is worth setting before you add
+                    anything.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Add the videos</h3>
+                  <p>
+                    Use <strong>Add videos</strong> for a multi-file picker, or drop files or a whole folder onto
+                    the window. Only supported videos <em>directly inside</em> a dropped folder are added &mdash;
+                    subfolders are deliberately never searched, so a folder of folders adds nothing you did not
+                    expect. Files already in the list are skipped rather than duplicated.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Review before you commit</h3>
+                  <p>
+                    Each row shows the filename and folder, length, displayed resolution, size and status. A dash
+                    means metadata could not be read &mdash; that on its own is not a rotation verdict. Use
+                    <strong>Remove selected</strong> or <strong>Clear list</strong> to drop anything you do not
+                    want.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Start the run</h3>
+                  <p>
+                    Select <strong>Rotate the list</strong>. ClipTurn takes a snapshot of the eligible rows, the
+                    chosen direction and your current settings, so changing a setting mid-run does not alter work
+                    already committed.
+                  </p>
+                </div>
+              </li>
+            </ol>
+
+            <div class="manual-callout info">
+              <strong>A slow folder read can be stopped.</strong>
+              <p>
+                Reading a large folder over a slow drive can take a moment. <strong>Stop adding</strong> ends the
+                read; rows already found stay in the list, so you can start with those and add the rest later.
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="statuses">
+            <p class="eyebrow">The point of a batch</p>
+            <h2>Reading the per-file results</h2>
+            <p class="manual-lede">
+              This is what separates a real batch tool from a loop: every row is its own job, so one file being
+              refused never stops, hides or corrupts the others.
+            </p>
+
+            <div class="manual-table-wrap" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Status</th>
+                    <th scope="col">What it means</th>
+                    <th scope="col">Can you run it again?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">Rotated</th><td>The verified result replaced the source.</td><td>No — a second turn is prevented deliberately</td></tr>
+                  <tr><th scope="row">Rotated copy created</th><td>A separately named output passed verification; the original was untouched.</td><td>No, the reviewed request is complete</td></tr>
+                  <tr><th scope="row">Review available</th><td>Exact replacement stopped safely and a separate-copy route is available for approval.</td><td>Use <strong>Review conversions</strong> and approve it explicitly</td></tr>
+                  <tr><th scope="row">Refused safely</th><td>No faithful route existed and the source is proven unchanged.</td><td>Yes, once you change the setting or capability it named</td></tr>
+                  <tr><th scope="row">Failed</th><td>The attempt stopped before modifying the source, or the file could not be found.</td><td>Yes, after fixing the cause</td></tr>
+                  <tr><th scope="row">Cannot rotate</th><td>The path or file type has a permanent refusal in this list.</td><td>No — remove the row</td></tr>
+                  <tr><th scope="row">Outcome unknown</th><td>Whether the source already carries the turn could not be proven.</td><td><strong>No. Inspect the file first.</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="manual-callout danger">
+              <strong>Never re-run an Outcome unknown row without looking.</strong>
+              <p>
+                If the turn already applied, sending it again leaves that video 180&deg; from where it started. Open
+                <a href="manual.html#recent-jobs">Recent Jobs</a>, then open the video itself and establish which way
+                up it currently is. Only then decide.
+              </p>
+            </div>
+
+            <p>
+              Every outcome is also written to Recent Jobs, so closing the window or restarting the app does not
+              lose the record. <a href="manual.html#batch-statuses">The manual lists every status and retry rule.</a>
+            </p>
+          </section>
+
+          <section class="manual-topic" id="stopping">
+            <p class="eyebrow">Changing your mind</p>
+            <h2>Stopping a run safely</h2>
+            <p>
+              There is no kill switch, and that is deliberate: terminating a worker mid-write is exactly how a video
+              gets truncated.
+            </p>
+            <ul class="manual-check-list">
+              <li>
+                <strong>Stop after the current videos</strong> prevents new rows from starting. Files already being
+                processed finish properly.
+              </li>
+              <li>
+                Untouched waiting rows go back to <strong>Not started</strong>, so selecting
+                <strong>Rotate the list</strong> later runs exactly the remainder.
+              </li>
+              <li>
+                Rows already committed to the active run cannot be removed from the list until they finish.
+              </li>
+              <li>
+                Closing the progress window is not the same as stopping. The work continues safely and the results
+                appear in Recent Jobs.
+              </li>
+            </ul>
+          </section>
+
+          <section class="manual-topic" id="concurrency">
+            <p class="eyebrow">Speed against safety</p>
+            <h2>How many at once</h2>
+            <p>
+              <strong>Maximum concurrent jobs</strong> in Settings allows 1 to 32 workers at a time. The default is
+              1, which is the most conservative use of your disk and codecs.
+            </p>
+            <ul class="manual-check-list">
+              <li>Raise it gradually for many short clips on a capable PC with fast local storage.</li>
+              <li>
+                Lower it if hardware encoders refuse parallel sessions, the PC becomes unresponsive, or temporary
+                storage fills up quickly.
+              </li>
+              <li>
+                Concurrency never weakens per-file verification. It changes how many files are active, not how
+                carefully each one is checked.
+              </li>
+              <li>
+                More workers is not always faster. Several large files competing for the same drive and the same
+                hardware encoder can finish slower than running them one after another.
+              </li>
+            </ul>
+          </section>
+
+          <section class="manual-topic" id="mixed">
+            <p class="eyebrow">The usual complication</p>
+            <h2>Clips that need different directions</h2>
+            <p>
+              One direction applies to the whole run. That is correct for a folder filmed the same way and wrong for
+              a mixed set, so split the work:
+            </p>
+            <ol class="manual-steps compact">
+              <li>
+                <div>
+                  <h3>Sort the clips by eye first</h3>
+                  <p>
+                    Explorer's large-icon view shows video thumbnails, which is usually enough to see which way each
+                    clip is lying without opening any of them.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Run the larger group</h3>
+                  <p>Add only those files, set their direction, and rotate the list.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Clear the list and run the rest</h3>
+                  <p>
+                    Select <strong>Clear list</strong>, add the remaining clips, choose the other direction, and go
+                    again. Already-rotated files are protected from a second accidental turn.
+                  </p>
+                </div>
+              </li>
+            </ol>
+            <div class="manual-callout info">
+              <strong>Upside-down clips belong in their own run.</strong>
+              <p>
+                Use <strong>Rotate 180&deg;</strong> rather than two 90&deg; runs. Each saved rotation is a fresh
+                encode, so two runs cost two generations of quality where one costs one.
+              </p>
+            </div>
+          </section>
+
+          <section class="manual-topic" id="before">
+            <p class="eyebrow">Worth five minutes</p>
+            <h2>Before you start a large batch</h2>
+            <ul class="manual-check-list">
+              <li>
+                <strong>Test on one file.</strong> Rotate a single clip from the folder and check the result in a
+                player before committing the other eighty-nine.
+              </li>
+              <li>
+                <strong>Copy anything irreplaceable.</strong> Batch work multiplies whatever mistake you make.
+              </li>
+              <li>
+                <strong>Check free space.</strong> Each file needs room for its candidate, same-volume staging and
+                rollback material while it is being written.
+              </li>
+              <li>
+                <strong>Move the folder off a NAS or USB stick first.</strong> Network, removable and non-NTFS
+                storage is refused, because the guarantees needed for safe replacement are not available there.
+              </li>
+              <li>
+                <strong>Expect some refusals in a mixed folder.</strong> That is the tool working, not failing
+                &mdash; and each refused file is left exactly as it was.
+                <a href="video-wont-rotate.html">The causes are listed here.</a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="manual-topic" id="faq">
+            <p class="eyebrow">Answers</p>
+            <h2>Common questions</h2>
+
+            <h3>How do I rotate multiple videos at once on Windows?</h3>
+            <p>
+              For a handful of clips filmed the same way, select them all in File Explorer, right-click, and use the
+              rotate command once &mdash; the direction is applied to each file independently. For a folder, or for a
+              list you want to check before starting, use ClipTurn's Batch Rotate tab, which shows every file as its
+              own row with its own status and reason.
+            </p>
+
+            <h3>Can I rotate a whole folder of videos in one go?</h3>
+            <p>
+              Yes. Drop the folder anywhere on the ClipTurn window and every supported video directly inside it is
+              added to the list. Subfolders are deliberately never searched, so a folder of folders adds nothing
+              unexpected. Unsupported files inside the folder are counted and skipped rather than filling the list
+              with rows you cannot use.
+            </p>
+
+            <h3>Can different videos be rotated in different directions in one run?</h3>
+            <p>
+              No. One direction applies to the whole run, which is what you want for a batch of clips filmed the same
+              way and wrong for a mixed set. Rotate the clips that need one direction, then add the rest and run
+              again with the other direction.
+            </p>
+
+            <h3>What happens if one video in the batch fails?</h3>
+            <p>
+              Nothing happens to the others. Every row is its own job, so a refusal, a failure or a row waiting for
+              review does not stop or hide the rest. The status and the complete reason stay attached to that row,
+              and a refused file is left exactly as it was.
+            </p>
+
+            <h3>How many videos can be rotated at the same time?</h3>
+            <p>
+              <strong>Maximum concurrent jobs</strong> in Settings allows 1 to 32 workers at once, and the default is
+              1. Raising it uses more CPU, hardware codec sessions, storage bandwidth, memory and temporary space.
+              Concurrency never weakens per-file verification; it only changes how many files are active at a time.
+            </p>
+
+            <h3>Can I stop a batch part-way through?</h3>
+            <p>
+              Yes. <strong>Stop after the current videos</strong> prevents new rows from starting while letting files
+              already being processed finish rather than being killed mid-write. Untouched waiting rows return to Not
+              started, so selecting Rotate the list later runs exactly the remainder.
+            </p>
+
+            <div class="manual-callout info">
+              <strong>Where to go next</strong>
+              <p>
+                If the clips came off a phone, <a href="rotate-video-taken-sideways.html">the sideways-video guide</a>
+                explains why they look fine there and wrong on a PC. For every Windows method compared, see
+                <a href="rotate-video-windows.html">how to rotate a video on Windows</a>. If rows are being refused,
+                work through <a href="video-wont-rotate.html">why a video will not rotate</a>.
+              </p>
+            </div>
+
+            <div class="manual-hero-actions">
+              <a
+                class="button button-primary"
+                href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                Get ClipTurn free
+              </a>
+              <a class="button button-secondary" href="guides.html">All guides</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/brand/clipturn-lockup-on-dark.svg" width="1600" height="400" alt="ClipTurn" />
+            <p>A focused app for physical, verifiable video rotation on Windows 11 and Windows 10. Published by FixQuotes.</p>
+            <p class="footer-copyright">
+              &copy; 2026 FixQuotes, Norway. All rights reserved.<br />
+              <a href="mailto:support@fixquotes.com">support@fixquotes.com</a>
+            </p>
+          </div>
+          <div class="footer-column">
+            <h2>Product</h2>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="manual.html">User manual</a></li>
+              <li><a href="guides.html">Guides</a></li>
+              <li><a href="tested-formats.html">Tested formats</a></li>
+              <li><a href="changelog.html">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h2>Legal &amp; support</h2>
+            <ul class="footer-links">
+              <li><a href="privacy.html">Privacy policy</a></li>
+              <li><a href="terms.html">Terms of use</a></li>
+              <li><a href="https://fixquotes.com/docs/contact/?category=clipturn" target="_blank" rel="noopener">Contact us</a></li>
+              <li><a href="media.html">Media</a></li>
+              <li><a href="https://fixquotes.com/docs/about/" target="_blank" rel="noopener">About the publisher</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="site.js" defer></script>
+    <script src="manual.js" defer></script>
+  </body>
+</html>
