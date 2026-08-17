@@ -36,7 +36,7 @@ Task-focused guides written for people solving a rotation problem, rather than r
 
 - [Privacy policy](https://clipturn.app/privacy.html): How the app, website, external badges, tutorial video, and support channels handle data.
 - [Terms of use](https://clipturn.app/terms.html): Website terms and product-specific notices.
-- [Contact ClipTurn support](https://fixquotes.com/docs/contact/?category=clipturn): Support, feedback, and questions.
+- [Contact ClipTurn support](https://clipturn.app/contact.html): ClipTurn’s handoff page for support, feedback, and questions handled by FixQuotes.
 - [About FixQuotes](https://fixquotes.com/docs/about/): Information about the publisher.
 
 ## Optional
