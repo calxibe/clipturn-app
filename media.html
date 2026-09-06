@@ -36,7 +36,7 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="site.min.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -132,7 +132,7 @@
             <article class="asset-card">
               <div class="asset-preview asset-preview-dark asset-preview-square">
                 <img
-                  src="assets/brand/clipturn-mark-512.png"
+                  src="assets/brand/clipturn-mark.svg"
                   width="512"
                   height="512"
                   alt="ClipTurn full-colour app mark"
@@ -165,7 +165,7 @@
             <article class="asset-card">
               <div class="asset-preview asset-preview-dark asset-preview-square">
                 <img
-                  src="assets/brand/clipturn-mark-mono-512.png"
+                  src="assets/brand/clipturn-mark-mono.svg"
                   width="512"
                   height="512"
                   alt="ClipTurn monochrome app mark"
@@ -253,7 +253,7 @@
             <article class="asset-card asset-card-wide">
               <div class="asset-preview asset-preview-banner">
                 <img
-                  src="assets/brand/clipturn-banner.png"
+                  src="assets/brand/clipturn-banner.svg"
                   width="1280"
                   height="640"
                   alt="ClipTurn blue social and listing banner"
@@ -273,7 +273,7 @@
             <article class="asset-card">
               <div class="asset-preview asset-preview-dark asset-preview-poster">
                 <img
-                  src="assets/brand/clipturn-store-poster-720x1080.png"
+                  src="assets/brand/clipturn-store-poster.svg"
                   width="720"
                   height="1080"
                   alt="ClipTurn portrait Microsoft Store poster"
@@ -330,13 +330,11 @@
                 data-caption="Right-click a video in File Explorer, rotate it, and watch the thumbnail refresh."
                 aria-label="View larger: File Explorer rotation screenshot"
               >
-                <img
-                  src="assets/screenshots/store-01-explorer-flyout.png"
-                  width="1920"
-                  height="1080"
-                  alt="File Explorer menu, rotation progress, and completed ClipTurn rotation"
-                  loading="lazy"
-                />
+                <picture>
+                  <source type="image/avif" srcset="assets/screenshots/previews/store-01-explorer-flyout-480-3b92e1a99731.avif 480w, assets/screenshots/previews/store-01-explorer-flyout-768-eb9dbec6f766.avif 768w, assets/screenshots/previews/store-01-explorer-flyout-1152-f788eaaa2b82.avif 1152w, assets/screenshots/previews/store-01-explorer-flyout-1920-3faf4ebe1039.avif 1920w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <source type="image/webp" srcset="assets/screenshots/previews/store-01-explorer-flyout-480-9bbfbb3dda13.webp 480w, assets/screenshots/previews/store-01-explorer-flyout-768-edf75219e108.webp 768w, assets/screenshots/previews/store-01-explorer-flyout-1152-dc6ecb51f7ea.webp 1152w, assets/screenshots/previews/store-01-explorer-flyout-1920-aa351d9a213c.webp 1920w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <img width="1920" height="1080" decoding="async" src="assets/screenshots/store-01-explorer-flyout.png" alt="File Explorer menu, rotation progress, and completed ClipTurn rotation" loading="lazy" />
+                </picture>
                 <span class="zoom-label">View larger</span>
               </button>
               <div class="screenshot-asset-copy">
@@ -354,13 +352,11 @@
                 data-caption="Preview a turn and save only after ClipTurn verifies the result."
                 aria-label="View larger: Rotate Video light-mode screenshot"
               >
-                <img
-                  src="assets/screenshots/store-02-rotate-video.png"
-                  width="1452"
-                  height="1401"
-                  alt="ClipTurn Rotate Video screen in light mode with a 90-degree preview"
-                  loading="lazy"
-                />
+                <picture>
+                  <source type="image/avif" srcset="assets/screenshots/previews/store-02-rotate-video-480-5b707e28178d.avif 480w, assets/screenshots/previews/store-02-rotate-video-768-612492ec2f3d.avif 768w, assets/screenshots/previews/store-02-rotate-video-1152-bda2bdddda40.avif 1152w, assets/screenshots/previews/store-02-rotate-video-1452-08444ecda833.avif 1452w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <source type="image/webp" srcset="assets/screenshots/previews/store-02-rotate-video-480-0ddccb789913.webp 480w, assets/screenshots/previews/store-02-rotate-video-768-a14c392227e4.webp 768w, assets/screenshots/previews/store-02-rotate-video-1152-bf091bc3bc7b.webp 1152w, assets/screenshots/previews/store-02-rotate-video-1452-97767619a4c6.webp 1452w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <img width="1452" height="1401" decoding="async" src="assets/screenshots/store-02-rotate-video.png" alt="ClipTurn Rotate Video screen in light mode with a 90-degree preview" loading="lazy" />
+                </picture>
                 <span class="zoom-label">View larger</span>
               </button>
               <div class="screenshot-asset-copy">
@@ -378,13 +374,11 @@
                 data-caption="Preview a turn and save only after ClipTurn verifies the result. Shown in dark mode."
                 aria-label="View larger: Rotate Video dark-mode screenshot"
               >
-                <img
-                  src="assets/screenshots/store-03-rotate-video-dark.png"
-                  width="1452"
-                  height="1401"
-                  alt="ClipTurn Rotate Video screen in dark mode with a 90-degree preview"
-                  loading="lazy"
-                />
+                <picture>
+                  <source type="image/avif" srcset="assets/screenshots/previews/store-03-rotate-video-dark-480-447171c6418e.avif 480w, assets/screenshots/previews/store-03-rotate-video-dark-768-c980b7761eb8.avif 768w, assets/screenshots/previews/store-03-rotate-video-dark-1152-9e5436d000b7.avif 1152w, assets/screenshots/previews/store-03-rotate-video-dark-1452-284551edc9ed.avif 1452w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <source type="image/webp" srcset="assets/screenshots/previews/store-03-rotate-video-dark-480-8c5fc49a1436.webp 480w, assets/screenshots/previews/store-03-rotate-video-dark-768-db7298651818.webp 768w, assets/screenshots/previews/store-03-rotate-video-dark-1152-1538d77f67df.webp 1152w, assets/screenshots/previews/store-03-rotate-video-dark-1452-55b67160ec19.webp 1452w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <img width="1452" height="1401" decoding="async" src="assets/screenshots/store-03-rotate-video-dark.png" alt="ClipTurn Rotate Video screen in dark mode with a 90-degree preview" loading="lazy" />
+                </picture>
                 <span class="zoom-label">View larger</span>
               </button>
               <div class="screenshot-asset-copy">
@@ -402,13 +396,11 @@
                 data-caption="Rotate mixed video formats together and pause conversions for explicit review."
                 aria-label="View larger: Batch Rotate screenshot"
               >
-                <img
-                  src="assets/screenshots/store-04-batch-rotate.png"
-                  width="1452"
-                  height="1401"
-                  alt="ClipTurn Batch Rotate screen with mixed video results"
-                  loading="lazy"
-                />
+                <picture>
+                  <source type="image/avif" srcset="assets/screenshots/previews/store-04-batch-rotate-480-751828badb0b.avif 480w, assets/screenshots/previews/store-04-batch-rotate-768-24c5ea1d9032.avif 768w, assets/screenshots/previews/store-04-batch-rotate-1152-3e57a4b0b535.avif 1152w, assets/screenshots/previews/store-04-batch-rotate-1452-d95fc62b340e.avif 1452w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <source type="image/webp" srcset="assets/screenshots/previews/store-04-batch-rotate-480-3446d4d713a2.webp 480w, assets/screenshots/previews/store-04-batch-rotate-768-5defd6943566.webp 768w, assets/screenshots/previews/store-04-batch-rotate-1152-7f5358f4727e.webp 1152w, assets/screenshots/previews/store-04-batch-rotate-1452-9cf2c3062659.webp 1452w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <img width="1452" height="1401" decoding="async" src="assets/screenshots/store-04-batch-rotate.png" alt="ClipTurn Batch Rotate screen with mixed video results" loading="lazy" />
+                </picture>
                 <span class="zoom-label">View larger</span>
               </button>
               <div class="screenshot-asset-copy">
@@ -426,13 +418,11 @@
                 data-caption="Review verified rotations and separately created copies in Recent Jobs."
                 aria-label="View larger: Recent Jobs screenshot"
               >
-                <img
-                  src="assets/screenshots/store-05-recent-jobs.png"
-                  width="1452"
-                  height="1401"
-                  alt="ClipTurn Recent Jobs screen with verified rotations and reviewed copies"
-                  loading="lazy"
-                />
+                <picture>
+                  <source type="image/avif" srcset="assets/screenshots/previews/store-05-recent-jobs-480-4281548ab0da.avif 480w, assets/screenshots/previews/store-05-recent-jobs-768-18ff1211bfee.avif 768w, assets/screenshots/previews/store-05-recent-jobs-1152-1db25e3c84c7.avif 1152w, assets/screenshots/previews/store-05-recent-jobs-1452-ece81f9055ef.avif 1452w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <source type="image/webp" srcset="assets/screenshots/previews/store-05-recent-jobs-480-61cfa4835b17.webp 480w, assets/screenshots/previews/store-05-recent-jobs-768-420c899da757.webp 768w, assets/screenshots/previews/store-05-recent-jobs-1152-da125d764dc7.webp 1152w, assets/screenshots/previews/store-05-recent-jobs-1452-b259f68e1d41.webp 1452w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <img width="1452" height="1401" decoding="async" src="assets/screenshots/store-05-recent-jobs.png" alt="ClipTurn Recent Jobs screen with verified rotations and reviewed copies" loading="lazy" />
+                </picture>
                 <span class="zoom-label">View larger</span>
               </button>
               <div class="screenshot-asset-copy">
@@ -450,13 +440,11 @@
                 data-caption="See the decode and encode paths available on this PC."
                 aria-label="View larger: System Capabilities screenshot"
               >
-                <img
-                  src="assets/screenshots/store-06-system-capabilities.png"
-                  width="1452"
-                  height="1401"
-                  alt="ClipTurn System Capabilities screen showing video decode and encode support"
-                  loading="lazy"
-                />
+                <picture>
+                  <source type="image/avif" srcset="assets/screenshots/previews/store-06-system-capabilities-480-a356c45963ee.avif 480w, assets/screenshots/previews/store-06-system-capabilities-768-6232afa7e5b6.avif 768w, assets/screenshots/previews/store-06-system-capabilities-1152-a1ccf441f209.avif 1152w, assets/screenshots/previews/store-06-system-capabilities-1452-09e8e22f41cf.avif 1452w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <source type="image/webp" srcset="assets/screenshots/previews/store-06-system-capabilities-480-765d8b7ee299.webp 480w, assets/screenshots/previews/store-06-system-capabilities-768-a377389f9208.webp 768w, assets/screenshots/previews/store-06-system-capabilities-1152-4e0b61e24dc4.webp 1152w, assets/screenshots/previews/store-06-system-capabilities-1452-568d36886c83.webp 1452w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <img width="1452" height="1401" decoding="async" src="assets/screenshots/store-06-system-capabilities.png" alt="ClipTurn System Capabilities screen showing video decode and encode support" loading="lazy" />
+                </picture>
                 <span class="zoom-label">View larger</span>
               </button>
               <div class="screenshot-asset-copy">
@@ -474,13 +462,11 @@
                 data-caption="Configure codec and quality policy, replacement safety and backups, timestamp preservation, and concurrency."
                 aria-label="View larger: Settings screenshot"
               >
-                <img
-                  src="assets/screenshots/store-07-settings.png"
-                  width="1452"
-                  height="1401"
-                  alt="ClipTurn Settings screen"
-                  loading="lazy"
-                />
+                <picture>
+                  <source type="image/avif" srcset="assets/screenshots/previews/store-07-settings-480-3c8c937a2d63.avif 480w, assets/screenshots/previews/store-07-settings-768-2db9ca583534.avif 768w, assets/screenshots/previews/store-07-settings-1152-e007b9ad5580.avif 1152w, assets/screenshots/previews/store-07-settings-1452-40cd544fe2bf.avif 1452w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <source type="image/webp" srcset="assets/screenshots/previews/store-07-settings-480-e58e0ccfba1f.webp 480w, assets/screenshots/previews/store-07-settings-768-b0a96d66f925.webp 768w, assets/screenshots/previews/store-07-settings-1152-b72eafd4463d.webp 1152w, assets/screenshots/previews/store-07-settings-1452-9284eb7a1fea.webp 1452w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <img width="1452" height="1401" decoding="async" src="assets/screenshots/store-07-settings.png" alt="ClipTurn Settings screen" loading="lazy" />
+                </picture>
                 <span class="zoom-label">View larger</span>
               </button>
               <div class="screenshot-asset-copy">
@@ -498,13 +484,11 @@
                 data-caption="Inspect exact media facts and the verification receipt for the current file."
                 aria-label="View larger: file details screenshot"
               >
-                <img
-                  src="assets/screenshots/store-08-file-details.png"
-                  width="1452"
-                  height="1401"
-                  alt="ClipTurn file details and verification receipt"
-                  loading="lazy"
-                />
+                <picture>
+                  <source type="image/avif" srcset="assets/screenshots/previews/store-08-file-details-480-5c16eec6548b.avif 480w, assets/screenshots/previews/store-08-file-details-768-46914b2a2eee.avif 768w, assets/screenshots/previews/store-08-file-details-1152-85a7ec6ffd10.avif 1152w, assets/screenshots/previews/store-08-file-details-1452-db1517cf9a75.avif 1452w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <source type="image/webp" srcset="assets/screenshots/previews/store-08-file-details-480-567fe9abf2f7.webp 480w, assets/screenshots/previews/store-08-file-details-768-6d7c91f03d6a.webp 768w, assets/screenshots/previews/store-08-file-details-1152-4a384f1da520.webp 1152w, assets/screenshots/previews/store-08-file-details-1452-2a30a3141d70.webp 1452w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <img width="1452" height="1401" decoding="async" src="assets/screenshots/store-08-file-details.png" alt="ClipTurn file details and verification receipt" loading="lazy" />
+                </picture>
                 <span class="zoom-label">View larger</span>
               </button>
               <div class="screenshot-asset-copy">
@@ -522,13 +506,11 @@
                 data-caption="Review exact copy changes before creating verified outputs beside unchanged originals."
                 aria-label="View larger: reviewed copies screenshot"
               >
-                <img
-                  src="assets/screenshots/store-09-reviewed-copies.png"
-                  width="1452"
-                  height="1401"
-                  alt="ClipTurn reviewed copies dialog showing proposed output changes"
-                  loading="lazy"
-                />
+                <picture>
+                  <source type="image/avif" srcset="assets/screenshots/previews/store-09-reviewed-copies-480-a37ae4110f70.avif 480w, assets/screenshots/previews/store-09-reviewed-copies-768-a5fcbda0332f.avif 768w, assets/screenshots/previews/store-09-reviewed-copies-1152-b162bbc8f4b1.avif 1152w, assets/screenshots/previews/store-09-reviewed-copies-1452-57fbf62263f1.avif 1452w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <source type="image/webp" srcset="assets/screenshots/previews/store-09-reviewed-copies-480-1552639cbc5a.webp 480w, assets/screenshots/previews/store-09-reviewed-copies-768-b75bedafb978.webp 768w, assets/screenshots/previews/store-09-reviewed-copies-1152-57635054dcc1.webp 1152w, assets/screenshots/previews/store-09-reviewed-copies-1452-1492b1aa9990.webp 1452w" sizes="(min-width: 1220px) 559px, (min-width: 821px) calc((100vw - 102px) / 2), calc(100vw - 54px)" />
+                  <img width="1452" height="1401" decoding="async" src="assets/screenshots/store-09-reviewed-copies.png" alt="ClipTurn reviewed copies dialog showing proposed output changes" loading="lazy" />
+                </picture>
                 <span class="zoom-label">View larger</span>
               </button>
               <div class="screenshot-asset-copy">

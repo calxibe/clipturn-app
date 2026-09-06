@@ -32,7 +32,33 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="site.min.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ClipTurn",
+            "item": "https://clipturn.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Video rotation guides",
+            "item": "https://clipturn.app/guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "How to rotate a video in VLC — and actually save it",
+            "item": "https://clipturn.app/rotate-video-vlc.html"
+          }
+        ]
+      }
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -176,7 +202,9 @@
     <main id="guide-content">
       <section class="legal-hero" aria-labelledby="guide-title">
         <div class="shell">
-          <p class="eyebrow"><a href="guides.html">Guides</a></p>
+          <nav class="eyebrow" aria-label="Breadcrumb">
+            <a href="/">ClipTurn</a><span aria-hidden="true">/</span><a href="guides.html">Guides</a>
+          </nav>
           <h1 id="guide-title">How to rotate a video in VLC &mdash; and actually save it</h1>
           <p>
             VLC can rotate a video in about four seconds. What it does not tell you is that it rotated the

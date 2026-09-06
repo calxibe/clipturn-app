@@ -32,7 +32,33 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="site.min.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ClipTurn",
+            "item": "https://clipturn.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Video rotation guides",
+            "item": "https://clipturn.app/guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Video won't rotate? Causes and fixes on Windows",
+            "item": "https://clipturn.app/video-wont-rotate.html"
+          }
+        ]
+      }
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -139,7 +165,9 @@
     <main id="guide-content">
       <section class="legal-hero" aria-labelledby="guide-title">
         <div class="shell">
-          <p class="eyebrow"><a href="guides.html">Guides</a></p>
+          <nav class="eyebrow" aria-label="Breadcrumb">
+            <a href="/">ClipTurn</a><span aria-hidden="true">/</span><a href="guides.html">Guides</a>
+          </nav>
           <h1 id="guide-title">Video won't rotate? Causes and fixes on Windows</h1>
           <p>
             Three completely different problems get described with the same sentence: the rotation never saved,

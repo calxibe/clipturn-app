@@ -32,7 +32,33 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="site.min.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ClipTurn",
+            "item": "https://clipturn.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Video rotation guides",
+            "item": "https://clipturn.app/guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "How to rotate a video in Windows Media Player",
+            "item": "https://clipturn.app/rotate-video-windows-media-player.html"
+          }
+        ]
+      }
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -139,7 +165,9 @@
     <main id="guide-content">
       <section class="legal-hero" aria-labelledby="guide-title">
         <div class="shell">
-          <p class="eyebrow"><a href="guides.html">Guides</a></p>
+          <nav class="eyebrow" aria-label="Breadcrumb">
+            <a href="/">ClipTurn</a><span aria-hidden="true">/</span><a href="guides.html">Guides</a>
+          </nav>
           <h1 id="guide-title">How to rotate a video in Windows Media Player</h1>
           <p>
             The honest answer first: you cannot. Windows Media Player has never had a rotation feature, and
@@ -258,14 +286,11 @@
             </p>
 
             <div class="manual-screenshot">
-              <img
-                src="assets/screenshots/store-01-explorer-flyout.png"
-                width="1920"
-                height="1080"
-                alt="The Windows File Explorer right-click menu with rotate video left and rotate video right commands added"
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source type="image/avif" srcset="assets/screenshots/previews/store-01-explorer-flyout-480-3b92e1a99731.avif 480w, assets/screenshots/previews/store-01-explorer-flyout-768-eb9dbec6f766.avif 768w, assets/screenshots/previews/store-01-explorer-flyout-1152-f788eaaa2b82.avif 1152w, assets/screenshots/previews/store-01-explorer-flyout-1920-3faf4ebe1039.avif 1920w" sizes="(min-width: 1220px) 757px, (min-width: 1160px) calc(100vw - 463px), (min-width: 1001px) calc(90vw - 347px), (min-width: 621px) calc(90vw - 58px), (min-width: 600px) calc(90vw - 46px), (min-width: 521px) calc(100vw - 106px), calc(100vw - 86px)" />
+                <source type="image/webp" srcset="assets/screenshots/previews/store-01-explorer-flyout-480-9bbfbb3dda13.webp 480w, assets/screenshots/previews/store-01-explorer-flyout-768-edf75219e108.webp 768w, assets/screenshots/previews/store-01-explorer-flyout-1152-dc6ecb51f7ea.webp 1152w, assets/screenshots/previews/store-01-explorer-flyout-1920-aa351d9a213c.webp 1920w" sizes="(min-width: 1220px) 757px, (min-width: 1160px) calc(100vw - 463px), (min-width: 1001px) calc(90vw - 347px), (min-width: 621px) calc(90vw - 58px), (min-width: 600px) calc(90vw - 46px), (min-width: 521px) calc(100vw - 106px), calc(100vw - 86px)" />
+                <img width="1920" height="1080" src="assets/screenshots/store-01-explorer-flyout.png" alt="The Windows File Explorer right-click menu with rotate video left and rotate video right commands added" loading="lazy" decoding="async" />
+              </picture>
             </div>
 
             <ol class="manual-steps">

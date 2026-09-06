@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Video Rotator for Windows 11 and Windows 10 — Free</title>
+    <title>ClipTurn — Free Video Rotator for Windows 11 &amp; 10</title>
     <meta
       name="description"
-      content="Rotate a video on Windows 11 or 10 straight from the right-click menu. ClipTurn turns the picture itself and verifies the result before replacing it."
+      content="Rotate MP4, MOV and other videos on Windows 11 and 10. Free from Microsoft Store. Right-click rotation, batch processing and local verification—no uploads."
     />
     <link rel="canonical" href="https://clipturn.app/" />
     <meta name="color-scheme" content="light dark" />
@@ -14,10 +14,10 @@
     <meta name="theme-color" content="#0b1022" media="(prefers-color-scheme: dark)" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ClipTurn" />
-    <meta property="og:title" content="ClipTurn — Rotate videos like photos" />
+    <meta property="og:title" content="ClipTurn — Free Video Rotator for Windows 11 &amp; 10" />
     <meta
       property="og:description"
-      content="Physical video rotation for Windows 11 and Windows 10, directly from File Explorer."
+      content="Rotate MP4, MOV and other videos on Windows 11 and 10. Free from Microsoft Store, with right-click rotation, batch processing and no video uploads."
     />
     <meta property="og:url" content="https://clipturn.app/" />
     <meta property="og:image" content="https://clipturn.app/og.png" />
@@ -25,17 +25,39 @@
     <meta property="og:image:height" content="640" />
     <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11 and Windows 10" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ClipTurn — Rotate videos like photos" />
+    <meta name="twitter:title" content="ClipTurn — Free Video Rotator for Windows 11 &amp; 10" />
     <meta
       name="twitter:description"
-      content="Physical video rotation for Windows 11 and Windows 10, directly from File Explorer."
+      content="Rotate MP4, MOV and other videos on Windows 11 and 10. Free from Microsoft Store, with right-click rotation, batch processing and no video uploads."
     />
     <meta name="twitter:image" content="https://clipturn.app/og.png" />
     <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="site.min.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://clipturn.app/#website",
+            "url": "https://clipturn.app/",
+            "name": "ClipTurn",
+            "alternateName": "ClipTurn Video Rotator",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://clipturn.app/#publisher" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://clipturn.app/#publisher",
+            "name": "FixQuotes",
+            "url": "https://fixquotes.com/docs/about/"
+          }
+        ]
+      }
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -44,7 +66,7 @@
         "name": "ClipTurn",
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Windows 11, Windows 10",
-        "description": "Rotate videos like photos on Windows 11 and Windows 10. ClipTurn physically turns the picture and verifies the result before replacing the source.",
+        "description": "Free video rotation for Windows 11 and Windows 10. Rotate MP4, MOV and other supported videos from File Explorer or in a batch, with local processing and verification before replacement.",
         "downloadUrl": "https://apps.microsoft.com/detail/9PGB9JVBRGLB",
         "isAccessibleForFree": true,
         "offers": {
@@ -54,6 +76,7 @@
         },
         "publisher": {
           "@type": "Organization",
+          "@id": "https://clipturn.app/#publisher",
           "name": "FixQuotes",
           "url": "https://fixquotes.com/docs/about/"
         }
@@ -173,8 +196,8 @@
             <p class="eyebrow">Currently free for Windows 11 (and 10)</p>
             <h1 id="hero-title">Rotate a video like you <span class="turn-word">rotate a photo.</span></h1>
             <p class="hero-lede">
-              ClipTurn turns the picture inside the file—not just an orientation flag—then verifies the
-              result before it replaces the source.
+              ClipTurn is a free video rotator for Windows 11 and Windows 10. Right-click to rotate MP4,
+              MOV and other supported videos on your PC, with the result checked before replacing your file.
             </p>
             <div class="hero-actions">
               <a
@@ -198,30 +221,9 @@
           <div class="hero-visual" aria-label="ClipTurn application preview">
             <div class="app-frame">
               <picture>
-                <source
-                  type="image/avif"
-                  srcset="
-                    assets/screenshots/store-03-rotate-video-dark-768.avif   768w,
-                    assets/screenshots/store-03-rotate-video-dark-1452.avif 1452w
-                  "
-                  sizes="(max-width: 1020px) calc(100vw - 50px), 457px"
-                />
-                <source
-                  type="image/webp"
-                  srcset="
-                    assets/screenshots/store-03-rotate-video-dark-768.webp   768w,
-                    assets/screenshots/store-03-rotate-video-dark-1452.webp 1452w
-                  "
-                  sizes="(max-width: 1020px) calc(100vw - 50px), 457px"
-                />
-                <!-- fetchpriority is not valid on <source>; it must stay here. -->
-                <img
-                  src="assets/screenshots/store-03-rotate-video-dark.png"
-                  width="1452"
-                  height="1401"
-                  alt="ClipTurn showing a video preview with rotate left, reset, and rotate right controls"
-                  fetchpriority="high"
-                />
+                <source type="image/avif" srcset="assets/screenshots/previews/store-03-rotate-video-dark-480-447171c6418e.avif 480w, assets/screenshots/previews/store-03-rotate-video-dark-768-c980b7761eb8.avif 768w, assets/screenshots/previews/store-03-rotate-video-dark-1152-9e5436d000b7.avif 1152w, assets/screenshots/previews/store-03-rotate-video-dark-1452-284551edc9ed.avif 1452w" sizes="(max-width: 1020px) calc(100vw - 50px), 457px" />
+                <source type="image/webp" srcset="assets/screenshots/previews/store-03-rotate-video-dark-480-8c5fc49a1436.webp 480w, assets/screenshots/previews/store-03-rotate-video-dark-768-db7298651818.webp 768w, assets/screenshots/previews/store-03-rotate-video-dark-1152-1538d77f67df.webp 1152w, assets/screenshots/previews/store-03-rotate-video-dark-1452-55b67160ec19.webp 1452w" sizes="(max-width: 1020px) calc(100vw - 50px), 457px" />
+                <img width="1452" height="1401" src="assets/screenshots/store-03-rotate-video-dark.png" alt="ClipTurn showing a video preview with rotate left, reset, and rotate right controls" fetchpriority="high" />
               </picture>
             </div>
             <div class="floating-chip">
@@ -268,31 +270,9 @@
             <!-- Despite loading="lazy" this sits inside Chrome's ~1250px prefetch
                  threshold on a phone, so it really is fetched during first paint. -->
             <picture>
-              <source
-                type="image/avif"
-                srcset="
-                  assets/screenshots/store-01-explorer-flyout-768.avif   768w,
-                  assets/screenshots/store-01-explorer-flyout-1152.avif 1152w,
-                  assets/screenshots/store-01-explorer-flyout-1920.avif 1920w
-                "
-                sizes="(min-width: 1220px) 1178px, (min-width: 621px) calc(100vw - 42px), calc(100vw - 30px)"
-              />
-              <source
-                type="image/webp"
-                srcset="
-                  assets/screenshots/store-01-explorer-flyout-768.webp   768w,
-                  assets/screenshots/store-01-explorer-flyout-1152.webp 1152w,
-                  assets/screenshots/store-01-explorer-flyout-1920.webp 1920w
-                "
-                sizes="(min-width: 1220px) 1178px, (min-width: 621px) calc(100vw - 42px), calc(100vw - 30px)"
-              />
-              <img
-                src="assets/screenshots/store-01-explorer-flyout.png"
-                width="1920"
-                height="1080"
-                alt="Three steps in File Explorer: right-click a video, ClipTurn rotates it, and the verified result appears"
-                loading="lazy"
-              />
+              <source type="image/avif" srcset="assets/screenshots/previews/store-01-explorer-flyout-480-3b92e1a99731.avif 480w, assets/screenshots/previews/store-01-explorer-flyout-768-eb9dbec6f766.avif 768w, assets/screenshots/previews/store-01-explorer-flyout-1152-f788eaaa2b82.avif 1152w, assets/screenshots/previews/store-01-explorer-flyout-1920-3faf4ebe1039.avif 1920w" sizes="(min-width: 1220px) 1178px, (min-width: 621px) calc(100vw - 42px), calc(100vw - 30px)" />
+              <source type="image/webp" srcset="assets/screenshots/previews/store-01-explorer-flyout-480-9bbfbb3dda13.webp 480w, assets/screenshots/previews/store-01-explorer-flyout-768-edf75219e108.webp 768w, assets/screenshots/previews/store-01-explorer-flyout-1152-dc6ecb51f7ea.webp 1152w, assets/screenshots/previews/store-01-explorer-flyout-1920-aa351d9a213c.webp 1920w" sizes="(min-width: 1220px) 1178px, (min-width: 621px) calc(100vw - 42px), calc(100vw - 30px)" />
+              <img width="1920" height="1080" decoding="async" src="assets/screenshots/store-01-explorer-flyout.png" alt="Three steps in File Explorer: right-click a video, ClipTurn rotates it, and the verified result appears" loading="lazy" />
             </picture>
             <div class="workflow-steps">
               <article class="workflow-step">
@@ -439,21 +419,9 @@
               aria-label="View larger: ClipTurn Batch Rotate screenshot"
             >
               <picture>
-                <source
-                  type="image/webp"
-                  srcset="
-                    assets/screenshots/store-04-batch-rotate-768.webp   768w,
-                    assets/screenshots/store-04-batch-rotate-full.webp 1452w
-                  "
-                  sizes="(min-width: 1021px) 600px, (min-width: 901px) 860px, calc(100vw - 40px)"
-                />
-                <img
-                  src="assets/screenshots/store-04-batch-rotate.png"
-                  width="1452"
-                  height="1401"
-                  alt="ClipTurn Batch Rotate showing four verified rotations and two videos waiting for conversion review"
-                  loading="lazy"
-                />
+                <source type="image/avif" srcset="assets/screenshots/previews/store-04-batch-rotate-480-751828badb0b.avif 480w, assets/screenshots/previews/store-04-batch-rotate-768-24c5ea1d9032.avif 768w, assets/screenshots/previews/store-04-batch-rotate-1152-3e57a4b0b535.avif 1152w, assets/screenshots/previews/store-04-batch-rotate-1452-d95fc62b340e.avif 1452w" sizes="(max-width: 1020px) calc(100vw - 60px), 570px" />
+                <source type="image/webp" srcset="assets/screenshots/previews/store-04-batch-rotate-480-3446d4d713a2.webp 480w, assets/screenshots/previews/store-04-batch-rotate-768-5defd6943566.webp 768w, assets/screenshots/previews/store-04-batch-rotate-1152-7f5358f4727e.webp 1152w, assets/screenshots/previews/store-04-batch-rotate-1452-9cf2c3062659.webp 1452w" sizes="(max-width: 1020px) calc(100vw - 60px), 570px" />
+                <img width="1452" height="1401" decoding="async" src="assets/screenshots/store-04-batch-rotate.png" alt="ClipTurn Batch Rotate showing four verified rotations and two videos waiting for conversion review" loading="lazy" />
               </picture>
               <span class="zoom-label" aria-hidden="true">View larger</span>
             </button>
@@ -485,21 +453,9 @@
               aria-label="View larger: ClipTurn reviewed copies screenshot"
             >
               <picture>
-                <source
-                  type="image/webp"
-                  srcset="
-                    assets/screenshots/store-09-reviewed-copies-768.webp   768w,
-                    assets/screenshots/store-09-reviewed-copies-full.webp 1452w
-                  "
-                  sizes="(min-width: 1021px) 600px, (min-width: 901px) 860px, calc(100vw - 40px)"
-                />
-                <img
-                  src="assets/screenshots/store-09-reviewed-copies.png"
-                  width="1452"
-                  height="1401"
-                  alt="ClipTurn Review rotated copies dialog showing a lossless display option and a high-quality H.264 copy option"
-                  loading="lazy"
-                />
+                <source type="image/avif" srcset="assets/screenshots/previews/store-09-reviewed-copies-480-a37ae4110f70.avif 480w, assets/screenshots/previews/store-09-reviewed-copies-768-a5fcbda0332f.avif 768w, assets/screenshots/previews/store-09-reviewed-copies-1152-b162bbc8f4b1.avif 1152w, assets/screenshots/previews/store-09-reviewed-copies-1452-57fbf62263f1.avif 1452w" sizes="(max-width: 1020px) calc(100vw - 60px), 570px" />
+                <source type="image/webp" srcset="assets/screenshots/previews/store-09-reviewed-copies-480-1552639cbc5a.webp 480w, assets/screenshots/previews/store-09-reviewed-copies-768-b75bedafb978.webp 768w, assets/screenshots/previews/store-09-reviewed-copies-1152-57635054dcc1.webp 1152w, assets/screenshots/previews/store-09-reviewed-copies-1452-1492b1aa9990.webp 1452w" sizes="(max-width: 1020px) calc(100vw - 60px), 570px" />
+                <img width="1452" height="1401" decoding="async" src="assets/screenshots/store-09-reviewed-copies.png" alt="ClipTurn Review rotated copies dialog showing a lossless display option and a high-quality H.264 copy option" loading="lazy" />
               </picture>
               <span class="zoom-label" aria-hidden="true">View larger</span>
             </button>
@@ -531,21 +487,9 @@
               aria-label="View larger: ClipTurn verification details screenshot"
             >
               <picture>
-                <source
-                  type="image/webp"
-                  srcset="
-                    assets/screenshots/store-08-file-details-768.webp   768w,
-                    assets/screenshots/store-08-file-details-full.webp 1452w
-                  "
-                  sizes="(min-width: 1021px) 600px, (min-width: 901px) 860px, calc(100vw - 40px)"
-                />
-                <img
-                  src="assets/screenshots/store-08-file-details.png"
-                  width="1452"
-                  height="1401"
-                  alt="ClipTurn file details showing verified rotation, metadata, and audio checks"
-                  loading="lazy"
-                />
+                <source type="image/avif" srcset="assets/screenshots/previews/store-08-file-details-480-5c16eec6548b.avif 480w, assets/screenshots/previews/store-08-file-details-768-46914b2a2eee.avif 768w, assets/screenshots/previews/store-08-file-details-1152-85a7ec6ffd10.avif 1152w, assets/screenshots/previews/store-08-file-details-1452-db1517cf9a75.avif 1452w" sizes="(max-width: 1020px) calc(100vw - 60px), 570px" />
+                <source type="image/webp" srcset="assets/screenshots/previews/store-08-file-details-480-567fe9abf2f7.webp 480w, assets/screenshots/previews/store-08-file-details-768-6d7c91f03d6a.webp 768w, assets/screenshots/previews/store-08-file-details-1152-4a384f1da520.webp 1152w, assets/screenshots/previews/store-08-file-details-1452-2a30a3141d70.webp 1452w" sizes="(max-width: 1020px) calc(100vw - 60px), 570px" />
+                <img width="1452" height="1401" decoding="async" src="assets/screenshots/store-08-file-details.png" alt="ClipTurn file details showing verified rotation, metadata, and audio checks" loading="lazy" />
               </picture>
               <span class="zoom-label" aria-hidden="true">View larger</span>
             </button>
@@ -627,6 +571,56 @@
               <div class="faq-answer"><p>The container name is only one part of the file. Codec, bit depth, track layout, metadata, installed Windows codecs, and hardware can all affect whether ClipTurn can produce and prove a faithful result. When it cannot, it gives a specific reason instead of taking a risky guess.</p></div>
             </details>
           </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" aria-labelledby="rotation-guides-title">
+        <div class="shell">
+          <div class="section-header">
+            <p class="eyebrow">Step-by-step help</p>
+            <h2 class="section-heading" id="rotation-guides-title">How to rotate your video.</h2>
+            <p class="section-intro">
+              Fix a sideways clip, choose a method for your file, or turn several videos together.
+              These guides explain the steps and the limits of each option.
+            </p>
+          </div>
+          <div class="manual-route-grid manual-route-grid-cards">
+            <article>
+              <span>Start here</span>
+              <h3>Rotate a video on Windows</h3>
+              <ol>
+                <li>Compare ClipTurn, Clipchamp and VLC.</li>
+                <li>Choose 90° left, right or 180°.</li>
+                <li>Check that the rotation is saved.</li>
+              </ol>
+              <a href="rotate-video-windows.html">How to rotate a video on Windows</a>
+            </article>
+            <article>
+              <span>MP4 files</span>
+              <h3>Rotate an MP4 without surprises</h3>
+              <ol>
+                <li>Understand lossless display rotation.</li>
+                <li>Know when the picture must be re-encoded.</li>
+                <li>Keep the audio and metadata when supported.</li>
+              </ol>
+              <a href="rotate-mp4.html">How to rotate an MP4 file</a>
+            </article>
+            <article>
+              <span>Multiple files</span>
+              <h3>Batch rotate a folder of videos</h3>
+              <ol>
+                <li>Add several files or a folder.</li>
+                <li>Apply a shared direction.</li>
+                <li>Review each video's result.</li>
+              </ol>
+              <a href="batch-rotate-videos.html">How to batch rotate videos</a>
+            </article>
+          </div>
+          <p class="formats-evidence">
+            More help: <a href="rotate-mov-file.html">rotate MOV and iPhone video</a>,
+            <a href="rotate-video-taken-sideways.html">fix sideways footage</a>, or
+            <a href="guides.html">browse all video rotation guides</a>.
+          </p>
         </div>
       </section>
 

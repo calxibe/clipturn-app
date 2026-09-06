@@ -22,7 +22,7 @@ Use the user manual for detailed information about supported file types, codecs,
 
 Task-focused guides written for people solving a rotation problem, rather than reference documentation. Each one covers the built-in Windows options and free tools honestly before describing ClipTurn.
 
-- [Guides index](https://clipturn.app/guides.html): All guides, plus the difference between rewriting an orientation flag and physically rotating stored picture.
+- [Video rotation guides for Windows](https://clipturn.app/guides.html): All guides, plus the difference between rewriting an orientation flag and physically rotating stored picture.
 - [How to rotate a video on Windows 11 and Windows 10](https://clipturn.app/rotate-video-windows.html): Every method compared, including what Windows can and cannot do without extra software, choosing a direction, whole folders, quality cost, and how to confirm a rotation was saved.
 - [How to rotate a video that was taken sideways](https://clipturn.app/rotate-video-taken-sideways.html): Why phone footage looks correct on the phone and sideways elsewhere, how rotation flags cause it, permanent fixes, and how to avoid it when recording.
 - [How to rotate a video in VLC and actually save it](https://clipturn.app/rotate-video-vlc.html): The Geometry transform is playback-only; includes the Convert/Save sequence that writes a rotated file, why converted output is often still sideways, and what conversion costs in quality and metadata.

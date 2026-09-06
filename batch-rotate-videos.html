@@ -32,7 +32,33 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="site.min.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ClipTurn",
+            "item": "https://clipturn.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Video rotation guides",
+            "item": "https://clipturn.app/guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "How to batch rotate multiple videos at once",
+            "item": "https://clipturn.app/batch-rotate-videos.html"
+          }
+        ]
+      }
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -189,7 +215,9 @@
     <main id="guide-content">
       <section class="legal-hero" aria-labelledby="guide-title">
         <div class="shell">
-          <p class="eyebrow"><a href="guides.html">Guides</a></p>
+          <nav class="eyebrow" aria-label="Breadcrumb">
+            <a href="/">ClipTurn</a><span aria-hidden="true">/</span><a href="guides.html">Guides</a>
+          </nav>
           <h1 id="guide-title">How to batch rotate multiple videos at once</h1>
           <p>
             A phone held the same way all afternoon produces a folder of clips that all need the same quarter turn.
@@ -337,14 +365,11 @@
             <h2>A folder, in Batch Rotate</h2>
 
             <div class="manual-screenshot">
-              <img
-                src="assets/screenshots/store-04-batch-rotate.png"
-                width="1452"
-                height="1401"
-                alt="ClipTurn's Batch Rotate tab listing several videos, each with its own length, resolution, size, status and reason"
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source type="image/avif" srcset="assets/screenshots/previews/store-04-batch-rotate-480-751828badb0b.avif 480w, assets/screenshots/previews/store-04-batch-rotate-768-24c5ea1d9032.avif 768w, assets/screenshots/previews/store-04-batch-rotate-1152-3e57a4b0b535.avif 1152w, assets/screenshots/previews/store-04-batch-rotate-1452-d95fc62b340e.avif 1452w" sizes="(min-width: 1220px) 757px, (min-width: 1160px) calc(100vw - 463px), (min-width: 1001px) calc(90vw - 347px), (min-width: 621px) calc(90vw - 58px), (min-width: 600px) calc(90vw - 46px), (min-width: 521px) calc(100vw - 106px), calc(100vw - 86px)" />
+                <source type="image/webp" srcset="assets/screenshots/previews/store-04-batch-rotate-480-3446d4d713a2.webp 480w, assets/screenshots/previews/store-04-batch-rotate-768-5defd6943566.webp 768w, assets/screenshots/previews/store-04-batch-rotate-1152-7f5358f4727e.webp 1152w, assets/screenshots/previews/store-04-batch-rotate-1452-9cf2c3062659.webp 1452w" sizes="(min-width: 1220px) 757px, (min-width: 1160px) calc(100vw - 463px), (min-width: 1001px) calc(90vw - 347px), (min-width: 621px) calc(90vw - 58px), (min-width: 600px) calc(90vw - 46px), (min-width: 521px) calc(100vw - 106px), calc(100vw - 86px)" />
+                <img width="1452" height="1401" src="assets/screenshots/store-04-batch-rotate.png" alt="ClipTurn's Batch Rotate tab listing several videos, each with its own length, resolution, size, status and reason" loading="lazy" decoding="async" />
+              </picture>
             </div>
 
             <ol class="manual-steps">
