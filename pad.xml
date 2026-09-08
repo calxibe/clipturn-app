@@ -28,9 +28,9 @@
   <Program_Info>
     <!-- AppVisor, which assigned PAD 4 AppID values, is no longer available. -->
     <Program_Name>ClipTurn</Program_Name>
-    <Program_Version>1.0.7</Program_Version>
+    <Program_Version>1.0.8</Program_Version>
     <Program_Release_Month>09</Program_Release_Month>
-    <Program_Release_Day>05</Program_Release_Day>
+    <Program_Release_Day>08</Program_Release_Day>
     <Program_Release_Year>2026</Program_Release_Year>
     <Program_Cost_Dollars>0.00</Program_Cost_Dollars>
     <Program_Type>Freeware</Program_Type>
@@ -41,14 +41,14 @@
     <Program_Language>English</Program_Language>
     <!-- Approximate maximum Store download size for the x64 and ARM64 bundle. -->
     <File_Info>
-      <File_Size_Bytes>194080693</File_Size_Bytes>
-      <File_Size_K>189531.93</File_Size_K>
-      <File_Size_MB>185.09</File_Size_MB>
+      <File_Size_Bytes>194877792</File_Size_Bytes>
+      <File_Size_K>190310.34</File_Size_K>
+      <File_Size_MB>185.85</File_Size_MB>
     </File_Info>
     <Expire_Info>
       <Has_Expire_Info>N</Has_Expire_Info>
     </Expire_Info>
-    <Program_Change_Info>Adds an About screen with the app version, a changelog link, and a Microsoft Store review button.</Program_Change_Info>
+    <Program_Change_Info>Correct batch details after rotation, more reliable settings saving and copying, and improved review reminders.</Program_Change_Info>
     <Program_Category_Class>Audio &amp; Multimedia::Video Tools</Program_Category_Class>
     <Program_System_Requirements>Windows 11, x64 or ARM64; Windows 10 version 2004 (build 19041) or later, x64</Program_System_Requirements>
   </Program_Info>
