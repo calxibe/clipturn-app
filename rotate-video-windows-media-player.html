@@ -67,7 +67,7 @@
         "description": "Windows Media Player has no rotation feature. This explains the alternatives on Windows 11 and Windows 10.",
         "inLanguage": "en",
         "url": "https://clipturn.app/rotate-video-windows-media-player.html",
-        "dateModified": "2026-08-13",
+        "dateModified": "2026-09-10",
         "publisher": {
           "@type": "Organization",
           "name": "FixQuotes",
@@ -179,7 +179,7 @@
             <a class="button button-primary" href="#fix-file">Fix the file</a>
             <a class="button button-secondary" href="#watch-now">Just watch it now</a>
           </div>
-          <p class="updated">Windows 11 and Windows 10 &middot; updated August 2026</p>
+          <p class="updated">Windows 11 and Windows 10 &middot; updated <time datetime="2026-09-10" data-page-updated>September 2026</time></p>
         </div>
       </section>
 
@@ -217,16 +217,19 @@
               never part of its job.
             </p>
             <p>
-              Rotating a compressed clip means decoding every frame, turning it, and encoding it again into a new
-              file. That is editing work. Windows Media Player reads files and draws them on screen; it has no
+              Physically rotating compressed video in ClipTurn means decoding, turning and re-encoding the
+              picture. A separate <a href="rotate-mp4.html">display-flag rotation</a> can leave the encoded picture
+              unchanged, but relies on the player reading that flag. Windows Media Player has no control for
+              saving either kind of rotation; it has no
               encoder, no export and no save-as for video. The same is true of the Media Player app that replaced
               it in Windows 11, and of Films &amp; TV.
             </p>
             <div class="manual-callout info">
               <strong>Good news, such as it is.</strong>
               <p>
-                Once the file itself is rotated, Windows Media Player plays it correctly with no configuration at
-                all. It reads whatever orientation the file has. The fix just has to happen somewhere else first.
+                A physically rotated result does not depend on the player interpreting a rotation flag. The
+                player still needs to support the file's container and codecs; turning a video does not add
+                missing playback support.
               </p>
             </div>
           </section>
@@ -287,8 +290,8 @@
 
             <div class="manual-screenshot">
               <picture>
-                <source type="image/avif" srcset="assets/screenshots/previews/store-01-explorer-flyout-480-3b92e1a99731.avif 480w, assets/screenshots/previews/store-01-explorer-flyout-768-eb9dbec6f766.avif 768w, assets/screenshots/previews/store-01-explorer-flyout-1152-f788eaaa2b82.avif 1152w, assets/screenshots/previews/store-01-explorer-flyout-1920-3faf4ebe1039.avif 1920w" sizes="(min-width: 1220px) 757px, (min-width: 1160px) calc(100vw - 463px), (min-width: 1001px) calc(90vw - 347px), (min-width: 621px) calc(90vw - 58px), (min-width: 600px) calc(90vw - 46px), (min-width: 521px) calc(100vw - 106px), calc(100vw - 86px)" />
-                <source type="image/webp" srcset="assets/screenshots/previews/store-01-explorer-flyout-480-9bbfbb3dda13.webp 480w, assets/screenshots/previews/store-01-explorer-flyout-768-edf75219e108.webp 768w, assets/screenshots/previews/store-01-explorer-flyout-1152-dc6ecb51f7ea.webp 1152w, assets/screenshots/previews/store-01-explorer-flyout-1920-aa351d9a213c.webp 1920w" sizes="(min-width: 1220px) 757px, (min-width: 1160px) calc(100vw - 463px), (min-width: 1001px) calc(90vw - 347px), (min-width: 621px) calc(90vw - 58px), (min-width: 600px) calc(90vw - 46px), (min-width: 521px) calc(100vw - 106px), calc(100vw - 86px)" />
+                <source type="image/avif" srcset="assets/screenshots/previews/store-01-explorer-flyout-480-3b92e1a99731.avif 480w, assets/screenshots/previews/store-01-explorer-flyout-768-eb9dbec6f766.avif 768w, assets/screenshots/previews/store-01-explorer-flyout-1152-f788eaaa2b82.avif 1152w, assets/screenshots/previews/store-01-explorer-flyout-1920-3faf4ebe1039.avif 1920w" sizes="(min-width: 1124px) 780px, (min-width: 1001px) calc(100vw - 344px), (min-width: 820px) 780px, (min-width: 621px) calc(100vw - 40px), calc(100vw - 28px)" />
+                <source type="image/webp" srcset="assets/screenshots/previews/store-01-explorer-flyout-480-9bbfbb3dda13.webp 480w, assets/screenshots/previews/store-01-explorer-flyout-768-edf75219e108.webp 768w, assets/screenshots/previews/store-01-explorer-flyout-1152-dc6ecb51f7ea.webp 1152w, assets/screenshots/previews/store-01-explorer-flyout-1920-aa351d9a213c.webp 1920w" sizes="(min-width: 1124px) 780px, (min-width: 1001px) calc(100vw - 344px), (min-width: 820px) 780px, (min-width: 621px) calc(100vw - 40px), calc(100vw - 28px)" />
                 <img width="1920" height="1080" src="assets/screenshots/store-01-explorer-flyout.png" alt="The Windows File Explorer right-click menu with rotate video left and rotate video right commands added" loading="lazy" decoding="async" />
               </picture>
             </div>
@@ -310,9 +313,10 @@
                   <h3>Right-click the video</h3>
                   <p>
                     Open <strong>ClipTurn &ndash; Video Rotator</strong> and choose
-                    <strong>Rotate video left</strong> or <strong>Rotate video right</strong>. Works on
+                    <strong>Rotate video left</strong> or <strong>Rotate video right</strong>. The commands appear for
                     <code>.mp4</code>, <code>.m4v</code>, <code>.mov</code>, <code>.mkv</code>, <code>.avi</code>,
-                    <code>.wmv</code> and <code>.webm</code>, and on several files at once.
+                    <code>.wmv</code> and <code>.webm</code>, including several files at once. The file's codecs,
+                    tracks and storage location still decide whether a safe rotation is possible.
                   </p>
                 </div>
               </li>
@@ -320,8 +324,9 @@
                 <div>
                   <h3>Play it in Windows Media Player as usual</h3>
                   <p>
-                    The rotation is now stored in the file, so nothing needs configuring in the player. The same
-                    file is also correct in browsers, editors, on a TV and on your phone.
+                    Wait for a successful result, then open the video in Windows Media Player. If the result says
+                    <strong>Review options</strong>, read the offered changes before approving a separate copy;
+                    do not assume the original has already been rotated.
                   </p>
                 </div>
               </li>
@@ -335,6 +340,13 @@
                 on the backup setting so the original is kept alongside the result.
               </p>
             </div>
+
+            <p>
+              <strong>Reviewed copies leave the original untouched.</strong> An offered display-only copy may
+              still appear sideways in a player that ignores orientation metadata. An offered physical H.264
+              copy has different trade-offs, listed before you approve it. See the
+              <a href="manual.html#reviewed-copies">reviewed-copy instructions</a> for the full distinction.
+            </p>
 
             <p>
               If you would rather not install anything, Windows 11 includes Clipchamp, which can rotate a clip on
