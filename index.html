@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClipTurn — Free Video Rotator for Windows 11 &amp; 10</title>
+    <meta
+      name="description"
+      content="Rotate MP4, MOV and other videos on Windows 11 and 10. Free from Microsoft Store. Right-click rotation, batch processing and local verification—no uploads."
+    />
+    <link rel="canonical" href="https://clipturn.app/" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1022" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ClipTurn" />
+    <meta property="og:title" content="ClipTurn — Free Video Rotator for Windows 11 &amp; 10" />
+    <meta
+      property="og:description"
+      content="Rotate MP4, MOV and other videos on Windows 11 and 10. Free from Microsoft Store, with right-click rotation, batch processing and no video uploads."
+    />
+    <meta property="og:url" content="https://clipturn.app/" />
+    <meta property="og:image" content="https://clipturn.app/og.png" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11 and Windows 10" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ClipTurn — Free Video Rotator for Windows 11 &amp; 10" />
+    <meta
+      name="twitter:description"
+      content="Rotate MP4, MOV and other videos on Windows 11 and 10. Free from Microsoft Store, with right-click rotation, batch processing and no video uploads."
+    />
+    <meta name="twitter:image" content="https://clipturn.app/og.png" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="site.min.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://clipturn.app/#website",
+            "url": "https://clipturn.app/",
+            "name": "ClipTurn",
+            "alternateName": "ClipTurn Video Rotator",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://clipturn.app/#publisher" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://clipturn.app/#publisher",
+            "name": "FixQuotes",
+            "url": "https://fixquotes.com/docs/about/"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "@id": "https://clipturn.app/#software",
+        "name": "ClipTurn",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Windows 11, Windows 10",
+        "description": "Free video rotation for Windows 11 and Windows 10. Rotate MP4, MOV and other supported videos from File Explorer or in a batch, with local processing and verification before replacement.",
+        "downloadUrl": "https://apps.microsoft.com/detail/9PGB9JVBRGLB",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://clipturn.app/#publisher",
+          "name": "FixQuotes",
+          "url": "https://fixquotes.com/docs/about/"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "ClipTurn Tutorial | Rotate Videos from File Explorer & Batch Rotate v1.0.2",
+        "description": "An 86-second tour of ClipTurn: rotate from File Explorer on Windows 11 or Windows 10, preview and verify a single rotation, process a mixed batch, and review verified separate-copy options before anything is created.",
+        "thumbnailUrl": "https://clipturn.app/assets/video/tutorial-poster.jpg",
+        "uploadDate": "2026-08-08T03:52:11-07:00",
+        "duration": "PT1M26S",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/-_kdhLjnPy0",
+        "url": "https://clipturn.app/#demo",
+        "publisher": {
+          "@type": "Organization",
+          "name": "FixQuotes",
+          "url": "https://fixquotes.com/docs/about/"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is ClipTurn free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ClipTurn is currently free through Microsoft Store. See pricing and everything included."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does ClipTurn rotate every video losslessly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Supported uncompressed AVI can be rotated sample-exactly. Compressed video is physically rotated through a visually lossless re-encode under the default policy, so repeated turns can accumulate loss."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it keep my original file?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A successful rotation replaces the selected file in place. File Explorer rotations keep no persistent backup and cannot be undone. When rotating inside the app, an optional backup setting is available and is off by default. If ClipTurn refuses or fails before a safe commit, the source remains unchanged."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will the rotated file be the same size?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not necessarily. ClipTurn does not lower quality merely to force the output back to the source byte size, so a faithful result can be somewhat larger."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why can a supported format still be refused?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The container name is only one part of the file. Codec, bit depth, track layout, metadata, installed Windows codecs, and hardware can all affect whether ClipTurn can produce and prove a faithful result. When it cannot, it gives a specific reason instead of taking a risky guess."
+            }
+          }
+        ]
+      }
+    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-26WWFWZZMP");(function(){var sent=false;var evts=["pointerdown","keydown","scroll","touchstart"];function load(){if(sent)return;sent=true;evts.forEach(function(e){removeEventListener(e,load,{passive:true})});removeEventListener("load",load);clearTimeout(timer);var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-26WWFWZZMP";document.head.appendChild(s)}var timer=setTimeout(load,1800);evts.forEach(function(e){addEventListener(e,load,{passive:true})});addEventListener("load",load)})();</script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell nav-shell">
+        <a class="brand-link" href="/" aria-label="ClipTurn home">
+          <img class="brand-mark" src="assets/brand/clipturn-mark.svg" width="40" height="40" alt="" />
+          <span class="brand-name">Clip<span>Turn</span></span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          aria-label="Open navigation"
+        >
+          <span class="menu-lines" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+          <a href="#how">How it works</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="guides.html">Guides</a>
+          <a href="manual.html">Manual</a>
+          <a href="changelog.html">Changelog</a>
+          <a
+            class="nav-download"
+            href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            Microsoft Store
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="shell hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Currently free for Windows 11 (and 10)</p>
+            <h1 id="hero-title">Rotate a video like you <span class="turn-word">rotate a photo.</span></h1>
+            <p class="hero-lede">
+              ClipTurn is a free video rotator for Windows 11 and Windows 10. Right-click to rotate MP4,
+              MOV and other supported videos on your PC, with the result checked before replacing your file.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                Get ClipTurn from Microsoft Store
+              </a>
+              <a class="button button-secondary" href="#how">See how it works</a>
+            </div>
+            <p class="hero-note" aria-label="Product highlights">
+              <span>No account</span>
+              <span>12 interface languages</span>
+              <span>No video uploads</span>
+            </p>
+          </div>
+
+          <div class="hero-visual" aria-label="ClipTurn application preview">
+            <div class="app-frame">
+              <picture>
+                <source type="image/avif" srcset="assets/screenshots/previews/store-03-rotate-video-dark-480-447171c6418e.avif 480w, assets/screenshots/previews/store-03-rotate-video-dark-768-c980b7761eb8.avif 768w, assets/screenshots/previews/store-03-rotate-video-dark-1152-9e5436d000b7.avif 1152w, assets/screenshots/previews/store-03-rotate-video-dark-1452-284551edc9ed.avif 1452w" sizes="(min-width: 1220px) 564px, (min-width: 1021px) calc((100vw - 92px) / 2), (min-width: 660px) 618px, (min-width: 621px) calc(100vw - 42px), calc(100vw - 30px)" />
+                <source type="image/webp" srcset="assets/screenshots/previews/store-03-rotate-video-dark-480-8c5fc49a1436.webp 480w, assets/screenshots/previews/store-03-rotate-video-dark-768-db7298651818.webp 768w, assets/screenshots/previews/store-03-rotate-video-dark-1152-1538d77f67df.webp 1152w, assets/screenshots/previews/store-03-rotate-video-dark-1452-55b67160ec19.webp 1452w" sizes="(min-width: 1220px) 564px, (min-width: 1021px) calc((100vw - 92px) / 2), (min-width: 660px) 618px, (min-width: 621px) calc(100vw - 42px), calc(100vw - 30px)" />
+                <img width="1452" height="1401" src="assets/screenshots/store-03-rotate-video-dark.png" alt="ClipTurn showing a video preview with rotate left, reset, and rotate right controls" fetchpriority="high" />
+              </picture>
+            </div>
+            <div class="floating-chip">
+              <span class="check" aria-hidden="true">✓</span>
+              Verified before replacement
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof-strip" aria-label="ClipTurn at a glance">
+        <div class="shell proof-grid">
+          <div class="proof-item">
+            <span class="proof-icon" aria-hidden="true">↻</span>
+            <div><strong>Physical rotation</strong><span class="proof-description">The picture itself is turned</span></div>
+          </div>
+          <div class="proof-item">
+            <span class="proof-icon" aria-hidden="true">⋯</span>
+            <div><strong>Explorer commands</strong><span class="proof-description">Right-click and rotate</span></div>
+          </div>
+          <div class="proof-item">
+            <span class="proof-icon" aria-hidden="true">✓</span>
+            <div><strong>Independent checks</strong><span class="proof-description">Candidate verified first</span></div>
+          </div>
+          <div class="proof-item">
+            <span class="proof-icon" aria-hidden="true">7</span>
+            <div><strong>7 Explorer file types</strong><span class="proof-description">Including MP4, MOV and MKV</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="how-title">
+        <div class="shell">
+          <div class="section-header" id="how">
+            <p class="eyebrow">How it works</p>
+            <h2 class="section-heading" id="how-title">Rotate from File Explorer</h2>
+            <p class="section-intro">
+              ClipTurn adds clear left and right rotation commands to File Explorer. Successful automatic
+              rotations keep the original name and location. When a separate copy is needed, ClipTurn
+              asks you to review it first.
+            </p>
+          </div>
+
+          <div class="workflow-card">
+            <!-- Despite loading="lazy" this sits inside Chrome's ~1250px prefetch
+                 threshold on a phone, so it really is fetched during first paint. -->
+            <picture>
+              <source type="image/avif" srcset="assets/screenshots/previews/store-01-explorer-flyout-480-3b92e1a99731.avif 480w, assets/screenshots/previews/store-01-explorer-flyout-768-eb9dbec6f766.avif 768w, assets/screenshots/previews/store-01-explorer-flyout-1152-f788eaaa2b82.avif 1152w, assets/screenshots/previews/store-01-explorer-flyout-1920-3faf4ebe1039.avif 1920w" sizes="(min-width: 1220px) 1178px, (min-width: 621px) calc(100vw - 42px), calc(100vw - 30px)" />
+              <source type="image/webp" srcset="assets/screenshots/previews/store-01-explorer-flyout-480-9bbfbb3dda13.webp 480w, assets/screenshots/previews/store-01-explorer-flyout-768-edf75219e108.webp 768w, assets/screenshots/previews/store-01-explorer-flyout-1152-dc6ecb51f7ea.webp 1152w, assets/screenshots/previews/store-01-explorer-flyout-1920-aa351d9a213c.webp 1920w" sizes="(min-width: 1220px) 1178px, (min-width: 621px) calc(100vw - 42px), calc(100vw - 30px)" />
+              <img width="1920" height="1080" decoding="async" src="assets/screenshots/store-01-explorer-flyout.png" alt="Three steps in File Explorer: right-click a video, ClipTurn rotates it, and the verified result appears" loading="lazy" />
+            </picture>
+            <div class="workflow-steps">
+              <article class="workflow-step">
+                <span class="step-number">1</span>
+                <div><h3>Choose a direction</h3><p>Right-click a supported video and select rotate left or right. In the app you can also turn it 180&deg;, in one save.</p></div>
+              </article>
+              <article class="workflow-step">
+                <span class="step-number">2</span>
+                <div><h3>Let ClipTurn decide</h3><p>The app chooses a compatible processing path for that exact file.</p></div>
+              </article>
+              <article class="workflow-step">
+                <span class="step-number">3</span>
+                <div><h3>Use the verified result</h3><p>The source is replaced only after the candidate passes its checks.</p></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" aria-labelledby="why-title">
+        <div class="shell">
+          <div class="section-header" id="why">
+            <p class="eyebrow">Why ClipTurn</p>
+            <h2 class="section-heading" id="why-title">Rotate the video itself</h2>
+            <p class="section-intro">
+              Some tools only change a display hint and hope every player, editor, and website reads it.
+              ClipTurn physically rotates the stored image so the result travels with the file.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-mark" aria-hidden="true">90°</span>
+              <h3>A real turn</h3>
+              <p>
+                The video picture is physically rotated left or right. The result is not dependent on
+                another app honoring an orientation flag.
+              </p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-mark" aria-hidden="true">A</span>
+              <h3>Automatic decisions</h3>
+              <p>
+                No codec lists, bitrate guesses, quality sliders, or output-format questions. ClipTurn
+                evaluates the file and chooses the safe path it can prove.
+              </p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-mark" aria-hidden="true">≋</span>
+              <h3>Preservation with proof</h3>
+              <p>
+                When supported, ClipTurn keeps the source codec, audio, metadata, subtitles, extra
+                soundtracks, colour information, and HDR.
+              </p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-mark" aria-hidden="true">✓</span>
+              <h3>Honest refusals</h3>
+              <p>
+                If a faithful candidate cannot be produced and independently verified, ClipTurn explains
+                why and leaves the source unchanged.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="demo-title">
+        <div class="shell">
+          <div class="section-header" id="demo">
+            <p class="eyebrow">An 86-second look</p>
+            <h2 class="section-heading" id="demo-title">See the whole idea in motion.</h2>
+            <p class="section-intro">
+              Rotate from File Explorer, preview in the app, or queue several videos at once.
+            </p>
+          </div>
+          <div class="video-wrap">
+            <button
+              class="video-facade"
+              type="button"
+              data-video-id="-_kdhLjnPy0"
+              data-video-title="ClipTurn Tutorial | Rotate Videos from File Explorer &amp; Batch Rotate v1.0.2"
+            >
+              <span class="video-facade-frame">
+                <picture>
+                  <source
+                    type="image/avif"
+                    srcset="
+                      assets/video/tutorial-poster-768.avif   768w,
+                      assets/video/tutorial-poster-1280.avif 1280w
+                    "
+                    sizes="(min-width: 1220px) 1158px, calc(100vw - 62px)"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      assets/video/tutorial-poster-768.webp   768w,
+                      assets/video/tutorial-poster-1280.webp 1280w
+                    "
+                    sizes="(min-width: 1220px) 1158px, calc(100vw - 62px)"
+                  />
+                  <img
+                    src="assets/video/tutorial-poster.jpg"
+                    width="1280"
+                    height="720"
+                    alt="ClipTurn Batch Rotate handling five mixed videos, with three verified rotations and two verified separate copies"
+                    loading="lazy"
+                  />
+                </picture>
+                <span class="video-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="34" height="34" focusable="false"><path d="M8 5.4v13.2L19 12z" fill="currentColor" /></svg>
+                </span>
+              </span>
+              <span class="video-facade-label">
+                <b>Watch the ClipTurn tutorial</b>
+                <em>1:26 · YouTube loads only when you press play</em>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" aria-labelledby="batch-title">
+        <div class="shell media-grid">
+          <div class="media-copy">
+            <p class="eyebrow">One file or a whole folder</p>
+            <h2 id="batch-title">Rotate several files in one go</h2>
+            <p>
+              Add multiple videos, choose the turn, and let every file finish with its own result. A video
+              that needs a reviewed copy does not hide or stop what happened to the others.
+            </p>
+            <ul class="plain-list">
+              <li>Drag supported videos anywhere onto the app window.</li>
+              <li>Preview a single file before saving when you want to check the direction.</li>
+              <li>Review completed work and clear explanations in Recent Jobs.</li>
+            </ul>
+          </div>
+          <div class="media-card">
+            <button
+              class="screenshot-button"
+              type="button"
+              data-lightbox="assets/screenshots/store-04-batch-rotate.png"
+              data-caption="Batch Rotate gives every video an independent result and holds conversion choices for review."
+              aria-label="View larger: ClipTurn Batch Rotate screenshot"
+            >
+              <picture>
+                <source type="image/avif" srcset="assets/screenshots/previews/store-04-batch-rotate-480-751828badb0b.avif 480w, assets/screenshots/previews/store-04-batch-rotate-768-24c5ea1d9032.avif 768w, assets/screenshots/previews/store-04-batch-rotate-1152-3e57a4b0b535.avif 1152w, assets/screenshots/previews/store-04-batch-rotate-1452-d95fc62b340e.avif 1452w" sizes="(min-width: 1220px) 621px, (min-width: 1021px) 55vw, (min-width: 900px) 858px, (min-width: 621px) calc(100vw - 42px), calc(100vw - 30px)" />
+                <source type="image/webp" srcset="assets/screenshots/previews/store-04-batch-rotate-480-3446d4d713a2.webp 480w, assets/screenshots/previews/store-04-batch-rotate-768-5defd6943566.webp 768w, assets/screenshots/previews/store-04-batch-rotate-1152-7f5358f4727e.webp 1152w, assets/screenshots/previews/store-04-batch-rotate-1452-9cf2c3062659.webp 1452w" sizes="(min-width: 1220px) 621px, (min-width: 1021px) 55vw, (min-width: 900px) 858px, (min-width: 621px) calc(100vw - 42px), calc(100vw - 30px)" />
+                <img width="1452" height="1401" decoding="async" src="assets/screenshots/store-04-batch-rotate.png" alt="ClipTurn Batch Rotate showing four verified rotations and two videos waiting for conversion review" loading="lazy" />
+              </picture>
+              <span class="zoom-label" aria-hidden="true">View larger</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="review-title">
+        <div class="shell media-grid reverse">
+          <div class="media-copy">
+            <p class="eyebrow">A safe way forward</p>
+            <h2 id="review-title">Review every change before a copy is created.</h2>
+            <p>
+              When ClipTurn cannot make a faithful replacement, it stops with the original untouched and
+              shows only the separate-copy choices this PC proved it can start for that exact source.
+            </p>
+            <ul class="plain-list">
+              <li>MP4, M4V, and MOV can use a lossless display-orientation copy when appropriate.</li>
+              <li>Eligible SDR video can become a physically rotated, high-quality H.264 MP4.</li>
+              <li>Batch Rotate groups the recommended choices and their exact trade-offs into one review.</li>
+            </ul>
+          </div>
+          <div class="media-card">
+            <button
+              class="screenshot-button"
+              type="button"
+              data-lightbox="assets/screenshots/store-09-reviewed-copies.png"
+              data-caption="ClipTurn names both recommended strategies and every relevant change before creating separate verified copies."
+              aria-label="View larger: ClipTurn reviewed copies screenshot"
+            >
+              <picture>
+                <source type="image/avif" srcset="assets/screenshots/previews/store-09-reviewed-copies-480-a37ae4110f70.avif 480w, assets/screenshots/previews/store-09-reviewed-copies-768-a5fcbda0332f.avif 768w, assets/screenshots/previews/store-09-reviewed-copies-1152-b162bbc8f4b1.avif 1152w, assets/screenshots/previews/store-09-reviewed-copies-1452-57fbf62263f1.avif 1452w" sizes="(min-width: 1220px) 621px, (min-width: 1021px) 55vw, (min-width: 900px) 858px, (min-width: 621px) calc(100vw - 42px), calc(100vw - 30px)" />
+                <source type="image/webp" srcset="assets/screenshots/previews/store-09-reviewed-copies-480-1552639cbc5a.webp 480w, assets/screenshots/previews/store-09-reviewed-copies-768-b75bedafb978.webp 768w, assets/screenshots/previews/store-09-reviewed-copies-1152-57635054dcc1.webp 1152w, assets/screenshots/previews/store-09-reviewed-copies-1452-1492b1aa9990.webp 1452w" sizes="(min-width: 1220px) 621px, (min-width: 1021px) 55vw, (min-width: 900px) 858px, (min-width: 621px) calc(100vw - 42px), calc(100vw - 30px)" />
+                <img width="1452" height="1401" decoding="async" src="assets/screenshots/store-09-reviewed-copies.png" alt="ClipTurn Review rotated copies dialog showing a lossless display option and a high-quality H.264 copy option" loading="lazy" />
+              </picture>
+              <span class="zoom-label" aria-hidden="true">View larger</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" aria-labelledby="details-title">
+        <div class="shell media-grid">
+          <div class="media-copy">
+            <p class="eyebrow">Show your work</p>
+            <h2 id="details-title">Verification you can inspect.</h2>
+            <p>
+              ClipTurn records local verification details for the exact file it checked—including file
+              identity, picture geometry, stream preservation, and the result of the physical rotation.
+            </p>
+            <ul class="plain-list">
+              <li>Verification receipts stay on your device.</li>
+              <li>System Capabilities shows the decoders and encoders detected on that PC.</li>
+              <li>Any unavoidable codec or format change is named clearly.</li>
+            </ul>
+          </div>
+          <div class="media-card">
+            <button
+              class="screenshot-button"
+              type="button"
+              data-lightbox="assets/screenshots/store-08-file-details.png"
+              data-caption="File details show the checks recorded for the exact video."
+              aria-label="View larger: ClipTurn verification details screenshot"
+            >
+              <picture>
+                <source type="image/avif" srcset="assets/screenshots/previews/store-08-file-details-480-5c16eec6548b.avif 480w, assets/screenshots/previews/store-08-file-details-768-46914b2a2eee.avif 768w, assets/screenshots/previews/store-08-file-details-1152-85a7ec6ffd10.avif 1152w, assets/screenshots/previews/store-08-file-details-1452-db1517cf9a75.avif 1452w" sizes="(min-width: 1220px) 621px, (min-width: 1021px) 55vw, (min-width: 900px) 858px, (min-width: 621px) calc(100vw - 42px), calc(100vw - 30px)" />
+                <source type="image/webp" srcset="assets/screenshots/previews/store-08-file-details-480-567fe9abf2f7.webp 480w, assets/screenshots/previews/store-08-file-details-768-6d7c91f03d6a.webp 768w, assets/screenshots/previews/store-08-file-details-1152-4a384f1da520.webp 1152w, assets/screenshots/previews/store-08-file-details-1452-2a30a3141d70.webp 1452w" sizes="(min-width: 1220px) 621px, (min-width: 1021px) 55vw, (min-width: 900px) 858px, (min-width: 621px) calc(100vw - 42px), calc(100vw - 30px)" />
+                <img width="1452" height="1401" decoding="async" src="assets/screenshots/store-08-file-details.png" alt="ClipTurn file details showing verified rotation, metadata, and audio checks" loading="lazy" />
+              </picture>
+              <span class="zoom-label" aria-hidden="true">View larger</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section truth-band" aria-labelledby="limits-title">
+        <div class="shell">
+          <div class="section-header" id="limits">
+            <p class="eyebrow">Clear limits, before surprises</p>
+            <h2 class="section-heading" id="limits-title">What “preserve” really means.</h2>
+            <p class="section-intro">
+              ClipTurn is designed to protect the file, not oversell the result. These are the important
+              boundaries to know before you rotate.
+            </p>
+          </div>
+
+          <div class="limits-grid">
+            <article class="limit-card">
+              <span class="limit-mark">1</span>
+              <div><h3>Compressed video is re-encoded</h3><p>The default aims for a visually lossless result in the source codec when a compatible encoder exists. Repeated rotations can accumulate loss.</p></div>
+            </article>
+            <article class="limit-card">
+              <span class="limit-mark">2</span>
+              <div><h3>Exact means uncompressed AVI</h3><p>Only supported uncompressed packed-pixel AVI can be rotated sample-exactly, without a decoder or encoder.</p></div>
+            </article>
+            <article class="limit-card">
+              <span class="limit-mark">3</span>
+              <div><h3>Successful Explorer turns replace the file</h3><p>There is no persistent Explorer backup and no undo after success. In-app backup is optional and off by default.</p></div>
+            </article>
+            <article class="limit-card">
+              <span class="limit-mark">4</span>
+              <div><h3>Some codecs depend on Windows</h3><p>VP9, HEVC, Media Feature Pack, hardware, and driver availability can determine what a particular PC can rotate.</p></div>
+            </article>
+          </div>
+
+          <div class="formats" aria-label="File types registered in File Explorer">
+            <span class="format-pill">MP4</span>
+            <span class="format-pill">M4V</span>
+            <span class="format-pill">MOV</span>
+            <span class="format-pill">MKV</span>
+            <span class="format-pill">WebM</span>
+            <span class="format-pill">WMV</span>
+            <span class="format-pill">Uncompressed AVI</span>
+          </div>
+          <p class="formats-evidence">
+            These seven file types have Explorer commands. Open MPG, MPEG, MOD, and TOD inside the app
+            for eligible reviewed MP4 copies; they do not have Explorer commands.
+            <a href="manual.html#formats">Read the format limits</a> or
+            <a href="tested-formats.html">see the 99 real videos tested end to end</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="faq-title">
+        <div class="shell">
+          <div class="section-header" id="faq">
+            <p class="eyebrow">The practical questions</p>
+            <h2 class="section-heading" id="faq-title">Before you make the turn.</h2>
+          </div>
+
+          <div class="faq-list">
+            <details>
+              <summary>Is ClipTurn free?</summary>
+              <div class="faq-answer"><p>Yes. ClipTurn is currently free through Microsoft Store. See <a href="pricing.html">pricing and everything included</a>.</p></div>
+            </details>
+            <details>
+              <summary>Does ClipTurn rotate every video losslessly?</summary>
+              <div class="faq-answer"><p>No. Supported uncompressed AVI can be rotated sample-exactly. Compressed video is physically rotated through a visually lossless re-encode under the default policy, so repeated turns can accumulate loss.</p></div>
+            </details>
+            <details>
+              <summary>Does it keep my original file?</summary>
+              <div class="faq-answer"><p>A successful rotation replaces the selected file in place. File Explorer rotations keep no persistent backup and cannot be undone. When rotating inside the app, an optional backup setting is available and is off by default. If ClipTurn refuses or fails before a safe commit, the source remains unchanged.</p></div>
+            </details>
+            <details>
+              <summary>Will the rotated file be the same size?</summary>
+              <div class="faq-answer"><p>Not necessarily. ClipTurn does not lower quality merely to force the output back to the source byte size, so a faithful result can be somewhat larger.</p></div>
+            </details>
+            <details>
+              <summary>Why can a supported format still be refused?</summary>
+              <div class="faq-answer"><p>The container name is only one part of the file. Codec, bit depth, track layout, metadata, installed Windows codecs, and hardware can all affect whether ClipTurn can produce and prove a faithful result. When it cannot, it gives a specific reason instead of taking a risky guess.</p></div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" aria-labelledby="rotation-guides-title">
+        <div class="shell">
+          <div class="section-header">
+            <p class="eyebrow">Step-by-step help</p>
+            <h2 class="section-heading" id="rotation-guides-title">How to rotate your video.</h2>
+            <p class="section-intro">
+              Fix a sideways clip, choose a method for your file, or turn several videos together.
+              These guides explain the steps and the limits of each option.
+            </p>
+          </div>
+          <div class="manual-route-grid manual-route-grid-cards">
+            <article>
+              <span>Start here</span>
+              <h3>Rotate a video on Windows</h3>
+              <ol>
+                <li>Compare ClipTurn, Clipchamp and VLC.</li>
+                <li>Choose 90° left, right or 180°.</li>
+                <li>Check that the rotation is saved.</li>
+              </ol>
+              <a href="rotate-video-windows.html">How to rotate a video on Windows</a>
+            </article>
+            <article>
+              <span>MP4 files</span>
+              <h3>Rotate an MP4 without surprises</h3>
+              <ol>
+                <li>Understand lossless display rotation.</li>
+                <li>Know when the picture must be re-encoded.</li>
+                <li>Keep the audio and metadata when supported.</li>
+              </ol>
+              <a href="rotate-mp4.html">How to rotate an MP4 file</a>
+            </article>
+            <article>
+              <span>Multiple files</span>
+              <h3>Batch rotate a folder of videos</h3>
+              <ol>
+                <li>Add several files or a folder.</li>
+                <li>Apply a shared direction.</li>
+                <li>Review each video's result.</li>
+              </ol>
+              <a href="batch-rotate-videos.html">How to batch rotate videos</a>
+            </article>
+          </div>
+          <p class="formats-evidence">
+            More help: <a href="rotate-mov-file.html">rotate MOV and iPhone video</a>,
+            <a href="rotate-video-taken-sideways.html">fix sideways footage</a>, or
+            <a href="guides.html">browse all video rotation guides</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="cta-section" aria-labelledby="cta-title">
+        <div class="shell">
+          <div class="cta-card">
+            <div>
+              <h2 id="cta-title">Your sideways video already knows where it belongs.</h2>
+              <p>Turn it from File Explorer or open ClipTurn for a preview and batch controls.</p>
+            </div>
+            <a
+              class="button button-primary"
+              href="https://apps.microsoft.com/detail/9PGB9JVBRGLB"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="ms-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+              Get ClipTurn
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="promote-section" aria-labelledby="promote-title">
+        <div class="shell">
+          <div class="section-header center">
+            <p class="eyebrow">More from FixQuotes</p>
+            <h2 class="section-heading small" id="promote-title">More useful tools from FixQuotes.</h2>
+            <p class="section-intro">
+              Explore more apps and browser extensions for code, browsing, sharing, and notes.
+            </p>
+          </div>
+
+          <div class="promote-grid">
+            <a class="promote-card" href="https://prettify.cloud/" target="_blank" rel="noopener">
+              <span class="promote-icon" aria-hidden="true">
+                <img src="assets/promote/codeprettify-logo.svg" width="128" height="128" alt="" loading="lazy" />
+              </span>
+              <h3>CodePrettify</h3>
+              <p>Format JS, JSON, CSS, YAML, XML, and RSS right in your browser.</p>
+              <span class="promote-visit">Visit website</span>
+            </a>
+
+            <a class="promote-card" href="https://fixguard.org/" target="_blank" rel="noopener">
+              <span class="promote-icon" aria-hidden="true">
+                <img src="assets/promote/fixguard-logo.svg" width="128" height="128" alt="" loading="lazy" />
+              </span>
+              <h3>FixGuard</h3>
+              <p>Block ads, hide cookie banners, and browse clean with zero tracking.</p>
+              <span class="promote-visit">Visit website</span>
+            </a>
+
+            <a class="promote-card" href="https://tabconnect.app/" target="_blank" rel="noopener">
+              <span class="promote-icon" aria-hidden="true">
+                <img src="assets/promote/tabconnect-logo.svg" width="128" height="128" alt="" loading="lazy" />
+              </span>
+              <h3>TabConnect</h3>
+              <p>Share browser tabs with short passwords and encrypted remote viewing.</p>
+              <span class="promote-visit">Visit website</span>
+            </a>
+
+            <a class="promote-card" href="https://notepin.cloud/" target="_blank" rel="noopener">
+              <span class="promote-icon" aria-hidden="true">
+                <img
+                  class="promote-logo-notepin"
+                  src="assets/promote/notepin-logo.svg"
+                  width="128"
+                  height="128"
+                  alt=""
+                  loading="lazy"
+                />
+              </span>
+              <h3>NotePin</h3>
+              <p>Sticky notes for any page with sync, colors, search, and dark mode.</p>
+              <span class="promote-visit">Visit website</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img
+              src="assets/brand/clipturn-lockup-on-dark.svg"
+              width="1600"
+              height="400"
+              alt="ClipTurn"
+              loading="lazy"
+            />
+            <p>A focused app for physical, verifiable video rotation on Windows 11 and Windows 10. Published by FixQuotes.</p>
+            <p class="footer-copyright">
+              © 2026 FixQuotes, Norway. All rights reserved.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h2>Product</h2>
+            <ul class="footer-links">
+              <li><a href="/" aria-current="page">Home</a></li>
+              <li><a href="manual.html">User manual</a></li>
+              <li><a href="guides.html">Guides</a></li>
+              <li><a href="tested-formats.html">Tested formats</a></li>
+              <li><a href="changelog.html">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h2>Legal &amp; support</h2>
+            <ul class="footer-links">
+              <li><a href="privacy.html">Privacy policy</a></li>
+              <li><a href="terms.html">Terms of use</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+              <li><a href="media.html">Media</a></li>
+              <li><a href="https://apps.fixquotes.com/" target="_blank" rel="noopener">More apps by FixQuotes</a></li>
+            </ul>
+          </div>
+        </div>
+        <nav class="footer-badges" aria-label="External badges">
+          <a class="footer-badge" href="https://fazier.com/launches/clipturn.app" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=light"
+              width="120"
+              alt="ClipTurn launched on Fazier"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+          </a>
+          <a
+            class="footer-badge"
+            href="https://www.producthunt.com/products/clipturn?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-clipturn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1216783&amp;theme=neutral&amp;t=1786055020916"
+              width="250"
+              height="54"
+              alt="ClipTurn on Product Hunt"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+          </a>
+          <a class="footer-badge" href="https://peerpush.com/p/clipturn" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://peerpush.com/p/clipturn/badge.png"
+              width="460"
+              height="130"
+              alt="ClipTurn on PeerPush"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+          </a>
+          <a class="footer-badge" href="https://www.directree.io" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://www.directree.io/badge/directree-badge-darkmode.svg"
+              width="200"
+              height="37"
+              alt="Verified on directree"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+          </a>
+          <a class="footer-badge" href="https://wonderlaunch.app/p/clipturn" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://wonderlaunch.app/badges/daily-winner.svg"
+              width="250"
+              height="54"
+              alt="ClipTurn Daily Winner on Wonderlaunch"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+          </a>
+        </nav>
+      </div>
+    </footer>
+
+    <dialog class="lightbox" id="image-lightbox" aria-label="Screenshot preview" aria-describedby="lightbox-caption" tabindex="-1">
+      <figure class="lightbox-figure">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" />
+        <figcaption class="lightbox-caption" id="lightbox-caption"></figcaption>
+      </figure>
+    </dialog>
+
+    <script src="site.js" defer></script>
+  </body>
+</html>

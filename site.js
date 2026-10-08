@@ -1,0 +1,106 @@
+(() => {
+  const menuButton = document.querySelector(".menu-toggle");
+  const navigation = document.querySelector(".site-nav");
+  const header = menuButton?.closest(".site-header");
+
+  const closeMenu = (returnFocus = false) => {
+    if (!menuButton || !navigation) return;
+    if (returnFocus && menuButton.getAttribute("aria-expanded") === "true" &&
+        navigation.contains(document.activeElement)) {
+      menuButton.focus();
+    }
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open navigation");
+    navigation.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
+  };
+
+  if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      menuButton.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+      navigation.classList.toggle("is-open", !isOpen);
+      document.body.classList.toggle("menu-open", !isOpen);
+    });
+
+    navigation.addEventListener("click", (event) => {
+      if (event.target.closest("a")) closeMenu();
+    });
+
+    header?.addEventListener("focusout", (event) => {
+      if (menuButton.getAttribute("aria-expanded") !== "true") return;
+      if (event.relatedTarget) {
+        if (!header.contains(event.relatedTarget)) closeMenu();
+        return;
+      }
+      // Some browser focus changes omit relatedTarget. Wait for activeElement
+      // to settle, and do not treat moving into browser chrome as a page control.
+      queueMicrotask(() => {
+        if (document.hasFocus() && !header.contains(document.activeElement)) closeMenu();
+      });
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1080) closeMenu();
+    });
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu(true);
+  });
+
+  document.querySelectorAll(".video-facade").forEach((facade) => {
+    facade.addEventListener("click", () => {
+      const id = facade.dataset.videoId;
+      if (!id) return;
+
+      const frame = document.createElement("iframe");
+      frame.src =
+        "https://www.youtube-nocookie.com/embed/" +
+        encodeURIComponent(id) +
+        "?autoplay=1&rel=0&modestbranding=1";
+      frame.title = facade.dataset.videoTitle || "ClipTurn video";
+      frame.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      frame.referrerPolicy = "strict-origin-when-cross-origin";
+      frame.allowFullscreen = true;
+
+      const host = facade.parentElement;
+      host.classList.add("video-playing");
+      facade.replaceWith(frame);
+      frame.focus();
+    });
+  });
+
+  const dialog = document.querySelector("#image-lightbox");
+  const dialogImage = dialog?.querySelector("img");
+  const dialogCaption = dialog?.querySelector("figcaption");
+  let lightboxOpener = null;
+
+  const closeLightbox = () => {
+    if (!dialog?.open) return;
+    dialog.close();
+    lightboxOpener?.focus();
+  };
+
+  if (dialog && dialogImage && dialogCaption) {
+    document.querySelectorAll("[data-lightbox]").forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        const preview = trigger.querySelector("img");
+        lightboxOpener = trigger;
+        dialogImage.src = trigger.dataset.lightbox;
+        dialogImage.alt = preview?.alt || "ClipTurn screenshot";
+        dialogCaption.textContent = trigger.dataset.caption || dialogImage.alt;
+        dialog.showModal();
+        dialog.focus({ preventScroll: true });
+      });
+    });
+
+    dialog.addEventListener("click", closeLightbox);
+
+    dialog.addEventListener("close", () => {
+      dialogImage.removeAttribute("src");
+    });
+  }
+})();

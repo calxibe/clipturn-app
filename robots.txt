@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://clipturn.app/sitemap.xml
