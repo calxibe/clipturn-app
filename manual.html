@@ -37,8 +37,8 @@
         "@context": "https://schema.org",
         "@type": "TechArticle",
         "headline": "The complete ClipTurn video rotation manual",
-        "description": "Complete instructions and reference information for ClipTurn version 1.0.10.",
-        "dateModified": "2026-10-08",
+        "description": "Complete instructions and reference information for ClipTurn version 1.0.11.",
+        "dateModified": "2026-11-11",
         "inLanguage": "en",
         "about": {
           "@type": "SoftwareApplication",
@@ -78,7 +78,7 @@
           {
             "@type": "HowToStep",
             "name": "Choose the direction",
-            "text": "Select Rotate video left or Rotate video right.",
+            "text": "Select Rotate video left, Rotate video right, or Rotate video 180°.",
             "url": "https://clipturn.app/manual.html#quick-start"
           },
           {
@@ -261,9 +261,9 @@
       <header class="manual-hero">
         <div class="shell manual-hero-grid">
           <div>
-            <p class="eyebrow">ClipTurn 1.0.10 · Windows 11 and Windows 10</p>
+            <p class="eyebrow">ClipTurn 1.0.11 · Windows 11 and Windows 10</p>
             <h1>The complete ClipTurn video rotation manual.</h1>
-            <p class="updated">Updated <time datetime="2026-10-08" data-page-updated>October 2026</time></p>
+            <p class="updated">Updated <time datetime="2026-11-11" data-page-updated>November 2026</time></p>
             <p class="manual-hero-lede">
               From a single right-click to a carefully controlled batch, this guide explains every
               workflow, setting, safeguard, supported format, and useful recovery step.
@@ -540,7 +540,7 @@
                 <ol>
                   <li>Right-click a supported video.</li>
                   <li>Open <strong>ClipTurn – Video Rotator</strong>.</li>
-                  <li>Select <strong>Rotate video left</strong> or <strong>Rotate video right</strong>.</li>
+                  <li>Select <strong>Rotate video left</strong>, <strong>Rotate video right</strong>, or <strong>Rotate video 180°</strong>.</li>
                   <li>Wait for the result card.</li>
                 </ol>
                 <a href="#file-explorer">Read the Explorer guide</a>
@@ -599,7 +599,7 @@
             <ol class="manual-steps compact">
               <li><div><h3>Select one or more videos</h3><p>The menu is available for MP4, M4V, MOV, MKV, AVI, WMV, and WebM. Every selected item must use a registered extension.</p></div></li>
               <li><div><h3>Open the ClipTurn submenu</h3><p>Right-click the selection and choose <strong>ClipTurn – Video Rotator</strong>.</p></div></li>
-              <li><div><h3>Choose the direction</h3><p>Select <strong>Rotate video left</strong> or <strong>Rotate video right</strong>. With a multi-selection, the direction is applied independently to every selected video.</p></div></li>
+              <li><div><h3>Choose the direction</h3><p>Select <strong>Rotate video left</strong>, <strong>Rotate video right</strong>, or <strong>Rotate video 180°</strong>. A half turn is done in one pass rather than two quarter turns. With a multi-selection, the direction is applied independently to every selected video.</p></div></li>
               <li><div><h3>Read the result card</h3><p>ClipTurn queues the request outside File Explorer, prepares and checks each file, then reports rotated, refused, failed, or uncertain outcomes.</p></div></li>
             </ol>
             <h3>The Explorer result card</h3>
@@ -620,7 +620,8 @@
                 copy choice in the app; the original remains unchanged and the copy does not start without approval.
                 To preview first or keep a replacement backup, use <strong>Open in ClipTurn</strong> instead. That
                 command loads the selected file on Rotate Video; open <strong>Details</strong> there when you want the
-                full inspection window.
+                full inspection window. ClipTurn is also listed under <strong>Open with</strong> for the same
+                file types and opens the video the same way; it does not replace your default player.
               </p>
             </div>
             <div class="manual-callout warning">
@@ -665,7 +666,7 @@
                 <div>
                   <h3>Check the video</h3>
                   <p>
-                    Select <strong>Play</strong> to preview playback. Select the filename or <strong>Details</strong>
+                    Select <strong>Play</strong> to preview playback. Move the pointer over the preview to show a seek bar and drag it to jump to another point in the video. Select the filename or <strong>Details</strong>
                     to inspect streams, geometry, file properties, and any existing ClipTurn receipt.
                   </p>
                 </div>
@@ -898,7 +899,7 @@
               <strong>The page shows the ten newest jobs.</strong>
               <p>
                 Older job records can remain in ClipTurn’s local data folder even though the interface shows only ten.
-                There is no Clear history button in version 1.0.10. Uninstalling the app removes its packaged local data;
+                There is no Clear history button in version 1.0.11. Uninstalling the app removes its packaged local data;
                 rotated files and backups remain where you saved them.
               </p>
             </div>
@@ -1077,7 +1078,7 @@
             <h2>Rotate without losing quality: choose a processing policy</h2>
             <div class="manual-table-wrap" tabindex="0">
               <table>
-                <thead><tr><th scope="col">Policy</th><th scope="col">Fidelity requirement</th><th scope="col">Size rule</th><th scope="col">Practical coverage in 1.0.10</th></tr></thead>
+                <thead><tr><th scope="col">Policy</th><th scope="col">Fidelity requirement</th><th scope="col">Size rule</th><th scope="col">Practical coverage in 1.0.11</th></tr></thead>
                 <tbody>
                   <tr>
                     <th scope="row">Keep codec and quality <span class="manual-badge">Recommended</span></th>
@@ -1248,7 +1249,7 @@
             </p>
             <div class="manual-table-wrap manual-format-table" tabindex="0">
               <table>
-                <thead><tr><th scope="col">Container</th><th scope="col">Extensions</th><th scope="col">Picture path in version 1.0.10</th><th scope="col">Main boundaries</th></tr></thead>
+                <thead><tr><th scope="col">Container</th><th scope="col">Extensions</th><th scope="col">Picture path in version 1.0.11</th><th scope="col">Main boundaries</th></tr></thead>
                 <tbody>
                   <tr>
                     <th scope="row">MP4 family</th>
@@ -1324,7 +1325,7 @@
                   <li>Multiple audio tracks, SubRip/UTF-8 text, Matroska WebVTT text, track language/name/default/forced flags, attachments, tags, IDs, date, title, and supported display/colour data can be carried within verified limits.</li>
                   <li>Container metadata must be inspected safely and completely, including metadata after video data. An unsafe or incomplete structure is refused before rotation.</li>
                   <li>Chapters, a second video track, PGS/VobSub/DVB/BMP bitmap subtitles, ASS/SSA and other styled scripts, unknown subtitle types, or content encodings ClipTurn cannot preserve are refused rather than stripped.</li>
-                  <li>10-bit HDR MKV is refused in version 1.0.10 because the output path cannot preserve the required declarations faithfully.</li>
+                  <li>10-bit HDR MKV is refused in version 1.0.11 because the output path cannot preserve the required declarations faithfully.</li>
                 </ul>
               </div>
             </details>
@@ -1425,7 +1426,7 @@
                   <tr><th scope="row">VP8 or VP9 / WebM</th><td>Install Microsoft’s free <strong>VP9 Video Extensions</strong>, restart affected apps if needed, then Analyze this PC again.</td><td>Required even when the source is VP8; ClipTurn’s bundled VP8 encoder does not supply the Windows decode path.</td></tr>
                   <tr><th scope="row">HEVC Main 8-bit</th><td>Install a compatible Microsoft/OEM <strong>HEVC Video Extensions</strong> package if the app provides that link.</td><td>The Microsoft package can be separately priced. An eligible 8-bit source may use a named H.264 fallback; not every HEVC layout is eligible.</td></tr>
                   <tr><th scope="row">HEVC Main10 encode</th><td>Install current graphics/chipset drivers from the exact PC or GPU manufacturer, restart, and analyze again; otherwise use another capable PC.</td><td>There is no generic Store package that guarantees a Main10 hardware encoder. ClipTurn never reduces 10-bit video to 8-bit silently.</td></tr>
-                  <tr><th scope="row">AV1 decode</th><td>Install Microsoft’s free <strong>AV1 Video Extension</strong> when the app offers it.</td><td>This can add decoding only; ClipTurn 1.0.10 has no AV1 output path, so an AV1 source may still refuse.</td></tr>
+                  <tr><th scope="row">AV1 decode</th><td>Install Microsoft’s free <strong>AV1 Video Extension</strong> when the app offers it.</td><td>This can add decoding only; ClipTurn 1.0.11 has no AV1 output path, so an AV1 source may still refuse.</td></tr>
                   <tr><th scope="row">Media Foundation unavailable on Windows N</th><td>Open Windows Settings → System → Optional features and install the free <strong>Media Feature Pack</strong>.</td><td>Restart Windows and analyze again after installation.</td></tr>
                   <tr><th scope="row">Vorbis playback component</th><td>Use the official <strong>Web Media Extensions</strong> action if ClipTurn names it.</td><td>WebM still has its own exact-audio and layout gates.</td></tr>
                   <tr><th scope="row">AC-3/E-AC-3 decode on newer Windows 11</th><td>Some systems rely on a device manufacturer’s codec; there may be no Microsoft Store restoration.</td><td>MKV exact packet passthrough can sometimes avoid audio decode, but other paths can refuse.</td></tr>
@@ -1798,7 +1799,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <span>Manual for ClipTurn 1.0.10</span>
+          <span>Manual for ClipTurn 1.0.11</span>
         </div>
       </div>
     </footer>

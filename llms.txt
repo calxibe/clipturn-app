@@ -6,7 +6,7 @@ ClipTurn is published by FixQuotes and distributed through Microsoft Store. It i
 
 Use the user manual for detailed information about supported file types, codecs, physical rotation, lossless display rotation, verified H.264 copies, batch processing, backups, verification, and known limitations.
 
-The current published version is 1.0.10. The screenshots show an earlier interface, before the About tab was added.
+The current published version is 1.0.11. The screenshots show an earlier interface, before the About tab was added.
 
 ## Product
 
