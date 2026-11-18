@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ClipTurn Changelog: What changed in version 1.0.11</title>
+    <title>ClipTurn Changelog: What changed in version 1.0.12</title>
     <meta
       name="description"
-      content="See what is new in ClipTurn 1.0.11 and browse the changes from earlier versions."
+      content="See what is new in ClipTurn 1.0.12 and browse the changes from earlier versions."
     />
     <link rel="canonical" href="https://clipturn.app/changelog.html" />
     <meta name="color-scheme" content="light dark" />
@@ -15,7 +15,7 @@
     <meta name="robots" content="index,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ClipTurn" />
-    <meta property="og:title" content="ClipTurn 1.0.11: release history" />
+    <meta property="og:title" content="ClipTurn 1.0.12: release history" />
     <meta
       property="og:description"
       content="What every ClipTurn release changed, from physical rotation in the source codec to an independent check before any file is replaced."
@@ -26,7 +26,7 @@
     <meta property="og:image:height" content="640" />
     <meta property="og:image:alt" content="ClipTurn video rotator for Windows 11 and Windows 10" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ClipTurn 1.0.11: release history" />
+    <meta name="twitter:title" content="ClipTurn 1.0.12: release history" />
     <meta
       name="twitter:description"
       content="What every ClipTurn release changed, from physical rotation in the source codec to an independent check before any file is replaced."
@@ -86,7 +86,7 @@
             Microsoft Store, updates arrive the same way every other Store app updates: you do not
             download anything from this page.
           </p>
-          <p class="updated">Current version 1.0.11</p>
+          <p class="updated">Current version 1.0.12</p>
         </div>
       </section>
 
@@ -94,8 +94,35 @@
         <div class="shell">
           <article class="version-card">
             <div class="version-header">
-              <h2 class="version-number" id="v1-0-11">v1.0.11</h2>
+              <h2 class="version-number" id="v1-0-12">v1.0.12</h2>
               <span class="version-badge">Latest</span>
+              <span class="version-date"><time datetime="2026-11">November 2026</time></span>
+            </div>
+            <div class="version-section">
+              <h3>Improved</h3>
+              <ul class="feature-list">
+                <li><strong>Full-screen preview.</strong> Open full screen beside Play/Pause. Use the seek bar between Play/Pause and Exit full screen. Esc also returns to the normal window.</li>
+                <li><strong>Seek by keyboard.</strong> The seek bar stays below the video. Reach it with Tab and seek with the arrow keys. Videos that cannot seek still show their playback position.</li>
+                <li><strong>Smaller download.</strong> The x64 and ARM64 installers still include the runtime ClipTurn needs.</li>
+                <li><strong>Rotate more WebM videos out of the box.</strong> ClipTurn includes the codecs needed to rotate supported VP8 and VP9 files without a separate Windows codec download.</li>
+                <li><strong>Preview WebM videos without a separate video codec download.</strong> ClipTurn can play supported VP8 and VP9 video in WebM and Matroska files using its bundled video codecs.</li>
+                <li><strong>Find your rotated copies.</strong> Show in File Explorer selects the new copy from Rotate Video, Batch Rotate, or Recent Jobs.</li>
+              </ul>
+            </div>
+            <div class="version-section">
+              <h3>Fixed</h3>
+              <ul class="feature-list">
+                <li><strong>Preview resizes with the window.</strong> The preview expands again when you make the window taller.</li>
+                <li><strong>Play resumes after a deliberate pause.</strong> Pausing just before the end no longer makes Play restart the video.</li>
+                <li><strong>Preview timing.</strong> When Windows cannot determine the total duration, the preview shows elapsed time. Affected WMV previews play from the beginning unless you seek first.</li>
+                <li><strong>HDR10 metadata is checked before replacement.</strong> If physical rotation changes the mastering-display or content-light metadata, ClipTurn keeps the original and can offer a separate lossless display copy.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="version-card">
+            <div class="version-header">
+              <h2 class="version-number" id="v1-0-11">v1.0.11</h2>
               <span class="version-date"><time datetime="2026-11">November 2026</time></span>
             </div>
             <div class="version-section">

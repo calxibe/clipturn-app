@@ -109,7 +109,7 @@
             "name": "Why does my video refuse with a missing codec message?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Windows is missing the specific encoder that route needs. WebM and VP8 or VP9 files need Microsoft's free VP9 Video Extensions. HEVC needs an HEVC Video Extensions package, and 10-bit HEVC output usually needs current graphics drivers from your PC or GPU manufacturer. Install only the exact component named in the message, then run the capability analysis again. Generic codec packs are not a reliable fix and often make diagnosis harder."
+              "text": "Windows is missing a codec the selected rotation route needs. ClipTurn bundles VP8 and VP9 codecs for eligible WebM rotation. HEVC needs an HEVC Video Extensions package, and 10-bit HEVC output usually needs current graphics drivers from your PC or GPU manufacturer. Install the component named in the message, then run the capability analysis again."
             }
           },
           {
@@ -451,9 +451,9 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">VP8 or VP9 / WebM</th>
-                    <td>Install Microsoft's free <strong>VP9 Video Extensions</strong>.</td>
-                    <td>Required even for VP8 sources, because the Windows decode path depends on it.</td>
+                    <th scope="row">VP8 or VP9 video</th>
+                    <td>ClipTurn uses the included video codecs when Windows cannot decode the picture.</td>
+                    <td>Preview audio uses the Windows audio decoder available on the PC.</td>
                   </tr>
                   <tr>
                     <th scope="row">HEVC 8-bit</th>
@@ -473,7 +473,7 @@
                   <tr>
                     <th scope="row">AV1</th>
                     <td>Microsoft's free <strong>AV1 Video Extension</strong> when offered.</td>
-                    <td>Adds decoding only. There is no AV1 output path in version 1.0.11, so the file may still refuse.</td>
+                    <td>Adds decoding only. There is no AV1 output path in version 1.0.12, so the file may still refuse.</td>
                   </tr>
                 </tbody>
               </table>
@@ -600,11 +600,10 @@
 
             <h3>Why does my video refuse with a missing codec message?</h3>
             <p>
-              Windows is missing the specific encoder that route needs. WebM and VP8 or VP9 files need Microsoft's
-              free VP9 Video Extensions. HEVC needs an HEVC Video Extensions package, and 10-bit HEVC output
-              usually needs current graphics drivers from your PC or GPU manufacturer. Install only the exact
-              component named in the message, then run the capability analysis again. Generic codec packs are not
-              a reliable fix and often make diagnosis harder.
+              Windows is missing a codec the selected rotation route needs. ClipTurn bundles VP8 and VP9 codecs
+              for eligible WebM rotation. HEVC needs an HEVC Video Extensions package, and 10-bit HEVC output
+              usually needs current graphics drivers from your PC or GPU manufacturer. Install the component named
+              in the message, then run the capability analysis again.
             </p>
 
             <h3>My video will not rotate at all. What should I do?</h3>

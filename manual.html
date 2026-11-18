@@ -37,8 +37,8 @@
         "@context": "https://schema.org",
         "@type": "TechArticle",
         "headline": "The complete ClipTurn video rotation manual",
-        "description": "Complete instructions and reference information for ClipTurn version 1.0.11.",
-        "dateModified": "2026-11-11",
+        "description": "Complete instructions and reference information for ClipTurn version 1.0.12.",
+        "dateModified": "2026-11-18",
         "inLanguage": "en",
         "about": {
           "@type": "SoftwareApplication",
@@ -129,10 +129,10 @@
           },
           {
             "@type": "Question",
-            "name": "Why does a WebM or VP8/VP9 file refuse on a normal Windows installation?",
+              "name": "Does WebM rotation need a Windows codec download?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Install Microsoft’s free VP9 Video Extensions using the exact action ClipTurn provides, then restart affected apps and select Analyze this PC again. VP8 planning also depends on this Windows package. The file can still refuse for 10-bit/profile, alpha, audio, subtitle, chapter, attachment, or multi-video limits."
+              "text": "ClipTurn bundles VP8 and VP9 codecs for eligible 8-bit WebM playback and rotation. Preview audio uses the Windows audio decoder available on your PC. Check the per-file result for details about a file that cannot be rotated."
             }
           },
           {
@@ -261,9 +261,9 @@
       <header class="manual-hero">
         <div class="shell manual-hero-grid">
           <div>
-            <p class="eyebrow">ClipTurn 1.0.11 · Windows 11 and Windows 10</p>
+            <p class="eyebrow">ClipTurn 1.0.12 · Windows 11 and Windows 10</p>
             <h1>The complete ClipTurn video rotation manual.</h1>
-            <p class="updated">Updated <time datetime="2026-11-11" data-page-updated>November 2026</time></p>
+            <p class="updated">Updated <time datetime="2026-11-18" data-page-updated>November 2026</time></p>
             <p class="manual-hero-lede">
               From a single right-click to a carefully controlled batch, this guide explains every
               workflow, setting, safeguard, supported format, and useful recovery step.
@@ -666,7 +666,8 @@
                 <div>
                   <h3>Check the video</h3>
                   <p>
-                    Select <strong>Play</strong> to preview playback. Move the pointer over the preview to show a seek bar and drag it to jump to another point in the video. Select the filename or <strong>Details</strong>
+                    Select <strong>Play</strong> to preview playback. Drag the seek bar below the preview or focus it with Tab and use the arrow keys.
+                    If the total duration is unknown, the preview shows elapsed time and hides the slider. Select the filename or <strong>Details</strong>
                     to inspect streams, geometry, file properties, and any existing ClipTurn receipt.
                   </p>
                 </div>
@@ -695,7 +696,8 @@
                   <h3>Read the durable result</h3>
                   <p>
                     The result explains whether the file was rotated, safely refused, failed while unchanged, or needs inspection.
-                    The same request is also available in <strong>Recent Jobs</strong>.
+                    The same request is also available in <strong>Recent Jobs</strong>. If ClipTurn creates a separate copy, choose
+                    <strong>Show in File Explorer</strong> to select the output file.
                   </p>
                 </div>
               </li>
@@ -728,6 +730,7 @@
               <div class="manual-mini-card">
                 <h3>Preview playback</h3>
                 <p>Playback does not start automatically. Use Play and Pause; the preview does not loop.</p>
+                <p>Select <strong>Full screen</strong> beside Play/Pause to enlarge the preview. The bottom bar puts the seek bar between Play/Pause and <strong>Exit full screen</strong>. Select <strong>Exit full screen</strong> or press Esc to return to the normal window.</p>
                 <p>Choosing another video during loading keeps the newest selection. If a rotation or reviewed-copy batch interrupts loading, the preview returns when the batch finishes.</p>
                 <p>If preview playback fails, ClipTurn can still let you request rotation because preview and processing use different checks.</p>
               </div>
@@ -855,7 +858,7 @@
                   <tr><th scope="row">Rotating</th><td>A worker is processing or verifying the file.</td><td>No; wait for the terminal result</td></tr>
                   <tr><th scope="row">Rotated</th><td>The verified result replaced the source.</td><td>No; ClipTurn prevents an accidental second turn</td></tr>
                   <tr><th scope="row">Review available</th><td>Exact replacement stopped safely, the source is unchanged, and ClipTurn has a proven separate-copy option for review.</td><td>No; use Review conversions and approve the disclosed choice explicitly</td></tr>
-                  <tr><th scope="row">Rotated copy created</th><td>A separately named output passed verification; the original was not replaced.</td><td>No; the reviewed request is complete</td></tr>
+                  <tr><th scope="row">Rotated copy created</th><td>A separately named output passed verification. Choose <strong>Show in File Explorer</strong> on the row to select it.</td><td>No; the reviewed request is complete</td></tr>
                   <tr><th scope="row">Refused safely</th><td>No faithful strategy was available and the source is proven unchanged.</td><td>Yes, if you first change the relevant setting or PC capability</td></tr>
                   <tr><th scope="row">Failed</th><td>The attempt failed before modifying the source, or the source could not be found.</td><td>Yes, after fixing the cause</td></tr>
                   <tr><th scope="row">Cannot rotate</th><td>The path or file type has a permanent refusal in this list.</td><td>No; remove it</td></tr>
@@ -893,13 +896,14 @@
               <li>Up to ten per-file outcomes for a completed request.</li>
               <li>The full path, whether the source was replaced, stayed unchanged, or may have changed, and the worker’s exact message.</li>
               <li>A <strong>Review options</strong> action when the validated result still has one or more separate-copy choices, including results first shown by File Explorer.</li>
+              <li>A <strong>Show in File Explorer</strong> action for each published copy shown in the card.</li>
               <li>For a request still awaiting a result, up to five queued paths so you can identify the work.</li>
             </ul>
             <div class="manual-callout info">
               <strong>The page shows the ten newest jobs.</strong>
               <p>
                 Older job records can remain in ClipTurn’s local data folder even though the interface shows only ten.
-                There is no Clear history button in version 1.0.11. Uninstalling the app removes its packaged local data;
+                There is no Clear history button in version 1.0.12. Uninstalling the app removes its packaged local data;
                 rotated files and backups remain where you saved them.
               </p>
             </div>
@@ -988,7 +992,7 @@
                 <tbody>
                   <tr><th scope="row">Detected</th><td>Windows registered a matching Media Foundation decoder or encoder for the exact subtype pair.</td><td>That it can negotiate this file, sustain the work, preserve everything, or pass ClipTurn’s verification.</td></tr>
                   <tr><th scope="row">Not detected</th><td>No matching registered component was found within the analysis.</td><td>That a generic codec pack is a safe fix. Use only the exact remediation shown.</td></tr>
-                  <tr><th scope="row">Included</th><td>The running worker contains the named bundled codec library, such as the libvpx 1.16 build ClipTurn prefers for VP8 encoding.</td><td>That the required Windows decoder or container path is also available.</td></tr>
+                  <tr><th scope="row">Included</th><td>The running worker contains the named bundled codec library. ClipTurn uses libvpx for VP8 and VP9 rotation.</td><td>That the particular file meets the container and track requirements for rotation.</td></tr>
                 </tbody>
               </table>
             </div>
@@ -1078,7 +1082,7 @@
             <h2>Rotate without losing quality: choose a processing policy</h2>
             <div class="manual-table-wrap" tabindex="0">
               <table>
-                <thead><tr><th scope="col">Policy</th><th scope="col">Fidelity requirement</th><th scope="col">Size rule</th><th scope="col">Practical coverage in 1.0.11</th></tr></thead>
+                <thead><tr><th scope="col">Policy</th><th scope="col">Fidelity requirement</th><th scope="col">Size rule</th><th scope="col">Practical coverage in 1.0.12</th></tr></thead>
                 <tbody>
                   <tr>
                     <th scope="row">Keep codec and quality <span class="manual-badge">Recommended</span></th>
@@ -1249,7 +1253,7 @@
             </p>
             <div class="manual-table-wrap manual-format-table" tabindex="0">
               <table>
-                <thead><tr><th scope="col">Container</th><th scope="col">Extensions</th><th scope="col">Picture path in version 1.0.11</th><th scope="col">Main boundaries</th></tr></thead>
+                <thead><tr><th scope="col">Container</th><th scope="col">Extensions</th><th scope="col">Picture path in version 1.0.12</th><th scope="col">Main boundaries</th></tr></thead>
                 <tbody>
                   <tr>
                     <th scope="row">MP4 family</th>
@@ -1267,7 +1271,7 @@
                     <th scope="row">WebM</th>
                     <td><code>.webm</code></td>
                     <td>VP8 or VP9, 8-bit 4:2:0, stays the same picture codec and is re-encoded.</td>
-                    <td>Opus/Vorbis audio and WebVTT-family text only; requires Microsoft VP9 Video Extensions; AV1, alpha, wider chroma, and 10/12-bit refuse.</td>
+                    <td>Bundled VP8/VP9 codecs for rotation. Opus/Vorbis audio and WebVTT-family text only. AV1, alpha, wider chroma, and 10/12-bit refuse.</td>
                   </tr>
                   <tr>
                     <th scope="row">Windows Media</th>
@@ -1305,7 +1309,7 @@
                 <ul>
                   <li>H.264 is physically rotated and written as H.264 High profile when the full path verifies.</li>
                   <li>Eligible 8-bit HEVC stays HEVC when a usable encoder exists. If none does, a permitted H.264 fallback is named clearly in the result.</li>
-                  <li>Eligible HEVC Main10 can stay 10-bit P010/Main10 with supported BT.2020/PQ and declared HDR10 static metadata only when a Main10 encoder accepts it. It never falls back to 8-bit.</li>
+                  <li>Physical HEVC Main10 rotation requires the candidate to retain 10-bit colour, BT.2020/PQ signalling where declared, and HDR10 mastering-display and content-light metadata. If Windows cannot preserve it, ClipTurn can offer a reviewed lossless display copy.</li>
                   <li>The writer preserves supported capture/media-created time, camera/GPS/time-zone metadata, audio language, colour declarations, display geometry, and the compatible major container brand, then verifies the promised result.</li>
                   <li>If faithful replacement is refused, a reviewed H.264 compatibility copy keeps MP4/M4V/MOV movie times, complete movie-level identity metadata—including GPS and camera details—and retained track languages. An independent reader compares the exact values and bytes before publication; failure leaves the source unchanged and publishes no copy.</li>
                   <li>That compatibility copy deliberately remains a standard MP4 instead of inheriting a MOV/M4V brand. Extra soundtrack, subtitle, chapter, timecode, per-frame sensor and other auxiliary tracks can still be omitted as listed in the approval dialog; metadata from non-MP4 source containers is not yet mapped into the new MP4.</li>
@@ -1325,7 +1329,7 @@
                   <li>Multiple audio tracks, SubRip/UTF-8 text, Matroska WebVTT text, track language/name/default/forced flags, attachments, tags, IDs, date, title, and supported display/colour data can be carried within verified limits.</li>
                   <li>Container metadata must be inspected safely and completely, including metadata after video data. An unsafe or incomplete structure is refused before rotation.</li>
                   <li>Chapters, a second video track, PGS/VobSub/DVB/BMP bitmap subtitles, ASS/SSA and other styled scripts, unknown subtitle types, or content encodings ClipTurn cannot preserve are refused rather than stripped.</li>
-                  <li>10-bit HDR MKV is refused in version 1.0.11 because the output path cannot preserve the required declarations faithfully.</li>
+                  <li>10-bit HDR MKV is refused in version 1.0.12 because the output path cannot preserve the required declarations faithfully.</li>
                 </ul>
               </div>
             </details>
@@ -1336,8 +1340,8 @@
                 <ul>
                   <li>VP8 remains VP8 and VP9 remains VP9, for supported 8-bit 4:2:0 sources. Every saved turn creates a new compressed picture generation.</li>
                   <li>Audio must be Opus or Vorbis and is copied packet-exactly. Supported WebVTT subtitle variants can be carried.</li>
-                  <li>The free Microsoft VP9 Video Extensions package is required for planning both VP9 and VP8/WebM paths. ClipTurn’s bundled VP8 encoder does not replace the Windows decoder requirement.</li>
-                  <li>VP8 is encoded by ClipTurn’s own bundled libvpx 1.16 rather than the 2015 encoder Windows carries, which makes the result smaller and sharper and keeps the source’s keyframe positions. The registered Windows encoder remains the required fallback. VP9 uses the Windows encoder.</li>
+                  <li>ClipTurn can use its bundled libvpx decoder for VP8 and VP9 rotation and verification when Windows cannot decode the video.</li>
+                  <li>VP8 prefers ClipTurn’s bundled encoder. VP9 uses a Windows encoder when available and can fall back to libvpx.</li>
                   <li>AV1, VP9 Profile 2 10/12-bit, Profile 1/wider chroma, alpha/block additions, other audio, chapters, attachments, non-WebVTT subtitles, and a second video refuse.</li>
                   <li>If every track starts before zero, ClipTurn can shift the shared timeline to zero without changing synchronization. Missing default frame duration can be derived from individual frame timing.</li>
                 </ul>
@@ -1423,10 +1427,10 @@
               <table>
                 <thead><tr><th scope="col">Missing path</th><th scope="col">Relevant action</th><th scope="col">Important limit</th></tr></thead>
                 <tbody>
-                  <tr><th scope="row">VP8 or VP9 / WebM</th><td>Install Microsoft’s free <strong>VP9 Video Extensions</strong>, restart affected apps if needed, then Analyze this PC again.</td><td>Required even when the source is VP8; ClipTurn’s bundled VP8 encoder does not supply the Windows decode path.</td></tr>
+                  <tr><th scope="row">VP8 or VP9 video</th><td>ClipTurn uses its bundled video codecs when Windows cannot decode the picture.</td><td>Preview audio uses the Windows audio decoder available on this PC.</td></tr>
                   <tr><th scope="row">HEVC Main 8-bit</th><td>Install a compatible Microsoft/OEM <strong>HEVC Video Extensions</strong> package if the app provides that link.</td><td>The Microsoft package can be separately priced. An eligible 8-bit source may use a named H.264 fallback; not every HEVC layout is eligible.</td></tr>
                   <tr><th scope="row">HEVC Main10 encode</th><td>Install current graphics/chipset drivers from the exact PC or GPU manufacturer, restart, and analyze again; otherwise use another capable PC.</td><td>There is no generic Store package that guarantees a Main10 hardware encoder. ClipTurn never reduces 10-bit video to 8-bit silently.</td></tr>
-                  <tr><th scope="row">AV1 decode</th><td>Install Microsoft’s free <strong>AV1 Video Extension</strong> when the app offers it.</td><td>This can add decoding only; ClipTurn 1.0.11 has no AV1 output path, so an AV1 source may still refuse.</td></tr>
+                  <tr><th scope="row">AV1 decode</th><td>Install Microsoft’s free <strong>AV1 Video Extension</strong> when the app offers it.</td><td>This can add decoding only; ClipTurn 1.0.12 has no AV1 output path, so an AV1 source may still refuse.</td></tr>
                   <tr><th scope="row">Media Foundation unavailable on Windows N</th><td>Open Windows Settings → System → Optional features and install the free <strong>Media Feature Pack</strong>.</td><td>Restart Windows and analyze again after installation.</td></tr>
                   <tr><th scope="row">Vorbis playback component</th><td>Use the official <strong>Web Media Extensions</strong> action if ClipTurn names it.</td><td>WebM still has its own exact-audio and layout gates.</td></tr>
                   <tr><th scope="row">AC-3/E-AC-3 decode on newer Windows 11</th><td>Some systems rely on a device manufacturer’s codec; there may be no Microsoft Store restoration.</td><td>MKV exact packet passthrough can sometimes avoid audio decode, but other paths can refuse.</td></tr>
@@ -1443,20 +1447,18 @@
             </div>
             <h3>One encoder ClipTurn brings itself</h3>
             <p>
-              The Store build carries its own copy of <strong>libvpx 1.16</strong> and prefers it when it encodes VP8.
+              ClipTurn carries its own copy of <strong>libvpx</strong> and prefers it when it encodes VP8.
               The VP8 encoder Windows provides is libvpx 1.4.0 from 2015 behind a Media Foundation wrapper, and it
               needs 24&ndash;101% more data to hold the same picture quality. Measured across ClipTurn's VP8 test
               files, the bundled encoder produced results that were both smaller and sharper on every file, and it
               reproduces the source's own keyframe positions, so a rotated WebM still seeks the way the original did.
             </p>
             <div class="manual-callout info">
-              <strong>A newer encoder is not wider format support.</strong>
+              <strong>Bundled codecs for WebM rotation</strong>
               <p>
-                This changes the quality of what ClipTurn writes, not what it can open. The registered Windows
-                encoder stays the required fallback, and the Windows decode path is still mandatory, so a VP8 or
-                WebM source continues to need the free VP9 Video Extensions package listed above. VP9 is
-                deliberately left on the Windows encoder, which already performs well for that codec. System
-                Capabilities reports the bundled library separately as <strong>Included</strong>.
+                System Capabilities lists the bundled VP8 and VP9 paths alongside the Windows codecs. The
+                preview can use the bundled video decoder. You can still save a verified rotation when the selected
+                video cannot be previewed, provided it meets the rotation requirements.
               </p>
             </div>
           </section>
@@ -1629,9 +1631,9 @@
                 </div>
               </details>
               <details>
-                <summary>Why does a WebM or VP8/VP9 file refuse on a normal Windows installation?</summary>
+                <summary>Does WebM rotation need a Windows codec download?</summary>
                 <div>
-                  <p>Install Microsoft’s free VP9 Video Extensions using the exact action ClipTurn provides, then restart affected apps and select Analyze this PC again. VP8 planning also depends on this Windows package.</p>
+                  <p>ClipTurn bundles VP8 and VP9 codecs for eligible 8-bit WebM playback and rotation. Preview audio uses the Windows audio decoder available on your PC.</p>
                   <p>The file can still refuse for 10-bit/profile, alpha, audio, subtitle, chapter, attachment, or multi-video limits.</p>
                 </div>
               </details>
@@ -1799,7 +1801,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <span>Manual for ClipTurn 1.0.11</span>
+          <span>Manual for ClipTurn 1.0.12</span>
         </div>
       </div>
     </footer>

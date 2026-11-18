@@ -48,7 +48,7 @@
             "name": "Tested video formats and codecs | ClipTurn",
             "description": "Real-file, end-to-end results for 99 video fixtures tested with ClipTurn 1.0.4.",
             "inLanguage": "en",
-            "dateModified": "2026-09-10",
+            "dateModified": "2026-11-18",
             "about": {
               "@id": "https://clipturn.app/#software"
             },
@@ -282,7 +282,7 @@
                 <tr data-route="refusal"><th scope="row">MP4</th><td><code>.mp4</code></td><td>H.264, two video tracks</td><td>Two AAC tracks</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Ambiguous multi-video orientation refused; source unchanged.</td></tr>
                 <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>HEVC Main10 10-bit 4:2:2</td><td>AAC</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>10-bit 4:2:2 picture retained without unsafe pixel-format conversion.</td></tr>
                 <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>HEVC Main10 10-bit 4:4:4</td><td>AAC</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>10-bit 4:4:4 picture retained without unsafe pixel-format conversion.</td></tr>
-                <tr data-route="replacement"><th scope="row">MP4</th><td><code>.mp4</code></td><td>HEVC Main10 10-bit 4:2:0 HDR10 PQ</td><td>AAC; BT.2020 and HDR10 metadata</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>Physical turn, Main10 picture, PQ/BT.2020, HDR10 metadata, audio, and timing verified.</td></tr>
+                <tr data-route="replacement"><th scope="row">MP4</th><td><code>.mp4</code></td><td>HEVC Main10 10-bit 4:2:0 HDR10 PQ</td><td>AAC; BT.2020 and HDR10 metadata</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>The 1.0.4 check verified the physical turn, Main10 picture, PQ/BT.2020, audio and timing. Version 1.0.12 also checks mastering-display metadata and offers a lossless display copy for this sample.</td></tr>
                 <tr data-route="replacement"><th scope="row">MP4</th><td><code>.mp4</code></td><td>MPEG-4 Part 2, variable frame rate</td><td>AAC</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>Declared H.264 fallback, physical turn, VFR timeline, and audio verified.</td></tr>
                 <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>MPEG-4 Part 2</td><td>Two AAC tracks and two timed-text tracks</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>Every encoded track and movie-level byte retained outside the orientation matrix.</td></tr>
                 <tr data-route="replacement"><th scope="row">MP4</th><td><code>.mp4</code></td><td>AV1 8-bit 4:2:0</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>Declared H.264 fallback and complete physical picture turn verified.</td></tr>
