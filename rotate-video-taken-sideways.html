@@ -67,7 +67,7 @@
         "description": "Why sideways footage looks correct on a phone and wrong on a computer, and how to permanently rotate it on Windows.",
         "inLanguage": "en",
         "url": "https://clipturn.app/rotate-video-taken-sideways.html",
-        "dateModified": "2026-10-01",
+        "dateModified": "2026-11-25",
         "publisher": {
           "@type": "Organization",
           "name": "FixQuotes",
@@ -140,7 +140,7 @@
             "name": "Will rotating a sideways video lose quality?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Physically turning compressed video means decoding and encoding it once more, which costs a single generation of quality that you are very unlikely to see. Rotating the same clip repeatedly does accumulate loss, so it is worth checking the direction before you save rather than turning it back and forth."
+              "text": "A typical phone video needs a lossy re-encode for a physical turn. A display-only copy preserves the encoded picture. Eligible AVI, FFV1, AV1 and VP9 physical turns can also be lossless."
             }
           },
           {
@@ -210,7 +210,7 @@
             <a class="button button-primary" href="#fix">Fix it now</a>
             <a class="button button-secondary" href="#why">Why it happened</a>
           </div>
-          <p class="updated">Windows 11 and Windows 10 &middot; updated <time datetime="2026-10-01" data-page-updated>October 2026</time></p>
+          <p class="updated">Windows 11 and Windows 10 &middot; updated <time datetime="2026-11-25" data-page-updated>November 2026</time></p>
         </div>
       </section>
 
@@ -301,7 +301,7 @@
             <p class="eyebrow">Step one</p>
             <h2>Which way does it need to turn?</h2>
             <p>
-              Worth thirty seconds, because turning it the wrong way and back costs two encodes instead of one.
+              Check the direction before saving to avoid a second turn.
               Look at where the top of the real-world scene &mdash; sky, ceiling, people's heads &mdash; has ended
               up.
             </p>
@@ -417,7 +417,7 @@
               ClipTurn still copies and verifies the complete file, which takes time.
             </p>
             <ul class="manual-check-list">
-              <li>ClipTurn offers its display-orientation copy for eligible MP4, M4V and MOV files.</li>
+              <li>ClipTurn offers display-orientation copies for eligible MP4, M4V, MOV and MKV files.</li>
               <li>
                 Any player, editor or website that ignored the old flag will ignore the new one, so the clip can
                 still turn up sideways in exactly the place that caused the problem.
@@ -544,10 +544,7 @@
 
             <h3>Will rotating a sideways video lose quality?</h3>
             <p>
-              Physically turning compressed video means decoding and encoding it once more, which costs a single
-              generation of quality that you are very unlikely to see. Rotating the same clip repeatedly does
-              accumulate loss, so it is worth checking the direction before you save rather than turning it back
-              and forth.
+              A typical phone video needs a lossy re-encode for a physical turn. A display-only copy preserves the encoded picture. Eligible AVI, FFV1, AV1 and VP9 physical turns can also be lossless.
             </p>
 
             <h3>How do I stop my phone recording sideways videos?</h3>

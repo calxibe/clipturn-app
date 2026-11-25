@@ -67,7 +67,7 @@
         "description": "Rotating MOV and iPhone video on Windows without QuickTime, and what survives the rotation.",
         "inLanguage": "en",
         "url": "https://clipturn.app/rotate-mov-file.html",
-        "dateModified": "2026-10-01",
+        "dateModified": "2026-11-25",
         "publisher": {
           "@type": "Organization",
           "name": "FixQuotes",
@@ -213,13 +213,13 @@
             MOV is what an iPhone hands you, and it lands on a Windows PC carrying more than just a picture: a
             capture date, GPS coordinates, camera details, and sometimes a rotation flag that Windows and the phone
             disagree about. This covers turning the clip the right way up without QuickTime, keeping everything else
-            intact, and the two cases where a MOV is deliberately refused rather than quietly broken.
+            intact, and which MOV files can use a separate copy when in-place rotation is unavailable.
           </p>
           <div class="manual-hero-actions">
             <a class="button button-primary" href="#rotate">Rotate a MOV</a>
             <a class="button button-secondary" href="#survives">What survives</a>
           </div>
-          <p class="updated">Windows 11 and Windows 10 &middot; updated <time datetime="2026-10-01" data-page-updated>October 2026</time></p>
+          <p class="updated">Windows 11 and Windows 10 &middot; updated <time datetime="2026-11-25" data-page-updated>November 2026</time></p>
         </div>
       </section>
 
@@ -243,7 +243,7 @@
               <li><a href="#lossless">The lossless option for MOV</a></li>
               <li><a href="#survives">What survives the rotation</a></li>
               <li><a href="#hevc">iPhone clips and HEVC</a></li>
-              <li><a href="#refused">Two MOV files that are refused</a></li>
+              <li><a href="#refused">When a MOV cannot rotate in place</a></li>
               <li><a href="#many">A camera roll's worth</a></li>
               <li><a href="#faq">Common questions</a></li>
             </ol>
@@ -437,8 +437,7 @@
                 fallback rather than applying it silently.
               </li>
               <li>
-                A 10-bit HEVC source never falls back to 8-bit. If no Main10 encoder is available it refuses instead,
-                because quietly halving the bit depth of HDR footage is not a fix.
+                Physical Main10 rotation requires a compatible encoder. An eligible display copy can keep the original 10-bit picture and HDR metadata.
               </li>
               <li>
                 Main10 encoding usually depends on your graphics driver. Installing the current driver from your PC
@@ -453,7 +452,7 @@
 
           <section class="manual-topic" id="refused">
             <p class="eyebrow">Deliberate limits</p>
-            <h2>Two MOV files that are refused</h2>
+            <h2>When a MOV cannot rotate in place</h2>
 
             <h3>A Live Photo MOV</h3>
             <p>
@@ -464,8 +463,7 @@
 
             <h3>A MOV with extra tracks or unusual geometry</h3>
             <p>
-              The MP4-family route carries one video track and at most one audio track. These refuse rather than
-              being silently stripped:
+              In-place rotation handles one video and at most one audio track. The following features can prevent replacement. A display copy can preserve extra tracks or a compressed QuickTime movie header when its updated orientation fits safely.
             </p>
             <ul class="manual-check-list">
               <li>A second video or audio track, subtitles, or chapters.</li>

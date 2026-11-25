@@ -6,7 +6,7 @@
     <title>Which Video Formats Can Be Rotated? 99 Files Tested</title>
     <meta
       name="description"
-      content="Which containers, codecs and profiles can actually be rotated: 99 real files tested end to end with ClipTurn 1.0.4, including the expected safe refusals."
+      content="Which containers, codecs and profiles can actually be rotated: 99 real files tested end to end with ClipTurn 1.0.15, including the expected safe refusals."
     />
     <link rel="canonical" href="https://clipturn.app/tested-formats.html" />
     <meta name="color-scheme" content="light dark" />
@@ -46,9 +46,9 @@
             "@id": "https://clipturn.app/tested-formats.html#webpage",
             "url": "https://clipturn.app/tested-formats.html",
             "name": "Tested video formats and codecs | ClipTurn",
-            "description": "Real-file, end-to-end results for 99 video fixtures tested with ClipTurn 1.0.4.",
+            "description": "Real-file, end-to-end results for 99 video fixtures tested with ClipTurn 1.0.15.",
             "inLanguage": "en",
-            "dateModified": "2026-11-18",
+            "dateModified": "2026-11-25",
             "about": {
               "@id": "https://clipturn.app/#software"
             },
@@ -60,7 +60,7 @@
             "@type": "SoftwareApplication",
             "@id": "https://clipturn.app/#software",
             "name": "ClipTurn",
-            "softwareVersion": "1.0.4",
+            "softwareVersion": "1.0.15",
             "applicationCategory": "MultimediaApplication",
             "operatingSystem": "Windows 11, Windows 10",
             "downloadUrl": "https://apps.microsoft.com/detail/9PGB9JVBRGLB",
@@ -78,10 +78,10 @@
             "@type": "Dataset",
             "@id": "https://clipturn.app/tested-formats.html#dataset",
             "name": "ClipTurn tested video formats and codecs",
-            "description": "Observed end-to-end outcomes for 99 real video fixtures tested with ClipTurn 1.0.4 on Windows 11 x64. Outcomes include verified source replacements, verified separate copies, and expected safe refusals.",
+            "description": "Observed end-to-end outcomes for 99 real video fixtures tested with ClipTurn 1.0.15 on Windows 11 x64. Outcomes include verified source replacements, verified separate copies, and expected safe refusals.",
             "url": "https://clipturn.app/tested-formats.html",
-            "version": "1.0.4",
-            "dateModified": "2026-08-08",
+            "version": "1.0.15",
+            "dateModified": "2026-11-25",
             "creator": {
               "@id": "https://clipturn.app/#publisher"
             },
@@ -107,6 +107,11 @@
                 "@type": "PropertyValue",
                 "name": "Test contracts passed",
                 "value": 99
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Supplemental progressive AVI fixtures passed",
+                "value": 2
               },
               {
                 "@type": "PropertyValue",
@@ -184,11 +189,11 @@
             These results come from real video files. A file extension alone does not prove compatibility, and
             files with different tracks, metadata, or Windows codecs can produce different results.
           </p>
-          <p class="updated">ClipTurn 1.0.4 &middot; Windows 11 x64 &middot; audited 8 August 2026</p>
+          <p class="updated">ClipTurn 1.0.15 &middot; Windows 11 x64 &middot; audited <time datetime="2026-11-25" data-page-updated>November 25, 2026</time></p>
           <p>
-            This is a historical test snapshot, not a claim that these tests were rerun for the latest release.
-            The tested version and audit date remain attached to the results. For current features and limits,
-            read the <a href="manual.html">user manual</a> and <a href="changelog.html">release history</a>.
+            ClipTurn rotated 90 of the 99 videos. For the other nine, the table gives the reason the original stayed unchanged.
+            See <a href="manual.html#included-codecs">which codecs ship with ClipTurn</a> and
+            <a href="manual.html#formats">which files you can open</a>.
           </p>
         </div>
       </section>
@@ -205,11 +210,11 @@
           </div>
 
           <dl class="evidence-summary" aria-label="Test outcome totals">
-            <div class="evidence-fact"><dt>Verified replacements</dt><dd>27</dd></div>
-            <div class="evidence-fact"><dt>Lossless display copies</dt><dd>32</dd></div>
-            <div class="evidence-fact"><dt>Physical H.264 copies</dt><dd>17</dd></div>
-            <div class="evidence-fact"><dt>Expected safe refusals</dt><dd>23</dd></div>
-            <div class="evidence-fact evidence-fact-total"><dt>Test failures</dt><dd>0</dd></div>
+            <div class="evidence-fact"><dt>Verified replacements</dt><dd>28</dd></div>
+            <div class="evidence-fact"><dt>Lossless display copies</dt><dd>38</dd></div>
+            <div class="evidence-fact"><dt>Lossless physical copies</dt><dd>11</dd></div>
+            <div class="evidence-fact"><dt>Physical H.264 copies</dt><dd>13</dd></div>
+            <div class="evidence-fact"><dt>Expected safe refusals</dt><dd>9</dd></div>
           </dl>
 
         </div>
@@ -230,6 +235,7 @@
             <ul>
               <li><b class="evidence-route evidence-route-replacement">Verified replacement</b><span>ClipTurn rotated the video, verified it, then replaced the isolated test copy.</span></li>
               <li><b class="evidence-route evidence-route-display">Lossless display copy</b><span>ClipTurn made a separate copy without re-encoding the video. The player must support rotation metadata.</span></li>
+              <li><b class="evidence-route">Lossless physical copy</b><span>ClipTurn turned the picture and checked every decoded sample. Eight copies used FFV1 in Matroska, two used AV1 and one used VP9 Profile 1.</span></li>
               <li><b class="evidence-route evidence-route-h264">Physical H.264 copy</b><span>After approval, ClipTurn made a separate MP4 with physically rotated H.264 video.</span></li>
               <li><b class="evidence-route evidence-route-refusal">Expected safe refusal</b><span>ClipTurn could not make a safe result, so it changed nothing.</span></li>
             </ul>
@@ -242,7 +248,7 @@
             aria-labelledby="tested-matrix-title"
           >
             <table class="evidence-table">
-              <caption>ClipTurn 1.0.4 end-to-end results, audited on Windows 11 x64 on 8 August 2026</caption>
+              <caption>ClipTurn 1.0.15 end-to-end results, audited on Windows 11 x64 on 25 November 2026</caption>
               <thead>
                 <tr>
                   <th scope="col">Container</th>
@@ -256,17 +262,17 @@
               </thead>
               <tbody>
                 <tr data-route="replacement"><th scope="row">AVI</th><td><code>.avi</code></td><td>Uncompressed RGB: 8-bit indexed, 16-bit, and 24-bit</td><td>No audio or PCM</td><td class="evidence-count" data-samples="3">3</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>Stored pixels permuted sample-exactly; optional PCM was copied unchanged where present.</td></tr>
-                <tr data-route="h264"><th scope="row">AVI</th><td><code>.avi</code></td><td>Motion JPEG (MJPEG)</td><td>PCM</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-h264">Physical H.264 copy</b></td><td>Separate physical result verified; original unchanged.</td></tr>
-                <tr data-route="refusal"><th scope="row">AVI</th><td><code>.avi</code></td><td>Cinepak</td><td>PCM</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>No verified writer route; source bytes unchanged.</td></tr>
-                <tr data-route="refusal"><th scope="row">AVI</th><td><code>.avi</code></td><td>MPEG-4 Part 2 (DivX/Xvid)</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Compressed AVI boundary named; source bytes unchanged.</td></tr>
-                <tr data-route="refusal"><th scope="row">AVI</th><td><code>.avi</code></td><td>FFV1 lossless</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Lossless master was not converted to lossy H.264; source unchanged.</td></tr>
-                <tr data-route="refusal"><th scope="row">AVI</th><td><code>.avi</code></td><td>H.264</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Unsupported compressed-AVI route named; source unchanged.</td></tr>
-                <tr data-route="refusal"><th scope="row">AVI</th><td><code>.avi</code></td><td>HuffYUV lossless</td><td>MP3</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Lossless master was not converted to lossy H.264; source unchanged.</td></tr>
-                <tr data-route="refusal"><th scope="row">AVI</th><td><code>.avi</code></td><td>Indeo 3</td><td>PCM</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Unsupported picture path named; source unchanged.</td></tr>
-                <tr data-route="refusal"><th scope="row">AVI</th><td><code>.avi</code></td><td>Lagarith lossless</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Lossless master was not converted to lossy H.264; source unchanged.</td></tr>
-                <tr data-route="refusal"><th scope="row">AVI</th><td><code>.avi</code></td><td>Microsoft MPEG-4 v3</td><td>MP3</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Unsupported compressed-AVI route named; source unchanged.</td></tr>
-                <tr data-route="refusal"><th scope="row">AVI</th><td><code>.avi</code></td><td>Ut Video RGB lossless</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Lossless master was not converted to lossy H.264; source unchanged.</td></tr>
-                <tr data-route="refusal"><th scope="row">AVI</th><td><code>.avi</code></td><td>Uncompressed UYVY / YUY2 4:2:2</td><td>PCM</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Unsupported chroma-subsampled exact path named; sources unchanged.</td></tr>
+                <tr data-route="replacement"><th scope="row">AVI</th><td><code>.avi</code></td><td>Motion JPEG (MJPEG)</td><td>PCM</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>The inverse turn restored every JPEG coefficient. PCM audio and the AVI recording date were preserved.</td></tr>
+                <tr data-route="ffv1"><th scope="row">AVI</th><td><code>.avi</code></td><td>Cinepak</td><td>PCM</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route">Lossless FFV1 copy</b></td><td>The FFV1 Matroska copy preserved the decoded pictures, 14 trailing hold slots and PCM audio.</td></tr>
+                <tr data-route="ffv1"><th scope="row">AVI</th><td><code>.avi</code></td><td>MPEG-4 Part 2 (DivX/Xvid)</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route">Lossless FFV1 copy</b></td><td>All 302 presentation slots in the AVI timeline were verified in the FFV1 Matroska copy.</td></tr>
+                <tr data-route="refusal"><th scope="row">AVI</th><td><code>.avi</code></td><td>FFV1 lossless</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>The source reported FFV1 slice checksum errors. A clean progressive FFV1 fixture passed the separate test below.</td></tr>
+                <tr data-route="refusal"><th scope="row">AVI</th><td><code>.avi</code></td><td>H.264</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Missing and repeated presentation times prevented ClipTurn from verifying the picture order in this VSSH recording.</td></tr>
+                <tr data-route="ffv1"><th scope="row">AVI</th><td><code>.avi</code></td><td>HuffYUV lossless</td><td>MP3</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route">Lossless FFV1 copy</b></td><td>The FFV1 Matroska copy preserved the decoded samples and original MP3 packets.</td></tr>
+                <tr data-route="refusal"><th scope="row">AVI</th><td><code>.avi</code></td><td>Indeo 3</td><td>PCM</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>The source contained an invalid Indeo 3 frame. Its bytes stayed unchanged.</td></tr>
+                <tr data-route="ffv1"><th scope="row">AVI</th><td><code>.avi</code></td><td>Lagarith lossless</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route">Lossless FFV1 copy</b></td><td>The FFV1 Matroska copy preserved the decoded colour and alpha samples.</td></tr>
+                <tr data-route="ffv1"><th scope="row">AVI</th><td><code>.avi</code></td><td>Microsoft MPEG-4 v3</td><td>MP3</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route">Lossless FFV1 copy</b></td><td>The FFV1 Matroska copy preserved the decoded pictures, timing and MP3 packets.</td></tr>
+                <tr data-route="refusal"><th scope="row">AVI</th><td><code>.avi</code></td><td>Ut Video RGB lossless</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>This recording contains interlaced fields. A clean progressive Ut Video fixture passed the separate test below.</td></tr>
+                <tr data-route="ffv1"><th scope="row">AVI</th><td><code>.avi</code></td><td>Uncompressed UYVY / YUY2 4:2:2</td><td>PCM</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route">Lossless FFV1 copy</b></td><td>Each colour plane was rotated separately. The FFV1 copies preserved every sample as 4:4:0 and kept the PCM audio.</td></tr>
 
                 <tr data-route="display"><th scope="row">M4V</th><td><code>.m4v</code></td><td>H.264 8-bit 4:2:0</td><td>AAC</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>Encoded media preserved; orientation and full-container byte boundary verified.</td></tr>
 
@@ -275,27 +281,27 @@
                 <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>H.264, fragmented MP4</td><td>AAC; <code>moof</code> fragments</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>All encoded fragments preserved; only verified track orientation changed.</td></tr>
                 <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>H.264 PAFF, anamorphic</td><td>AAC; field-coded picture</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>Encoded fields, aspect declarations, audio, and metadata retained byte-for-byte outside the matrix.</td></tr>
                 <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>H.264 MBAFF interlaced</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>Interlaced payload retained; display orientation verified.</td></tr>
-                <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>H.264 sRGB transfer; full- and limited-range greyramps</td><td>No audio</td><td class="evidence-count" data-samples="3">3</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>Exact colour declarations and encoded samples retained.</td></tr>
+                <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>H.264 with sRGB transfer and full or limited range</td><td>No audio</td><td class="evidence-count" data-samples="3">3</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>Exact colour declarations and encoded samples retained.</td></tr>
                 <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>H.264 with non-square pixel aspect</td><td>No audio; <code>pasp</code></td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>Pixel-aspect and media payload retained; display orientation verified.</td></tr>
                 <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>H.264 8-bit 4:2:0</td><td>Opus</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>Unsupported exact audio rewrite avoided; complete source copied with verified orientation.</td></tr>
                 <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>H.264 High 10</td><td>AAC</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>10-bit compressed picture retained without re-encoding.</td></tr>
-                <tr data-route="refusal"><th scope="row">MP4</th><td><code>.mp4</code></td><td>H.264, two video tracks</td><td>Two AAC tracks</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Ambiguous multi-video orientation refused; source unchanged.</td></tr>
-                <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>HEVC Main10 10-bit 4:2:2</td><td>AAC</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>10-bit 4:2:2 picture retained without unsafe pixel-format conversion.</td></tr>
-                <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>HEVC Main10 10-bit 4:4:4</td><td>AAC</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>10-bit 4:4:4 picture retained without unsafe pixel-format conversion.</td></tr>
-                <tr data-route="replacement"><th scope="row">MP4</th><td><code>.mp4</code></td><td>HEVC Main10 10-bit 4:2:0 HDR10 PQ</td><td>AAC; BT.2020 and HDR10 metadata</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>The 1.0.4 check verified the physical turn, Main10 picture, PQ/BT.2020, audio and timing. Version 1.0.12 also checks mastering-display metadata and offers a lossless display copy for this sample.</td></tr>
+                <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>H.264, two video tracks</td><td>Two AAC tracks</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>Both matching video tracks received the same display turn. Both AAC tracks and the encoded video were preserved.</td></tr>
+                <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>HEVC Range Extensions, 10-bit 4:2:2</td><td>AAC</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>10-bit 4:2:2 picture retained without unsafe pixel-format conversion.</td></tr>
+                <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>HEVC Range Extensions, 10-bit 4:4:4</td><td>AAC</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>10-bit 4:4:4 picture retained without unsafe pixel-format conversion.</td></tr>
+                <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>HEVC Main10 10-bit 4:2:0 HDR10 PQ</td><td>AAC; BT.2020 and HDR10 metadata</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>The display copy retained the encoded Main10 picture, HDR10 mastering metadata and AAC soundtrack.</td></tr>
                 <tr data-route="replacement"><th scope="row">MP4</th><td><code>.mp4</code></td><td>MPEG-4 Part 2, variable frame rate</td><td>AAC</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>Declared H.264 fallback, physical turn, VFR timeline, and audio verified.</td></tr>
                 <tr data-route="display"><th scope="row">MP4</th><td><code>.mp4</code></td><td>MPEG-4 Part 2</td><td>Two AAC tracks and two timed-text tracks</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>Every encoded track and movie-level byte retained outside the orientation matrix.</td></tr>
-                <tr data-route="replacement"><th scope="row">MP4</th><td><code>.mp4</code></td><td>AV1 8-bit 4:2:0</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>Declared H.264 fallback and complete physical picture turn verified.</td></tr>
+                <tr data-route="av1"><th scope="row">MP4</th><td><code>.mp4</code></td><td>AV1 8-bit 4:2:0</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route">Lossless AV1 copy</b></td><td>The decoded pictures matched the physical turn sample for sample in a separate AV1 MP4.</td></tr>
 
                 <tr data-route="display"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>HEVC Main10 HLG from iPhone</td><td>AAC; GPS, camera, capture-time, and five sensor tracks</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>HLG media and every auxiliary/metadata byte retained; orientation verified.</td></tr>
                 <tr data-route="display"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>H.264 8-bit 4:2:0</td><td>AAC</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>Encoded media and movie metadata retained; orientation verified.</td></tr>
                 <tr data-route="refusal"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>No video track</td><td>AAC audio only</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>No picture to rotate; source unchanged.</td></tr>
-                <tr data-route="refusal"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>Sorenson Video</td><td>QCELP; compressed movie header</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Container could not be rewritten under the verified contract; source unchanged.</td></tr>
-                <tr data-route="display"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>Apple ProRes 422 Proxy (<code>apco</code>)</td><td>No audio, or four float-PCM tracks plus timecode</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>ProRes payload and tracks retained; orientation/container verified; the external samples also decoded successfully.</td></tr>
-                <tr data-route="display"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>Apple ProRes 422 LT (<code>apcs</code>)</td><td>No audio, or four float-PCM tracks plus timecode</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>ProRes payload and tracks retained; orientation/container verified; the external samples also decoded successfully.</td></tr>
-                <tr data-route="display"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>Apple ProRes 422 (<code>apcn</code>)</td><td>No audio, or four float-PCM tracks plus timecode</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>ProRes payload and tracks retained; orientation/container verified; the external samples also decoded successfully.</td></tr>
-                <tr data-route="display"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>Apple ProRes 422 HQ (<code>apch</code>)</td><td>No audio, or four float-PCM tracks plus timecode</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>ProRes payload and tracks retained; orientation/container verified; the external samples also decoded successfully.</td></tr>
-                <tr data-route="display"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>Apple ProRes 4444 (<code>ap4h</code>) with alpha/transparency</td><td>No audio or PCM; timecode represented</td><td class="evidence-count" data-samples="3">3</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>ProRes 4444 and alpha-bearing payload retained; orientation/container verified; the external samples also decoded successfully.</td></tr>
+                <tr data-route="display"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>Sorenson Video</td><td>QCELP; compressed movie header</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>The updated QuickTime header fit its original allocation. Encoded Sorenson video and QCELP audio were preserved.</td></tr>
+                <tr data-route="display"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>Apple ProRes 422 Proxy (<code>apco</code>)</td><td>No audio, or four float-PCM tracks plus timecode</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>ProRes payload and tracks retained; orientation/container verified.</td></tr>
+                <tr data-route="display"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>Apple ProRes 422 LT (<code>apcs</code>)</td><td>No audio, or four float-PCM tracks plus timecode</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>ProRes payload and tracks retained; orientation/container verified.</td></tr>
+                <tr data-route="display"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>Apple ProRes 422 (<code>apcn</code>)</td><td>No audio, or four float-PCM tracks plus timecode</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>ProRes payload and tracks retained; orientation/container verified.</td></tr>
+                <tr data-route="display"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>Apple ProRes 422 HQ (<code>apch</code>)</td><td>No audio, or four float-PCM tracks plus timecode</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>ProRes payload and tracks retained; orientation/container verified.</td></tr>
+                <tr data-route="display"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>Apple ProRes 4444 (<code>ap4h</code>) with alpha/transparency</td><td>No audio or PCM; timecode represented</td><td class="evidence-count" data-samples="3">3</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>ProRes 4444 and alpha-bearing payload retained; orientation/container verified.</td></tr>
                 <tr data-route="display"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>GoPro CineForm 10-bit</td><td>PCM and camera timecode</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>Professional source payload and auxiliary tracks retained; orientation verified.</td></tr>
                 <tr data-route="display"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>Avid DNxHD, CID 1260</td><td>No audio; non-square display geometry</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>DNxHD payload and geometry retained; composed display orientation verified.</td></tr>
                 <tr data-route="display"><th scope="row">QuickTime / MOV</th><td><code>.mov</code></td><td>Avid DNxHR 12-bit, CID 1271</td><td>Camera timecode</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>12-bit professional payload and timecode retained; orientation verified.</td></tr>
@@ -315,31 +321,31 @@
                 <tr data-route="h264"><th scope="row">Matroska</th><td><code>.mkv</code></td><td>H.264</td><td>Two MP3 tracks and compressed VobSub</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-h264">Physical H.264 copy</b></td><td>Approved first-audio/video contract verified; omitted tracks were disclosed.</td></tr>
                 <tr data-route="h264"><th scope="row">Matroska</th><td><code>.mkv</code></td><td>H.264</td><td>Styled ASS and font attachment; no audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-h264">Physical H.264 copy</b></td><td>Approved copy disclosed omitted subtitle/attachment; complete physical picture verified.</td></tr>
                 <tr data-route="replacement"><th scope="row">Matroska</th><td><code>.mkv</code></td><td>H.264 with header stripping</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>Physical picture and structural timeline verified.</td></tr>
-                <tr data-route="refusal"><th scope="row">Matroska</th><td><code>.mkv</code></td><td>H.264 High 4:4:4</td><td>WebVTT; no audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Unsupported picture profile named; source unchanged.</td></tr>
-                <tr data-route="h264"><th scope="row">Matroska</th><td><code>.mkv</code></td><td>H.264 with field-order declarations</td><td>No audio</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route evidence-route-h264">Physical H.264 copy</b></td><td>Approved compatibility copy normalized declared structure; physical picture verified.</td></tr>
+                <tr data-route="display"><th scope="row">Matroska</th><td><code>.mkv</code></td><td>H.264 High 4:4:4</td><td>WebVTT; no audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>The Matroska display turn preserved the encoded picture and WebVTT captions.</td></tr>
+                <tr data-route="replacement"><th scope="row">Matroska</th><td><code>.mkv</code></td><td>H.264 with progressive scan declared</td><td>No audio</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>Both sources declared progressive frames. The physically rotated replacements passed picture and timing checks.</td></tr>
                 <tr data-route="h264"><th scope="row">Matroska</th><td><code>.mkv</code></td><td>H.264 with field-order or opening-timeline boundary</td><td>Vorbis</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route evidence-route-h264">Physical H.264 copy</b></td><td>Approved compatibility copy&rsquo;s physical picture and retained/converted soundtrack contract verified.</td></tr>
-                <tr data-route="refusal"><th scope="row">Matroska</th><td><code>.mkv</code></td><td>HEVC Main10, BT.2020 with HLG signalling</td><td>AAC</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>HDR/10-bit Matroska boundary named; source unchanged.</td></tr>
-                <tr data-route="refusal"><th scope="row">Matroska</th><td><code>.mkv</code></td><td>HEVC Main10 HDR10 PQ</td><td>Chapters; no audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Unsupported chapter/HDR contract refused; source unchanged.</td></tr>
+                <tr data-route="display"><th scope="row">Matroska</th><td><code>.mkv</code></td><td>HEVC Main10, BT.2020 with SDR transfer and HLG signalling</td><td>AAC</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>The display turn preserved the original Main10 picture, colour signalling and AAC audio.</td></tr>
+                <tr data-route="display"><th scope="row">Matroska</th><td><code>.mkv</code></td><td>HEVC Main10 HDR10 PQ</td><td>Chapters; no audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-display">Lossless display copy</b></td><td>The display turn preserved the encoded HDR10 picture and chapter timing.</td></tr>
                 <tr data-route="h264"><th scope="row">Matroska</th><td><code>.mkv</code></td><td>MPEG-4 Part 2 (ASP)</td><td>PGS and chapters</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-h264">Physical H.264 copy</b></td><td>Approved copy disclosed omitted structures; complete physical picture verified.</td></tr>
                 <tr data-route="replacement"><th scope="row">Matroska</th><td><code>.mkv</code></td><td>VP9 8-bit 4:2:0</td><td>Opus</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>VP9 remained VP9; physical picture and exact Opus timeline verified.</td></tr>
 
                 <tr data-route="replacement"><th scope="row">WebM</th><td><code>.webm</code></td><td>VP8 8-bit 4:2:0</td><td>Vorbis; ordinary, portrait, and no-default-duration timing</td><td class="evidence-count" data-samples="3">3</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>VP8 physical picture and exact Vorbis/timing contract verified.</td></tr>
                 <tr data-route="replacement"><th scope="row">WebM</th><td><code>.webm</code></td><td>VP8 8-bit 4:2:0</td><td>Vorbis and WebVTT captions</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>VP8 picture, exact Vorbis, and WebVTT blocks/flags verified.</td></tr>
                 <tr data-route="h264"><th scope="row">WebM</th><td><code>.webm</code></td><td>VP9 with alpha</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-h264">Physical H.264 copy</b></td><td>Approved copy disclosed transparency loss; physical SDR H.264 result verified.</td></tr>
-                <tr data-route="refusal"><th scope="row">WebM</th><td><code>.webm</code></td><td>VP9 profile 1</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Unsupported wider-chroma profile named; source unchanged.</td></tr>
+                <tr data-route="vp9"><th scope="row">WebM</th><td><code>.webm</code></td><td>VP9 profile 1</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route">Lossless VP9 copy</b></td><td>The separate VP9 Profile 1 WebM preserved every decoded RGB sample after the physical turn.</td></tr>
                 <tr data-route="h264"><th scope="row">WebM</th><td><code>.webm</code></td><td>VP9 8-bit 4:2:0</td><td>Opus; gapless padding or field-order boundary</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route evidence-route-h264">Physical H.264 copy</b></td><td>Approved physical result and disclosed audio/structure contract verified.</td></tr>
-                <tr data-route="h264"><th scope="row">WebM</th><td><code>.webm</code></td><td>AV1 8-bit 4:2:0</td><td>Opus</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-h264">Physical H.264 copy</b></td><td>Approved H.264 MP4 fallback, physical picture, and soundtrack timeline verified.</td></tr>
+                <tr data-route="av1"><th scope="row">WebM</th><td><code>.webm</code></td><td>AV1 8-bit 4:2:0</td><td>Opus</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route">Lossless AV1 copy</b></td><td>The separate AV1 WebM preserved the rotated samples and the original Opus packets.</td></tr>
 
                 <tr data-route="replacement"><th scope="row">Windows Media / ASF</th><td><code>.wmv</code></td><td>WMV7 (WMV1)</td><td>WMA</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>Matching Windows Media subtype, complete physical picture, timing, and soundtrack contract verified.</td></tr>
                 <tr data-route="replacement"><th scope="row">Windows Media / ASF</th><td><code>.wmv</code></td><td>WMV8 (WMV2)</td><td>WMA</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>Matching Windows Media subtype, complete physical picture, timing, and soundtrack contract verified.</td></tr>
                 <tr data-route="replacement"><th scope="row">Windows Media / ASF</th><td><code>.wmv</code></td><td>WMV9 (WMV3)</td><td>No audio or WMA</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>Matching Windows Media picture and complete admitted soundtrack contract verified.</td></tr>
                 <tr data-route="replacement"><th scope="row">Windows Media / ASF</th><td><code>.wmv</code></td><td>VC-1 Advanced, progressive</td><td>No audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-replacement">Verified replacement</b></td><td>Matching VC-1 subtype, complete physical picture, and timing verified.</td></tr>
-                <tr data-route="refusal"><th scope="row">Windows Media / ASF</th><td><code>.wmv</code></td><td>VC-1 Advanced, interlaced</td><td>No audio or WMA</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Interlaced structure could not be preserved; sources unchanged.</td></tr>
-                <tr data-route="refusal"><th scope="row">Windows Media / ASF</th><td><code>.wmv</code></td><td>Microsoft MPEG-4 v3 in ASF</td><td>Audio plus ASF markers</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Foreign codec and marker structure named; source unchanged.</td></tr>
-                <tr data-route="refusal"><th scope="row">Windows Media / ASF</th><td><code>.wmv</code></td><td>WMV7, multi-bitrate</td><td>Two video streams and WMA</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>Ambiguous multi-video structure refused; source unchanged.</td></tr>
+                <tr data-route="refusal"><th scope="row">Windows Media / ASF</th><td><code>.wmv</code></td><td>VC-1 Advanced, interlaced</td><td>No audio or WMA</td><td class="evidence-count" data-samples="2">2</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>The decoded fields represent different instants. Both interlaced sources stayed unchanged.</td></tr>
+                <tr data-route="ffv1"><th scope="row">Windows Media / ASF</th><td><code>.wmv</code></td><td>Microsoft MPEG-4 v3 in ASF</td><td>WMA and 20 ASF markers</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route">Lossless FFV1 copy</b></td><td>The FFV1 Matroska copy preserved the decoded picture and WMA packets. All 20 marker titles and times were verified as chapters.</td></tr>
+                <tr data-route="refusal"><th scope="row">Windows Media / ASF</th><td><code>.wmv</code></td><td>WMV7, multi-bitrate</td><td>Two video streams and WMA</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>A single-video output would discard the alternative bitrate renditions. The source stayed unchanged.</td></tr>
 
                 <tr data-route="h264"><th scope="row">MPEG program stream</th><td><code>.mpg</code></td><td>MPEG-1 Video</td><td>MPEG-1 Layer II audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-h264">Physical H.264 copy</b></td><td>Approved H.264 MP4, physical picture, and soundtrack timeline verified.</td></tr>
-                <tr data-route="refusal"><th scope="row">MPEG program stream</th><td><code>.mpg</code></td><td>MPEG-2 Video</td><td>MPEG-1 Layer II audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>No verified compatibility-copy contract was available; source unchanged.</td></tr>
+                <tr data-route="refusal"><th scope="row">MPEG program stream</th><td><code>.mpg</code></td><td>MPEG-2 Video</td><td>MPEG-1 Layer II audio</td><td class="evidence-count" data-samples="1">1</td><td><b class="evidence-route evidence-route-refusal">Expected safe refusal</b></td><td>The source contains interlaced fields and DVD navigation packets. It stayed unchanged.</td></tr>
               </tbody>
             </table>
           </div>
@@ -356,7 +362,7 @@
             </div>
             <div class="evidence-method">
               <p>
-                We ran every video through the Release x64 worker using a 90&deg; right turn. The test checked the
+                We ran the 99 videos through the packaged Release x64 worker using a 90&deg; right turn. The test checked the
                 result, source hash and dates, output files, verification evidence, and temporary files.
               </p>
               <p>
@@ -364,8 +370,7 @@
                 output-name collisions are tested separately.
               </p>
               <p>
-                Separate automated tests cover left and 180&deg; turns, queues, replacement, duplicate files, batch
-                rotation, and the user interface.
+                Two additional fixtures tested clean progressive FFV1 and Ut Video in AVI. Both passed a 90&deg; left turn to an FFV1 Matroska copy. These fixtures are counted separately from the 99 videos above.
               </p>
             </div>
           </div>
@@ -430,7 +435,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <span>Media corpus audited 8 August 2026</span>
+          <span>Media corpus audited 25 November 2026</span>
         </div>
       </div>
     </footer>

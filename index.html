@@ -118,7 +118,7 @@
             "name": "Does ClipTurn rotate every video losslessly?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. Supported uncompressed AVI can be rotated sample-exactly. Compressed video is physically rotated through a visually lossless re-encode under the default policy, so repeated turns can accumulate loss."
+              "text": "No. A display-only copy preserves the encoded picture. Lossless physical turns are available for eligible AVI, FFV1, AV1 and VP9 sources. Many phone videos need a lossy re-encode for a physical turn."
             }
           },
           {
@@ -440,7 +440,8 @@
               shows only the separate-copy choices this PC proved it can start for that exact source.
             </p>
             <ul class="plain-list">
-              <li>MP4, M4V, and MOV can use a lossless display-orientation copy when appropriate.</li>
+              <li>Eligible MP4, M4V, MOV and MKV files can keep the encoded picture in a display-orientation copy.</li>
+              <li>Selected AV1, VP9 and archival recordings can become lossless, physically rotated copies.</li>
               <li>Eligible SDR video can become a physically rotated, high-quality H.264 MP4.</li>
               <li>Batch Rotate groups the recommended choices and their exact trade-offs into one review.</li>
             </ul>
@@ -512,11 +513,11 @@
           <div class="limits-grid">
             <article class="limit-card">
               <span class="limit-mark">1</span>
-              <div><h3>Compressed video is re-encoded</h3><p>The default aims for a visually lossless result in the source codec when a compatible encoder exists. Repeated rotations can accumulate loss.</p></div>
+              <div><h3>How much quality does a turn cost?</h3><p>Most phone videos need a re-encode for a physical turn. Each lossy encode can lose detail. A display-only copy keeps the original encoded video.</p></div>
             </article>
             <article class="limit-card">
               <span class="limit-mark">2</span>
-              <div><h3>Exact means uncompressed AVI</h3><p>Only supported uncompressed packed-pixel AVI can be rotated sample-exactly, without a decoder or encoder.</p></div>
+              <div><h3>Some physical turns are lossless</h3><p>ClipTurn can rearrange packed AVI pixels, turn Motion JPEG coefficients, or save a verified FFV1, AV1 or VP9 Profile 1 copy of eligible footage.</p></div>
             </article>
             <article class="limit-card">
               <span class="limit-mark">3</span>
@@ -524,7 +525,7 @@
             </article>
             <article class="limit-card">
               <span class="limit-mark">4</span>
-              <div><h3>Some codecs depend on Windows</h3><p>VP9, HEVC, Media Feature Pack, hardware, and driver availability can determine what a particular PC can rotate.</p></div>
+              <div><h3>Which codecs are included?</h3><p>ClipTurn ships libvpx, libaom, FFmpeg with ffprobe, and libjpeg-turbo. HEVC and other Windows media paths can depend on installed components and drivers. <a href="manual.html#included-codecs">See what each codec handles</a>.</p></div>
             </article>
           </div>
 
@@ -535,11 +536,11 @@
             <span class="format-pill">MKV</span>
             <span class="format-pill">WebM</span>
             <span class="format-pill">WMV</span>
-            <span class="format-pill">Uncompressed AVI</span>
+            <span class="format-pill">AVI</span>
           </div>
           <p class="formats-evidence">
             These seven file types have Explorer commands. Open MPG, MPEG, MOD, and TOD inside the app
-            for eligible reviewed MP4 copies; they do not have Explorer commands.
+            for an eligible reviewed H.264 MP4 copy.
             <a href="manual.html#formats">Read the format limits</a> or
             <a href="tested-formats.html">see the 99 real videos tested end to end</a>.
           </p>
@@ -560,7 +561,7 @@
             </details>
             <details>
               <summary>Does ClipTurn rotate every video losslessly?</summary>
-              <div class="faq-answer"><p>No. Supported uncompressed AVI can be rotated sample-exactly. Compressed video is physically rotated through a visually lossless re-encode under the default policy, so repeated turns can accumulate loss.</p></div>
+              <div class="faq-answer"><p>No. A display-only copy preserves the encoded picture. Lossless physical turns are available for eligible AVI, FFV1, AV1 and VP9 sources. Many phone videos need a lossy re-encode for a physical turn.</p></div>
             </details>
             <details>
               <summary>Does it keep my original file?</summary>

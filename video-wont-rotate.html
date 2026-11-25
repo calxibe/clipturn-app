@@ -67,7 +67,7 @@
         "description": "Diagnosing a video that will not rotate or will not save its rotation on Windows 11 and Windows 10.",
         "inLanguage": "en",
         "url": "https://clipturn.app/video-wont-rotate.html",
-        "dateModified": "2026-11-11",
+        "dateModified": "2026-11-25",
         "publisher": {
           "@type": "Organization",
           "name": "FixQuotes",
@@ -85,7 +85,7 @@
             "name": "Why does my video play fine but refuse to rotate?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Playing a video only proves your PC can decode it. Rotating one also needs an encoder for the same codec, a container writer, a route that preserves the soundtrack exactly, a supported picture layout, and somewhere safe to write the result. Any one of those being unavailable stops a rotation while playback carries on working perfectly."
+              "text": "Playback shows that your PC can decode the file. Saving a physical turn also requires a compatible writer and, for most formats, an encoder. A display-only copy requires editable orientation metadata. ClipTurn checks the tracks, timing and output before saving."
             }
           },
           {
@@ -109,7 +109,7 @@
             "name": "Why does my video refuse with a missing codec message?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Windows is missing a codec the selected rotation route needs. ClipTurn bundles VP8 and VP9 codecs for eligible WebM rotation. HEVC needs an HEVC Video Extensions package, and 10-bit HEVC output usually needs current graphics drivers from your PC or GPU manufacturer. Install the component named in the message, then run the capability analysis again."
+              "text": "The selected route needs a Windows media component. Physical HEVC rotation can require an HEVC extension and a compatible graphics driver. ClipTurn includes its own codecs for eligible VP8, VP9, AV1 and archival video. Install the component named in the message, then run the capability analysis again."
             }
           },
           {
@@ -178,7 +178,7 @@
             <a class="button button-primary" href="#symptom">Find your symptom</a>
             <a class="button button-secondary" href="#refusals">Why files get refused</a>
           </div>
-          <p class="updated">Windows 11 and Windows 10 &middot; updated <time datetime="2026-11-11" data-page-updated>November 2026</time></p>
+          <p class="updated">Windows 11 and Windows 10 &middot; updated <time datetime="2026-11-25" data-page-updated>November 2026</time></p>
         </div>
       </section>
 
@@ -473,7 +473,7 @@
                   <tr>
                     <th scope="row">AV1</th>
                     <td>Microsoft's free <strong>AV1 Video Extension</strong> when offered.</td>
-                    <td>Adds decoding only. There is no AV1 output path in version 1.0.12, so the file may still refuse.</td>
+                    <td>Adds Windows decoding for playback. The <a href="manual.html#included-codecs">bundled AV1 encoder</a> handles eligible 8-bit AV1 copies in MP4 or WebM.</td>
                   </tr>
                 </tbody>
               </table>
@@ -576,10 +576,7 @@
 
             <h3>Why does my video play fine but refuse to rotate?</h3>
             <p>
-              Playing a video only proves your PC can decode it. Rotating one also needs an encoder for the same
-              codec, a container writer, a route that preserves the soundtrack exactly, a supported picture
-              layout, and somewhere safe to write the result. Any one of those being unavailable stops a rotation
-              while playback carries on working perfectly.
+              Playback shows that your PC can decode the file. Saving a physical turn also requires a compatible writer and, for most formats, an encoder. A display-only copy requires editable orientation metadata. ClipTurn checks the tracks, timing and output before saving.
             </p>
 
             <h3>Why does my video rotation keep not saving?</h3>
@@ -600,10 +597,7 @@
 
             <h3>Why does my video refuse with a missing codec message?</h3>
             <p>
-              Windows is missing a codec the selected rotation route needs. ClipTurn bundles VP8 and VP9 codecs
-              for eligible WebM rotation. HEVC needs an HEVC Video Extensions package, and 10-bit HEVC output
-              usually needs current graphics drivers from your PC or GPU manufacturer. Install the component named
-              in the message, then run the capability analysis again.
+              The selected route needs a Windows media component. Physical HEVC rotation can require an HEVC extension and a compatible graphics driver. ClipTurn includes its own codecs for eligible VP8, VP9, AV1 and archival video. Install the component named in the message, then run the capability analysis again.
             </p>
 
             <h3>My video will not rotate at all. What should I do?</h3>

@@ -4,9 +4,9 @@
 
 ClipTurn is published by FixQuotes and distributed through Microsoft Store. It is currently free, requires no account, and does not upload selected videos. Use the Microsoft Store listing as the authoritative source for current availability and pricing.
 
-Use the user manual for detailed information about supported file types, codecs, physical rotation, lossless display rotation, verified H.264 copies, batch processing, backups, verification, and known limitations.
+Use the user manual for detailed information about supported file types, codecs, physical rotation, lossless display rotation, lossless physical copies in FFV1, AV1 or VP9, verified H.264 compatibility copies, batch processing, backups, verification, and known limitations.
 
-The current published version is 1.0.12. The screenshots show an earlier interface, before the About tab was added.
+The current published version is 1.0.15. The screenshots show an earlier interface, before the About tab was added.
 
 ## Product
 
@@ -17,7 +17,8 @@ The current published version is 1.0.12. The screenshots show an earlier interfa
 ## Documentation
 
 - [User manual](https://clipturn.app/manual.html): Detailed installation, rotation workflows, supported formats, codec requirements, verification behavior, recovery guidance, and troubleshooting.
-- [Tested formats and codecs](https://clipturn.app/tested-formats.html): Real-file, end-to-end results by container, extension, picture codec and profile, notable streams, processing route, and verified outcome, including expected safe refusals.
+- [Included codec tools](https://clipturn.app/manual.html#included-codecs): Versions and format coverage for bundled libvpx, libaom, FFmpeg with ffprobe, and libjpeg-turbo, plus Windows playback and encoder dependencies.
+- [Tested formats and codecs](https://clipturn.app/tested-formats.html): Real-file, end-to-end results by container, extension, picture codec and profile, notable streams, processing route, and verified outcome, including the nine expected refusals among 99 original files in the 1.0.15 Windows 11 x64 run. Two supplemental progressive AVI cases passed separately.
 - [Changelog](https://clipturn.app/changelog.html): Release history and changes by version.
 
 ## Guides

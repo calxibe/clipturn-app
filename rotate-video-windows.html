@@ -67,7 +67,7 @@
         "description": "Every method for rotating video on Windows, compared, including how to make the rotation persist in the file.",
         "inLanguage": "en",
         "url": "https://clipturn.app/rotate-video-windows.html",
-        "dateModified": "2026-10-01",
+        "dateModified": "2026-11-25",
         "about": {
           "@type": "SoftwareApplication",
           "@id": "https://clipturn.app/#software",
@@ -145,7 +145,7 @@
             "name": "Does rotating a video reduce its quality?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Physically rotating compressed video adds an encode generation. Targeting the source bitrate aims to minimize visible loss, but the result depends on the source and encoder, and repeated saved rotations can accumulate loss. An MP4, M4V or MOV display-orientation copy is lossless and skips re-encoding, but copying and verification still take time. Software that ignores the flag can still show it sideways."
+              "text": "Most phone videos need a lossy re-encode for a physical turn. Targeting the source bitrate aims to minimize visible loss, but the result depends on the source and encoder, and repeated saved rotations can accumulate loss. An eligible MP4, M4V, MOV or MKV display-orientation copy is lossless and skips re-encoding, but copying and verification still take time. Software that ignores the flag can still show it sideways."
             }
           },
           {
@@ -223,7 +223,7 @@
             <a class="button button-primary" href="#fastest">Jump to the fastest method</a>
             <a class="button button-secondary" href="#compare">Compare every method</a>
           </div>
-          <p class="updated">Windows 11 and Windows 10 &middot; updated <time datetime="2026-10-01" data-page-updated>October 2026</time></p>
+          <p class="updated">Windows 11 and Windows 10 &middot; updated <time datetime="2026-11-25" data-page-updated>November 2026</time></p>
         </div>
       </section>
 
@@ -496,8 +496,7 @@
             <p class="eyebrow">Get it right first time</p>
             <h2>Which way does it need to turn?</h2>
             <p>
-              Rotating the wrong way and then rotating back costs you two generations of quality instead of one,
-              so it is worth thirty seconds of checking.
+              Check the direction before saving. If your file needs a lossy re-encode, each extra turn can reduce quality.
             </p>
 
             <div class="manual-table-wrap" tabindex="0">
@@ -526,8 +525,7 @@
             </div>
 
             <p>
-              For a 180&deg; turn, do not save two separate 90&deg; rotations. Each save is a fresh encode, so
-              two saves cost twice the quality. In ClipTurn, click the direction button twice so the preview
+              For a 180&deg; turn, click the direction button twice so the preview
               reads 180&deg;, then save once. Batch Rotate offers <strong>Rotate 180&deg;</strong> directly.
             </p>
           </section>
@@ -574,9 +572,7 @@
             <p class="eyebrow">The honest trade-off</p>
             <h2>What rotation costs in quality</h2>
             <p class="manual-lede">
-              Any tool that physically turns compressed video has to decode it and encode it again. There is no
-              way around that, and anyone claiming otherwise is either changing a display flag or not telling
-              you.
+              The quality cost depends on the source and the rotation method. Phone footage often needs a lossy re-encode for a physical turn. Some formats allow an exact turn.
             </p>
             <ul class="manual-check-list">
               <li>
@@ -584,8 +580,7 @@
                 helps, but the result depends on the source and encoder.
               </li>
               <li>
-                <strong>Repeated rotations are.</strong> Each saved turn is another encode. Rotate, check,
-                rotate back, rotate again and the losses stack up.
+                <strong>Choose the direction before saving.</strong> Repeated lossy re-encodes can accumulate visible loss.
               </li>
               <li>
                 <strong>The rotated file may be larger.</strong> Preserving quality means not spending picture
@@ -599,8 +594,7 @@
               </li>
             </ul>
             <p>
-              Uncompressed AVI is the one format where a quarter turn can be done with no loss whatsoever,
-              because the stored pixels can simply be rearranged. Everything else involves a trade.
+              ClipTurn can rearrange packed RGB AVI pixels or rotate eligible Motion JPEG coefficients in place. Other eligible recordings can become lossless FFV1, AV1 or VP9 copies. See <a href="manual.html#included-codecs">which codecs handle each format</a>.
             </p>
           </section>
 
@@ -666,9 +660,9 @@
 
             <h3>Does rotating a video reduce its quality?</h3>
             <p>
-              Physically rotating compressed video adds an encode generation. Targeting the source bitrate aims
+              Most phone videos need a lossy re-encode for a physical turn. Targeting the source bitrate aims
               to minimize visible loss, but the result depends on the source and encoder, and repeated saved
-              rotations can accumulate loss. An MP4, M4V or MOV display-orientation copy is lossless and skips
+              rotations can accumulate loss. An eligible MP4, M4V, MOV or MKV display-orientation copy is lossless and skips
               re-encoding, but copying and verification still take time. Software that ignores the flag can
               still show it sideways.
             </p>

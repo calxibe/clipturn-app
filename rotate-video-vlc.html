@@ -67,7 +67,7 @@
         "description": "VLC's Geometry transform rotates playback only. This explains the difference and gives the sequence that writes a rotated file.",
         "inLanguage": "en",
         "url": "https://clipturn.app/rotate-video-vlc.html",
-        "dateModified": "2026-09-06",
+        "dateModified": "2026-11-25",
         "publisher": {
           "@type": "Organization",
           "name": "FixQuotes",
@@ -146,7 +146,7 @@
             "name": "Does rotating and converting in VLC reduce quality?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Convert/Save re-encodes the video using the bitrate in the chosen profile, not the bitrate of your source, and VLC's default profiles are conservative. A high-bitrate 4K clip converted with a default profile can come back noticeably softer and much smaller, which is a quality loss beyond the single unavoidable generation that any physical rotation costs."
+              "text": "Yes. Convert/Save re-encodes the video using the bitrate in the chosen profile, not the bitrate of your source, and VLC's default profiles are conservative. A high-bitrate 4K clip converted with a default profile can come back noticeably softer and much smaller."
             }
           },
           {
@@ -216,7 +216,7 @@
             <a class="button button-primary" href="#playback">Rotate playback</a>
             <a class="button button-secondary" href="#save">Save it to a file</a>
           </div>
-          <p class="updated">VLC on Windows &middot; updated <time datetime="2026-09-06" data-page-updated>September 2026</time></p>
+          <p class="updated">VLC on Windows &middot; updated <time datetime="2026-11-25" data-page-updated>November 2026</time></p>
         </div>
       </section>
 
@@ -448,9 +448,7 @@
             <p class="eyebrow">The hidden cost</p>
             <h2>What conversion costs you</h2>
             <p>
-              Any physical rotation of compressed video costs one encode. VLC's Convert/Save can cost more than
-              that, because it re-encodes to the settings in the profile rather than to the properties of your
-              source.
+              VLC’s Convert/Save re-encodes the picture using the selected profile. Its bitrate and codec settings determine how much detail the new file keeps.
             </p>
             <ul class="manual-check-list">
               <li>
@@ -571,8 +569,7 @@
             <p>
               Yes. Convert/Save re-encodes the video using the bitrate in the chosen profile, not the bitrate of
               your source, and VLC's default profiles are conservative. A high-bitrate 4K clip converted with a
-              default profile can come back noticeably softer and much smaller, which is a quality loss beyond the
-              single unavoidable generation that any physical rotation costs.
+              default profile can come back noticeably softer and much smaller.
             </p>
 
             <h3>Is VLC the best way to rotate a video on Windows?</h3>
